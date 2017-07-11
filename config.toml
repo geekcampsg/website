@@ -1,0 +1,36 @@
+baseurl = "https://geekcampsg.github.io/"
+languageCode = "en-us"
+title = "GeekcampSG"
+# https://github.com/jrutheiser/hugo-lithium-theme.git
+theme = "hugo-lithium-theme"
+googleAnalytics = ""
+disqusShortname = ""
+
+[permalinks]
+    post = "/:year/:month/:day/:title/"
+    page = "/:title/"
+
+[[menu.main]]
+    name = "1. Home"
+    url = "/"
+[[menu.main]]
+    name = "2. Blog"
+    url = "/blog/"
+[[menu.main]]
+    name = "3. GitHub"
+    url = ""
+[[menu.main]]
+    name = "4. Twitter"
+    url = ""
+[[menu.main]]
+    name = "5. About"
+    url = "/about/"
+
+[params]
+    description = "By geeks. For geeks."
+
+    [params.logo]
+    url = "logo.png"
+    width = 60
+    height = 60
+    alt = "logo"
