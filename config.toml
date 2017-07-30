@@ -1,8 +1,8 @@
 baseurl = "https://geekcampsg.github.io/"
 languageCode = "en-us"
-title = "GeekcampSG"
+title = "Geekcamp Singapore 2017"
 # https://github.com/jrutheiser/hugo-lithium-theme.git
-theme = "hugo-lithium-theme"
+theme = "pacgeek"
 googleAnalytics = ""
 disqusShortname = ""
 
