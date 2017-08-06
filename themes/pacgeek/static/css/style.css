@@ -429,20 +429,46 @@ body {
   background: white;
   display: flex; }
 
-.brand a {
-  color: #999999;
-  text-decoration: none; }
+.brand {
+  padding: 1em 1.5em; }
+  .brand a {
+    color: #999999;
+    text-decoration: none; }
 
 .menu {
   margin-left: auto; }
   .menu ul {
     display: flex;
-    list-style-type: none; }
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .menu ul li {
+      display: block;
+      margin-right: 1em;
+      padding: 1em 1.5em; }
+    .menu ul li.special-btn {
+      position: relative;
+      width: 100%;
+      padding-right: 200px; }
+
+a.special-btn__call {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px; }
 
 .hero {
   padding: 5em;
   background: #0094EE;
   color: white; }
+
+.hero-title {
+  position: relative; }
+
+.hero-text {
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 .logo__svg {
   position: relative;
@@ -457,3 +483,11 @@ body {
     width: 100%;
     top: 0;
     left: 0; }
+
+.button {
+  display: inline-block;
+  padding: 1em 1.5em;
+  background: #FF8B8B;
+  box-sizing: border-box;
+  color: white;
+  box-shadow: 7px 7px 0 #F0CF61; }

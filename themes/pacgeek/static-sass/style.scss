@@ -13,6 +13,7 @@ body {
 }
 
 .brand {
+  padding: 1em 1.5em;
   & a {
     color: $gray;
     text-decoration: none;
@@ -24,13 +25,42 @@ body {
   & ul {
     display: flex;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    & li {
+      display: block;
+      margin-right: 1em;
+      padding: 1em 1.5em;
+    }
+    & li.special-btn {
+      position: relative;
+      width: 100%;
+      padding-right: 200px;
+    }
   }
+}
+
+a.special-btn__call {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
 }
 
 .hero {
   padding: 5em;
   background: $brightblue;
   color: $white;
+}
+
+.hero-title {
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -50,4 +80,13 @@ body {
       left: 0;
     }
   }
+}
+
+.button {
+  display: inline-block;
+  padding: 1em 1.5em;
+  background: $peach;
+  box-sizing: border-box;
+  color: $white;
+  box-shadow: 7px 7px 0 $paleorange;
 }
