@@ -25,5 +25,8 @@ To make things easier, both commands are combined into `npm run dev` or `yarn de
 Deploy to Github
 --
 
-1. Run `hugo` to create a `public/` directory.
-2. Switch branch from `source` to `master` to `commit` the necessary assets and `push` them.
+1. Checkout `source` branch.
+2. Run `npm run build-hugo` to compile the assets to `public/`. It will also copy `CNAME` file over to the same folder.
+3. Then run `git subtree push --prefix public origin master` to push the contents in `public` to `master`
+
+__Note: There's no need to checkout `master` branch and commit directly to it.__
