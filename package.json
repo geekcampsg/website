@@ -4,11 +4,14 @@
   "description": "",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.5.3"
+    "node-sass": "^4.5.3",
+    "autoprefixer": "^7.1.2",
+    "postcss-cli": "^4.1.0"
   },
   "scripts": {
-    "dev": "hugo serve | npm run sass",
-    "sass": "node-sass -r -w themes/pacgeek/static-sass/style.scss themes/pacgeek/static/css/style.css"
+    "prefix-css": "./node_modules/.bin/postcss theme/pacgeek/static/css/style.css --use autoprefixer -r themes/pacgeek/static/css/style.css",
+    "sass": "node-sass -r themes/pacgeek/static-sass/style.scss themes/pacgeek/static/css/style.css",
+    "build-css": "npm run sass && npm run prefix-css"
   },
   "keywords": [],
   "author": "",
