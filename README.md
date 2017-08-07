@@ -1,35 +1,29 @@
-# Geekcampsg website
+Geekcamp.SG website
+===
 
-## Running local setup
+> By Geeks. For Geeks.
 
-This website uses Hugo static site generator and it is hosted on github pages.
+**Web site: http://geekcamp.sg/**
 
-It requires you to have `hugo` install via homebrew using `brew insall hugo`.
+Running local setup
+--
 
+This website uses [Hugo](https://gohugo.io/) static site generator.
 
-Run to run the local server.
+1. [Install `hugo`](https://gohugo.io/getting-started/installing/).
+2. `hugo serve` to start the local server.
 
-```
-hugo serve
-```
+The CSS is preprocessed via [Sass](http://sass-lang.com/) and post-processed via [Autoprefixer](https://github.com/postcss/autoprefixer).
 
-As the css is using Sass pre-processor to compile, run `npm install` to install the neccessary dependencies to run the compilation process.
+1. `npm install` or `yarn` to install the dependencies
+2. For the CSS:
+  - `npm run css` or `yarn css` to build the CSS
+  - `npm run build-css` or `yarn build-css` to run above command with `watch` mode.
 
+To make things easier, both commands are combined into `npm run dev` or `yarn dev`;
 
-To compile local css, open another termainal and run:
+Deploy to Github
+--
 
-```
-npm run sass
-```
-
-
-## To deploy on Github
-
-
-Run this command to ask `hugo` to create a `public/` directory in main projecy folder:
-
-```
-hugo
-```
-
-Switch your branch from `source` to `master` to commit the neccessary assets and pushed.
+1. Run `hugo` to create a `public/` directory.
+2. Switch branch from `source` to `master` to `commit` the necessary assets and `push` them.

@@ -1,6 +1,6 @@
 baseurl = "https://geekcampsg.github.io/"
 languageCode = "en-us"
-title = "Geekcamp Singapore 2017"
+title = "Geekcamp Singapore - 18th November 2017"
 # https://github.com/jrutheiser/hugo-lithium-theme.git
 theme = "pacgeek"
 googleAnalytics = ""
