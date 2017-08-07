@@ -2,12 +2,12 @@
   "name": "pacgeek",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "node-sass": "^4.5.3"
   },
   "scripts": {
+    "dev": "hugo serve | npm run sass",
     "sass": "node-sass -r -w themes/pacgeek/static-sass/style.scss themes/pacgeek/static/css/style.css"
   },
   "keywords": [],
