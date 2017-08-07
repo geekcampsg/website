@@ -16,9 +16,9 @@ This website uses [Hugo](https://gohugo.io/) static site generator.
 The CSS is preprocessed via [Sass](http://sass-lang.com/) and post-processed via [Autoprefixer](https://github.com/postcss/autoprefixer).
 
 1. `npm install` or `yarn` to install the dependencies
-2. `npm run build-css` or `yarn build-css` to build the CSS, which runs these commands:
-  - `sass` - preprocess the SASS files, with watch mode.
-  - `prefix-css` - autoprefix the CSS.
+2. For the CSS:
+  - `npm run css` or `yarn css` to build the CSS
+  - `npm run build-css` or `yarn build-css` to run above command with `watch` mode.
 
 To make things easier, both commands are combined into `npm run dev` or `yarn dev`;
 

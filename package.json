@@ -4,15 +4,15 @@
   "description": "",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.5.3",
     "autoprefixer": "^7.1.2",
-    "postcss-cli": "^4.1.0"
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0",
+    "watch": "^1.0.2"
   },
   "scripts": {
     "dev": "npm run build-css | hugo serve",
-    "prefix-css": "postcss theme/pacgeek/static/css/style.css --use autoprefixer -r themes/pacgeek/static/css/style.css",
-    "sass": "node-sass -r themes/pacgeek/static-sass/style.scss themes/pacgeek/static/css/style.css",
-    "build-css": "npm run sass && npm run prefix-css"
+    "css": "node-sass themes/pacgeek/static-sass/style.scss | postcss -u autoprefixer > themes/pacgeek/static/css/style.css",
+    "build-css": "watch 'npm run css' themes/pacgeek/static-sass"
   },
   "keywords": [],
   "author": "",
