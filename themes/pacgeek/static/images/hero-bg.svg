@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <polygon points="100,60 50,150 150,150"/>
+  <polygon points="100,-140 50,-50 150,-50"/>
+  <polygon points="300,60 250,150 350,150"/>
+  <polygon points="300,-140 250,-50 350,-50"/>
+  <style>
+    polygon {
+      animation: anim 20s linear infinite both;
+      fill: #fff;
+      opacity: .1;
+      transform-origin: center;
+    }
+    @keyframes anim {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(-200px, 200px) rotate(360deg); }
+    }
+  </style>
+</svg>

@@ -78,8 +78,14 @@ nav {
 .hero {
   padding: 3em 0;
   color: $white;
-  background-color: $brightblue;
+  background: $brightblue url(/images/hero-bg.svg);
+  background-size: 50px;
   text-align: center;
+  will-change: background-position;
+  transition: background-position 10s;
+  &:hover {
+    background-position: -100px 600px;
+  }
 }
 
 .logo {
