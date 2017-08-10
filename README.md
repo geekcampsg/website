@@ -11,6 +11,7 @@ Running local setup
 This website uses [Hugo](https://gohugo.io/) static site generator.
 
 1. [Install `hugo`](https://gohugo.io/getting-started/installing/).
+2. Checkout `source` branch: `git checkout source`
 2. `hugo serve` to start the local server.
 
 The CSS is preprocessed via [Sass](http://sass-lang.com/) and post-processed via [Autoprefixer](https://github.com/postcss/autoprefixer).
