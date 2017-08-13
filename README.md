@@ -25,9 +25,17 @@ To make things easier, both commands are combined into `npm run dev` or `yarn de
 
 Deploy to Github
 --
+View the deployed website at http://beta.geekcamp.sg
 
 1. Checkout `source` branch.
 2. Run `npm run build-hugo` to compile the assets to `public/`. It will also copy `CNAME` file over to the same folder.
 3. Then run `git subtree push --prefix public origin master` to push the contents in `public` to `master`
 
 __Note: There's no need to checkout `master` branch and commit directly to it.__
+
+
+Deploy to Netlify
+--
+View the deployed website at http://beta.geekcamp.sg
+
+Simply make a commit to the `source` branch. It will be autodeployed onto netlify.
