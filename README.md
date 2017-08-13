@@ -36,6 +36,6 @@ __Note: There's no need to checkout `master` branch and commit directly to it.__
 
 Deploy to Netlify
 --
-View the deployed website at http://beta.geekcamp.sg
+View the deployed website at http://netlify.geekcamp.sg
 
 Simply make a commit to the `source` branch. It will be autodeployed onto netlify.
