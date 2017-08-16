@@ -13,7 +13,7 @@
     "dev": "npm run build-css | hugo serve",
     "css": "node-sass themes/pacgeek/static-sass/style.scss | postcss -u autoprefixer > themes/pacgeek/static/css/style.css",
     "build-css": "watch 'npm run css' themes/pacgeek/static-sass",
-    "build-hugo": "hugo | cp CNAME public/"
+    "build-hugo": "hugo && cp CNAME public/"
   },
   "keywords": [],
   "author": "",
