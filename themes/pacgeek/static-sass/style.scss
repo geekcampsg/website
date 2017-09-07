@@ -5,6 +5,7 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   color: $darkgray;
   background-color: $white;
+  height: 100%;
 }
 
 a {
@@ -32,12 +33,10 @@ p {
 
 .footer {
   background: $navyblue;
-  height: 80px;
 }
 
 .footer-menu {
   color: $white;
-  height: 80px;
   ul {
     margin: 0;
     padding: 0;
@@ -164,6 +163,15 @@ a.button {
   }
 }
 
+.header-title {
+  display: inline-block;
+  padding: 0.5em 0.5em;
+  color: $white;
+  background-color: $aquamarine;
+  box-shadow: 7px 7px 0 $peach;
+  font-weight: 400;
+}
+
 @media (min-width: 500px) {
   .brand {
     position: static;
@@ -177,6 +185,7 @@ a.button {
   nav .sub-container{
     display: flex;
   }
+
 }
 
 @media (min-width: 700px) {
