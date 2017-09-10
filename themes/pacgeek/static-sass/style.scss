@@ -27,10 +27,6 @@ p {
   line-height: 1.5;
 }
 
-.wrapper {
-  min-height: calc(100vh - 80px);
-}
-
 .footer {
   background: $navyblue;
 }
@@ -170,6 +166,18 @@ a.button {
   background-color: $aquamarine;
   box-shadow: 7px 7px 0 $peach;
   font-weight: 400;
+}
+
+
+.coc-small {
+  color: $gray;
+  font-size: 0.9em;
+}
+
+@media (max-width: 500px) {
+  .footer-menu ul li {
+    padding: 0.8em;
+  }
 }
 
 @media (min-width: 500px) {
