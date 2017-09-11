@@ -6,26 +6,6 @@ theme = "pacgeek"
 googleAnalytics = ""
 disqusShortname = ""
 
-[permalinks]
-    post = "/:year/:month/:day/:title/"
-    page = "/:title/"
-
-[[menu.main]]
-    name = "1. Home"
-    url = "/"
-[[menu.main]]
-    name = "2. Blog"
-    url = "/blog/"
-[[menu.main]]
-    name = "3. GitHub"
-    url = ""
-[[menu.main]]
-    name = "4. Twitter"
-    url = ""
-[[menu.main]]
-    name = "5. About"
-    url = "/about/"
-
 [params]
     description = "By geeks. For geeks."
 
