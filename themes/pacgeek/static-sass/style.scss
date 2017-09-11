@@ -168,10 +168,18 @@ a.button {
   font-weight: 400;
 }
 
+.coc {
+  &-content {
+    padding: 0 2.5em 1em 2em;
 
-.coc-small {
+  }
+
+  &-small {
   color: $gray;
   font-size: 0.9em;
+
+  }
+
 }
 
 @media (max-width: 500px) {
