@@ -1,0 +1,11 @@
+{{ $talks := getJSON "data/talk_submissions.json" }}
+{{ range $talks }}
+
+    <li class="talk">
+        <!-- FAKE AVATAR, PLS REPLACE -->
+        <img src="http://via.placeholder.com/120x120" width="60" height="60" alt="">
+        <h3 id="are-we-web-yet"><a href="{{ .Url }}">{{ .Title }}</a> <small>by {{ .Speaker }}</small></h3>
+        <p class="talk-abstract">{{ .Abstract }} Come and be fascinated by Rust’s mature HTTP stack and various frameworks that enable you to build APIs and backend services quickly.</p>
+        <a href="{{ .Url }}"><button>Like</button></a> <span class="vote-text">&larr; Voting coming soon 👍</span>
+    </li>
+{{ end }}
