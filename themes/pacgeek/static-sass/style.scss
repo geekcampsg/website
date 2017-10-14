@@ -198,7 +198,7 @@ a.button {
       border-right: 8px solid transparent;
       border-bottom: 14px solid $peach;
       transform-origin: center 60%;
-      animation: rotate 3s linear infinite;
+      animation: rotate 6s linear infinite;
     }
 
     img {
@@ -234,7 +234,7 @@ a.button {
 
   .vote-text {
     display: inline-block;
-    animation: moveabit .75s infinite ease-in-out alternate;
+    animation: moveabit 2s infinite ease-in-out alternate;
   }
 }
 
@@ -243,7 +243,7 @@ a.button {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(15px);
+    transform: translateX(10px);
   }
 }
 
