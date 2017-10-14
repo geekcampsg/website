@@ -201,6 +201,15 @@ a.button {
       animation: rotate 6s linear infinite;
     }
 
+    &:nth-child(2n):before {
+      border-bottom-color: $palegreen;
+      animation-direction: alternate-reverse;
+    }
+    &:nth-child(3n):before {
+      border-bottom-color: $aquamarine;
+      animation-direction: reverse;
+    }
+
     img {
       float: right;
       object-fit: cover;
