@@ -1,0 +1,260 @@
+[
+   {
+      "Title": "Algorithms for Startup Founders ",
+      "Abstract": "Algorithms are for everyone, not just for programmers! In this talk I will be discussing how algorithms can be used to help startup founders to solve some of their most common problems.",
+      "Speaker": "Sau Sheong Chang",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/586534241799766017/jN4Y6OPR_400x400.jpg"
+   },
+   {
+      "Title": "Are We Web Yet? : Building Web Stuff Using Rust ",
+      "Abstract": "Come and be fascinated by Rust's mature HTTP stack and various frameworks that enable you to build APIs and backend services quickly.",
+      "Speaker": "Vigneshwer Dhinakaran",
+      "Profile_pic": "https://avatars3.githubusercontent.com/u/5075497?s=460&v=4"
+   },
+   {
+      "Title": "Artificial Intelligence Renaissance - How, Why, What's Next ",
+      "Abstract": "We are at the beginning of the golden age in AI. However, among the hype lies much confusion about what AI is all about. In this talk, I aim to answer three common questions: How does AI work? Why now? What's next? My passion is to bring AI closer to people and empower our limitless imagination.",
+      "Speaker": "Kai Xin THIA",
+      "Profile_pic": "https://avatars1.githubusercontent.com/u/1366313?s=460&v=4"
+   },
+   {
+      "Title": "Breaking the Binary World with Vue.js",
+      "Abstract": "Vue.js is more consolidated than ever. It is the future of the MV* client side world and is one of the most promising alternatives, fighting with industry giants like React and Angular 2. I will show you the simplicity and power of this framework which combines the best parts of front end world.",
+      "Speaker": "Ignacio Anaya",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/874095013835280385/iJ-JsBek_400x400.jpg"
+   },
+   {
+      "Title": "Building Machine Learning Units in Rust",
+      "Abstract": "Learn to build an end-to-end, high-performance machine learning algorithm such as SVM, RF in Rust language which has the capabilities to solving classification problems.",
+      "Speaker": "Vigneshwer Dhinakaran",
+      "Profile_pic": "https://avatars3.githubusercontent.com/u/5075497?s=460&v=4"
+   },
+   {
+      "Title": "Building Messenger Chatbots with Python",
+      "Abstract": "The app ecosystem keeps evolving. Desktop apps > web apps > mobile apps > bots. You don't need to download 50 apps to access 50 services. All you need is your favorite messenger app and one chatbot. In this talk, i am going to discuss how to build your own messenger chatbot right way from python.",
+      "Speaker": "Daxeel Soni",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/866915630490017793/mxg621cb_400x400.jpg"
+   },
+   {
+      "Title": "Cakewalk WebVR development with A-Frame",
+      "Abstract": "Ram is going to talk about easily building VR website using opensource library A-Frame. In this talk, you will learn to use various concepts & APIs of A-Frame to create interactive & immersive VR experiences on the web. Also learn how A-Frame is different from other similar frameworks like ReactVR.",
+      "Speaker": "Ram Dayal Vaishnav",
+      "Profile_pic": "https://avatars1.githubusercontent.com/u/2748973?s=460&v=4"
+   },
+   {
+      "Title": "Constructing REST APIs in Python & Deploying to AWS",
+      "Abstract": "In this talk, i am going to explain how to write REST APIs in python with Flask micro-framework. Then we are going to deploy this API to AWS cloud and make it public. We will use Lambda, S3 and API Gateway services of AWS to deploy and manage our REST architecture.",
+      "Speaker": "Daxeel Soni",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/866915630490017793/mxg621cb_400x400.jpg"
+   },
+   {
+      "Title": "Consumer Driven Contracts for Microservices",
+      "Abstract": "CDCs are \"Asynchronous Integration Tests\".CDC stands for Consumer Driven Contract. We can now forget about bringing up all the microservices to test the integration between different microservices.This makes integration tests as simple as unit tests. This is a must-have test for all microservices.",
+      "Speaker": "Ramya Authappan",
+      "Profile_pic": "https://avatars1.githubusercontent.com/u/5637976?s=460&v=4"
+   },
+   {
+      "Title": "Creating my own emoji programming language",
+      "Abstract": "Creating a programming language is sometimes boring and requires a lot of dedication and knowledge about how compiler works. I have been thinking about creating something similar just for fun and emoji's are fun. So the idea expressing a syntax just by emojis are interesting.",
+      "Speaker": "Subhransu Behera",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/883208170272735232/4zaxrjfD_200x200.jpg"
+   },
+   {
+      "Title": "Hacker's guide to Rust Programming",
+      "Abstract": "Venture deep into the belly of the state of art programming language Rust's design and concepts to uncover the secret incantations to create high performance and memory safe applications.",
+      "Speaker": "Vigneshwer Dhinakaran",
+      "Profile_pic": "https://avatars3.githubusercontent.com/u/5075497?s=460&v=4"
+   },
+   {
+      "Title": "Hacker's guide to Web Assembly",
+      "Abstract": "Starting from the basics, this talk will walk you through what WebAssembly is, and then why it's fast.",
+      "Speaker": "Vigneshwer Dhinakaran",
+      "Profile_pic": "https://avatars3.githubusercontent.com/u/5075497?s=460&v=4"
+   },
+   {
+      "Title": "How about Go Lang... from a Ruby Guy?",
+      "Abstract": "So I've had 10 years working on PHP. I have mastered Ruby & Ruby on Rail... now on to the next conquest - Go Lang!",
+      "Speaker": "Michael Cheng",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/690974876136439809/-j1hI35X_400x400.jpg"
+   },
+   {
+      "Title": "How and Why I almost wrote an ORM",
+      "Abstract": "Sometimes when you can't find existing solutions, you just go ahead and build your own. As you evolve what you build, it will start to grow and start to do more than what it was meant to. This is one of those times.",
+      "Speaker": "Eric",
+      "Profile_pic": "https://avatars2.githubusercontent.com/u/197371?s=460&v=4"
+   },
+   {
+      "Title": "How did I help 5000+ testers with few lines of code!!",
+      "Abstract": "I'd like to talk about the pain points I faced while automating the web application with dynamic test data and how did I overcome the difficulties with the help of my chrome extension.",
+      "Speaker": "Syam Sasi",
+      "Profile_pic": "https://avatars2.githubusercontent.com/u/19327735?s=460&v=4"
+   },
+   {
+      "Title": "Make More Than Music with Tiny Computers, JavaScript and MIDI",
+      "Abstract": "We're living the halcyon days of tiny computers and JavaScript, but MIDI is a technology that's been around for much longer. In this talk we'll explore why it's implementation and prevalence in musical hardware makes for a uniquely intriguing and accessible platform for creative coding.",
+      "Speaker": "George Mandis",
+      "Profile_pic": "https://avatars0.githubusercontent.com/u/21219?s=460&v=4"
+   },
+   {
+      "Title": "Of Course We Tust The WIFI",
+      "Abstract": "We all love to be connected and we love public WIFI! Of course we know that we should use HTTPS and VPN, we're not that silly! But what about our friends and family? Should we leave them to fend for themselves? Of course not! So how do we keep them safe while using that awesome free WIFI?",
+      "Speaker": "Muhammad Hazwan",
+      "Profile_pic": "https://avatars0.githubusercontent.com/u/3363501?s=460&v=4"
+   },
+   {
+      "Title": "Stop Calling (them) Millennials! Bringing Executive Coaching to Tech College Students",
+      "Abstract": "Executive Coaching has been embraced by leaders in boardrooms across the globe - Let's talk about the impact of bringing an Executive Coach into the classroom and how Post Secondary Technology students have embraced this 1-on-1 approach that helps them focus on their academic and personal success.",
+      "Speaker": "Matthew Stewart",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/789564617731170304/gK_y-xI2_400x400.jpg"
+   },
+   {
+      "Title": "The Dark side of Internet of things",
+      "Abstract": "With the advent of Internet of things, monitoring and controlling electrical appliances over the internet has become a child's play. But are we really making our lives simpler or diving ourselves in a vast ocean which is getting deeper and deeper?",
+      "Speaker": "Dipesh Monga",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/693328695423946753/9foWnjqI_400x400.jpg"
+   },
+   {
+      "Title": "The Day I met Steven",
+      "Abstract": "Come hear a story about a dev named Steve - the first developer to shatter my world view that all devs actually care. Maintaining passion in this industry can be tough and burnout is a real threat to devs. Learn to identify \"Steve-like\" characteristics in yourself. Together we can overcome the salt!",
+      "Speaker": "Alyssa Nicoll",
+      "Profile_pic": "https://avatars3.githubusercontent.com/u/1058831?s=460&v=4"
+   },
+   {
+      "Title": "UI, beyond pixels",
+      "Abstract": "Most of the time when people speak of ui they only think of screens. However there are other methods that are ignored such as tangible user interface or voice user interface.\r\rIt can serve an underserved population and open up new markets. At the same time how it can be done right.",
+      "Speaker": "Yi Chiao Cheng (Yitch)",
+      "Profile_pic": "https://media.licdn.com/mpr/mprx/0_mh1Ic7vKWC-W-aNloi1LtaNKWAyL-ONloKSQAmIOG5j6n060ertFPktrIdt"
+   },
+   {
+      "Title": "Un-sucking Our Service Components",
+      "Abstract": "Micro services are amazing. They are easy to develop, arguably easier to scale, and allow multiple teams in various countries to work in parallel. They make life easier - until they don't. Here, I'll explain my experience and the things I learned while un-sucking the service components at work.",
+      "Speaker": "Zac Brown",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/867756788384444419/7BHj5QnO_400x400.jpg"
+   },
+   {
+      "Title": "Using your DevTools for Gain and Glory",
+      "Abstract": "No, Firefox DevTools are not Firebug. The web came a long way since Firebug, and so have the DevTools baked into Firefox. So let's go exploring! This is basically 30 minutes of pure debugging on stage, no slides.",
+      "Speaker": "Alex Lakatos",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/832462920806076417/ElesrvIy_400x400.jpg"
+   },
+   {
+      "Title": "When VR meets Internet of things: Life beyond second life",
+      "Abstract": "imagine the possibilities that can exist if we were to we combine the worlds of Virtual Reality and Internet of Things This session will enable people with minimal knowledge of VR and basic IoT boards(such as Arduino, Raspberry Pi) to experience the best of the IoT & VR worlds.",
+      "Speaker": "Puja Purswani",
+      "Profile_pic": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAA2CAAAAJDFjYWU0ZTZiLTE3NGUtNDQ1Yy1iZDQxLWI5MjU2YWYzYzYwOQ.jpg"
+   },
+   {
+      "Title": "Samsung Tizen .Net with Xamarin",
+      "Abstract": "Tizen is an open source operating system based on Linux that powers more than 50 million Samsung devices around the world, including TVs, wearables, mobile, and many other Internet of Things (IoT) devices.",
+      "Speaker": "Eng Soon Cheah",
+      "Profile_pic": "https://f.ch9.ms/avatar/e6ead7ad-8a1c-478c-b59c-eb24b3ae8415.jpg"
+   },
+   {
+      "Title": "RUST: Robust and Safe Programming Language",
+      "Abstract": "Technology is growing in a wide range in all aspects. But learning the tech stack for its implementation is still a challenge for many developers. What if we could have a programming language that can be used everywhere in all aspects for a better and robust real-time solution.",
+      "Speaker": "Jayesh Katta Ramalingaiah",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/752262170490974208/WjDXPo0b_400x400.jpg"
+   },
+   {
+      "Title": "Meet Crystal - Ruby's compiled younger sibling",
+      "Abstract": "We all know Ruby is awesome, many of us fell in love with its simplicity. But what about speed? Like many interpreted languages Ruby is not known for its speed. What if you have a language as expressive and simple as ruby yet blazingly fast? That's Crystal Lang for you, Fast as C and Slick as Ruby",
+      "Speaker": "Tony Vincent T.Y",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/899974498572656641/F8JazUcN_400x400.jpg"
+   },
+   {
+      "Title": "This time rabbit wins the race - Distributed systems using RabbitMQ",
+      "Abstract": "Are you having maintainability nightmares ever since your app grown out of the box to serve tens of thousands of users every day? Ever thought of breaking your application monolith into microservices and switch to a more maintainable and distributed architecture? Then RabbitMQ is the tool for you",
+      "Speaker": "Tony Vincent T.Y",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/899974498572656641/F8JazUcN_400x400.jpg"
+   },
+   {
+      "Title": "Metaprogramming in ruby - the dos and don'ts",
+      "Abstract": "Metaprogramming in simple words is the art of writing code that writes code. Metaprogramming is every developer's friend when it comes to writing code that is both DRY and readable. This talk tries to show the best practices, dos and don'ts, and the pros & cons of metaprogramming in ruby.",
+      "Speaker": "Tony Vincent T.Y",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/899974498572656641/F8JazUcN_400x400.jpg"
+   },
+   {
+      "Title": "Going Serverless",
+      "Abstract": "Serverless computing replaces long-running virtual machines with ephemeral compute power that comes into existence on request and disappears immediately after use. Tap into a virtually endless mana pool!",
+      "Speaker": "Yos Riady",
+      "Profile_pic": "https://avatars0.githubusercontent.com/u/1084226?s=460&v=4"
+   },
+   {
+      "Title": "Think twice before dropping ACID and throw your CAP away",
+      "Abstract": "In today's world of Google and Amazon everyone demands their apps and platforms to be \"web scale\" (whatever that means). The CAP theorem says we have to sacrifice consistency for scalability. However, the practical implications are much more nuanced, and even Google is moving to scalable ACID.",
+      "Speaker": "Andrew Gregovic",
+      "Profile_pic": "https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-1/c0.78.320.320/p320x320/39891_425037869346_5034064_n.jpg?oh=8090280f8fa6e793fc45f78f04780856&oe=5A78B0D5"
+   },
+   {
+      "Title": "Your Browser is your Factory",
+      "Abstract": "In the old days you needed millions of dollars, properly trained personnel and tons of complex software and equipment to have your own factory. Today, digital production methods and modern web applications have transformed the web browser into an ultimate tool for design and a gateway to production.",
+      "Speaker": "Markus Leutwyler",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/900943576367996934/jfzw8bJD_400x400.jpg"
+   },
+   {
+      "Title": "How Developers got Password Security so Wrong",
+      "Abstract": "All of us use passwords on a daily basis, throughout the internet, on everything from social media to online banking. Over decades, misinformation on password security has jeopardised the security of millions of users. This talk will discuss where password security went wrong and how we can fix it.",
+      "Speaker": "Junade Ali",
+      "Profile_pic": "https://avatars0.githubusercontent.com/u/2026099?s=460&v=4"
+   },
+   {
+      "Title": "Would you like a Cyberattack with your Toast?",
+      "Abstract": "Everyday; more and more of our household appliances become \"smart\"; or in other words, internet-connected. The IoT revolution has truly changed the internet threat landscape. This talk will discuss the security anti-patterns that can turn your toaster into a tool for large-scale cyber attacks.",
+      "Speaker": "Junade Ali",
+      "Profile_pic": "https://avatars0.githubusercontent.com/u/2026099?s=460&v=4"
+   },
+   {
+      "Title": "What if I said there was a way NOT to get data you don't require.",
+      "Abstract": "We live in a data-driven world where all the realtime data received by our apps is provided by certain data streams on the backend. However, most of the data provided in these streams is not something that we might be interested in. Nevertheless, it adds the load on our server.",
+      "Speaker": "Srushtika Neelakantam",
+      "Profile_pic": "https://avatars2.githubusercontent.com/u/5900152?s=460&v=4"
+   },
+   {
+      "Title": "A Primer on Concurrency in Go",
+      "Abstract": "Sometimes it's faster to do multiple things at once; computing hardware has recognised this with multithreading and multicore architectures. This lightening talk will demonstrate how developers can utilise concurrency in the Go programming language.",
+      "Speaker": "Junade Ali",
+      "Profile_pic": "https://avatars0.githubusercontent.com/u/2026099?s=460&v=4"
+   },
+   {
+      "Title": "Service Workers and their role in PWAs",
+      "Abstract": "PWAs have gained unparalleled momentum in the tech world and are currently one of the hottest trends in Web Development. Find out how PWA attempts to combine features offered by most modern browsers with the benefits of mobile experience and how service workers make them fast, reliable & engaging.",
+      "Speaker": "Ipsha",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/728603553258835968/CMyibaHc_400x400.jpg"
+   },
+   {
+      "Title": "Continuous Delivery For Short People",
+      "Abstract": "Martin Fowler has a famous phrase - \"you must be this tall to use Microservices\". But Continuous Delivery is for everyone - even short people. In this talk, I'll show you how you can do CD for your small companies and succeed.",
+      "Speaker": "Huiren Woo",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/663623265231892480/dX2lyJHk_400x400.jpg"
+   },
+   {
+      "Title": "Building for the bad guys",
+      "Abstract": "How often do you think about security when building apps? Do you think about the ~5% of your users that are bots and hackers? Many of us don't. We worry more about application architecture and database structure and the billion users. This talk aims to bring you back to earth on security.",
+      "Speaker": "Neo Ighodaro",
+      "Profile_pic": "https://avatars2.githubusercontent.com/u/807318?s=460&v=4"
+   },
+   {
+      "Title": "Demystifying Docker ��� Practical uses",
+      "Abstract": "Docker can be intimidating yes. I remember my horror when we had to use Docker in my company. This talk is meant to target new users. It's designed to show you how Docker can actually help you build portable applications.\r\rThe talk will also pinpoints times were using Docker is inappropriate.",
+      "Speaker": "Neo Ighodaro",
+      "Profile_pic": "https://avatars2.githubusercontent.com/u/807318?s=460&v=4"
+   },
+   {
+      "Title": "Deploying Laravel Applications",
+      "Abstract": "Deploying applications are sometimes hectic and annoying. This article goes through how you can deploy PHP applications, specifically, Laravel framework. It torches deployment methods and also deployment platforms. It also takes about using Jenkins CI for application deployment. _�Ӵ",
+      "Speaker": "Neo Ighodaro",
+      "Profile_pic": "https://avatars2.githubusercontent.com/u/807318?s=460&v=4"
+   },
+   {
+      "Title": "And The Reason Is You",
+      "Abstract": "I've found a reason for me / To change who I used to be / A reason to start over new /\r\rWith fantastic type inference and a blazing fast compiler that spits out readable javascript, learn why ReasonML is a great choice to introduce a functional, statically typed language into your front-end stack.",
+      "Speaker": "Neehar Venugopal",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/890131426217259008/6LEkT3eS_400x400.jpg"
+   },
+   {
+      "Title": "Mixed Reality for Humans: Build your world using WebVR, Augment with WebAR",
+      "Abstract": "Ever wanted to experience a virtual world? Like how you experience the real world? Touch, interact, play, talk and immerse? Vive,Oculus brings you that experience, but why can't we have that in our mobiles?Why can't we build that with the language we already know? JavaScript? Welcome WebVR and WebAR",
+      "Speaker": "Rabimba Karanjai\r",
+      "Profile_pic": "https://pbs.twimg.com/profile_images/1249567144/download_400x400.jpg"
+   }
+]
