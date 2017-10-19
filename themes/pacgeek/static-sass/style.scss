@@ -166,7 +166,6 @@ a.button {
 #talks {
   padding-top: 3em;
   padding-bottom: 3em;
-  border-bottom: 1em dotted $paleorange;
 
   .header-title {
     @include overlap-rects($palegreen, $paleorange);
@@ -269,7 +268,6 @@ a.button {
 #coc {
   padding-top: 3em;
   padding-bottom: 3em;
-  border-top: 1em dotted $paleorange;
 
   p small {
     color: $gray;
@@ -294,7 +292,7 @@ a.button {
 
   .address {
     @include overlap-rects($aquamarine, $palegreen);
-    font-weight: 200;
+    padding: 1.5em;
     font-size: 1em;
     margin: 0 0 0 0.5em;
 
