@@ -294,6 +294,26 @@ a.button {
   }
 }
 
+#sponsors {
+  padding-top: 3em;
+
+  .header-title {
+    @include overlap-rects($brightblue, $paleorange);
+  }
+
+  .sponsors-list {
+    text-align: center;
+  }
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 100px;
+    margin: 15px;
+  }
+}
+
 @media (max-width: 500px) {
   .footer-menu ul li {
     padding: 0.8em;
