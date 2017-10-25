@@ -280,25 +280,17 @@ a.button {
 }
 
 #venue {
-  background: url('/images/venue-map-bg.jpg') center center;
-  background-size: cover;
-  min-height: 550px;
   padding-top: 3em;
 
   .header-title {
     @include overlap-rects($paleorange, $aquamarine);
-    margin-bottom: 0;
   }
 
-  .address {
-    @include overlap-rects($aquamarine, $palegreen);
-    padding: 1.5em;
-    font-size: 1em;
-    margin: 0 0 0 0.5em;
-
-    a {
-      color: inherit;
-    }
+  .venue-map {
+    border: 2px solid $brightblue;
+    box-shadow: 7px 7px 0 $brightblue;
+    vertical-align: top;
+    line-height: 0;
   }
 }
 
