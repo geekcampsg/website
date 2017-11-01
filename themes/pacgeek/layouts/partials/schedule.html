@@ -1,0 +1,55 @@
+<section id="schedule">
+  <div class="sub-container">
+    <h2 class="header-title">Schedule</h2>
+    <h3 class="header-subtitle">Saturday, 18th November</h3>
+    <div id="schedule-content">Loading&hellip;</div>
+  </div>
+</section>
+<script>
+  var dataURL = 'http://gsx2json.com/api?id=1DsQpdJxF2N0zAR6UM1ornsI5p4dYTU3n6f3vAtQC1BU&sheet=1&columns=false';
+  function renderSchedule(data){
+    var html = '<table>';
+    data.rows.forEach(function(talk){
+      var time = talk.time
+        .replace(/\s\-.*$/, '')
+        .replace('p.m.', 'pm')
+        .replace(/^0/, '');
+      html += '<tr class="' + (talk.speakername ? 'talk' : 'no-talk') + '">'
+          + '<td>' + time + '</td>'
+          + '<td>'
+            + (talk.talkdescription && talk.speakername  ? (
+              '<details>'
+                + '<summary>'
+                  + '<b>' + talk.title + '</b> '
+                  + '<span class="by">by ' + talk.speakername + '</span>'
+                + '</summary>'
+                + (talk.speakerimage ? (
+                  '<img src="' + talk.speakerimage + '" alt="" width="60" height="60">'
+                ) : '')
+                + '<p>' + talk.talkdescription + '</p>'
+              + '</details>'
+            ) : (
+              '<b>' + talk.title + '</b>' + (talk.speakername ? (' <span class="by">by ' + talk.speakername) + '</span>' : '')
+            ))
+          + '</td>'
+        + '</tr>';
+    });
+    html += '</table>';
+    document.getElementById('schedule-content').innerHTML = html;
+  };
+  function getSchedule(){
+    var key = 'talks-schedule';
+    var data = localStorage.getItem(key);
+    if (data) renderSchedule(JSON.parse(data));
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function(){
+      var data = JSON.parse(xhr.responseText);
+      renderSchedule(data);
+      localStorage.setItem(key, JSON.stringify(data));
+    };
+    xhr.open('GET', dataURL, true);
+    xhr.send();
+  };
+  getSchedule();
+  document.querySelector('#schedule .header-title').ondblclick = getSchedule;
+</script>
