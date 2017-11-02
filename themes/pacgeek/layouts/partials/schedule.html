@@ -39,13 +39,17 @@
   };
   function getSchedule(){
     var key = 'talks-schedule';
-    var data = localStorage.getItem(key);
-    if (data) renderSchedule(JSON.parse(data));
+    try {
+      var data = localStorage.getItem(key);
+      if (data) renderSchedule(JSON.parse(data));
+    } catch(e) {}
     var xhr = new XMLHttpRequest();
     xhr.onload = function(){
       var data = JSON.parse(xhr.responseText);
       renderSchedule(data);
-      localStorage.setItem(key, JSON.stringify(data));
+      try {
+        localStorage.setItem(key, JSON.stringify(data));
+      } catch (e){}
     };
     xhr.open('GET', dataURL, true);
     xhr.send();
