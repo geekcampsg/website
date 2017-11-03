@@ -568,8 +568,7 @@ a.button {
     text-decoration: none; }
 
 #talks {
-  padding-top: 3em;
-  padding-bottom: 3em; }
+  padding-top: 3em; }
   #talks .header-title {
     display: inline-block;
     padding: 0.5em 0.5em;
