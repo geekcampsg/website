@@ -6,7 +6,7 @@
   </div>
 </section>
 <script>
-  var dataURL = 'http://gsx2json.com/api?id=1DsQpdJxF2N0zAR6UM1ornsI5p4dYTU3n6f3vAtQC1BU&sheet=1&columns=false';
+  var dataURL = 'https://spreadsheets.google.com/feeds/list/1DsQpdJxF2N0zAR6UM1ornsI5p4dYTU3n6f3vAtQC1BU/1/public/values?alt=json';
   function renderSchedule(data){
     var html = '<table>';
     data.rows.forEach(function(talk){
@@ -37,6 +37,19 @@
     html += '</table>';
     document.getElementById('schedule-content').innerHTML = html;
   };
+  function massageData(data){
+    return {
+      rows: data.feed.entry.map(function(entry){
+        var keys = 'speakerimage speakername speakertwitter talkdescription time title'.split(' ');
+        var result = {};
+        keys.forEach(function(key){
+          var e = entry['gsx$' + key];
+          if (e) result[key] = e['$t'].trim();
+        });
+        return result;
+      }),
+    };
+  }
   function getSchedule(){
     var key = 'talks-schedule';
     try {
@@ -45,7 +58,7 @@
     } catch(e) {}
     var xhr = new XMLHttpRequest();
     xhr.onload = function(){
-      var data = JSON.parse(xhr.responseText);
+      var data = massageData(JSON.parse(xhr.responseText));
       renderSchedule(data);
       try {
         localStorage.setItem(key, JSON.stringify(data));
