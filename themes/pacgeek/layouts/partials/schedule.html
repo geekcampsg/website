@@ -14,22 +14,33 @@
         .replace(/\s\-.*$/, '')
         .replace(/(\w)\.m\.?/, '$1m')
         .replace(/^0/, '');
-      html += '<tr class="' + (talk.speakername ? 'talk' : 'no-talk') + '">'
+      var title = talk.title.trim();
+      if (/lunch$/i.test(title)) title += ' 🍱';
+      if (/break$/i.test(title)) title += ' ☕️';
+      if (/party$/i.test(title)) title += ' 🎉';
+      var speakername = talk.speakername.trim();
+      var talkdescription = talk.talkdescription.trim();
+      var speakerimage = talk.speakerimage.trim();
+      var speakertwitter = talk.speakertwitter.trim();
+
+      html += '<tr class="' + (speakername ? 'talk' : 'no-talk') + '">'
           + '<td>' + time + '</td>'
           + '<td>'
-            + (talk.talkdescription && talk.speakername  ? (
+            + (talkdescription && speakername  ? (
               '<details>'
                 + '<summary>'
-                  + '<b>' + talk.title + '</b> '
-                  + '<span class="by">by ' + talk.speakername + '</span>'
+                  + '<b>' + title + '</b> '
+                  + '<span class="by">by ' + speakername + '</span>'
                 + '</summary>'
-                + (talk.speakerimage ? (
-                  '<img src="' + talk.speakerimage + '" alt="" width="60" height="60">'
-                ) : '')
-                + '<p>' + talk.talkdescription + '</p>'
+                + (speakerimage ? (
+                  '<img src="' + encodeURIComponent(speakerimage) + '" alt="" width="60" height="60">'
+                ) : (speakertwitter && speakertwitter != 'geekcamp') ? (
+                  '<img src="https://avatars.io/twitter/' + encodeURIComponent(speakertwitter) + '" alt="" width="60" height="60">'
+                  ) : '')
+                + '<p>' + talkdescription + '</p>'
               + '</details>'
             ) : (
-              '<b>' + talk.title + '</b>' + (talk.speakername ? (' <span class="by">by ' + talk.speakername) + '</span>' : '')
+              '<b>' + title + '</b>' + (speakername ? (' <span class="by">by ' + speakername) + '</span>' : '')
             ))
           + '</td>'
         + '</tr>';
