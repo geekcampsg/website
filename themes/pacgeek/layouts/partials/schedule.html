@@ -12,7 +12,7 @@
     data.rows.forEach(function(talk){
       var time = talk.time
         .replace(/\s\-.*$/, '')
-        .replace('p.m.', 'pm')
+        .replace(/(\w)\.m\.?/, '$1m')
         .replace(/^0/, '');
       html += '<tr class="' + (talk.speakername ? 'talk' : 'no-talk') + '">'
           + '<td>' + time + '</td>'
