@@ -165,7 +165,6 @@ a.button {
 
 #talks {
   padding-top: 3em;
-  padding-bottom: 3em;
 
   .header-title {
     @include overlap-rects($palegreen, $paleorange);
@@ -262,6 +261,79 @@ a.button {
   }
   100% {
     transform: rotate(1turn);
+  }
+}
+
+#schedule {
+  padding-top: 3em;
+
+  .header-title {
+    @include overlap-rects($palegreen, $paleorange);
+  }
+
+  .header-subtitle {
+    margin: 0;
+  }
+
+  table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: calc(100% + 2em);
+    margin-left: -1em;
+  }
+
+  .no-talk {
+    color: rgba($darkgray, .5);
+  }
+
+  td {
+    padding: 10px;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  td:first-child {
+    white-space: nowrap;
+    text-align: right;
+    font-family: monospace;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    width: 8em;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f0f0f0;
+  }
+
+  summary {
+    cursor: pointer;
+    transition: all .3s;
+    outline: 0;
+    user-select: none;
+  }
+
+  summary + * {
+    font-size: .9em;
+  }
+
+  details {
+
+    p {
+      margin-top: .5em;
+      padding-top: 0;
+      font-size: .9em;
+    }
+  }
+
+  .by {
+    padding-left: .25em;
+    display: inline-block;
+    color: opacify($darkgray, .7);
+
+    img {
+      object-fit: cover;
+      border-radius: 18112017px;
+      vertical-align: text-bottom;
+    }
   }
 }
 
