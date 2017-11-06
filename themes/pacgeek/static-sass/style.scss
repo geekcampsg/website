@@ -317,14 +317,6 @@ a.button {
 
   details {
 
-    img {
-      float: right;
-      object-fit: cover;
-      margin: 0 1em .5em;
-      border-radius: 18112017px;
-      box-shadow: 0 0 1px #000;
-    }
-
     p {
       margin-top: .5em;
       padding-top: 0;
@@ -333,8 +325,15 @@ a.button {
   }
 
   .by {
+    padding-left: .25em;
     display: inline-block;
-    opacity: .75;
+    color: opacify($darkgray, .7);
+
+    img {
+      object-fit: cover;
+      border-radius: 18112017px;
+      vertical-align: text-bottom;
+    }
   }
 }
 

@@ -22,6 +22,9 @@
       var talkdescription = talk.talkdescription.trim();
       var speakerimage = talk.speakerimage.trim();
       var speakertwitter = talk.speakertwitter.trim();
+      if (!speakerimage && speakertwitter && speakertwitter != 'geekcamp'){
+        speakerimage = 'https://avatars.io/twitter/' + encodeURIComponent(speakertwitter);
+      }
 
       html += '<tr class="' + (speakername ? 'talk' : 'no-talk') + '">'
           + '<td>' + time + '</td>'
@@ -30,17 +33,23 @@
               '<details>'
                 + '<summary>'
                   + '<b>' + title + '</b> '
-                  + '<span class="by">by ' + speakername + '</span>'
+                  + '<span class="by">by '
+                  + (speakerimage ? (
+                      '<img src="' + speakerimage + '" alt="" width="20" height="20"> '
+                    ) : '')
+                  + speakername + '</span>'
                 + '</summary>'
-                + (speakerimage ? (
-                  '<img src="' + encodeURIComponent(speakerimage) + '" alt="" width="60" height="60">'
-                ) : (speakertwitter && speakertwitter != 'geekcamp') ? (
-                  '<img src="https://avatars.io/twitter/' + encodeURIComponent(speakertwitter) + '" alt="" width="60" height="60">'
-                  ) : '')
                 + '<p>' + talkdescription + '</p>'
               + '</details>'
             ) : (
-              '<b>' + title + '</b>' + (speakername ? (' <span class="by">by ' + speakername) + '</span>' : '')
+              '<b>' + title + '</b> '
+              + (speakername ? (
+                  '<span class="by">by '
+                  + (speakerimage ? (
+                      '<img src="' + speakerimage + '" alt="" width="20" height="20"> '
+                    ) : '')
+                  + speakername + '</span>'
+                ) : '')
             ))
           + '</td>'
         + '</tr>';
