@@ -22,9 +22,10 @@
       var talkdescription = talk.talkdescription.trim();
       var speakerimage = talk.speakerimage.trim();
       var speakertwitter = talk.speakertwitter.trim();
-      if (!speakerimage && speakertwitter && speakertwitter != 'geekcamp'){
+      if (!speakerimage && speakertwitter && !/geekcamp|nil/.test(speakertwitter)){
         speakerimage = 'https://avatars.io/twitter/' + encodeURIComponent(speakertwitter);
       }
+      var fburl = talk.fburl.trim();
 
       html += '<tr class="' + (speakername ? 'talk' : 'no-talk') + '">'
           + '<td>' + time + '</td>'
@@ -39,7 +40,9 @@
                     ) : '')
                   + speakername + '</span>'
                 + '</summary>'
-                + '<p>' + talkdescription + '</p>'
+                + '<p>' + talkdescription
+                  + (fburl ? ' <a href="' + fburl + '" class="details" target="_blank">More details 👉' : '')
+                + '</p>'
               + '</details>'
             ) : (
               '<b>' + title + '</b> '
@@ -60,7 +63,7 @@
   function massageData(data){
     return {
       rows: data.feed.entry.map(function(entry){
-        var keys = 'speakerimage speakername speakertwitter talkdescription time title'.split(' ');
+        var keys = 'speakerimage speakername speakertwitter talkdescription time title fburl'.split(' ');
         var result = {};
         keys.forEach(function(key){
           var e = entry['gsx$' + key];
