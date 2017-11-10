@@ -22,7 +22,7 @@
       var talkdescription = talk.talkdescription.trim();
       var speakerimage = talk.speakerimage.trim();
       var speakertwitter = talk.speakertwitter.trim();
-      if (!speakerimage && speakertwitter && speakertwitter != 'geekcamp'){
+      if (!speakerimage && speakertwitter && !/geekcamp|nil/.test(speakertwitter)){
         speakerimage = 'https://avatars.io/twitter/' + encodeURIComponent(speakertwitter);
       }
 
