@@ -366,6 +366,20 @@ a.button {
     box-shadow: 7px 7px 0 $brightblue;
     vertical-align: top;
     line-height: 0;
+
+    iframe {
+      max-height: 65vh;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .address {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
