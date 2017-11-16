@@ -369,6 +369,40 @@ a.button {
   }
 }
 
+#apps {
+  padding-top: 3em;
+
+  .header-title {
+    padding: 0.5em 0 0 0.5em;
+    color: $darkgray;
+    margin: 0;
+  }
+
+  .content {
+    background-color: $navyblue;
+    color: $white;
+    padding: 1em 0;
+    position: relative;
+    max-width: 800px;
+    color: $darkgray;
+    background-color: transparent;
+    margin: auto;
+    overflow: hidden;
+
+    .desc {
+      max-width: 24em;
+    }
+
+    & > img {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+
 #sponsors {
   padding-top: 3em;
 
@@ -408,7 +442,6 @@ a.button {
   nav .sub-container{
     display: flex;
   }
-
 }
 
 @media (min-width: 700px) {
@@ -425,5 +458,18 @@ a.button {
 
   .hero {
     padding: 4em 0;
+  }
+
+  #apps {
+    .content {
+      .desc {
+        margin-right: 300px;
+      }
+
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }
