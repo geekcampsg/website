@@ -57,6 +57,13 @@ p {
   padding: 0 1em;
 }
 
+main {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 nav {
   background-color: rgba($white, .85);
   backdrop-filter: blur(10px);
@@ -109,6 +116,8 @@ nav {
   text-align: center;
   will-change: background-position;
   transition: background-position 10s;
+  flex-grow: 1;
+  display: flex;
   &:hover {
     background-position: -100px 600px;
   }
@@ -140,6 +149,7 @@ nav {
   font-size: 1.6em;
   margin-top: 0;
   padding-top: 0;
+  margin: 30px 0 40px;
 }
 
 .hero-desc {
