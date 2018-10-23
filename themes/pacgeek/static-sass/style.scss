@@ -58,7 +58,7 @@ p {
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -149,7 +149,15 @@ nav {
   font-size: 1.6em;
   margin-top: 0;
   padding-top: 0;
-  margin: 30px 0 40px;
+  margin: 10px 0 70px;
+
+  .button {
+    margin-bottom: 1em;
+  }
+}
+
+.fine-text {
+  font-size: 0.7em;
 }
 
 .hero-desc {
@@ -170,6 +178,10 @@ a.button {
   &:hover {
     transform: scale(1.05) rotate(-1deg);
     text-decoration: none;
+  }
+
+  &-secondary {
+    box-shadow: none;
   }
 }
 
