@@ -138,6 +138,58 @@ nav {
   color: $sky;
 }
 
+.talks {
+  margin: 70px auto 150px;
+  h2 {
+    border-bottom: 5px solid $emojiyellow;
+    display: inline-block;
+  }
+  a {
+    color: $emojiyellow;
+  }
+}
+.talk-number {
+  display: block;
+  font-size: 0.5em;
+  background-color: $emojiaccent;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  margin: 0 auto 0.5em;
+  line-height: 25px;
+}
+.talk-title {
+  color: $sky;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.talk-speaker {
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin-top: 0.5em;
+}
+
+.talk-metas {
+  display: flex;
+  justify-content: center;
+}
+.talk-meta {
+  font-size: 0.8em;
+  line-height: 1.5;
+  display: inline-block;
+  text-align: right;
+  flex: 1;
+  & + & {
+    margin-left: 1.5em;
+    text-align: left;
+  }
+  strong {
+    display: block;
+    opacity: 0.75;
+  }
+}
+
 @keyframes rainbow {
   0% {
     filter: hue-rotate(0deg);
