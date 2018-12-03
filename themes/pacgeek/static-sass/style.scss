@@ -149,6 +149,9 @@ nav {
     text-decoration: underline;
     opacity: 0.75;
     font-size: 0.9em;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 .talk {
