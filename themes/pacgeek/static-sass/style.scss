@@ -148,26 +148,30 @@ nav {
     color: $emojiyellow;
   }
 }
+.talk {
+  margin-bottom: 3em;
+}
 .talk-number {
-  display: block;
+  display: inline-block;
   font-size: 0.5em;
   background-color: $emojiaccent;
   color: #fff;
   width: 25px;
   height: 25px;
   border-radius: 100px;
-  margin: 0 auto 0.5em;
+  margin: 0 0.5em 0 0;
   line-height: 25px;
+  vertical-align: 0.4em;
 }
 .talk-title {
   color: $sky;
   font-size: 2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.35em;
 }
 .talk-speaker {
   font-size: 1.5em;
   line-height: 1.5;
-  margin-top: 0.5em;
+  margin-top: 0.25em;
 }
 
 .talk-metas {
