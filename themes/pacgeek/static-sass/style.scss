@@ -28,7 +28,7 @@ p {
 }
 
 .footer {
-  background: $navyblue;
+  background: $mouldygreen;
 }
 
 .footer-menu {
@@ -111,7 +111,7 @@ nav {
 .hero {
   padding: 3em 0;
   color: $white;
-  background: $brightblue url(/images/hero-bg.svg);
+  background: $originalgreen url(/images/hero-bg.svg);
   background-size: 50px;
   text-align: center;
   will-change: background-position;
@@ -126,14 +126,16 @@ nav {
 .logo {
   margin-bottom: 0;
   padding-bottom: 0;
-  svg {
-    width: 90%;
-    max-width: 500px;
-
-    &:hover {
-      animation: rainbow 1s linear 10s infinite;
-    }
+  width: 240px;
+  margin: 0 auto 40px;
+  img {
+    display: block;
+    width: 100%;
   }
+}
+
+.sky {
+  color: $sky;
 }
 
 @keyframes rainbow {
@@ -158,6 +160,7 @@ nav {
 
 .fine-text {
   font-size: 0.7em;
+  line-height: 1.5;
 }
 
 .hero-desc {
@@ -169,15 +172,22 @@ nav {
 a.button {
   display: inline-block;
   padding: 1em 1.5em;
-  background-color: $peach;
-  color: $white;
-  box-shadow: 7px 7px 0 $paleorange;
+  background-color: $emojiyellow;
+  color: #000;
+  // box-shadow: 7px 7px 0 $paleorange;
   font-weight: bold;
   transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 15px;
+  border: 5px solid #000;
 
   &:hover {
     transform: scale(1.05) rotate(-1deg);
     text-decoration: none;
+  }
+
+  strong {
+    color: $emojiaccent;
+    font-weight: inherit;
   }
 
   &-secondary {
