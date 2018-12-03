@@ -145,7 +145,10 @@ nav {
     display: inline-block;
   }
   a {
-    color: $emojiyellow;
+    color: #fff;
+    text-decoration: underline;
+    opacity: 0.75;
+    font-size: 0.9em;
   }
 }
 .talk {
@@ -172,6 +175,7 @@ nav {
   font-size: 1.5em;
   line-height: 1.5;
   margin-top: 0.25em;
+  color: $emojiyellow;
 }
 
 .talk-metas {
