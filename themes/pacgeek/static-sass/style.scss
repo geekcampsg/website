@@ -138,13 +138,14 @@ nav {
   color: $sky;
 }
 
+.header-title {
+  border-bottom: 5px solid $emojiyellow;
+  display: inline-block;
+}
+
 .talks {
   padding-top: 4em;
-  margin: 0 auto 150px;
-  h2 {
-    border-bottom: 5px solid $emojiyellow;
-    display: inline-block;
-  }
+  margin: 0 auto 100px;
   a {
     color: #fff;
     text-decoration: underline;
@@ -199,6 +200,27 @@ nav {
   strong {
     display: block;
     opacity: 0.75;
+  }
+}
+
+.sponsors {
+  margin-bottom: 100px;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-direction: column;
+}
+.sponsor-logo {
+  flex: 1 0 35vw;
+  padding: 5%;
+  background: #fff;
+  margin: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: 100%;
   }
 }
 
@@ -454,6 +476,14 @@ a.button {
 
   nav .sub-container{
     display: flex;
+  }
+
+  .sponsor-logos {
+    flex-direction: row;
+  }
+
+  .sponsor-logo {
+    flex-basis: 45%;
   }
 }
 
