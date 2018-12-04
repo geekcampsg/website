@@ -75,7 +75,7 @@ nav {
   height: 50px;
 
   a.special-btn__call {
-    display: none;
+    // display: none;
   }
 
   & + * {
@@ -89,7 +89,7 @@ nav {
   color: $gray;
   text-decoration: none;
   position: absolute;
-  left: -999em;
+  // left: -999em;
 }
 
 .menu {
@@ -237,7 +237,7 @@ nav {
   font-size: 1.6em;
   margin-top: 0;
   padding-top: 0;
-  margin: 10px 0 70px;
+  margin: 10px 0 0;
 
   .button {
     margin-bottom: 1em;
@@ -459,6 +459,15 @@ a.button {
 }
 
 @media (max-width: 500px) {
+  a.special-btn__call {
+    position: absolute;
+    right: 10px;
+    width: 38%;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0.5em;
+    top: 10px;
+  }
   .footer-menu ul li {
     padding: 0.8em;
   }
@@ -476,6 +485,10 @@ a.button {
 
   nav .sub-container{
     display: flex;
+  }
+
+  .hero-text {
+    margin-bottom: 70px;
   }
 
   .sponsor-logos {
