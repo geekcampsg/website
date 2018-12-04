@@ -75,7 +75,7 @@ nav {
   height: 50px;
 
   a.special-btn__call {
-    display: none;
+    // display: none;
   }
 
   & + * {
@@ -89,7 +89,7 @@ nav {
   color: $gray;
   text-decoration: none;
   position: absolute;
-  left: -999em;
+  // left: -999em;
 }
 
 .menu {
@@ -138,12 +138,14 @@ nav {
   color: $sky;
 }
 
+.header-title {
+  border-bottom: 5px solid $emojiyellow;
+  display: inline-block;
+}
+
 .talks {
-  margin: 70px auto 150px;
-  h2 {
-    border-bottom: 5px solid $emojiyellow;
-    display: inline-block;
-  }
+  padding-top: 4em;
+  margin: 0 auto 100px;
   a {
     color: #fff;
     text-decoration: underline;
@@ -201,6 +203,27 @@ nav {
   }
 }
 
+.sponsors {
+  margin-bottom: 100px;
+}
+
+.sponsor-logos {
+  display: flex;
+  flex-direction: column;
+}
+.sponsor-logo {
+  flex: 1 0 35vw;
+  padding: 5%;
+  background: #fff;
+  margin: 2.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: 100%;
+  }
+}
+
 @keyframes rainbow {
   0% {
     filter: hue-rotate(0deg);
@@ -214,7 +237,7 @@ nav {
   font-size: 1.6em;
   margin-top: 0;
   padding-top: 0;
-  margin: 10px 0 70px;
+  margin: 10px 0 0;
 
   .button {
     margin-bottom: 1em;
@@ -230,6 +253,10 @@ nav {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.conf-date {
+  font-size: 1.7em;
 }
 
 a.button {
@@ -255,89 +282,6 @@ a.button {
 
   &-secondary {
     box-shadow: none;
-  }
-}
-
-#talks {
-  padding-top: 3em;
-
-  .header-title {
-    @include overlap-rects($palegreen, $paleorange);
-  }
-
-  .talks {
-    margin: 2em 0;
-    padding: 0;
-    list-style: none;
-    column-width: 320px;
-    column-gap: 2em;
-  }
-
-  .talk {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    margin: 0;
-    padding-left: 30px;
-    position: relative;
-    padding-bottom: 2em;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 3px;
-      height: 0;
-      width: 0;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
-      border-bottom: 14px solid $peach;
-      transform-origin: center 60%;
-      animation: rotate 6s linear infinite;
-    }
-
-    &:nth-child(2n):before {
-      border-bottom-color: $palegreen;
-      animation-direction: alternate-reverse;
-    }
-    &:nth-child(3n):before {
-      border-bottom-color: $aquamarine;
-      animation-direction: reverse;
-    }
-
-    img {
-      float: right;
-      object-fit: cover;
-      margin: .2em 0 1em 1em;
-      border-radius: 18112017px;
-      box-shadow: 0 0 1px #000;
-    }
-
-    h3 {
-      font-weight: 600;
-      letter-spacing: -1px;
-      color: $navyblue;
-      margin: 0 80px 0 0;
-      padding: 0;
-
-      small {
-        letter-spacing: 0;
-        display: inline-block;
-        font-weight: 300;
-        color: $darkgray;
-      }
-    }
-
-    .talk-abstract {
-      color: $darkgray;
-      font-size: .8em;
-      margin-top: .2em;
-      padding-top: 0;
-    }
-  }
-
-  .vote-text {
-    display: inline-block;
-    animation: moveabit 2s infinite ease-in-out alternate;
   }
 }
 
@@ -518,7 +462,20 @@ a.button {
   }
 }
 
+.coc {
+  margin-bottom: 100px;
+}
+
 @media (max-width: 500px) {
+  a.special-btn__call {
+    position: absolute;
+    right: 10px;
+    width: 38%;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0.5em;
+    top: 10px;
+  }
   .footer-menu ul li {
     padding: 0.8em;
   }
@@ -536,6 +493,18 @@ a.button {
 
   nav .sub-container{
     display: flex;
+  }
+
+  .hero-text {
+    margin-bottom: 30px;
+  }
+
+  .sponsor-logos {
+    flex-direction: row;
+  }
+
+  .sponsor-logo {
+    flex-basis: 45%;
   }
 }
 
