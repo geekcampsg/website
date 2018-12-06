@@ -501,10 +501,11 @@ a.button {
 
   .sponsor-logos {
     flex-direction: row;
+    justify-content: space-evenly;
   }
 
   .sponsor-logo {
-    flex-basis: 45%;
+    flex: 0 0 45%;
   }
 }
 
