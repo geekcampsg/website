@@ -306,12 +306,8 @@ a.button {
 #schedule {
   padding-top: 3em;
 
-  .header-title {
-    @include overlap-rects($palegreen, $paleorange);
-  }
-
   .header-subtitle {
-    margin: 0;
+    // margin: 0;
   }
 
   table {
@@ -319,6 +315,7 @@ a.button {
     border-spacing: 0;
     width: calc(100% + 2em);
     margin-left: -1em;
+    background: #4aad4a;
   }
 
   .no-talk {
@@ -340,7 +337,7 @@ a.button {
   }
 
   tr:nth-child(even) {
-    background-color: #f0f0f0;
+    background-color: #5cb55c;
   }
 
   summary {
@@ -369,7 +366,7 @@ a.button {
   .by {
     padding-left: .25em;
     display: inline-block;
-    color: opacify($darkgray, .7);
+    color: opacify(#fff, .7);
 
     img {
       object-fit: cover;
@@ -465,6 +462,11 @@ a.button {
 .coc {
   margin-bottom: 100px;
 }
+
+#schedule-content {
+  text-align: left;
+}
+
 
 @media (max-width: 500px) {
   a.special-btn__call {
