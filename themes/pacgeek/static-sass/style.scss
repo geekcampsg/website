@@ -504,6 +504,7 @@ a.button {
   .sponsor-logos {
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   .sponsor-logo {
