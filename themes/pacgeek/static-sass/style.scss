@@ -257,6 +257,20 @@ nav {
 
 .conf-date {
   font-size: 1.7em;
+  margin-bottom: 0.5em;
+}
+
+.conf-venue {
+  line-height: 1.5;
+  margin-bottom: 1em;
+  text-align: center;
+  &-link {
+    display: inline-block;
+    color: #fff;
+  }
+  div {
+    font-size: 0.7em;
+  }
 }
 
 a.button {
