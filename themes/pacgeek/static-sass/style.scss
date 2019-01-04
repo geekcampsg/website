@@ -258,6 +258,9 @@ nav {
 .conf-date {
   font-size: 1.7em;
   margin-bottom: 0.5em;
+  b {
+    white-space: nowrap;
+  }
 }
 
 .conf-venue {
