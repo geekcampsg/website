@@ -1,278 +1,108 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>{{ .Title }}</title>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="geekcamp singapore">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="shortcut icon" type="image/png" href="favicon.png">
-</head>
-<body>
-  <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=714733198720948";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-  <main>
-    <nav>
-      <div class="sub-container">
-        <a class="brand" href="/">Geekcamp Singapore</a>
-        <div class="menu"></div>
-      </div>
-    </nav>
-    <section class="hero">
-      <div class="sub-container">
-        <h1 class="logo">
-          <img src="/images/geekcamp-logo-white.png" alt="Geekcamp.SG">
-        </h1>
-        <div class="hero-text">
-          <p class='conf-date'>📣 😜 ✨ <b>5th Jan 2019</b> ✨ 🎉 🗓</p>
-          <div class='conf-venue'><a class="conf-venue-link" href="https://goo.gl/maps/7FPPcqzm1DB2" target="_blank">📍 Microsoft Singapore 🏢<div>Level 21, 1 Marina Boulevard, Singapore 018989</div></a></div>
-          <a target="_blank" href="https://www.eventbrite.sg/e/geekcamp-singapore-2018-registration-53246252976" class="button hero-button"><strong>🗳 Register now!</strong> 🖍</a>
+  <head>
+    <title>{{ .Title }}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="geekcamp singapore" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src =
+          '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=714733198720948';
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, 'script', 'facebook-jssdk');
+    </script>
+    <main>
+      <nav>
+        <div class="sub-container">
+          <a class="brand" href="/">Geekcamp Singapore</a>
+          <div class="menu"></div>
         </div>
+      </nav>
+      <section class="hero">
+        <div class="sub-container">
+          <h1 class="title">GeekcampSG 2019</h1>
+          <h1 class="logo">
+            <img src="/images/geekcamp-logo-white.png" alt="Geekcamp.SG" />
+          </h1>
+          <div class="hero-text">
+            <p class="conf-date">19th Oct 2019</p>
+            <a
+              target="_blank"
+              href="https://www.papercall.io/geekcamppsg2019"
+              class="button hero-button"
+              ><strong>🗳 CFP is now open!</strong> 🖍</a
+            >
+          </div>
+          <p class="cfp-close">closes 31 Jul 2019</p>
+          <p class="hero-desc">
+            Geekcamp Singapore is a one day event that brings together hundreds
+            of geeks to share about technologies and knowledge.
+          </p>
+        </div>
+      </section>
 
-        <div class="schedule" id="schedule">
-          <h2 class='header-title'>📌 Schedule 🗒</h2>
-          <h3 class="header-subtitle">Saturday, 5th January</h3>
-          <div id="schedule-content">
-              <table>
-                  <tbody>
-                      <tr class="no-talk">
-                          <td>8:30 am</td>
-                          <td><b>Registration</b> </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>9:15 am</td>
-                          <td><b>Opening Remarks</b></td>
-                      </tr>
-                      <tr class="talk">
-                          <td>9:30 am</td>
-                          <td>
-                              <details>
-                                  <summary><b>Genetic Algorithms in Go </b> <span class="by">by  <a href='http://twitter.com/sausheong' target="_blank"><img src="https://avatars.io/twitter/sausheong" alt="" width="20" height="20"> Chang Sau Sheong</a></span></summary>
-                                  <p>Genetic algorithms are metaheuristics that are based on the process of natural selection. This talk give a simple introduction to GA, with a couple of examples including evolving a phrase from Shakespeare’s Hamlet, and also an image of Mona Lisa.</p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>10:00 am</td>
-                          <td>
-                              <details>
-                                  <summary><b>Serverless - Looking beyond the hype</b> <span class="by">by <img src="https://avatars.io/twitter/" alt="" width="20" height="20"> Monika Puhazhendhi</span></summary>
-                                  <p>We all know serverless as a top buzzword today. But is it suitable for everything? How cost effective is it? What are the pitfalls to avoid? How does it fit in with microservices? In this talk, we will explore these questions and more. We will look beyond the hype to grasp what serverless really is.</p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="no-talk">
-                          <td>10:30 am</td>
-                          <td><b>Break ☕️</b> </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>10:45 am</td>
-                          <td>
-                              <details>
-                                  <summary><b>How Alan Turing accidentally invented Software</b> <span class="by">by <a href='https://www.linkedin.com/in/melvinzhang/' target="_blank"><img src="https://avatars.io/linkedin/melvinzhang" alt="" width="20" height="20"> Melvin Zhang</a></span></summary>
-                                  <p>We use software regularly without thinking too much of it, but do you wonder how it all came to be? Turing was the first person to realize that by using different software a single machine can be made to perform any task. In this talk, we will demonstrate his insight through a series of demos.</p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>11:15 am</td>
-                          <td>
-                              <details>
-                                  <summary><b>5 cool things about Haskell </b> <span class="by">by <a href='http://twitter.com/beardpappa' target="_blank"><img src="https://avatars.io/twitter/beardpappa" alt="" width="20" height="20"> Stephan February</a></span></summary>
-                                  <p>Haskell is often seen as daunting to beginners. While this can certainly be the case, I would love to share 5 cool (non-intimidating) things which I’m sure will get you excited about digging a little deeper into this language.</p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>11:45 am</td>
-                          <td>
-                              <details>
-                                  <summary><b>When life gives you Orange, make data speak volumes!</b> <span class="by">by <a href='https://www.linkedin.com/in/jaindrishti/' target="_blank"><img src="https://avatars.io/twitter/drishtijjain" alt="" width="20" height="20"> Drishti Jain</a></span></summary>
-                                  <p>Have you ever thought of using data visualization to represent data; but feel that it is a cumbersome process? Worry not – Orange is here to the rescue! Come, dive into the world of this magical open source data mining tool that can also be used as a Python library. Beginner friendly!</p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="no-talk">
-                          <td>12:15 pm</td>
-                          <td><b>Lunch 🍱</b> </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>1:45 pm</td>
-                          <td>
-                              <details>
-                                  <summary><b>The Incredibly Fine Balance of an Open Source Project and an Open Source Product</b> <span class="by">by <a href='http://twitter.com/harishpillay' target="_blank"><img src="https://avatars.io/twitter/harishpillay" alt="" width="20" height="20"> Harish Pillay</a></span></summary>
-                                  <p>“Open source” as a label has been used in many places and yet, there are nuances that it has that gets either lost or not articulated. This talk will explain the fine balance that is between open source PROJECTs and open source PRODUCTs.</p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>2:15 pm</td>
-                          <td>
-                              <details>
-                                  <summary><b>Pocket Science Lab - An Open Source Hardware for Electronics Teaching & Learning</b> <span class="by">by <a href='https://www.linkedin.com/in/waigiekok/' target="_blank"><img src="https://avatars.io/twitter/woshikie" alt="" width="20" height="20"> Wai Gie</a></span></summary>
-                                  <p>Pocket Science Lab (PSLab) is an Open Source hardware device (open on all layers) that can be used for experiments by teachers, students and citizen scientists to learn and teach electronics. The hardware comes with a firmware, desktop app, android app - all open source. This tiny pocket lab provides an array of sensors for doing science and engineering experiments. It comes with functions of numerous measurement devices including an oscilloscope, a waveform generator, a frequency counter, a programmable voltage, current source and as a data logger. During this session, Wai Gie will speak about the project development and current use cases of the device through a short demo. </p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>2:45 pm</td>
-                          <td>
-                              <details>
-                                  <summary><b>So what's exactly a JIT Compiler?</b> <span class="by">by <a href='http://twitter.com/olenhad' target="_blank"><img src="https://avatars.io/twitter/olenhad" alt="" width="20" height="20"> Omer Iqbal</a></span></summary>
-                                  <p>What exactly makes Javascript so much faster than other dynamic languages? Or why is Pypy so much faster than CPython? And how is it, that our old friend Java, which runs on a “VM”, can almost compete with native compiled languages? The answer partially is due to JIT (Just In Time) compilation.</p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="no-talk">
-                          <td>3:15 pm</td>
-                          <td><b>Break ☕️</b> </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>3:45 pm</td>
-                          <td>
-                              <details>
-                                  <summary><b>United we serve, divided we scale</b> <span class="by">by <a href='http://twitter.com/sebdeckers' target="_blank"><img src="https://avatars.io/twitter/sebdeckers" alt="" width="20" height="20"> Sebastiaan Deckers</a></span></summary>
-                                  <p>The story of why & how I am building a global CDN to make the web & DNS fast, secure, and cheap even in regions others can’t. Free software. Open hardware. Cooperative infrastructure ownership.</p>
-                              </details>                              
-                          </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>4:15 pm</td>
-                          <td>
-                              <details>
-                                  <summary><b>Application Security for FREE !!</b> <span class="by">by <a href='http://twitter.com/harleydavidkar1' target="_blank"><img src="https://avatars.io/twitter/harleydavidkar1" alt="" width="20" height="20"> Harley Davidson Karel</a></span></summary>
-                                  <p>This topic will cover how to find vulnerability on java, python,ruby on rails,php using free/open source SAST.It will demonstrate on CLI,IDE and Jenkins integration.So that developer can found & fixed the vulnerability since on development stage without waiting for penetration testing stage</p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>4:45 pm</td>
-                          <td>
-                              <details>
-                                  <summary><b>DevSecOps</b> <span class="by">by <a href='http://twitter.com/CheahEngSoon' target="_blank"><img src="https://avatars.io/twitter/CheahEngSoon" alt="" width="20" height="20"> Cheah Eng Soon</a></span></summary>
-                                  <p>Are you looking to build Cloud-based applications using DevOps methodology but worried that the traditional security methods may not adapt to the modern development techniques?</p>
-                              </details>
-                          </td>
-                      </tr>
-                      <tr class="talk">
-                          <td>5:30 pm</td>
-                          <td><b>Closing Address + Photo taking</b></td>
-                      </tr>
-                  </tbody>
-              </table>
+      <footer class="footer">
+        <div class="sub-container">
+          <div class="footer-menu">
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/GeekcampSG/"
+                  title="Geekcampsg facebook"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://twitter.com/geekcamp" title="Twitter"
+                  >Twitter</a
+                >
+              </li>
+              <li><a href="http://bit.ly/geekcampslack">Slack</a></li>
+              <li>
+                <a href="https://github.com/GeekcampSG/geekcampsg.github.io"
+                  >GitHub</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
+      </footer>
+    </main>
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      );
 
-        <div class="workshop">
-            <h2 class='header-title'>👩‍🏫  Workshop 👨‍💻</h2>
-            <div class="workshop-holder">
-                <div class="workshop-schedule">
-                    <dl>
-                        <dt>Two Sessions:</dt>
-                        <dd><span>10:45 AM &ndash; 11:45 AM</span> &odot; <span>1:45 PM &ndash; 2:45 PM</span></dd>
-                        <dt>Venue:</dt>
-                        <dd>Level 22 (one floor above)</dd>
-                    </dl>
-                </div>
-                <h3>Building cross-platform browser add-ons using Extensions APIs</h3>
-                <p>We use Ad-block, Grammarly, Containers, and a lot more other add-ons in our browser every day. How about being on the other side of the table and build one with the javascript we already knew? Let’s talk about add-ons, Extension apis and build an add-on of our own with existing AI/ML models.</p>
-
-                <p>Conducted by: <b>Jyotsna Gupta</b></p>
-                <p>Participants should bring their laptops along with the latest Firefox browser installed in it and a text editor such as atom, Sublime text, etc would suffice.</p>
-                <p>Prior knowledge of Javascript is required.</p>
-                <p class='workshop-highlight'>ℹ️ <b>Interested particpants are to register at the participation booth, at least 15 minutes before the start of each session. Each session can only hold a maximum of 50 participants. ❗️</b></p>
-            </div>
-        </div>
-
-        <section class='villages'>
-          <h2 class='header-title'>🏕️ Community Villages ⛲</h2>
-          <div class="villages-holder">
-            <div class="village">
-              <h3 class="head-subtitle">Challenge by OSI Layer 8</h3>
-              <figure class="village-logo">
-                <img src="/images/osilayer8-logo.svg" alt="SP Group">
-              </figure>
-              <p>
-                Pick up some security basics through a mini capture-the-flag game run by team OSI Layer 8. There are three categories to choose from: web exploits, binary exploits and forensics, each challenge gives you points and a place on a scoreboard. <strong>Do bring your laptop if you want to take part</strong>. Prizes to be won for top 5 teams!
-              </p>
-            </div>
-            <div class="village">
-              <h3 class="head-subtitle">Hackerspace.sg Village</h3>
-              <figure class="village-logo">
-                <img src="/images/hackerspace-logo.png" alt="SP Group">
-              </figure>
-              <p>
-                Hangout, code or get your hands on VR, 3D printing and soldering at the Hackerspace.sg Village with the guys/gals from Singapore’s first co-working/tech community space.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class='sponsors'>
-          <h2 class='header-title'>🎖 Sponsors 💰</h2>
-          <div class="sponsor-logos">
-            <figure class="sponsor-logo">
-              <img src="/images/spgroup-logo.svg" alt="SP Group">
-            </figure>
-            <figure class="sponsor-logo">
-              <img src="/images/microsoft-logo.svg" alt="Microsoft">
-            </figure>
-            <figure class="sponsor-logo">
-              <img src="/images/jetbrains-logo.svg" alt="JetBrains">
-            </figure>
-          </div>
-        </section>
-
-        <section class="coc">
-          <h2 class="header-title">💡 Conference Code of Conduct 🙏</h2>
-          <p>All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organizers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensuring a safe environment for everybody.</p>
-          <p>Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, technology choices, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>
-          <p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>
-          <p>Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.</p>
-          <p>If a participant engages in harassing behavior, the conference organisers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.</p>
-          <p>If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified as they'll be wearing branded t-shirts.</p>
-          <p>Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p>
-          <p>We expect participants to follow these rules at conference and workshop venues and conference-related social events.</p>
-          <h3>Need help?</h3>
-          <p>You have our contact details in the emails we've sent. Please feel free to approach (a few designated people we appointed to handle, emails here) to report any incidents. Rest assured it will be kept confidental.</p>
-        </section>
-
-        <p class="hero-desc">Geekcamp Singapore is a one day event that brings together hundreds of geeks to share about technologies and knowledge.</p>
-        <div class="hero-actions">
-          <a href="https://engineers.sg/conference/geekcampsg-2017" class="button button-secondary">🎉 Geekcamp 2017 videos are up! Watch on <strong>Engineers.SG</strong>! 📣</a>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="sub-container">
-        <div class="footer-menu">
-          <ul>
-            <li><a href="https://www.facebook.com/GeekcampSG/" title="Geekcampsg facebook">Facebook</a></li>
-            <li><a href="https://twitter.com/geekcamp" title="Twitter">Twitter</a></li>
-            <li><a href="http://bit.ly/geekcampslack">Slack</a></li>
-            <li><a href="https://github.com/GeekcampSG/geekcampsg.github.io">GitHub</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  </main>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-105379506-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-</body>
+      ga('create', 'UA-105379506-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>

@@ -2,7 +2,8 @@
 @import 'mixins';
 
 body {
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   color: $darkgray;
   background-color: $white;
   height: 100%;
@@ -15,11 +16,13 @@ a {
     text-decoration: underline;
   }
   &:active {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -65,7 +68,7 @@ main {
 }
 
 nav {
-  background-color: rgba($white, .85);
+  background-color: rgba($white, 0.85);
   backdrop-filter: blur(10px);
   font-weight: 500;
   position: fixed;
@@ -85,7 +88,7 @@ nav {
 
 .brand {
   display: inline-block;
-  padding: 1em .5em;
+  padding: 1em 0.5em;
   color: $gray;
   text-decoration: none;
   position: absolute;
@@ -102,7 +105,7 @@ nav {
       display: inline;
       a {
         display: inline-block;
-        padding: 1em .5em;
+        padding: 1em 0.5em;
       }
     }
   }
@@ -121,6 +124,11 @@ nav {
   &:hover {
     background-position: -100px 600px;
   }
+}
+
+.title {
+  margin-bottom: 1.5em;
+  font-size: 3em;
 }
 
 .logo {
@@ -238,10 +246,10 @@ nav {
   margin-top: 0;
   padding-top: 0;
   margin: 10px 0 0;
+}
 
-  .button {
-    margin-bottom: 1em;
-  }
+.cfp-close {
+  margin: -1em 0 2em;
 }
 
 .fine-text {
@@ -283,7 +291,7 @@ a.button {
   color: #000;
   // box-shadow: 7px 7px 0 $paleorange;
   font-weight: bold;
-  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 15px;
   border: 5px solid #000;
 
@@ -336,7 +344,7 @@ a.button {
   }
 
   .no-talk {
-    color: rgba($darkgray, .5);
+    color: rgba($darkgray, 0.5);
   }
 
   td {
@@ -359,20 +367,20 @@ a.button {
 
   summary {
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.3s;
     outline: 0;
     user-select: none;
   }
 
   summary + * {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   details {
     p {
-      margin-top: .5em;
+      margin-top: 0.5em;
       padding-top: 0;
-      font-size: .9em;
+      font-size: 0.9em;
     }
 
     .details {
@@ -381,9 +389,9 @@ a.button {
   }
 
   .by {
-    padding-left: .25em;
+    padding-left: 0.25em;
     display: inline-block;
-    color: opacify(#fff, .7);
+    color: opacify(#fff, 0.7);
 
     img {
       object-fit: cover;
@@ -392,7 +400,7 @@ a.button {
     }
 
     a {
-      color: #fff
+      color: #fff;
     }
   }
 }
@@ -515,7 +523,7 @@ a.button {
 
 .workshop-schedule {
   margin-bottom: 2em;
-   dt {
+  dt {
     display: inline-block;
     font-weight: bold;
     margin-bottom: 0.5em;
@@ -540,7 +548,6 @@ a.button {
   color: #000;
   padding: 1em;
 }
-
 
 @media (max-width: 500px) {
   a.special-btn__call {
@@ -571,7 +578,7 @@ a.button {
     text-align: right;
   }
 
-  nav .sub-container{
+  nav .sub-container {
     display: flex;
   }
 
@@ -596,7 +603,7 @@ a.button {
   }
 
   nav {
-    a.special-btn__call{
+    a.special-btn__call {
       display: inline-block;
       margin-top: 1em;
     }
