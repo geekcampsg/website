@@ -111,6 +111,22 @@ nav {
   }
 }
 
+.main-nav {
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  li {
+    & + li {
+      margin-left: 2rem;
+    }
+  }
+  a {
+    color: #999;
+    font-size: 14px;
+  }
+}
+
 .hero {
   padding: 3em 0;
   color: $white;
@@ -624,4 +640,43 @@ a.button {
   .villages-holder {
     flex-direction: row;
   }
+}
+
+.past-events {
+  background: #fff;
+  margin: 0 auto 3rem;
+  padding: 2em;
+  color: $darkgray;
+
+  h2 {
+    color: $originalgreen;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.schedule {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 1rem 0;
+
+  h3 {
+    margin-bottom: 0.5em;
+    color: $mouldygreen;
+  }
+}
+.schedule-item {
+  margin-bottom: 2rem;  
+}
+
+.schedule-speaker {
+  margin-bottom: 0.5em;
+  color: $gray;
+}
+.past-event-date {
+  font-size: 14px;
+  color: $gray;
 }
