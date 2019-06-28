@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ .Title }}</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="geekcamp singapore" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="favicon.png" />
-  </head>
-  <body>
-    <div id="fb-root"></div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="geekcamp singapore - past events" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+  <title>{{ .Title }}</title>
+</head>
+<body>
+  <div id="fb-root"></div>
     <script>
       (function(d, s, id) {
         var js,
@@ -23,8 +23,8 @@
         fjs.parentNode.insertBefore(js, fjs);
       })(document, 'script', 'facebook-jssdk');
     </script>
-    <main>
-      <nav>
+  <main>
+    <nav>
         <div class="sub-container">
           <a class="brand" href="/">Geekcamp Singapore</a>
           <ul class="main-nav">
@@ -56,31 +56,35 @@
           </ul>
         </div>
       </nav>
-      <section class="hero">
-        <div class="sub-container">
-          <h1 class="title">GeekcampSG 2019</h1>
-          <h1 class="logo">
-            <img src="/images/geekcamp-logo-white.png" alt="Geekcamp.SG" />
-          </h1>
-          <div class="hero-text">
-            <p class="conf-date">19th Oct 2019</p>
-            <p class="conf-venu">Venue: TBA</p>
-            <a
-              target="_blank"
-              href="https://www.papercall.io/geekcamppsg2019"
-              class="button hero-button"
-              ><strong>🗳 CFP is now open!</strong> 🖍</a
-            >
+    <div class="hero">
+      <div class="sub-container">
+        <h1>Past GeekcampSG Events</h1>
+          <div>
+            {{ $archive := $.Site.Data.archive }}
+            {{ range sort $archive "year" "asc" }}
+            <div class="past-events">
+              <h2>GeekcampSG {{ .year }}</h2>
+              <div class="past-event-date">{{.date}}</div>
+              <ul class="schedule">
+              {{ range .talks }}
+                <li class="schedule-item">
+                  <h3>{{ .title }}</h3>
+                  
+                  <div class="schedule-speaker">{{ .speaker }}</div>
+                  
+                  <div class="schedule-summary">{{ .summary }}</div>
+                </li>
+              {{ end }}
+              </ul>
+            </div>
+            {{ end }}
           </div>
-          <p class="cfp-close">closes 1 Aug 2019, 0900 SGT</p>
-          <p class="hero-desc">
-            Geekcamp Singapore is a one day event that brings together hundreds
-            of geeks to share about technologies and knowledge.
-          </p>
-        </div>
-      </section>
+      </div>
 
-      <footer class="footer">
+    </div>
+  </main>
+
+  <footer class="footer">
         <div class="sub-container">
           <div class="footer-menu">
             <ul>
@@ -131,5 +135,5 @@
       ga('create', 'UA-105379506-1', 'auto');
       ga('send', 'pageview');
     </script>
-  </body>
+</body>
 </html>
