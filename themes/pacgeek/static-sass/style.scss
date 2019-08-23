@@ -67,6 +67,10 @@ main {
   flex-direction: column;
 }
 
+.details {
+  margin-bottom: 10rem;
+}
+
 nav {
   background-color: rgba($white, 0.85);
   backdrop-filter: blur(10px);
