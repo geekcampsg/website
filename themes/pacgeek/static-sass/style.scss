@@ -68,7 +68,7 @@ main {
 }
 
 .details {
-  margin-bottom: 10rem;
+  margin-bottom: 6rem;
 }
 
 nav {
@@ -430,17 +430,7 @@ a.button {
 }
 
 #coc {
-  padding-top: 3em;
-  padding-bottom: 3em;
-
-  p small {
-    color: $gray;
-    font-size: 0.9em;
-  }
-
-  .header-title {
-    @include overlap-rects($aquamarine, $peach);
-  }
+  padding-top: 4rem;
 }
 
 #venue {
