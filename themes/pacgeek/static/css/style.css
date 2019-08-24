@@ -768,19 +768,7 @@ a.button {
     #schedule .by a {
       color: #fff; }
 
-#coc {
-  padding-top: 3em;
-  padding-bottom: 3em; }
-  #coc p small {
-    color: #999;
-    font-size: 0.9em; }
-  #coc .header-title {
-    display: inline-block;
-    padding: 0.5em 0.5em;
-    color: white;
-    background-color: #0BBCD6;
-    box-shadow: 7px 7px 0 #FF8B8B;
-    font-weight: 400; }
+
 
 #venue {
   padding-top: 3em; }
