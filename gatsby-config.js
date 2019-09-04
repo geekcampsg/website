@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Geekcamp Singapore 2019`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `A one day event that brings together hundreds of geeks to share about technologies and knowledge.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
