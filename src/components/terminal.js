@@ -123,7 +123,9 @@ export default () => {
             ref={inputRef}
             onKeyPress={handleKeyPress}
             className="input"
-            type="email" autocorrect="off" autocapitalize="none
+            type="email"
+            autocorrect="off"
+            autocapitalize="none"
           ></input>
         </code>
       </Console.Code>
