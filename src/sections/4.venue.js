@@ -1,7 +1,7 @@
 import React from "react"
 
 export default () => (
-  <section className="section-venue">
+  <section className="section-venue" id="venue">
     <div className="contain">
       <div className="vessel cols">
         <div className="left">

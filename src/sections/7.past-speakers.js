@@ -65,7 +65,7 @@ export default () => {
     }
   `)
   return (
-    <section className="section-past-speakers">
+    <section className="section-past-speakers" id="past-speakers">
       <div className="contain">
         <div className="vessel cols cols--alt">
           <div className="left">

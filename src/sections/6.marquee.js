@@ -67,7 +67,7 @@ const tags = [
 const shuffled = shuffle(tags)
 
 export default () => (
-  <Marquee>
+  <Marquee id="marquee">
     <div className="text">{shuffled.join(".")}.</div>
     <div className="text">{shuffled.join(".")}.</div>
   </Marquee>

@@ -63,7 +63,7 @@ const ScheduleItem = styled.li`
 `
 
 export default () => (
-  <section className="section-schedule">
+  <section className="section-schedule" id="schedule">
     <div className="contain">
       <div className="vessel cols">
         <div className="left">
@@ -171,7 +171,7 @@ export default () => (
                 built a DApp of your own, running on the Ethereum blockchain.
               </p>
               <h3 style={{ margin: "3rem 0" }}>OR</h3>
-              <h3>Workshop 2: Virtual Network Testbed Using GNS3 (Workshop)</h3>
+              <h3>Workshop 2: Virtual Network Testbed Using GNS3</h3>
               <strong>Hazwan Hassan</strong>
               <p>
                 Ever wanted to build complex virtual networks to test and
