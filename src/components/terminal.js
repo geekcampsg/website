@@ -81,7 +81,7 @@ export default () => {
         val = "Location to be announced!"
       } else if (cmd.match(/^speakers$/)) {
         val =
-          "Chang Sau Sheong, Subhransu Behera, Muhammad Hazwan, Michael Cheng, and many more"
+          "Chang Sau Sheong, Subhransu Behera, Muhammad Hazwan, Michael Cheng, and many more (--all)"
       } else {
         val = `command not found: ${cmd}`
       }
@@ -123,6 +123,7 @@ export default () => {
             ref={inputRef}
             onKeyPress={handleKeyPress}
             className="input"
+            type="email" autocorrect="off" autocapitalize="none
           ></input>
         </code>
       </Console.Code>
