@@ -50,7 +50,7 @@ export default () => {
   `)
 
   return (
-    <section className="section-speakers">
+    <section className="section-speakers" id="speakers">
       <div className="contain">
         <div className="vessel cols">
           <div className="left">

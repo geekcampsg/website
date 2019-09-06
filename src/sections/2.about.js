@@ -15,7 +15,7 @@ const AboutText = styled.p`
 `
 
 export default () => (
-  <section className="section-about">
+  <section className="section-about" id="about">
     <Images />
     <div className="contain">
       <div className="vessel cols">

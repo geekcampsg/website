@@ -63,7 +63,7 @@ const ScheduleItem = styled.li`
 `
 
 export default () => (
-  <section className="section-schedule">
+  <section className="section-schedule" id="schedule">
     <div className="contain">
       <div className="vessel cols">
         <div className="left">
