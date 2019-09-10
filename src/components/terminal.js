@@ -46,6 +46,16 @@ export default () => {
     "Enter command. Type help to see available commands",
   ])
 
+  const cmdWithoutArg = [
+    "help",
+    "pwd",
+    "clear",
+    "ls",
+    "register",
+    "location",
+    "dir",
+  ]
+
   const inputRef = useRef()
   useEffect(() => {
     inputRef.current.focus()
@@ -56,35 +66,54 @@ export default () => {
     if (e.which === 13) {
       let newLog = [...log]
       const userInput = e.target.value
-      const cmd = userInput.trim()
+      const trimmed = userInput.trim()
+      const matched = trimmed.match(/^(\S+)((\s+)(.*))?$/)
+      const cmd = matched[1]
+      const arg = matched[matched.length - 1]
+
       let val
 
-      if (cmd === "help") {
-        // val = ["> register", "> speakers", "> location"]
-        val = "Available commands: register, speakers, location"
-      } else if (cmd.match(/^pw(d$|d\s+)/)) {
-        val = "/geekcamp/2019"
-      } else if (cmd.match(/^clea(r$|r\s+)/)) {
-        setLog([])
-        e.target.value = ""
-        return
-      } else if (cmd.match(/^l(s$|s\s+)/)) {
-        val = "These are not the files you are looking for."
-      } else if (cmd.match(/^echo\s*|^print\s*/)) {
-        val =
-          (cmd.match(/^echo\s*(.*)/) && cmd.match(/^echo\s*(.*)/)[1]) ||
-          (cmd.match(/^print\s*(.*)/) && cmd.match(/^print\s*(.*)/)[1])
-        val = val || "\n" // print newline if no args
-      } else if (cmd.match(/^registe(r$|r\s+)/)) {
-        val = "Registration will open soon!"
-      } else if (cmd.match(/^location$/)) {
-        val = "Location to be announced!"
-      } else if (cmd.match(/^speakers$/)) {
-        val =
-          "Chang Sau Sheong, Subhransu Behera, Muhammad Hazwan, Michael Cheng, and many more (--all)"
+      if (cmdWithoutArg.indexOf(cmd) > -1) {
+        // display error if arguments found
+        if (arg) {
+          val = `${cmd}: illegal option ${arg}`
+        } else {
+          if (cmd === "help") {
+            // val = ["> register", "> speakers", "> location"]
+            val = "Available commands: register, speakers, location"
+            // } else if (cmd.match(/^pw(d$|d\s+)/)) {
+          } else if (cmd === "pwd") {
+            val = "/geekcamp/2019"
+          } else if (cmd === "clear") {
+            setLog([])
+            e.target.value = ""
+            return
+          } else if (cmd === "register") {
+            val = "Registration will open soon!"
+          } else if (cmd === "location") {
+            val = "Location to be announced!"
+          } else if (cmd === "dir") {
+            val = "Your dir has no power here"
+          } else if (cmd === "ls") {
+            val = "These are not the files you are looking for."
+          }
+        }
       } else {
-        val = `command not found: ${cmd}`
+        if (cmd === "print" || cmd === "echo") {
+          val = arg || "" // print newline if no args
+        } else if (cmd === "speakers") {
+          if (arg && arg === "--all") {
+            val =
+              "Chang Sau Sheong, Subhransu Behera, Muhammad Hazwan, Michael Cheng, Kenrick, Renaldi Gondosubroto, Hazwan Hassan, Yos Riady, Sudharshan, Liu Weiyuan, Dipesh Monga, Viral Parmar"
+          } else {
+            val =
+              "Chang Sau Sheong, Subhransu Behera, Muhammad Hazwan, Michael Cheng, and many more (--all)"
+          }
+        } else {
+          val = `command not found: ${cmd}`
+        }
       }
+
       newLog.push(`$ ${cmd.split(/\s+/)[0]}`)
       if (Array.isArray(val)) {
         newLog = newLog.concat(val)
@@ -95,11 +124,11 @@ export default () => {
       e.target.value = ""
 
       // gtm push
-      window.dataLayer.push({
-        input: userInput,
-        output: val,
-        event: "terminalResponse",
-      })
+      // window.dataLayer.push({
+      //   input: userInput,
+      //   output: val,
+      //   event: "terminalResponse",
+      // })
     }
 
     return false
