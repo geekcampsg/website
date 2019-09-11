@@ -8,6 +8,10 @@ const StyledHeader = styled.header`
   padding-top: 2rem;
   text-align: center;
 
+  img {
+    margin-bottom: 0;
+  }
+
   @media screen and (min-width: 768px) {
     padding-top: 3rem;
     text-align: left;
