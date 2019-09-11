@@ -5,13 +5,20 @@ import styled from "styled-components"
 import Logo from "../images/geekcamp-logo.svg"
 
 const StyledHeader = styled.header`
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   text-align: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
 
   img {
     margin-bottom: 0;
+    max-width: 60%;
   }
 
+  @media screen and (min-width: 481px) {
+    padding-top: 2rem;
+  }
   @media screen and (min-width: 768px) {
     padding-top: 3rem;
     text-align: left;
