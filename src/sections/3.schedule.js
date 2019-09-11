@@ -48,6 +48,7 @@ const ScheduleItem = styled.li`
   }
 
   strong {
+    display: block;
     color: #808081;
     font-weight: normal;
     font-size: 1.333333333rem;

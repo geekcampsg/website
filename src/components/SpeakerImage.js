@@ -27,7 +27,7 @@ const Figure = styled.figure`
     padding: 0 0.6rem 0.6rem;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: ${props => (props.past ? ".888888889rem" : "1.5rem")};
     line-height: 1;
     font-family: "Staatliches", "Franklin Gothic Medium", "Arial Narrow", Arial;
 
@@ -36,6 +36,12 @@ const Figure = styled.figure`
       font-size: 2.333333333rem;
     }
   }
+
+  span {
+    display: block;
+    font-size: 1.333333333rem;
+  }
+
   ${props =>
     props.portrait &&
     `
@@ -43,13 +49,18 @@ const Figure = styled.figure`
     `}
 `
 
-export default ({ name, portrait, ...props }) => (
-  <Figure portrait={portrait}>
+export default ({ name, portrait, past = false, position = "", ...props }) => (
+  <Figure past={past} portrait={portrait}>
     <Img
       alt={name}
       style={{ position: "absolute", width: "100%", height: "100%" }}
       {...props}
     />
-    {name && <figcaption>{name}</figcaption>}
+    {name && (
+      <figcaption>
+        {name}
+        {position && <span>{position}</span>}
+      </figcaption>
+    )}
   </Figure>
 )

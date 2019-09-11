@@ -45,7 +45,7 @@ const Row = styled.div`
 export default () => (
   <section className="section-testimonials" id="testimonials">
     <div className="contain">
-      <div className="vessel cols cols--alt">
+      <div className="vessel cols ">
         <div className="left">
           <h2>
             What

@@ -51,18 +51,19 @@ section {
   margin-bottom: 2rem;
 }
 
-.section-about h2::after {
+.section-about h2::after,
+.section-testimonials h2::after {
   background-color: var(--red);
 }
-.section-schedule h2::after {
+.section-schedule h2::after,
+.section-coc h2::after {
   background-color: var(--green);
 }
 .section-venue h2::after,
 .section-past-speakers h2::after {
   background-color: var(--blue);
 }
-.section-speakers h2::after,
-.section-testimonials h2::after {
+.section-speakers h2::after {
   background-color: var(--yellow);
 }
 
@@ -95,7 +96,7 @@ a:hover {
     padding-right: 3rem;
   }
   h2 {
-    font-size: 5.333rem;
+    font-size: 4.888888889rem;
     margin-bottom: 3.5rem;
   }
   h2 br {
@@ -105,17 +106,13 @@ a:hover {
     display: flex;
   }
   .left {
-    width: 35%;
+    width: 32%;
+    margin-right: 3%;
   }
   .right {
-    margin-left: 5rem;
     width: 65%;
   }
   .cols--alt .left {
     width: 32%;
-  }
-  .cols--alt .right {
-    width: 68%;
-    margin-left: 4rem;
   }
 }
