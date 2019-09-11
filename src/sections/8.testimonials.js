@@ -6,8 +6,24 @@ import Console from "../components/console"
 const Row = styled.div`
   display: flex;
 
-  .pre {
-    flex: 1;
+  .testimonials-holder {
+    margin-top: 0;
+    color: var(--green);
+    flex-shrink: 0;
+
+    @media screen and (max-width: 480px) {
+      width: 50%;
+      code {
+        display: inline;
+        &::before {
+          display: none;
+        }
+        &.break {
+          display: block;
+          margin-bottom: 1rem;
+        }
+      }
+    }
   }
 
   .ascii {
@@ -56,10 +72,7 @@ export default () => (
         <div className="right">
           <Console>
             <Row>
-              <Console.Code
-                lineNumbers
-                style={{ marginTop: "0", color: "var(--green)", flexShrink: 0 }}
-              >
+              <Console.Code className="testimonials-holder" lineNumbers>
                 <code>/*</code>
                 <code>Talking about browser </code>
                 <code>extensions was never </code>
@@ -69,7 +82,7 @@ export default () => (
                 <code>\o/</code>
                 <code>- Jyotsna Gupta</code>
                 <code>*/</code>
-                <code> </code>
+                <code className="break"> </code>
                 <code>/*</code>
                 <code>Subtle things why I</code>
                 <code>love SG: Singapore</code>

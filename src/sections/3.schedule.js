@@ -25,22 +25,24 @@ const ScheduleItem = styled.li`
     margin-left: -1px;
     left: 0;
     top: 0.277777778rem;
-    transform: translateX(-50%);
     z-index: 1;
   }
 
   &::after {
     content: "";
     position: absolute;
-    left: -1px;
     top: 0.277777778rem;
     bottom: -0.277777778rem;
     border-left: 1px solid #2b292d;
+    left: 0;
+    margin-left: 0.625rem;
   }
 
   time {
+    display: block;
     font-size: 1.777777778rem;
     line-height: 1;
+    margin: 0.5rem 0;
   }
 
   &:last-child::after {
@@ -59,6 +61,15 @@ const ScheduleItem = styled.li`
       position: absolute;
       left: -13rem;
       top: 0;
+      margin: 0;
+    }
+
+    &::before {
+      transform: translateX(-50%);
+    }
+    &::after {
+      left: -1px;
+      margin-left: 0;
     }
   }
 `

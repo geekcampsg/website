@@ -12,6 +12,10 @@ const LandingSection = styled.section`
   flex-direction: column;
 `
 
+const HeadeOuter = styled.div`
+  position: relative;
+`
+
 const Main = styled.div`
   flex: 1;
   padding: 1rem;
@@ -60,7 +64,9 @@ export default ({ title }) => {
   const data = useContext(SiteContext)
   return (
     <LandingSection className="contain">
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <HeadeOuter>
+        <Header siteTitle={data.site.siteMetadata.title} />
+      </HeadeOuter>
       <Main>
         <Console>
           <Console.Controls />
