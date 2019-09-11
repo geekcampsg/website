@@ -7,11 +7,11 @@ const Images = styled.div`
   background: #ccc;
   width: 100%;
   background: url(${Photos}) center;
-  margin-bottom: 2rem;
+  margin-bottom: 3.5rem;
 `
 
 const AboutText = styled.p`
-  font-size: 1.777777778rem;
+  font-size: 1.555555556rem;
 `
 
 export default () => (

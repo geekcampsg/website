@@ -5,12 +5,8 @@ import SpeakerImage from "../components/SpeakerImage"
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
-
-  @media screen and (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 `
 
 export default () => {
@@ -67,7 +63,7 @@ export default () => {
   return (
     <section className="section-past-speakers" id="past-speakers">
       <div className="contain">
-        <div className="vessel cols cols--alt">
+        <div className="vessel cols">
           <div className="left">
             <h2>
               Our Past <br /> Speakers
@@ -79,32 +75,38 @@ export default () => {
                 portrait
                 name="Dr Vivian Balakrishnan"
                 fixed={data.vivian.childImageSharp.fixed}
+                past
               />
               <SpeakerImage
                 portrait
                 name="Sebastiaan Deckers"
                 objectPosition="0% 0%"
+                past
                 fixed={data.sebastiaan.childImageSharp.fixed}
               />
               <SpeakerImage
                 portrait
                 name="Michelle Lye"
                 fixed={data.michelle.childImageSharp.fixed}
+                past
               />
               <SpeakerImage
                 portrait
                 name="Omer Iqbal"
                 fixed={data.omer.childImageSharp.fixed}
+                past
               />
               <SpeakerImage
                 portrait
                 name="Bunnie Huang"
                 fixed={data.bunnie.childImageSharp.fixed}
+                past
               />
               <SpeakerImage
                 portrait
                 name="Melvin Zhang"
                 fixed={data.melvin.childImageSharp.fixed}
+                past
               />
             </Grid>
           </div>
