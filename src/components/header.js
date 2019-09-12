@@ -7,7 +7,6 @@ import Logo from "../images/geekcamp-logo.svg"
 const StyledHeader = styled.header`
   padding-top: 1.5rem;
   text-align: center;
-  position: absolute;
   left: 0;
   width: 100%;
 
