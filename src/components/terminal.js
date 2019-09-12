@@ -65,13 +65,18 @@ export default () => {
     // enter is pressed
     if (e.which === 13) {
       let newLog = [...log]
+      let val
       const userInput = e.target.value
       const trimmed = userInput.trim()
+      if (!trimmed) {
+        newLog.push("$")
+        setLog(newLog)
+        e.target.value = ""
+        return false
+      }
       const matched = trimmed.match(/^(\S+)((\s+)(.*))?$/)
       const cmd = matched[1]
       const arg = matched[matched.length - 1]
-
-      let val
 
       if (cmdWithoutArg.indexOf(cmd) > -1) {
         // display error if arguments found
