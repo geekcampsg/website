@@ -12,7 +12,7 @@ const Terminal = styled(Console)`
     background: transparent;
     border: none;
     line-height: 1.25;
-    color: yellow;
+    color: #fff;
     flex: 1;
 
     &:focus {
@@ -38,6 +38,13 @@ const Terminal = styled(Console)`
   .prompt {
     margin-right: 0.5rem;
     color: var(--green);
+  }
+
+  .output a {
+    color: var(--green);
+    &:hover {
+      color: var(--blue);
+    }
   }
 `
 
@@ -94,7 +101,9 @@ export default () => {
             e.target.value = ""
             return
           } else if (cmd === "register") {
-            val = "Registration will open soon!"
+            val =
+              "Register now at <a href='#'>https://geekcampsg2019.eventbrite.sg</a>"
+            window.open("https://geekcampsg2019.eventbrite.sg")
           } else if (cmd === "location") {
             val = "Location to be announced!"
           } else if (cmd === "dir") {
@@ -148,7 +157,7 @@ export default () => {
       <Console.Code>
         <div className="output">
           {log.map((entry, i) => (
-            <code key={i}>{entry}</code>
+            <code key={i} dangerouslySetInnerHTML={{ __html: entry }} />
           ))}
         </div>
         <code className="promptline">
