@@ -33,7 +33,10 @@ const Figure = styled.figure`
 
     @media screen and (min-width: 768px) {
       padding: 0 1.5rem 1rem;
-      font-size: 2.333333333rem;
+      font-size: 1.888888889rem;
+    }
+    @media screen and (min-width: 960px) {
+      font-size: 2.333333rem;
     }
   }
 
