@@ -107,7 +107,7 @@ export default () => {
           } else if (cmd === "location") {
             val = "Location to be announced!"
           } else if (cmd === "dir") {
-            val = "Your dir has no power here"
+            val = "Bad command or file name"
           } else if (cmd === "ls") {
             val = "These are not the files you are looking for."
           }
