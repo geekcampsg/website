@@ -59,5 +59,11 @@ module.exports = {
         dataLayerName: "dataLayer",
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
   ],
 }
