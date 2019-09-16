@@ -182,16 +182,6 @@ export default () => (
                 programming language. By the end of the workshop, you’ll have
                 built a DApp of your own, running on the Ethereum blockchain.
               </p>
-              <h3 style={{ margin: "3rem 0" }}>OR</h3>
-              <h3>Workshop 2: Virtual Network Testbed Using GNS3</h3>
-              <strong>Hazwan Hassan</strong>
-              <p>
-                Ever wanted to build complex virtual networks to test and
-                practice networking concepts or build a test production
-                environment for practicing software development but find
-                building such networks difficult? In this workshop, learn about
-                GNS3 and how to build and manage virtual networks visually.
-              </p>
             </ScheduleItem>
             <ScheduleItem>
               <h3>
@@ -224,10 +214,22 @@ export default () => (
               <time dateTime="2019-10-19T15:50:00">1550 - 1620</time>
             </ScheduleItem>
             <ScheduleItem>
+              <h3>Workshop 2: Virtual Network Testbed Using GNS3</h3>
+              <strong>Hazwan Hassan</strong>
+              <time dateTime="2019-10-19T16:20:00">1620 - 1710</time>
+              <p>
+                Ever wanted to build complex virtual networks to test and
+                practice networking concepts or build a test production
+                environment for practicing software development but find
+                building such networks difficult? In this workshop, learn about
+                GNS3 and how to build and manage virtual networks visually.
+              </p>
+            </ScheduleItem>
+            <ScheduleItem>
               <h3>
                 WebThings: A secure gateway to connect your things to Internet
               </h3>
-              <time dateTime="2019-10-19T16:20:00">1620 - 1650</time>
+              <time dateTime="2019-10-19T17:10:00">1710 - 1740</time>
               <strong>Dipesh Monga</strong>
               <p>
                 With the advent of the IoT, are we really making our lives
@@ -238,20 +240,8 @@ export default () => (
               </p>
             </ScheduleItem>
             <ScheduleItem>
-              <h3>Serverless Authentication with JWT</h3>
-              <time dateTime="2019-10-19T16:50:00">1650 - 1720</time>
-              <strong>Viral Parmar</strong>
-              <p>
-                Talk is about the JWT Authentication with Auth0 which plays an
-                important role in modern day application development where it is
-                a lot more than just the login screen, People will get know
-                about different ways of authentication and authorization,
-                concepts that make up modern identity.
-              </p>
-            </ScheduleItem>
-            <ScheduleItem>
               <h3>The Singapore Tech Community - A 10 year retrospective</h3>
-              <time dateTime="2019-10-19T17:20:00">1720 - 1750</time>
+              <time dateTime="2019-10-19T17:40:00">1740 - 1810</time>
               <strong>Michael Cheng</strong>
               <p>
                 A talk on the development of the local technology meetup scene
@@ -263,7 +253,7 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>Closing</h3>
-              <time dateTime="2019-10-19T17:50:00">1750 - 1755</time>
+              <time dateTime="2019-10-19T18:10:00">1810 - 1815</time>
             </ScheduleItem>
           </Schedule>
         </div>
