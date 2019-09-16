@@ -102,7 +102,7 @@ export default () => {
             return
           } else if (cmd === "register") {
             val =
-              "Register now at <a href='#'>https://geekcampsg2019.eventbrite.sg</a>"
+              "Register now at <a href='https://geekcampsg2019.eventbrite.sg' target='_blank'>https://geekcampsg2019.eventbrite.sg</a>"
             window.open("https://geekcampsg2019.eventbrite.sg")
           } else if (cmd === "location") {
             val = "Location to be announced!"
