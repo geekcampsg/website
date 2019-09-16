@@ -74,12 +74,14 @@ export default () => {
               <SpeakerImage
                 portrait
                 name="Dr Vivian Balakrishnan"
+                position="Minister"
                 fixed={data.vivian.childImageSharp.fixed}
                 past
               />
               <SpeakerImage
                 portrait
                 name="Sebastiaan Deckers"
+                position="Staff Software Engineer, Zendesk"
                 objectPosition="0% 0%"
                 past
                 fixed={data.sebastiaan.childImageSharp.fixed}
@@ -87,23 +89,27 @@ export default () => {
               <SpeakerImage
                 portrait
                 name="Michelle Lye"
+                position="Product Manager, Mudahmy"
                 fixed={data.michelle.childImageSharp.fixed}
                 past
               />
               <SpeakerImage
                 portrait
                 name="Omer Iqbal"
+                position="iOS Dev, SEA"
                 fixed={data.omer.childImageSharp.fixed}
                 past
               />
               <SpeakerImage
                 portrait
                 name="Bunnie Huang"
+                position="Hacker"
                 fixed={data.bunnie.childImageSharp.fixed}
                 past
               />
               <SpeakerImage
                 portrait
+                position="VP of Software, The Intelligent Warehouse"
                 name="Melvin Zhang"
                 fixed={data.melvin.childImageSharp.fixed}
                 past

@@ -46,6 +46,52 @@ export default () => {
           }
         }
       }
+      kenrick: file(relativePath: { eq: "speakers/featured/kenrick.jpeg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      renaldi: file(
+        relativePath: { eq: "speakers/featured/Renaldi-Gondosubroto.png" }
+      ) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      yos: file(relativePath: { eq: "speakers/featured/yosss.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      sudharshan: file(
+        relativePath: { eq: "speakers/featured/Sudharshan.jpeg" }
+      ) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      weiyuan: file(relativePath: { eq: "speakers/featured/weiyuan.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      dipesh: file(relativePath: { eq: "speakers/featured/dipesh.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
 
@@ -64,18 +110,52 @@ export default () => {
             <Grid>
               <SpeakerImage
                 name="Chang Sau Sheong"
+                position="CEO, SP Digital"
                 fixed={data.sausheong.childImageSharp.fixed}
               />
               <SpeakerImage
-                name="Subhransu Behera"
-                fixed={data.subh.childImageSharp.fixed}
+                name="Kenrick"
+                position="Front-End Engineer, Shopee"
+                fixed={data.kenrick.childImageSharp.fixed}
               />
               <SpeakerImage
-                name="Muhammad Hazwan"
+                name="Renaldi Gondosubroto"
+                position="Founder and CEO, GReS Studio"
+                fixed={data.renaldi.childImageSharp.fixed}
+              />
+              <SpeakerImage
+                name="Hazwan Hassan"
+                position="Cyber Security Enthusiast"
                 fixed={data.hazwan.childImageSharp.fixed}
               />
               <SpeakerImage
+                name="Subhransu Behera"
+                position="Principal Software Engineer, SP Digital"
+                fixed={data.subh.childImageSharp.fixed}
+              />
+              <SpeakerImage
+                name="Yos Riady"
+                position="Software Engineer, TenX"
+                fixed={data.yos.childImageSharp.fixed}
+              />
+              <SpeakerImage
+                name="Sudharshan"
+                position="Hacker, Maker, Coder, Tech-Enthusiast"
+                fixed={data.sudharshan.childImageSharp.fixed}
+              />
+              <SpeakerImage
+                name="Liu Weiyuan"
+                position="Full Stack Engineer, Rakuten Viki"
+                fixed={data.weiyuan.childImageSharp.fixed}
+              />
+              <SpeakerImage
+                name="Dipesh Monga"
+                position="Tech Speaker, Mozilla"
+                fixed={data.dipesh.childImageSharp.fixed}
+              />
+              <SpeakerImage
                 name="Michael Cheng"
+                position="Lead Engineer, GovTech"
                 fixed={data.michael.childImageSharp.fixed}
               />
             </Grid>
