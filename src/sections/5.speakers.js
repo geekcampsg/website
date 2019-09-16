@@ -64,18 +64,22 @@ export default () => {
             <Grid>
               <SpeakerImage
                 name="Chang Sau Sheong"
+                position="CEO, SP Digital"
                 fixed={data.sausheong.childImageSharp.fixed}
               />
               <SpeakerImage
                 name="Subhransu Behera"
+                position="Principal Software Engineer, SP Digital"
                 fixed={data.subh.childImageSharp.fixed}
               />
               <SpeakerImage
-                name="Muhammad Hazwan"
+                name="Hazwan Hassan"
+                position="Cyber Security Enthusiast"
                 fixed={data.hazwan.childImageSharp.fixed}
               />
               <SpeakerImage
                 name="Michael Cheng"
+                position="Lead Engineer, GovTech"
                 fixed={data.michael.childImageSharp.fixed}
               />
             </Grid>
