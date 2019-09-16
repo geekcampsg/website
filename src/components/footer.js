@@ -62,10 +62,7 @@ export default ({ siteTitle }) => (
       <Inner className="vessel">
         <div style={{ flexBasis: "25%" }}>
           <h4 style={{ color: "var(--red)" }}>Register Tickets</h4>
-          <p>
-            Conference registration will open soon! It’s on the house for
-            everyone.
-          </p>
+          <p>Conference registration has opened! Find it! 🧐</p>
         </div>
         <div>
           <h4 style={{ color: "var(--yellow)" }}>Geekcamp SG</h4>
