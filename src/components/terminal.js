@@ -138,11 +138,12 @@ export default () => {
       e.target.value = ""
 
       // gtm push
-      window.dataLayer.push({
-        input: userInput,
-        output: val,
-        event: "terminalResponse",
-      })
+      window.dataLayer &&
+        window.dataLayer.push({
+          input: userInput,
+          output: val,
+          event: "terminalResponse",
+        })
     }
 
     return false
