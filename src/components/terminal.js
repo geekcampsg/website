@@ -61,6 +61,7 @@ export default () => {
     "register",
     "location",
     "dir",
+    "date",
   ]
 
   const inputRef = useRef()
@@ -75,6 +76,7 @@ export default () => {
       let val
       const userInput = e.target.value
       const trimmed = userInput.trim()
+      let invalidCmd = false
       if (!trimmed) {
         newLog.push("$")
         setLog(newLog)
@@ -110,6 +112,8 @@ export default () => {
             val = "Bad command or file name"
           } else if (cmd === "ls") {
             val = "These are not the files you are looking for."
+          } else if (cmd === "date") {
+            val = "Saturday, 19th Oct 2019"
           }
         }
       } else {
@@ -123,12 +127,20 @@ export default () => {
             val =
               "Chang Sau Sheong, Subhransu Behera, Hazwan Hassan, Michael Cheng, and many more (--all)"
           }
+        } else if (cmd === "cd") {
+          val = "You are already where you are supposed to be."
+        } else if (cmd === "mkdir") {
+          val = "Permission denied"
         } else {
+          invalidCmd = true
           val = `command not found: ${cmd}`
         }
       }
-
-      newLog.push(`$ ${cmd.split(/\s+/)[0]}`)
+      if (invalidCmd) {
+        newLog.push(`$ ${cmd.split(/\s+/)[0]}`)
+      } else {
+        newLog.push(`$ ${trimmed}`)
+      }
       if (Array.isArray(val)) {
         newLog = newLog.concat(val)
       } else {
@@ -138,11 +150,12 @@ export default () => {
       e.target.value = ""
 
       // gtm push
-      window.dataLayer.push({
-        input: userInput,
-        output: val,
-        event: "terminalResponse",
-      })
+      window.dataLayer &&
+        window.dataLayer.push({
+          input: userInput,
+          output: val,
+          event: "terminalResponse",
+        })
     }
 
     return false

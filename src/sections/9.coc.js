@@ -1,46 +1,4 @@
 import React from "react"
-import styled from "styled-components"
-
-import Console from "../components/console"
-
-const Row = styled.div`
-  display: flex;
-
-  .pre {
-    flex: 1;
-  }
-
-  .ascii {
-    display: flex;
-  }
-  .ascii-holder {
-    overflow: hidden;
-    padding-left: 0;
-    margin-top: 0;
-    margin-left: auto;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    code {
-      font-family: monospace;
-      font-weight: bold;
-      font-size: 6px;
-      line-height: 6px;
-    }
-    @media screen and (min-width: 768px) {
-      code {
-        font-size: 7px;
-        line-height: 7px;
-      }
-    }
-    @media screen and (min-width: 960px) {
-      code {
-        font-size: 10px;
-        line-height: 10px;
-      }
-    }
-  }
-`
 
 export default () => (
   <section className="section-coc" id="coc">

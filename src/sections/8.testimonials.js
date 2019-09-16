@@ -1,8 +1,8 @@
+/* eslint-disable */
 import React from "react"
 import styled from "styled-components"
 
 import Console from "../components/console"
-
 const Row = styled.div`
   display: flex;
 
