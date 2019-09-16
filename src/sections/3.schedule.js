@@ -177,10 +177,8 @@ export default () => (
               <strong>Yos Riady</strong>
               <p>
                 Come and discover how you can write smart contracts and build
-                decentralized applications! You will learn blockchain
-                fundamentals and get a practical hands-on with the Solidity
-                programming language. By the end of the workshop, you’ll have
-                built a DApp of your own, running on the Ethereum blockchain.
+                decentralized applications! In this workshop, get a practical
+                hands-on with the Solidity programming language.
               </p>
             </ScheduleItem>
             <ScheduleItem>
