@@ -1,13 +1,26 @@
 import React from "react"
 import styled from "styled-components"
-import Photos from "../images/photos.jpg"
+import Photos1 from "../images/photos-1.jpg"
+import Photos2 from "../images/photos-2.jpg"
 
-const Images = styled.div`
-  height: 538px;
-  background: #ccc;
-  width: 100%;
-  background: url(${Photos}) center;
-  margin-bottom: 3.5rem;
+const Photos = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  figure {
+    flex: 1;
+  }
+  img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `
 
 const AboutText = styled.p`
@@ -16,7 +29,14 @@ const AboutText = styled.p`
 
 export default () => (
   <section className="section-about" id="about">
-    <Images />
+    <Photos>
+      <figure>
+        <img src={Photos1} alt="" />
+      </figure>
+      <figure>
+        <img src={Photos2} alt="" />
+      </figure>
+    </Photos>
     <div className="contain">
       <div className="vessel cols">
         <div className="left">
