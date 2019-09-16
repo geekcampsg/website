@@ -129,7 +129,7 @@ export default () => (
                 Implementing Open Source-Based Motion Controlled Robotic Arms
                 with Python and C
               </h3>
-              <time dateTime="2019-10-19T11:20:00">1120 - 1155</time>
+              <time dateTime="2019-10-19T11:20:00">1120 - 1150</time>
               <strong>Renaldi Gondosubroto</strong>
               <p>
                 This talk will demonstrate how to easily program two DIY open
@@ -177,10 +177,8 @@ export default () => (
               <strong>Yos Riady</strong>
               <p>
                 Come and discover how you can write smart contracts and build
-                decentralized applications! You will learn blockchain
-                fundamentals and get a practical hands-on with the Solidity
-                programming language. By the end of the workshop, you’ll have
-                built a DApp of your own, running on the Ethereum blockchain.
+                decentralized applications! In this workshop, get a practical
+                hands-on with the Solidity programming language.
               </p>
             </ScheduleItem>
             <ScheduleItem>

@@ -101,8 +101,7 @@ export default () => {
         <div className="vessel cols">
           <div className="left">
             <h2>
-              Featured
-              <br /> 2019
+              2019
               <br /> Speakers
             </h2>
           </div>
