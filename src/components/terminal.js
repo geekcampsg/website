@@ -118,7 +118,7 @@ export default () => {
         } else if (cmd === "speakers") {
           if (arg && arg === "--all") {
             val =
-              "Chang Sau Sheong, Subhransu Behera, Muhammad Hazwan, Michael Cheng, Kenrick, Renaldi Gondosubroto, Hazwan Hassan, Yos Riady, Sudharshan, Liu Weiyuan, Dipesh Monga, Viral Parmar"
+              "Chang Sau Sheong, Subhransu Behera, Muhammad Hazwan, Michael Cheng, Kenrick, Renaldi Gondosubroto, Hazwan Hassan, Yos Riady, Sudharshan, Liu Weiyuan, Dipesh Monga"
           } else {
             val =
               "Chang Sau Sheong, Subhransu Behera, Muhammad Hazwan, Michael Cheng, and many more (--all)"
