@@ -104,11 +104,11 @@ export default () => {
             return
           } else if (cmd === "register") {
             val =
-              "Register now at <a href='https://geekcampsg2019.eventbrite.sg' target='_blank'>https://geekcampsg2019.eventbrite.sg</a>"
+              "Register now at <a href='https://geekcampsg2019.eventbrite.sg' rel='noopener noreferrer' target='_blank'>https://geekcampsg2019.eventbrite.sg</a>"
             window.open("https://geekcampsg2019.eventbrite.sg")
           } else if (cmd === "location") {
             val =
-              "Shaw Foundation Alumni House, NUS. Auditorium Level 2, 11 Kent Ridge Drive, Singapore 119244"
+              "<a href='https://goo.gl/maps/f4TMkMJKBrrXtbWd6' rel='noopener noreferrer' target='_blank'>📍 Shaw Foundation Alumni House, NUS. Auditorium Level 2, 11 Kent Ridge Drive, Singapore 119244</a>"
           } else if (cmd === "dir") {
             val = "Bad command or file name"
           } else if (cmd === "ls") {
