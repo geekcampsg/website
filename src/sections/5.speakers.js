@@ -111,51 +111,61 @@ export default () => {
                 name="Chang Sau Sheong"
                 position="CEO, SP Digital"
                 fixed={data.sausheong.childImageSharp.fixed}
+                target="speaker-sau-sheong"
               />
               <SpeakerImage
                 name="Kenrick"
                 position="Front-End Engineer, Shopee"
                 fixed={data.kenrick.childImageSharp.fixed}
+                target="speaker-kendrick"
               />
               <SpeakerImage
                 name="Renaldi Gondosubroto"
                 position="Founder and CEO, GReS Studio"
                 fixed={data.renaldi.childImageSharp.fixed}
+                target="speaker-renaldi"
               />
               <SpeakerImage
                 name="Hazwan Hassan"
                 position="Cyber Security Enthusiast"
                 fixed={data.hazwan.childImageSharp.fixed}
+                target="speaker-hazwan"
               />
               <SpeakerImage
                 name="Subhransu Behera"
                 position="Principal Software Engineer, SP Digital"
                 fixed={data.subh.childImageSharp.fixed}
+                target="speaker-subh"
               />
               <SpeakerImage
                 name="Yos Riady"
                 position="Software Engineer, TenX"
                 fixed={data.yos.childImageSharp.fixed}
+                target="speaker-yos"
               />
               <SpeakerImage
                 name="Sudharshan"
                 position="Hacker, Maker, Coder, Tech-Enthusiast"
                 fixed={data.sudharshan.childImageSharp.fixed}
+                target="speaker-sudharshan"
               />
               <SpeakerImage
                 name="Liu Weiyuan"
                 position="Full Stack Engineer, Rakuten Viki"
                 fixed={data.weiyuan.childImageSharp.fixed}
+                target="speaker-weiyuan"
               />
               <SpeakerImage
                 name="Dipesh Monga"
                 position="Tech Speaker, Mozilla"
                 fixed={data.dipesh.childImageSharp.fixed}
+                target="speaker-dipesh"
               />
               <SpeakerImage
                 name="Michael Cheng"
                 position="Lead Engineer, GovTech"
                 fixed={data.michael.childImageSharp.fixed}
+                target="speaker-michael"
               />
             </Grid>
           </div>
