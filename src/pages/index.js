@@ -9,6 +9,7 @@ import "../components/main.css"
 import Landing from "../sections/1.landing"
 import About from "../sections/2.about"
 import Schedule from "../sections/3.schedule"
+import Venue from "../sections/4.venue"
 import Speakers from "../sections/5.speakers"
 import Marquee from "../sections/6.marquee"
 import PastSpeakers from "../sections/7.past-speakers"
@@ -24,6 +25,7 @@ const IndexPage = ({ data }) => {
       <Landing />
       <About />
       <Schedule />
+      <Venue />
       <Speakers />
       <Marquee />
       <PastSpeakers />
