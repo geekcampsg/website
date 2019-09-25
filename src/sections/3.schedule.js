@@ -94,15 +94,11 @@ export default () => (
               <time dateTime="2019-10-19T09:30:00">0930 - 0945</time>
             </ScheduleItem>
             <ScheduleItem>
-              <h3>Sponsor Talk</h3>
-              <time dateTime="2019-10-19T09:45:00">0945 - 0950</time>
-            </ScheduleItem>
-            <ScheduleItem>
               <h3>
                 How to create a web application in multiple programming
                 languages
               </h3>
-              <time dateTime="2019-10-19T09:50:00">0950 - 1020</time>
+              <time dateTime="2019-10-19T09:45:00">0945 - 1015</time>
               <strong>Chang Sau Sheong</strong>
               <p>
                 Tanuki is a polyglot web framework that allows you to develop
@@ -111,7 +107,7 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>Building Web-Based Audio Player for Obscure Audio Format</h3>
-              <time dateTime="2019-10-19T10:20:00">1020 - 1050</time>
+              <time dateTime="2019-10-19T10:15:00">1015 - 1045</time>
               <strong>Kenrick</strong>
               <p>
                 BRSTM is an audio file format that are used on Nintendo Wii
@@ -122,14 +118,14 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>Break</h3>
-              <time dateTime="2019-10-19T10:50:00">1050 - 1120</time>
+              <time dateTime="2019-10-19T10:45:00">1045 - 1115</time>
             </ScheduleItem>
             <ScheduleItem>
               <h3>
                 Implementing Open Source-Based Motion Controlled Robotic Arms
                 with Python and C
               </h3>
-              <time dateTime="2019-10-19T11:20:00">1120 - 1150</time>
+              <time dateTime="2019-10-19T11:15:00">1115 - 1145</time>
               <strong>Renaldi Gondosubroto</strong>
               <p>
                 This talk will demonstrate how to easily program two DIY open
@@ -141,7 +137,7 @@ export default () => (
               <h3>
                 Don’t let your Internet Of Things become an Internet Of Targets
               </h3>
-              <time dateTime="2019-10-19T11:50:00">1150 - 1220</time>
+              <time dateTime="2019-10-19T11:45:00">1145 - 1215</time>
               <strong>Hazwan Hassan</strong>
               <p>
                 As current and future homes become pre-wired for connectivity
@@ -153,7 +149,7 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>Creating Art from Music</h3>
-              <time dateTime="2019-10-19T12:20:00">1220 - 1250</time>
+              <time dateTime="2019-10-19T12:15:00">1215 - 1245</time>
               <strong>Subhransu Behera</strong>
               <p>
                 3 years ago I wanted to work on a project where I wanted to
@@ -165,15 +161,15 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>Group Photo</h3>
-              <time dateTime="2019-10-19T12:50:00">1250 - 1300</time>
+              <time dateTime="2019-10-19T12:45:00">1245 - 1255</time>
             </ScheduleItem>
             <ScheduleItem>
               <h3>Lunch</h3>
-              <time dateTime="2019-10-19T13:00:00">1300 - 1400</time>
+              <time dateTime="2019-10-19T12:55:00">1255 - 1355</time>
             </ScheduleItem>
             <ScheduleItem>
               <h3>Workshop 1: Getting Started with Smart Contracts</h3>
-              <time dateTime="2019-10-19T14:00:00">1400 - 1450</time>
+              <time dateTime="2019-10-19T13:55:00">1355 - 1445</time>
               <strong>Yos Riady</strong>
               <p>
                 Come and discover how you can write smart contracts and build
@@ -185,7 +181,7 @@ export default () => (
               <h3>
                 Love At First Byte: a romantic journey into the future of us
               </h3>
-              <time dateTime="2019-10-19T14:50:00">1450 - 1520</time>
+              <time dateTime="2019-10-19T14:45:00">1445 - 1515</time>
               <strong>Sudharshan</strong>
               <p>
                 Love At First Byte, is a talk about humans, and how technology
@@ -197,7 +193,7 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>Implementing Trigonometry in SCSS, and lessons learnt</h3>
-              <time dateTime="2019-10-19T15:20:00">1520 - 1550</time>
+              <time dateTime="2019-10-19T15:15:00">1515 - 1545</time>
               <strong>Liu Weiyuan</strong>
               <p>
                 Basic CSS is insufficient. We use Sass (SCSS) to push the
@@ -209,12 +205,12 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>Break</h3>
-              <time dateTime="2019-10-19T15:50:00">1550 - 1620</time>
+              <time dateTime="2019-10-19T15:45:00">1545 - 1615</time>
             </ScheduleItem>
             <ScheduleItem>
               <h3>Workshop 2: Virtual Network Testbed Using GNS3</h3>
               <strong>Hazwan Hassan</strong>
-              <time dateTime="2019-10-19T16:20:00">1620 - 1710</time>
+              <time dateTime="2019-10-19T16:15:00">1615 - 1705</time>
               <p>
                 Ever wanted to build complex virtual networks to test and
                 practice networking concepts or build a test production
@@ -227,7 +223,7 @@ export default () => (
               <h3>
                 WebThings: A secure gateway to connect your things to Internet
               </h3>
-              <time dateTime="2019-10-19T17:10:00">1710 - 1740</time>
+              <time dateTime="2019-10-19T17:05:00">1705 - 1735</time>
               <strong>Dipesh Monga</strong>
               <p>
                 With the advent of the IoT, are we really making our lives
@@ -239,7 +235,7 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>The Singapore Tech Community - A 10 year retrospective</h3>
-              <time dateTime="2019-10-19T17:40:00">1740 - 1810</time>
+              <time dateTime="2019-10-19T17:35:00">1735 - 1805</time>
               <strong>Michael Cheng</strong>
               <p>
                 A talk on the development of the local technology meetup scene
@@ -251,7 +247,7 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>Closing</h3>
-              <time dateTime="2019-10-19T18:10:00">1810 - 1815</time>
+              <time dateTime="2019-10-19T18:05:00">1805 - 1810</time>
             </ScheduleItem>
           </Schedule>
         </div>

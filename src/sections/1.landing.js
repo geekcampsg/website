@@ -115,11 +115,36 @@ export default ({ title }) => {
               <i className="c-b">"</i>
               <i className="c-r">location</i>
               <i className="c-b">"</i>
-              <i className="c-g">: </i>
+              <i className="c-g">: {`{`}</i>
+            </code>
+            <code>
+              {`    `}
               <i className="c-b">"</i>
-              <i className="c-r">{`TBA`}</i>
+              <i className="c-r">name</i>
+              <i className="c-b">"</i>
+              <i className="c-g">: </i>
+              <i className="c-b">"</i>Shaw Foundation Alumni House, NUS
               <i className="c-b">"</i>
               <i className="c-g">,</i>
+            </code>
+            <code>
+              {`    `}
+              <i className="c-b">"</i>
+              <i className="c-r">address</i>
+              <i className="c-b">"</i>
+              <i className="c-g">: </i>
+              <i className="c-b">"</i>Auditorium Level 2<i className="c-g">,</i>
+            </code>
+            <code>
+              {`      `}
+              <i>
+                11 Kent Ridge Drive<i className="c-g">,</i> Singapore 119244
+              </i>
+              <i className="c-b">"</i>
+            </code>
+            <code>
+              {`  `}
+              <i className="c-g">{`}`}</i>
             </code>
             <code>
               {`  `}
@@ -128,9 +153,12 @@ export default ({ title }) => {
               <i className="c-b">"</i>
               <i className="c-g">: </i>
               <div className="codeblock s-2">
-                <i className="c-b">"</i>Join us for an eventful day of geek
-                talks.
+                <i className="c-b">"</i>Join us for an eventful day of
               </div>
+            </code>
+            <code>
+              {`    `}
+              <i>geek talks.</i>
               <i className="c-b">"</i>
             </code>
             <code>
