@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Logo from "../images/geekcamp-logo-light.svg"
+import Button from "./Button"
 
 const Footer = styled.footer`
   background: #282a35;
@@ -63,11 +64,16 @@ export default ({ siteTitle }) => (
         <div style={{ flexBasis: "25%" }}>
           <h4 style={{ color: "var(--red)" }}>Register Tickets</h4>
           <p>
-            Conference registration has opened! Find it!{" "}
-            <span role="img" aria-label="Searching emoji">
-              🧐
-            </span>
+            Register now to sign up for the conference. It’s on the house for
+            everyone.
           </p>
+          <Button
+            href="https://geekcampsg2019.eventbrite.sg"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Register now
+          </Button>
         </div>
         <div>
           <h4 style={{ color: "var(--yellow)" }}>Geekcamp SG</h4>

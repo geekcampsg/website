@@ -93,7 +93,7 @@ export default () => (
               <h3>Opening</h3>
               <time dateTime="2019-10-19T09:30:00">0930 - 0945</time>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-sau-sheong">
               <h3>
                 How to create a web application in multiple programming
                 languages
@@ -105,7 +105,7 @@ export default () => (
                 web applications and services in multiple programming languages.
               </p>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-kendrick">
               <h3>Building Web-Based Audio Player for Obscure Audio Format</h3>
               <time dateTime="2019-10-19T10:15:00">1015 - 1045</time>
               <strong>Kenrick</strong>
@@ -120,7 +120,7 @@ export default () => (
               <h3>Break</h3>
               <time dateTime="2019-10-19T10:45:00">1045 - 1115</time>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-renaldi">
               <h3>
                 Implementing Open Source-Based Motion Controlled Robotic Arms
                 with Python and C
@@ -133,7 +133,7 @@ export default () => (
                 start your own mechatronics-related projects easily.
               </p>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-hazwan">
               <h3>
                 Don’t let your Internet Of Things become an Internet Of Targets
               </h3>
@@ -147,7 +147,7 @@ export default () => (
                 at home to keep the network safe.
               </p>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-subh">
               <h3>Creating Art from Music</h3>
               <time dateTime="2019-10-19T12:15:00">1215 - 1245</time>
               <strong>Subhransu Behera</strong>
@@ -167,7 +167,7 @@ export default () => (
               <h3>Lunch</h3>
               <time dateTime="2019-10-19T12:55:00">1255 - 1355</time>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-yos">
               <h3>Workshop 1: Getting Started with Smart Contracts</h3>
               <time dateTime="2019-10-19T13:55:00">1355 - 1445</time>
               <strong>Yos Riady</strong>
@@ -177,7 +177,7 @@ export default () => (
                 hands-on with the Solidity programming language.
               </p>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-sudharshan">
               <h3>
                 Love At First Byte: a romantic journey into the future of us
               </h3>
@@ -191,7 +191,7 @@ export default () => (
                 a love story between mind and machine.
               </p>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-weiyuan">
               <h3>Implementing Trigonometry in SCSS, and lessons learnt</h3>
               <time dateTime="2019-10-19T15:15:00">1515 - 1545</time>
               <strong>Liu Weiyuan</strong>
@@ -219,7 +219,7 @@ export default () => (
                 GNS3 and how to build and manage virtual networks visually.
               </p>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-dipesh">
               <h3>
                 WebThings: A secure gateway to connect your things to Internet
               </h3>
@@ -233,7 +233,7 @@ export default () => (
                 the rescue.
               </p>
             </ScheduleItem>
-            <ScheduleItem>
+            <ScheduleItem id="speaker-michael">
               <h3>The Singapore Tech Community - A 10 year retrospective</h3>
               <time dateTime="2019-10-19T17:35:00">1735 - 1805</time>
               <strong>Michael Cheng</strong>

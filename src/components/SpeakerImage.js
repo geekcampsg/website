@@ -2,6 +2,11 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+function SpeakerLink({ target, children }) {
+  if (target) return <a href={`#${target}`}>{children}</a>
+  return <>{children}</>
+}
+
 const Figure = styled.figure`
   background: #ddd;
   height: 0;
@@ -55,18 +60,27 @@ const Figure = styled.figure`
     `}
 `
 
-export default ({ name, portrait, past = false, position = "", ...props }) => (
-  <Figure past={past} portrait={portrait}>
-    <Img
-      alt={name}
-      style={{ position: "absolute", width: "100%", height: "100%" }}
-      {...props}
-    />
-    {name && (
-      <figcaption>
-        {name}
-        {position && <span>{position}</span>}
-      </figcaption>
-    )}
-  </Figure>
+export default ({
+  target,
+  name,
+  portrait,
+  past = false,
+  position = "",
+  ...props
+}) => (
+  <SpeakerLink target={target}>
+    <Figure past={past} portrait={portrait}>
+      <Img
+        alt={name}
+        style={{ position: "absolute", width: "100%", height: "100%" }}
+        {...props}
+      />
+      {name && (
+        <figcaption>
+          {name}
+          {position && <span>{position}</span>}
+        </figcaption>
+      )}
+    </Figure>
+  </SpeakerLink>
 )
