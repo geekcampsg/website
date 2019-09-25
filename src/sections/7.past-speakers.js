@@ -89,7 +89,7 @@ export default () => {
               <SpeakerImage
                 portrait
                 name="Michelle Lye"
-                position="Product Manager, Mudahmy"
+                position="Product Manager, AIS Cube"
                 fixed={data.michelle.childImageSharp.fixed}
                 past
               />
@@ -103,7 +103,7 @@ export default () => {
               <SpeakerImage
                 portrait
                 name="Bunnie Huang"
-                position="Hacker"
+                position="Hacker, Bunnie Studios"
                 fixed={data.bunnie.childImageSharp.fixed}
                 past
               />
