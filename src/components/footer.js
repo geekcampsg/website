@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Logo from "../images/geekcamp-logo-light.svg"
 import Button from "./Button"
@@ -57,86 +58,100 @@ const Inner = styled.div`
   }
 `
 
-export default ({ siteTitle }) => (
-  <Footer>
-    <div className="contain">
-      <Inner className="vessel">
-        <div style={{ flexBasis: "25%" }}>
-          <h4 style={{ color: "var(--red)" }}>Register Tickets</h4>
-          <p>
-            Register now to sign up for the conference. It’s on the house for
-            everyone.
-          </p>
-          <Button
-            href="https://geekcampsg2019.eventbrite.sg"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Register now
-          </Button>
-        </div>
-        <div>
-          <h4 style={{ color: "var(--yellow)" }}>Geekcamp SG</h4>
-          <ul>
-            <li>
-              <a
-                href="https://www.facebook.com/GeekcampSG/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/geekcamp"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://join.slack.com/t/geekcampattendees/shared_invite/enQtNzM3MDc0ODM1MDYxLWEzODZjZjliMzFlMjhmNzMwZjUwYTc1NTUwZDY4NmQ1MmVmODI4NGNhMmVlODhjNTBiZWFiYzU4MGYxYzRmNjI"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Slack
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/GeekcampSG/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                GitHub
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4 style={{ color: "var(--green)" }}>Archives</h4>
-          <ul>
-            <li>
-              <a
-                href="https://engineers.sg/episodes/search?search=GeekcampSG"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Recordings
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="branding">
-          <img src={Logo} alt={siteTitle} />
-          <div className="copyright">
-            Copyright &copy; 2019. All rights reserved.
+export default ({ siteTitle }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQueryFooter {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  return (
+    <Footer>
+      <div className="contain">
+        <Inner className="vessel">
+          <div style={{ flexBasis: "25%" }}>
+            <h4 style={{ color: "var(--red)" }}>Register Tickets</h4>
+            <p>
+              Register now to sign up for the conference. It’s on the house for
+              everyone.
+            </p>
+            <Button
+              href="https://geekcampsg2019.eventbrite.sg"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Register now
+            </Button>
           </div>
-        </div>
-      </Inner>
-    </div>
-  </Footer>
-)
+          <div>
+            <h4 style={{ color: "var(--yellow)" }}>Geekcamp SG</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/GeekcampSG/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/geekcamp"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://join.slack.com/t/geekcampattendees/shared_invite/enQtNzM3MDc0ODM1MDYxLWEzODZjZjliMzFlMjhmNzMwZjUwYTc1NTUwZDY4NmQ1MmVmODI4NGNhMmVlODhjNTBiZWFiYzU4MGYxYzRmNjI"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Slack
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/GeekcampSG/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 style={{ color: "var(--green)" }}>Archives</h4>
+            <ul>
+              <li>
+                <Link to="/past-events">Past Events</Link>
+              </li>
+              <li>
+                <a
+                  href="https://engineers.sg/episodes/search?search=GeekcampSG"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Recordings
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="branding">
+            <img src={Logo} alt={data.site.siteMetadata.title} />
+            <div className="copyright">
+              Copyright &copy; 2019. All rights reserved.
+            </div>
+          </div>
+        </Inner>
+      </div>
+    </Footer>
+  )
+}

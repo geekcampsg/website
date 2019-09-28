@@ -1,10 +1,9 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled from "styled-components"
 
 import Header from "../components/header"
 import Console from "../components/console"
 import Terminal from "../components/terminal"
-import SiteContext from "../components/siteContext"
 
 const LandingSection = styled.section`
   min-height: 100vh;
@@ -61,11 +60,10 @@ const Main = styled.div`
 `
 
 export default ({ title }) => {
-  const data = useContext(SiteContext)
   return (
     <LandingSection className="contain">
       <HeadeOuter>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
       </HeadeOuter>
       <Main>
         <Console>
