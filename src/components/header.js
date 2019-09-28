@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
@@ -39,29 +39,32 @@ const StyledHeader = styled.header`
   }
 `
 
-const Header = ({ siteTitle }) => (
-  <StyledHeader className="vessel">
-    <h1 className="logo">
-      <Link to="/">
-        <img src={Logo} alt={siteTitle} />
-      </Link>
-    </h1>
-    <Button
-      href="https://geekcampsg2019.eventbrite.sg"
-      target="_blank"
-      rel="noreferrer noopener"
-    >
-      Register now
-    </Button>
-  </StyledHeader>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQueryHeader {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  return (
+    <StyledHeader className="vessel">
+      <h1 className="logo">
+        <Link to="/">
+          <img src={Logo} alt={data.site.siteMetadata.title} />
+        </Link>
+      </h1>
+      <Button
+        href="https://geekcampsg2019.eventbrite.sg"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        Register now
+      </Button>
+    </StyledHeader>
+  )
 }
 
 export default Header

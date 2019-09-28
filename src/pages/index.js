@@ -1,5 +1,4 @@
 import React from "react"
-import SiteContext from "../components/siteContext"
 import { graphql } from "gatsby"
 
 // components
@@ -18,9 +17,9 @@ import CoC from "../sections/9.coc"
 import Footer from "../components/footer"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
-    <SiteContext.Provider value={data}>
+    <>
       <SEO title="Home" />
       <Landing />
       <About />
@@ -31,18 +30,9 @@ const IndexPage = ({ data }) => {
       <PastSpeakers />
       <Testimonials />
       <CoC />
-      <Footer siteTitle={data.site.siteMetadata.title} />
-    </SiteContext.Provider>
+      <Footer />
+    </>
   )
 }
 
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
 export default IndexPage
