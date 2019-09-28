@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 // components
 import "../components/main.css"
+import Layout from "../components/layout"
 
 // sections
 import Landing from "../sections/1.landing"
@@ -14,12 +15,11 @@ import Marquee from "../sections/6.marquee"
 import PastSpeakers from "../sections/7.past-speakers"
 import Testimonials from "../sections/8.testimonials"
 import CoC from "../sections/9.coc"
-import Footer from "../components/footer"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
   return (
-    <>
+    <Layout>
       <SEO title="Home" />
       <Landing />
       <About />
@@ -30,8 +30,7 @@ const IndexPage = () => {
       <PastSpeakers />
       <Testimonials />
       <CoC />
-      <Footer />
-    </>
+    </Layout>
   )
 }
 
