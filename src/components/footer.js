@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Logo from "../images/geekcamp-logo-light.svg"
 import Button from "./Button"
@@ -130,6 +130,9 @@ export default ({ siteTitle }) => {
           <div>
             <h4 style={{ color: "var(--green)" }}>Archives</h4>
             <ul>
+              <li>
+                <Link to="/past-events">Past Events</Link>
+              </li>
               <li>
                 <a
                   href="https://engineers.sg/episodes/search?search=GeekcampSG"

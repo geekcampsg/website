@@ -52,7 +52,8 @@ section {
 }
 
 .section-about h2::after,
-.section-testimonials h2::after {
+.section-testimonials h2::after,
+.section-past-events h2::after {
   background-color: var(--red);
 }
 .section-schedule h2::after,
