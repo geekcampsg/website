@@ -4,7 +4,9 @@ import styled from "styled-components"
 const Schedule = styled.ul`
   list-style: none;
   margin-left: 0;
+`
 
+const ScheduleTime = styled(Schedule)`
   @media screen and (min-width: 768px) {
     padding-left: 13rem;
   }
@@ -76,4 +78,4 @@ const ScheduleItem = styled.li`
   }
 `
 
-export { Schedule, ScheduleItem }
+export { Schedule, ScheduleTime, ScheduleItem }

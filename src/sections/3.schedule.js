@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Schedule, ScheduleItem } from "../components/Schedule"
+import { ScheduleTime, ScheduleItem } from "../components/Schedule"
 
 export default () => (
   <section className="section-schedule" id="schedule">
@@ -12,7 +12,7 @@ export default () => (
           </h2>
         </div>
         <div className="right">
-          <Schedule>
+          <ScheduleTime>
             <ScheduleItem>
               <h3>Registration</h3>
               <time dateTime="2019-10-19T08:30:00">0830 - 0930</time>
@@ -177,7 +177,7 @@ export default () => (
               <h3>Closing</h3>
               <time dateTime="2019-10-19T18:05:00">1805 - 1810</time>
             </ScheduleItem>
-          </Schedule>
+          </ScheduleTime>
         </div>
       </div>
     </div>
