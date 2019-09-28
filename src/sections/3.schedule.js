@@ -1,78 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
-const Schedule = styled.ul`
-  list-style: none;
-  margin-left: 0;
-
-  @media screen and (min-width: 768px) {
-    padding-left: 13rem;
-  }
-`
-
-const ScheduleItem = styled.li`
-  position: relative;
-  padding: 0 0 3.5rem 2rem;
-  margin-bottom: 0;
-
-  &::before {
-    content: "";
-    background: #61bfad;
-    border-radius: 100%;
-    width: 1.38888rem;
-    height: 1.38888rem;
-    position: absolute;
-    margin-left: -1px;
-    left: 0;
-    top: 0.277777778rem;
-    z-index: 1;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0.277777778rem;
-    bottom: -0.277777778rem;
-    border-left: 1px solid #2b292d;
-    left: 0;
-    margin-left: 0.625rem;
-  }
-
-  time {
-    display: block;
-    font-size: 1.777777778rem;
-    line-height: 1;
-    margin: 0.5rem 0;
-  }
-
-  &:last-child::after {
-    display: none;
-  }
-
-  strong {
-    display: block;
-    color: #808081;
-    font-weight: normal;
-    font-size: 1.333333333rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    time {
-      position: absolute;
-      left: -13rem;
-      top: 0;
-      margin: 0;
-    }
-
-    &::before {
-      transform: translateX(-50%);
-    }
-    &::after {
-      left: -1px;
-      margin-left: 0;
-    }
-  }
-`
+import { Schedule, ScheduleItem } from "../components/Schedule"
 
 export default () => (
   <section className="section-schedule" id="schedule">
@@ -99,7 +27,7 @@ export default () => (
                 languages
               </h3>
               <time dateTime="2019-10-19T09:45:00">0945 - 1015</time>
-              <strong>Chang Sau Sheong</strong>
+              <h4>Chang Sau Sheong</h4>
               <p>
                 Tanuki is a polyglot web framework that allows you to develop
                 web applications and services in multiple programming languages.
@@ -108,7 +36,7 @@ export default () => (
             <ScheduleItem id="speaker-kendrick">
               <h3>Building Web-Based Audio Player for Obscure Audio Format</h3>
               <time dateTime="2019-10-19T10:15:00">1015 - 1045</time>
-              <strong>Kenrick</strong>
+              <h4>Kenrick</h4>
               <p>
                 BRSTM is an audio file format that are used on Nintendo Wii
                 games and many others. This talk will cover the journey in
@@ -126,7 +54,7 @@ export default () => (
                 with Python and C
               </h3>
               <time dateTime="2019-10-19T11:15:00">1115 - 1145</time>
-              <strong>Renaldi Gondosubroto</strong>
+              <h4>Renaldi Gondosubroto</h4>
               <p>
                 This talk will demonstrate how to easily program two DIY open
                 source motion-controlled robotic arms, demonstrating how to
@@ -138,7 +66,7 @@ export default () => (
                 Don’t let your Internet Of Things become an Internet Of Targets
               </h3>
               <time dateTime="2019-10-19T11:45:00">1145 - 1215</time>
-              <strong>Hazwan Hassan</strong>
+              <h4>Hazwan Hassan</h4>
               <p>
                 As current and future homes become pre-wired for connectivity
                 and home renovators start providing “smart home” services, it is
@@ -150,7 +78,7 @@ export default () => (
             <ScheduleItem id="speaker-subh">
               <h3>Creating Art from Music</h3>
               <time dateTime="2019-10-19T12:15:00">1215 - 1245</time>
-              <strong>Subhransu Behera</strong>
+              <h4>Subhransu Behera</h4>
               <p>
                 3 years ago I wanted to work on a project where I wanted to
                 convert any image (art piece, selfie, random portrait) into
@@ -170,7 +98,7 @@ export default () => (
             <ScheduleItem id="speaker-yos">
               <h3>Workshop 1: Getting Started with Smart Contracts</h3>
               <time dateTime="2019-10-19T13:55:00">1355 - 1445</time>
-              <strong>Yos Riady</strong>
+              <h4>Yos Riady</h4>
               <p>
                 Come and discover how you can write smart contracts and build
                 decentralized applications! In this workshop, get a practical
@@ -182,7 +110,7 @@ export default () => (
                 Love At First Byte: a romantic journey into the future of us
               </h3>
               <time dateTime="2019-10-19T14:45:00">1445 - 1515</time>
-              <strong>Sudharshan</strong>
+              <h4>Sudharshan</h4>
               <p>
                 Love At First Byte, is a talk about humans, and how technology
                 is going to shape us in the future. Discussing concepts like
@@ -194,7 +122,7 @@ export default () => (
             <ScheduleItem id="speaker-weiyuan">
               <h3>Implementing Trigonometry in SCSS, and lessons learnt</h3>
               <time dateTime="2019-10-19T15:15:00">1515 - 1545</time>
-              <strong>Liu Weiyuan</strong>
+              <h4>Liu Weiyuan</h4>
               <p>
                 Basic CSS is insufficient. We use Sass (SCSS) to push the
                 stylesheet language to the limit, where it’s similar to a
@@ -209,7 +137,7 @@ export default () => (
             </ScheduleItem>
             <ScheduleItem>
               <h3>Workshop 2: Virtual Network Testbed Using GNS3</h3>
-              <strong>Hazwan Hassan</strong>
+              <h4>Hazwan Hassan</h4>
               <time dateTime="2019-10-19T16:15:00">1615 - 1705</time>
               <p>
                 Ever wanted to build complex virtual networks to test and
@@ -224,7 +152,7 @@ export default () => (
                 WebThings: A secure gateway to connect your things to Internet
               </h3>
               <time dateTime="2019-10-19T17:05:00">1705 - 1735</time>
-              <strong>Dipesh Monga</strong>
+              <h4>Dipesh Monga</h4>
               <p>
                 With the advent of the IoT, are we really making our lives
                 simpler or drowning ourselves in a vast ocean by uploading our
@@ -236,7 +164,7 @@ export default () => (
             <ScheduleItem id="speaker-michael">
               <h3>The Singapore Tech Community - A 10 year retrospective</h3>
               <time dateTime="2019-10-19T17:35:00">1735 - 1805</time>
-              <strong>Michael Cheng</strong>
+              <h4>Michael Cheng</h4>
               <p>
                 A talk on the development of the local technology meetup scene
                 through the eyes of a community builder & organizer. I’ll show
