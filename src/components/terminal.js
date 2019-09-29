@@ -62,6 +62,7 @@ export default () => {
     "location",
     "dir",
     "date",
+    "sponsors",
   ]
 
   const inputRef = useRef()
@@ -115,6 +116,8 @@ export default () => {
             val = "These are not the files you are looking for."
           } else if (cmd === "date") {
             val = "Saturday, 19th Oct 2019"
+          } else if (cmd === "sponsors") {
+            val = "Platinum: [SPDigital], Silver: [Microsoft]"
           }
         }
       } else {
