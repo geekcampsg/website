@@ -2,8 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // components
-import "../components/main.css"
 import Layout from "../components/layout"
+import "../components/main.css"
 
 // sections
 import Landing from "../sections/1.landing"

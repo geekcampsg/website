@@ -60,7 +60,7 @@ const PastEvents = () => {
       <Header />
       <section className="section-past-events">
         <div className="contain">
-          <div className="vessel cols">
+          <div className="vessel cols" style={{ marginTop: "2rem" }}>
             <div className="left">
               <h2>Past Events</h2>
               <SideLinks>
