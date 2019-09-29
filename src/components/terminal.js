@@ -72,8 +72,6 @@ export default () => {
   }, [])
 
   function handleKeyPress(e) {
-    // enter is pressed
-
     if (e.ctrlKey) {
       if (e.which === 85) {
         e.target.value = ""
@@ -88,7 +86,25 @@ export default () => {
       }
     }
 
+    // enter is pressed
     if (e.which === 13) {
+      const { top, height } = inputRef.current.getBoundingClientRect()
+      const theY = window.scrollY + top
+
+      // adjust window scroll
+      if (top < 0) {
+        // above
+        window.scroll(0, theY)
+      } else if (theY > window.scrollY + window.innerHeight - height - 26) {
+        //below
+        window.requestAnimationFrame(function() {
+          const { top, height } = inputRef.current.getBoundingClientRect()
+          const theY = window.scrollY + top
+          window.scroll(0, theY - window.innerHeight + height + 26)
+        })
+      }
+
+      // handle cmds
       let newLog = [...log]
       let val
       const userInput = e.target.value
@@ -179,7 +195,6 @@ export default () => {
           event: "terminalResponse",
         })
     }
-
     return false
   }
 
