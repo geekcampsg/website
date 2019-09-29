@@ -14,6 +14,7 @@ const Terminal = styled(Console)`
     line-height: 1.25;
     color: #fff;
     flex: 1;
+    box-shadow: none;
 
     &:focus {
       outline: none;
@@ -36,7 +37,7 @@ const Terminal = styled(Console)`
   }
 
   .prompt {
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
     color: var(--green);
   }
 
@@ -72,6 +73,21 @@ export default () => {
 
   function handleKeyPress(e) {
     // enter is pressed
+
+    if (e.ctrlKey) {
+      if (e.which === 85) {
+        e.target.value = ""
+      }
+      if (e.which === 67) {
+        setLog([...log, `$ ${e.target.value.trim()}`])
+        e.target.value = ""
+      }
+      if (e.which === 75) {
+        setLog([])
+        e.target.value = ""
+      }
+    }
+
     if (e.which === 13) {
       let newLog = [...log]
       let val
@@ -133,8 +149,10 @@ export default () => {
           }
         } else if (cmd === "cd") {
           val = "You are already where you are supposed to be."
-        } else if (cmd === "mkdir") {
+        } else if (cmd === "mkdir" || cmd === "rm") {
           val = "Permission denied"
+        } else if (cmd === "sudo") {
+          val = "Your sudo has no power here."
         } else {
           invalidCmd = true
           val = `command not found: ${cmd}`
@@ -181,7 +199,7 @@ export default () => {
           <i className="prompt">$</i>
           <input
             ref={inputRef}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyPress}
             className="input"
             type="email"
             autoCorrect="off"
