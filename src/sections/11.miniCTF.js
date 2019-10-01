@@ -71,7 +71,12 @@ export default () => (
                   <code>{"| | | | | | | | | | | |___  | | |  _|"}</code>
                   <code>{"|_| |_| |_|_|_| |_|_|\\____| |_| |_|"}</code>
                   <code>{""}</code>
-                  <code>{"       Organised by OSI Layer 8"}</code>
+                  <code
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        "       Organised by <a target='_blank' rel='noreferrer noopener' href='https://osilayer8.makerforce.io/'>OSI Layer 8</a>",
+                    }}
+                  />
                   <code>{""}</code>
                   <code>{"Rules:"}</code>
                   <code>
