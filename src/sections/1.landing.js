@@ -38,24 +38,8 @@ const Main = styled.div`
   .c-g {
     color: var(--green);
   }
-  .codeblock {
-    display: block;
-  }
-  .codeblock.s-1 {
-    margin-left: 2ch;
-  }
-  .codeblock.s-2 {
-    margin-left: 4ch;
-  }
-  .codeblock.s-3 {
-    margin-left: 6ch;
-  }
   @media screen and (min-width: 768px) {
     padding: 1.7rem;
-    .codeblock.codeblock {
-      display: inline;
-      margin-left: 0;
-    }
   }
 `
 
@@ -78,11 +62,9 @@ export default ({ title }) => {
               <i className="c-y">title</i>
               <i className="c-b">"</i>
               <i className="c-g">: </i>
-              <div className="codeblock s-2">
-                <i className="c-b">"</i>GeekcampSG 2019
-                <i className="c-b">"</i>
-                <i className="c-g">,</i>
-              </div>
+              <i className="c-b">"</i>GeekcampSG 2019
+              <i className="c-b">"</i>
+              <i className="c-g">,</i>
             </code>
             <code>
               {`  `}
@@ -90,11 +72,9 @@ export default ({ title }) => {
               <i className="c-y">startDate</i>
               <i className="c-b">"</i>
               <i className="c-g">: </i>
-              <div className="codeblock s-2">
-                <i className="c-b">"</i>2019-10-19T08:30
-                <i className="c-b">"</i>
-                <i className="c-g">,</i>
-              </div>
+              <i className="c-b">"</i>2019-10-19T08:30
+              <i className="c-b">"</i>
+              <i className="c-g">,</i>
             </code>
             <code>
               {`  `}
@@ -102,11 +82,9 @@ export default ({ title }) => {
               <i className="c-y">endDate</i>
               <i className="c-b">"</i>
               <i className="c-g">: </i>
-              <div className="codeblock s-2">
-                <i className="c-b">"</i>2019-10-19T18:15
-                <i className="c-b">"</i>
-                <i className="c-g">,</i>
-              </div>
+              <i className="c-b">"</i>2019-10-19T18:15
+              <i className="c-b">"</i>
+              <i className="c-g">,</i>
             </code>
             <code>
               {`  `}
@@ -150,9 +128,7 @@ export default ({ title }) => {
               <i className="c-g">description</i>
               <i className="c-b">"</i>
               <i className="c-g">: </i>
-              <div className="codeblock s-2">
-                <i className="c-b">"</i>Join us for an eventful day of
-              </div>
+              <i className="c-b">"</i>Join us for an eventful day of
             </code>
             <code>
               {`    `}
