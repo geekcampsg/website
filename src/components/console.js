@@ -33,7 +33,7 @@ const TopBar = styled.div`
 const Code = styled.pre`
   counter-reset: line;
   padding-left: 2rem;
-  font-size: 0.8rem;
+  font-size: 2.35vw;
   color: #fff;
   margin-bottom: 0;
   margin-top: auto;
@@ -46,6 +46,9 @@ const Code = styled.pre`
     padding: 0;
     font-size: inherit;
     white-space: pre-wrap;
+    &::after {
+      display: none;
+    }
     ${({ lineNumbers }) =>
       lineNumbers &&
       `
@@ -59,6 +62,10 @@ const Code = styled.pre`
       letter-spacing: 0;
     }
       `}
+  }
+
+  @media screen and (min-width: 375px) {
+    font-size: 2.65vw;
   }
 
   @media screen and (min-width: 768px) {
