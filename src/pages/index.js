@@ -26,6 +26,7 @@ const IndexPage = () => {
       <Landing />
       <About />
       <Schedule />
+      <MiniCTF />
       <Venue />
       <Speakers />
       <Marquee />
@@ -33,7 +34,6 @@ const IndexPage = () => {
       <Testimonials />
       <Sponsors />
       <CoC />
-      <MiniCTF />
     </Layout>
   )
 }

@@ -4,7 +4,6 @@ import Console from "../components/console"
 
 const Main = styled.div`
   flex: 1;
-  padding: 1rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -25,24 +24,8 @@ const Main = styled.div`
   .c-g {
     color: var(--green);
   }
-  .codeblock {
-    display: block;
-  }
-  .codeblock.s-1 {
-    margin-left: 2ch;
-  }
-  .codeblock.s-2 {
-    margin-left: 4ch;
-  }
-  .codeblock.s-3 {
-    margin-left: 6ch;
-  }
   @media screen and (min-width: 768px) {
-    padding: 1.7rem;
-    .codeblock.codeblock {
-      display: inline;
-      margin-left: 0;
-    }
+    /* font-size: 2.35vw; */
   }
 `
 
@@ -60,103 +43,69 @@ export default () => (
           <section className="minictf">
             <Main>
               <Console>
-                <Console.Controls />
-                <Console.Code lineNumbers>
+                <Console.Code
+                  style={{ paddingLeft: "3vw", paddingRight: "3vw" }}
+                >
                   <code>
-                    <i className="c-g">{`{`}</i>
+                    <i className="c-b">$</i>
+                    {" ./exploit.py"}
                   </code>
                   <code>
-                    {`  `}
-                    <i className="c-b">"</i>
-                    <i className="c-y">title</i>
-                    <i className="c-b">"</i>
-                    <i className="c-g">: </i>
-                    <div className="codeblock s-2">
-                      <i className="c-b">"</i>GeekcampSG 2019
-                      <i className="c-b">"</i>
-                      <i className="c-g">,</i>
-                    </div>
+                    {"["}
+                    <i className="c-y">+</i>
+                    {"] Opening connection to ctf.makerforce.io"}
+                  </code>
+                  <code>{""}</code>
+                  <code>{""}</code>
+                  <code>{"              Geekcamp"}</code>
+                  <code>{"           _       _  ____ _____ _____"}</code>
+                  <code>{" _ __ ___ (_)_ __ (_)/ ___|_   _|  ___|"}</code>
+                  <code>{"| '_ ` _ \\| | '_ \\| | |     | | | |_"}</code>
+                  <code>{"| | | | | | | | | | | |___  | | |  _|"}</code>
+                  <code>{"|_| |_| |_|_|_| |_|_|\\____| |_| |_|"}</code>
+                  <code>{""}</code>
+                  <code>{"       Organised by OSI Layer 8"}</code>
+                  <code>{""}</code>
+                  <code>{"Rules:"}</code>
+                  <code>
+                    {"1. Do not attack any other addresses or ports."}
+                  </code>
+                  <code>{"2. Do not use brute forcing tools or perform"}</code>
+                  <code>{"   denial of service attacks."}</code>
+                  <code>{"3. Play fair, don't share flags."}</code>
+                  <code>{"4. Clarify if in doubt."}</code>
+                  <code>{""}</code>
+                  <code>{"Get started at https://ctf.makerforce.io"}</code>
+                  <code>{"Contest begins at 0945 and ends at 1800"}</code>
+                  <code>{""}</code>
+                  <code>
+                    {"Enter your name: Oh no, I’ve been exploited :("}
                   </code>
                   <code>
-                    {`  `}
-                    <i className="c-b">"</i>
-                    <i className="c-y">startDate</i>
-                    <i className="c-b">"</i>
-                    <i className="c-g">: </i>
-                    <div className="codeblock s-2">
-                      <i className="c-b">"</i>2019-10-19T08:30
-                      <i className="c-b">"</i>
-                      <i className="c-g">,</i>
-                    </div>
+                    {"["}
+                    <i className="c-b">*</i>
+                    {"] Switching to interactive mode"}
                   </code>
                   <code>
-                    {`  `}
-                    <i className="c-b">"</i>
-                    <i className="c-y">endDate</i>
-                    <i className="c-b">"</i>
-                    <i className="c-g">: </i>
-                    <div className="codeblock s-2">
-                      <i className="c-b">"</i>2019-10-19T18:15
-                      <i className="c-b">"</i>
-                      <i className="c-g">,</i>
-                    </div>
+                    <i className="c-r">$</i>
+                    {" whoami"}
+                  </code>
+                  <code>{"root"}</code>
+                  <code>
+                    <i className="c-r">$</i>
+                    {" cat /flag.txt"}
+                  </code>
+                  <code>{"miniCTF{web_pwn_re_and_other_puzzles}"}</code>
+                  <code>
+                    <i className="c-r">$</i>
+                    {" ^D"}
                   </code>
                   <code>
-                    {`  `}
-                    <i className="c-b">"</i>
-                    <i className="c-r">location</i>
-                    <i className="c-b">"</i>
-                    <i className="c-g">: {`{`}</i>
+                    {"["}
+                    <i className="c-b">*</i>
+                    {"] Closed connection to ctf.makerforce.io"}
                   </code>
-                  <code>
-                    {`    `}
-                    <i className="c-b">"</i>
-                    <i className="c-r">name</i>
-                    <i className="c-b">"</i>
-                    <i className="c-g">: </i>
-                    <i className="c-b">"</i>Shaw Foundation Alumni House, NUS
-                    <i className="c-b">"</i>
-                    <i className="c-g">,</i>
-                  </code>
-                  <code>
-                    {`    `}
-                    <i className="c-b">"</i>
-                    <i className="c-r">address</i>
-                    <i className="c-b">"</i>
-                    <i className="c-g">: </i>
-                    <i className="c-b">"</i>Auditorium Level 2
-                    <i className="c-g">,</i>
-                  </code>
-                  <code>
-                    {`      `}
-                    <i>
-                      11 Kent Ridge Drive<i className="c-g">,</i> Singapore
-                      119244
-                    </i>
-                    <i className="c-b">"</i>
-                  </code>
-                  <code>
-                    {`  `}
-                    <i className="c-g">{`}`}</i>
-                  </code>
-                  <code>
-                    {`  `}
-                    <i className="c-b">"</i>
-                    <i className="c-g">description</i>
-                    <i className="c-b">"</i>
-                    <i className="c-g">: </i>
-                    <div className="codeblock s-2">
-                      <i className="c-b">"</i>Join us for an eventful day of
-                    </div>
-                  </code>
-                  <code>
-                    {`    `}
-                    <i>geek talks.</i>
-                    <i className="c-b">"</i>
-                  </code>
-                  <code>
-                    <i className="c-g">{`}`}</i>
-                  </code>
+                  <code>{""}</code>
                 </Console.Code>
               </Console>
             </Main>
