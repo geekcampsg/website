@@ -12,25 +12,7 @@ const Main = styled.div`
   i {
     font-style: normal;
   }
-  .c-y {
-    color: var(--yellow);
-  }
-  .c-b {
-    color: var(--blue);
-  }
-  .c-r {
-    color: var(--red);
-  }
-  .c-g {
-    color: var(--green);
-  }
 
-  a {
-    color: var(--green);
-    &:hover {
-      color: var(--blue);
-    }
-  }
   @media screen and (min-width: 768px) {
     /* font-size: 2.35vw; */
   }

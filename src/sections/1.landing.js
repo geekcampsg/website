@@ -26,18 +26,6 @@ const Main = styled.div`
   i {
     font-style: normal;
   }
-  .c-y {
-    color: var(--yellow);
-  }
-  .c-b {
-    color: var(--blue);
-  }
-  .c-r {
-    color: var(--red);
-  }
-  .c-g {
-    color: var(--green);
-  }
   @media screen and (min-width: 768px) {
     padding: 1.7rem;
   }

@@ -40,13 +40,6 @@ const Terminal = styled(Console)`
     margin-right: 0.75rem;
     color: var(--green);
   }
-
-  .output a {
-    color: var(--green);
-    &:hover {
-      color: var(--blue);
-    }
-  }
 `
 
 export default () => {
