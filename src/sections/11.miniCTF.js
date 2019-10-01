@@ -9,10 +9,6 @@ const Main = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  i {
-    font-style: normal;
-  }
-
   @media screen and (min-width: 768px) {
     /* font-size: 2.35vw; */
   }

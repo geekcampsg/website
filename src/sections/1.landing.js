@@ -22,10 +22,6 @@ const Main = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
-  i {
-    font-style: normal;
-  }
   @media screen and (min-width: 768px) {
     padding: 1.7rem;
   }
