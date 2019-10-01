@@ -24,6 +24,13 @@ const Main = styled.div`
   .c-g {
     color: var(--green);
   }
+
+  a {
+    color: var(--green);
+    &:hover {
+      color: var(--blue);
+    }
+  }
   @media screen and (min-width: 768px) {
     /* font-size: 2.35vw; */
   }
@@ -75,7 +82,12 @@ export default () => (
                   <code>{"3. Play fair, don't share flags."}</code>
                   <code>{"4. Clarify if in doubt."}</code>
                   <code>{""}</code>
-                  <code>{"Get started at https://ctf.makerforce.io"}</code>
+                  <code
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        "Get started at <a rel='noreferrer noopener' target='_blank' href='https://ctf.makerforce.io'>https://ctf.makerforce.io</a>",
+                    }}
+                  />
                   <code>{"Contest begins at 0945 and ends at 1800"}</code>
                   <code>{""}</code>
                   <code>
