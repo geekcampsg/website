@@ -47,7 +47,10 @@ const Figure = styled.figure`
 
   span {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.625rem;
+    @media screen and (min-width: 375px) {
+      font-size: 0.75rem;
+    }
     @media screen and (min-width: 768px) {
       font-size: 1.3rem;
     }
