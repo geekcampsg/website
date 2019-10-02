@@ -65,6 +65,7 @@ section {
   background-color: var(--blue);
 }
 .section-speakers h2::after,
+.section-ctf h2::after,
 .section-coc h2::after {
   background-color: var(--yellow);
 }
