@@ -59,6 +59,7 @@ export default () => {
     "date",
     "sponsors",
     "ctf",
+    "archives",
   ]
 
   const inputRef = useRef()
@@ -122,7 +123,8 @@ export default () => {
         } else {
           if (cmd === "help") {
             // val = ["> register", "> speakers", "> location"]
-            val = "Available commands: register, speakers, location, ctf"
+            val =
+              "Available commands: register, speakers, location, ctf, archives"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
             val = "/geekcamp/2019"
@@ -147,6 +149,8 @@ export default () => {
             val = "Platinum: [SPDigital], Silver: [Microsoft]"
           } else if (cmd === "ctf") {
             navigate("#ctf")
+          } else if (cmd === "archives") {
+            navigate("/past-events")
           }
         }
       } else {
