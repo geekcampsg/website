@@ -86,10 +86,25 @@ figure {
 }
 
 a {
+  color: var(--green);
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+  color: var(--blue);
+}
+
+.c-y {
+  color: var(--yellow);
+}
+.c-b {
+  color: var(--blue);
+}
+.c-r {
+  color: var(--red);
+}
+.c-g {
+  color: var(--green);
 }
 
 @media screen and (min-width: 1280px) {

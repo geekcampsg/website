@@ -38,6 +38,10 @@ const Code = styled.pre`
   margin-bottom: 0;
   margin-top: auto;
 
+  i {
+    font-style: normal;
+  }
+
   code {
     line-height: 1.26;
     font-family: "PT Mono", "Courier New", Courier, monospace;
