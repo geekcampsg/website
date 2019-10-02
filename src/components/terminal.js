@@ -153,6 +153,8 @@ export default () => {
             navigate("#bonus")
           } else if (cmd === "archives") {
             navigate("/past-events")
+          } else if (cmd === "game") {
+            val = "Starting game..."
           }
         }
       } else {

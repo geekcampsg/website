@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Header from "../components/header"
 import Console from "../components/console"
 import Terminal from "../components/terminal"
+import Game from "../components/game"
 
 const LandingSection = styled.section`
   min-height: 100vh;
@@ -34,6 +35,7 @@ export default ({ title }) => {
         <Header />
       </HeadeOuter>
       <Main>
+        <Game />
         <Console>
           <Console.Controls />
           <Console.Code lineNumbers>

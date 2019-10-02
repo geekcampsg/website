@@ -5,8 +5,9 @@ const Console = styled.div`
   width: 850px;
   max-width: 100%;
   margin-bottom: 1rem;
-  background: #282a35;
+  background: ${props => (props.light ? "white" : "#282a35")};
   border-radius: 8px;
+  ${props => (props.light ? "border: 1px solid #C4C4C4" : "")};
 
   @media screen and (min-width: 768px) {
     margin-bottom: 1.7rem;
