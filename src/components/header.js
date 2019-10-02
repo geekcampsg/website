@@ -1,5 +1,4 @@
 import { Link, useStaticQuery, graphql } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import Logo from "../images/geekcamp-logo.svg"
