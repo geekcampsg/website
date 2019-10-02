@@ -10,9 +10,12 @@ const Button = styled.a`
   padding: 0 1.222222222rem;
   font-weight: bolder;
   cursor: pointer;
+  transition: background-color 200ms ease-in-out;
 
   &:hover {
     text-decoration: none;
+    color: #fff;
+    background-color: var(--green);
   }
 `
 
