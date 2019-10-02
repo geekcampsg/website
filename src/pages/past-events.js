@@ -56,7 +56,9 @@ const PastEvents = () => {
 
   return (
     <Layout>
-      <Header />
+      <div className="contain">
+        <Header />
+      </div>
       <section className="section-past-events">
         <div className="contain">
           <div className="vessel cols" style={{ marginTop: "2rem" }}>
