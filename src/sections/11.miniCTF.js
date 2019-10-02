@@ -15,7 +15,7 @@ const Main = styled.div`
 `
 
 export default () => (
-  <section className="section-coc" id="coc">
+  <section className="section-ctf" id="ctf">
     <div className="contain">
       <div className="vessel cols">
         <div className="left">
