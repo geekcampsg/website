@@ -179,7 +179,7 @@ export default () => {
       if (Array.isArray(val)) {
         newLog = newLog.concat(val)
       } else {
-        newLog.push(val)
+        val && newLog.push(val)
       }
       setLog(newLog)
       e.target.value = ""
