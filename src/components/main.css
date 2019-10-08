@@ -61,7 +61,7 @@ section {
 .section-past-speakers h2::after {
   background-color: var(--green);
 }
-.section-ctf h2::after,
+.section-bonus h2::after,
 .section-testimonials h2::after {
   background-color: var(--blue);
 }

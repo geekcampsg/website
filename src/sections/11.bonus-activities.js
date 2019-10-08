@@ -15,17 +15,17 @@ const Main = styled.div`
 `
 
 export default () => (
-  <section className="section-ctf" id="ctf">
+  <section className="section-bonus" id="bonus">
     <div className="contain">
       <div className="vessel cols">
         <div className="left">
           <h2>
-            MiniCTF
-            <br /> Challenge
+            Bonus
+            <br /> Activities
           </h2>
         </div>
         <div className="right">
-          <section className="minictf">
+          <section className="bonus">
             <Main>
               <Console>
                 <Console.Code
