@@ -28,7 +28,7 @@ export default () => (
         <div className="right">
           <section className="bonus">
             <Main>
-              <Console>
+              <Console id="ctf">
                 <Console.Controls />
                 <Console.Code
                   style={{ paddingLeft: "3vw", paddingRight: "3vw" }}
@@ -105,7 +105,7 @@ export default () => (
                   <code>{""}</code>
                 </Console.Code>
               </Console>
-              <Console>
+              <Console id="ml-workshop">
                 <Console.Controls />
                 <Console.Code>
                   <img src={wwc} />

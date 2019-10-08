@@ -58,7 +58,6 @@ export default () => {
     "dir",
     "date",
     "sponsors",
-    "ctf",
     "bonus",
     "archives",
   ]
@@ -124,8 +123,7 @@ export default () => {
         } else {
           if (cmd === "help") {
             // val = ["> register", "> speakers", "> location"]
-            val =
-              "Available commands: register, speakers, location, ctf, archives"
+            val = "Available commands: register, speakers, location, archives"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
             val = "/geekcamp/2019"
@@ -148,7 +146,7 @@ export default () => {
             val = "Saturday, 19th Oct 2019"
           } else if (cmd === "sponsors") {
             val = "Platinum: [SPDigital], Silver: [Microsoft]"
-          } else if (cmd === "ctf" || cmd === "bonus") {
+          } else if (cmd === "bonus") {
             navigate("#bonus")
           } else if (cmd === "archives") {
             navigate("/past-events")
