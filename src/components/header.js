@@ -10,19 +10,26 @@ const StyledHeader = styled.header`
   left: 0;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
   .logo {
     margin: 0;
+    width: 50%;
   }
 
   img {
     margin-bottom: 0;
-    max-width: 60%;
+    max-width: 80%;
   }
 
+  @media screen and (max-width: 400px) {
+    ${Button} {
+      font-size: 0.825rem;
+      line-height: 3;
+      padding: 0 0.75rem;
+    }
+  }
   @media screen and (min-width: 481px) {
     padding-top: 2rem;
   }

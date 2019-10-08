@@ -11,6 +11,7 @@ const Button = styled.a`
   font-weight: bolder;
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
+  white-space: nowrap;
 
   &:hover {
     text-decoration: none;
