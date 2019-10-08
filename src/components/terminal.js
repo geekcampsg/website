@@ -59,6 +59,7 @@ export default () => {
     "date",
     "sponsors",
     "ctf",
+    "bonus",
     "archives",
   ]
 
@@ -147,8 +148,8 @@ export default () => {
             val = "Saturday, 19th Oct 2019"
           } else if (cmd === "sponsors") {
             val = "Platinum: [SPDigital], Silver: [Microsoft]"
-          } else if (cmd === "ctf") {
-            navigate("#ctf")
+          } else if (cmd === "ctf" || cmd === "bonus") {
+            navigate("#bonus")
           } else if (cmd === "archives") {
             navigate("/past-events")
           }

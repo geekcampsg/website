@@ -15,7 +15,7 @@ import PastSpeakers from "../sections/7.past-speakers"
 import Testimonials from "../sections/8.testimonials"
 import CoC from "../sections/9.coc"
 import Sponsors from "../sections/10.sponsors"
-import MiniCTF from "../sections/11.miniCTF"
+import BonusActivities from "../sections/11.bonus-activities"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -25,7 +25,7 @@ const IndexPage = () => {
       <Landing />
       <About />
       <Schedule />
-      <MiniCTF />
+      <BonusActivities />
       <Venue />
       <Speakers />
       <Marquee />
