@@ -1,6 +1,7 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Console from "../components/console"
+import wwc from "../../static/images/partners/womenwhocode.png"
 
 const Main = styled.div`
   flex: 1;
@@ -28,6 +29,7 @@ export default () => (
           <section className="bonus">
             <Main>
               <Console>
+                <Console.Controls />
                 <Console.Code
                   style={{ paddingLeft: "3vw", paddingRight: "3vw" }}
                 >
@@ -99,6 +101,43 @@ export default () => (
                     {"["}
                     <i className="c-b">*</i>
                     {"] Closed connection to ctf.makerforce.io"}
+                  </code>
+                  <code>{""}</code>
+                </Console.Code>
+              </Console>
+              <Console>
+                <Console.Controls />
+                <Console.Code>
+                  <img src={wwc} />
+                  <code>
+                    GeekcampSG has partnered with{" "}
+                    <a
+                      href="https://www.womenwhocode.com/singapore"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Women Who Code Singapore
+                    </a>{" "}
+                    to have their{" "}
+                    <a
+                      href="https://www.meetup.com/Women-Who-Code-Singapore/events/264579891/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      Machines Learning and Edge Computing Workshop
+                    </a>{" "}
+                    as a concurrent track during the first half of the
+                    conference. Do RSVP at the{" "}
+                    <a
+                      href="https://www.meetup.com/Women-Who-Code-Singapore/events/264579891/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      meetup.com event page
+                    </a>{" "}
+                    and bring your laptop for this workshop. This will be held
+                    at Cardamom, Lvl 2 of Shaw Foundation Alumni House. All are
+                    welcomed!
                   </code>
                   <code>{""}</code>
                 </Console.Code>

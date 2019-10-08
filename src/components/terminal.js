@@ -149,7 +149,7 @@ export default () => {
           } else if (cmd === "sponsors") {
             val = "Platinum: [SPDigital], Silver: [Microsoft]"
           } else if (cmd === "ctf" || cmd === "bonus") {
-            navigate("#bonus-activities")
+            navigate("#bonus")
           } else if (cmd === "archives") {
             navigate("/past-events")
           }
