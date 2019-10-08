@@ -33,10 +33,22 @@ export default () => (
           >
             <Row>
               <Col>
-                <img alt="NUS Hackers" src={nushackers} />
+                <a
+                  href="https://www.nushackers.org/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img alt="NUS Hackers" src={nushackers} />
+                </a>
               </Col>
               <Col>
-                <img alt="12 Geeks" src={twelvegeeks} />
+                <a
+                  href="https://12geeks.com/community/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img alt="12Geeks" src={twelvegeeks} />
+                </a>
               </Col>
               <Col>
                 <img alt="Junction X Singapore" src={junction} />
@@ -44,13 +56,31 @@ export default () => (
             </Row>
             <Row>
               <Col>
-                <img alt="Engineers.g" src={engineerssg} />
+                <a
+                  href="https://engineers.sg/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img alt="Engineers.sg" src={engineerssg} />
+                </a>
               </Col>
               <Col>
-                <img alt="Women Who Code" src={womenwhocode} />
+                <a
+                  href="https://www.womenwhocode.com/singapore"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img alt="Women Who Code Singapore" src={womenwhocode} />
+                </a>
               </Col>
               <Col>
-                <img alt="OSI Layer 8" src={osilayer8} />
+                <a
+                  href="https://osilayer8.makerforce.io/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img alt="OSI Layer 8" src={osilayer8} />
+                </a>
               </Col>
             </Row>
           </section>
