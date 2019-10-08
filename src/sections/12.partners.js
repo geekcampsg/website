@@ -26,7 +26,11 @@ export default () => (
                 align-items: center;
                 justify-content: center;
               }
+              a {
+                flex: 1;
+              }
               img {
+                display: block;
                 width: 100%;
               }
             `}
