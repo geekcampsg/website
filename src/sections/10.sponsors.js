@@ -41,12 +41,14 @@ export default () => {
           <div
             className="right"
             css={`
-              ${Col} {
-                max-width: 500px;
+              @media screen and (min-width: 768px) {
+                ${Col} {
+                  max-width: 500px;
+                }
               }
             `}
           >
-            <Row css="margin-bottom: 3rem;">
+            <Row css="@media screen and (min-width: 768px) {margin-bottom: 3rem;}">
               <Col>
                 <h3>Platinum Sponsor</h3>
                 <Img fluid={data.spdigital.childImageSharp.fluid} />
