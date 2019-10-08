@@ -1,23 +1,8 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-
-const Row = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-  }
-`
-
-const Col = styled.div`
-  text-align: center;
-  @media screen and (min-width: 768px) {
-    flex: 1;
-  }
-`
+import { Row, Col } from "../components/Grid"
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -36,6 +21,13 @@ export default () => {
           }
         }
       }
+      shopify: file(relativePath: { eq: "sponsors/shopify.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -46,11 +38,26 @@ export default () => {
           <div className="left">
             <h2>Sponsors</h2>
           </div>
-          <div className="right">
-            <Row>
+          <div
+            className="right"
+            css={`
+              @media screen and (min-width: 768px) {
+                ${Col} {
+                  max-width: 500px;
+                }
+              }
+            `}
+          >
+            <Row css="@media screen and (min-width: 768px) {margin-bottom: 3rem;}">
               <Col>
                 <h3>Platinum Sponsor</h3>
                 <Img fluid={data.spdigital.childImageSharp.fluid} />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <h3>Gold Sponsor</h3>
+                <Img fluid={data.shopify.childImageSharp.fluid} />
               </Col>
               <Col>
                 <h3>Silver Sponsor</h3>
