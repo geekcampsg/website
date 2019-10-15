@@ -93,8 +93,8 @@ export default () => {
         // above
         window.scroll(0, theY)
       } else if (theY > window.scrollY + window.innerHeight - height - 26) {
-        //below
-        window.requestAnimationFrame(function() {
+        // below
+        window.requestAnimationFrame(function () {
           const { top, height } = inputRef.current.getBoundingClientRect()
           const theY = window.scrollY + top
           window.scroll(0, theY - window.innerHeight + height + 26)
