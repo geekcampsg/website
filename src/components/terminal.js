@@ -60,6 +60,7 @@ export default () => {
     "sponsors",
     "bonus",
     "archives",
+    "contact",
   ]
 
   const inputRef = useRef()
@@ -144,6 +145,8 @@ export default () => {
             val = "These are not the files you are looking for."
           } else if (cmd === "date") {
             val = "Saturday, 19th Oct 2019"
+          } else if (cmd === "contact") {
+            val = "geekcampsingapore @t gmail dott com"
           } else if (cmd === "sponsors") {
             val = "Platinum: [SPDigital], Silver: [Microsoft]"
           } else if (cmd === "bonus") {
