@@ -148,7 +148,7 @@ export default () => {
           } else if (cmd === "contact") {
             val = "geekcampsingapore @t gmail dott com"
           } else if (cmd === "sponsors") {
-            val = "Platinum: [SPDigital], Silver: [Microsoft]"
+            val = "Platinum: [SPDigital], Gold: [Shopify], Silver: [Microsoft]"
           } else if (cmd === "bonus") {
             navigate("#bonus")
           } else if (cmd === "archives") {
