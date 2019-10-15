@@ -51,17 +51,35 @@ export default () => {
             <Row css="@media screen and (min-width: 768px) {margin-bottom: 3rem;}">
               <Col>
                 <h3>Platinum Sponsor</h3>
-                <Img fluid={data.spdigital.childImageSharp.fluid} />
+                <a
+                  href="https://www.spdigital.io/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Img fluid={data.spdigital.childImageSharp.fluid} />
+                </a>
               </Col>
             </Row>
             <Row>
               <Col>
                 <h3>Gold Sponsor</h3>
-                <Img fluid={data.shopify.childImageSharp.fluid} />
+                <a
+                  href="https://www.shopify.com/careers/search?locations%5B%5D=43&keywords=&sort="
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Img fluid={data.shopify.childImageSharp.fluid} />
+                </a>
               </Col>
               <Col>
                 <h3>Silver Sponsor</h3>
-                <Img fluid={data.microsoft.childImageSharp.fluid} />
+                <a
+                  href="https://www.facebook.com/MicrosoftSG/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Img fluid={data.microsoft.childImageSharp.fluid} />
+                </a>
               </Col>
             </Row>
           </div>
