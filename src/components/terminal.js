@@ -60,6 +60,7 @@ export default () => {
     "sponsors",
     "bonus",
     "archives",
+    "contact",
   ]
 
   const inputRef = useRef()
@@ -92,8 +93,8 @@ export default () => {
         // above
         window.scroll(0, theY)
       } else if (theY > window.scrollY + window.innerHeight - height - 26) {
-        //below
-        window.requestAnimationFrame(function() {
+        // below
+        window.requestAnimationFrame(function () {
           const { top, height } = inputRef.current.getBoundingClientRect()
           const theY = window.scrollY + top
           window.scroll(0, theY - window.innerHeight + height + 26)
@@ -144,8 +145,10 @@ export default () => {
             val = "These are not the files you are looking for."
           } else if (cmd === "date") {
             val = "Saturday, 19th Oct 2019"
+          } else if (cmd === "contact") {
+            val = "geekcampsingapore @t gmail dott com"
           } else if (cmd === "sponsors") {
-            val = "Platinum: [SPDigital], Silver: [Microsoft]"
+            val = "Platinum: [SPDigital], Gold: [Shopify], Silver: [Microsoft]"
           } else if (cmd === "bonus") {
             navigate("#bonus")
           } else if (cmd === "archives") {
