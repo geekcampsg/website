@@ -55,7 +55,13 @@ export default () => (
                 </a>
               </Col>
               <Col>
-                <img alt="Junction X Singapore" src={junction} />
+                <a
+                  href="https://singapore.hackjunction.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <img alt="Junction X Singapore" src={junction} />
+                </a>
               </Col>
             </Row>
             <Row>
