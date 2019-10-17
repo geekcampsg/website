@@ -43,7 +43,7 @@ const Terminal = styled(Console)`
   }
 `
 
-export default () => {
+export default ({ handleToggleGame }) => {
   const [log, setLog] = useState([
     "Enter command. Type help to see available commands",
   ])
@@ -61,6 +61,8 @@ export default () => {
     "bonus",
     "archives",
     "contact",
+    "game",
+    "q",
   ]
 
   const inputRef = useRef()
@@ -94,7 +96,7 @@ export default () => {
         window.scroll(0, theY)
       } else if (theY > window.scrollY + window.innerHeight - height - 26) {
         // below
-        window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function() {
           const { top, height } = inputRef.current.getBoundingClientRect()
           const theY = window.scrollY + top
           window.scroll(0, theY - window.innerHeight + height + 26)
@@ -155,6 +157,10 @@ export default () => {
             navigate("/past-events")
           } else if (cmd === "game") {
             val = "Starting game..."
+            handleToggleGame(true)
+          } else if (cmd === "q") {
+            val = "Quitting game..."
+            handleToggleGame(false)
           }
         }
       } else {
