@@ -1,11 +1,13 @@
 import React, { useRef, useEffect } from "react"
 import Console from "./console"
+import gameSprite from '../../static/images/game/geekcamp_sprite.png'
+import gameTent from '../../static/images/game/geekcamp_tent.png'
 
-function getRandom(min, max) {
+function getRandom (min, max) {
   return Math.random() * (max - min) + min
 }
 
-export default function Game() {
+export default function Game () {
   const canvas = useRef()
 
   useEffect(() => {
@@ -18,7 +20,20 @@ export default function Game() {
       x: [],
     }
 
+    let imagesLoaded = [false, false]
+    const geekcampTent = new Image()
+    geekcampTent.src = gameTent
+    geekcampTent.onload = function () {
+      imagesLoaded[0] = true
+    }
+    const geekcampSprite = new Image()
+    geekcampSprite.src = gameSprite
+    geekcampSprite.onload = function () {
+      imagesLoaded[1] = true
+    }
+
     const ctx = canvas.current.getContext("2d")
+    const dpr = window.devicePixelRatio || 1
     ctx.beginPath()
     ctx.fill()
     let animationFrameId = requestAnimationFrame(render)
@@ -34,13 +49,18 @@ export default function Game() {
     let lastTime = new Date().getTime()
     let numSeconds = 0
 
-    function createSprite(x, y) {
-      ctx.beginPath()
-      ctx.arc(x, y, 10, 0, 2 * Math.PI)
-      ctx.fill()
+    function createSprite (x, y) {
+      if (imagesLoaded[1]) {
+        ctx.drawImage(geekcampSprite, x, y)
+      } else {
+        ctx.fillStyle = "black"
+        ctx.beginPath()
+        ctx.arc(x, y, 10, 0, 2 * Math.PI)
+        ctx.fill()
+      }
     }
 
-    function detectHit() {
+    function detectHit () {
       for (let i = 0; i < numSprite; i++) {
         for (let j = 0; j < numBullets; j++) {
           if (
@@ -63,11 +83,12 @@ export default function Game() {
         }
       }
     }
-    function faillingSprite(ctx) {
-      const rate = getRandom(1, 10 + score)
-      //console.log(rate / 60)
-      if (rate / 60 <= 0.018) {
-        aliensState.x.push(getRandom(10, 490))
+    function faillingSprite (ctx) {
+      const rate = getRandom(1, 10)
+      const limit = ((18 + score / 100) / 1000)
+      //console.log(rate / 60, ((18 + score / 100) / 1000))
+      if (rate / 60 <= limit) {
+        aliensState.x.push(getRandom(100, 490))
         aliensState.y.push(0)
       }
       numSprite = aliensState.x.length
@@ -82,13 +103,14 @@ export default function Game() {
         }
       }
     }
-    function fireBullet(ctx) {
+    function fireBullet (ctx) {
       for (let i = 0; i < bulletState.y.length; i++) {
         if (bulletState.y[i] <= canvas.current.height) {
           bulletState.y[i] -= 5
         }
+        ctx.fillStyle = "#868686"
         ctx.beginPath()
-        ctx.arc(bulletState.x[i], bulletState.y[i], 4, 0, 2 * Math.PI)
+        ctx.arc(bulletState.x[i], bulletState.y[i], 2, 0, 2 * Math.PI)
         ctx.fill()
 
         if (bulletState.y[i] <= 0) {
@@ -101,7 +123,7 @@ export default function Game() {
     document.addEventListener("keydown", moveTriangle, false)
     document.addEventListener("keyup", gameState, false)
 
-    function moveTriangle(evt) {
+    function moveTriangle (evt) {
       switch (evt.keyCode) {
         case 16:
           bulletState.y.push(bulletInitY)
@@ -120,7 +142,7 @@ export default function Game() {
       }
     }
 
-    function gameState(evt) {
+    function gameState (evt) {
       switch (evt.keyCode) {
         case 80:
           console.log("start")
@@ -131,32 +153,36 @@ export default function Game() {
       }
     }
 
-    function resetGame() {
+    function resetGame () {
       gameOver = true
       score = 0
       numSeconds = 0
     }
 
-    function render() {
+    function render () {
       ctx.clearRect(0, 0, canvas.current.width, canvas.current.height)
-      ctx.fillStyle = "azure"
+      ctx.fillStyle = "#F8F8F8"
       ctx.fillRect(0, 0, canvas.current.width, canvas.current.height)
 
       if (!gameOver) {
         // Elapsed time
         let currentTime = new Date().getTime()
         if (currentTime - lastTime >= 1000) {
-          console.log(lastTime, currentTime)
           lastTime = currentTime
           numSeconds++
         }
-        // Draw triangle
-        ctx.fillStyle = "black"
-        ctx.beginPath()
-        ctx.moveTo(midX + deltaX, canvas.current.height - triLength)
-        ctx.lineTo(midX - triLength + deltaX, canvas.current.height)
-        ctx.lineTo(midX + triLength + deltaX, canvas.current.height)
-        ctx.fill()
+        // Draw tank shooter
+        if (imagesLoaded[0]) {
+          ctx.drawImage(geekcampTent, midX - triLength + deltaX, canvas.current.height - 172)
+        } else {
+          ctx.fillStyle = "black"
+          ctx.beginPath()
+          ctx.moveTo(midX + deltaX, canvas.current.height - triLength)
+          ctx.lineTo(midX - triLength + deltaX, canvas.current.height)
+          ctx.lineTo(midX + triLength + deltaX, canvas.current.height)
+          ctx.fill()
+        }
+
         fireBullet(ctx)
 
         // Draw antenna
@@ -165,9 +191,12 @@ export default function Game() {
 
         ctx.fillStyle = "#282a35"
         ctx.font = '16px "PT Mono"'
-        ctx.fillText(numSeconds, 20, 70)
+        ctx.fillText("Time: " + numSeconds + "s", 20, 70)
+        ctx.fillText("Score: " + score, 20, 90)
 
-        if (numSeconds > 30 && score <= 0) {
+        //console.log('score relation', score / numSeconds)
+        let scoreRelation = score / numSeconds
+        if ((numSeconds > 30 && score <= 0) || (scoreRelation < 0.05 && scoreRelation > 0)) {
           resetGame()
         }
 
@@ -193,7 +222,7 @@ export default function Game() {
   return (
     <Console light>
       <Console.Controls></Console.Controls>
-      <canvas ref={canvas} width={600} height={400} />
+      <canvas ref={canvas} width={848} height={400} />
     </Console>
   )
 }
