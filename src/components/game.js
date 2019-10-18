@@ -23,12 +23,12 @@ export default function Game() {
     let imagesLoaded = [false, false]
     const geekcampTent = new Image()
     geekcampTent.src = gameTent
-    geekcampTent.onload = function() {
+    geekcampTent.onload = function () {
       imagesLoaded[0] = true
     }
     const geekcampSprite = new Image()
     geekcampSprite.src = gameSprite
-    geekcampSprite.onload = function() {
+    geekcampSprite.onload = function () {
       imagesLoaded[1] = true
     }
 
@@ -48,6 +48,7 @@ export default function Game() {
     let score = 0
     let lastTime = new Date().getTime()
     let numSeconds = 0
+    let missed = 0
 
     function createSprite(x, y) {
       if (imagesLoaded[1]) {
@@ -55,7 +56,7 @@ export default function Game() {
       } else {
         ctx.fillStyle = "black"
         ctx.beginPath()
-        ctx.arc(x, y, 10, 0, 2 * Math.PI)
+        ctx.arc(x, y, 15, 0, 2 * Math.PI)
         ctx.fill()
       }
     }
@@ -64,18 +65,18 @@ export default function Game() {
       for (let i = 0; i < numSprite; i++) {
         for (let j = 0; j < numBullets; j++) {
           if (
-            bulletState.y[j] <= aliensState.y[i] + 10 &&
-            bulletState.y[j] >= aliensState.y[i] - 10 &&
-            bulletState.x[j] <= aliensState.x[i] + 10 &&
-            bulletState.x[j] >= aliensState.x[i] - 10
+            bulletState.y[j] <= aliensState.y[i] + 15 &&
+            bulletState.y[j] >= aliensState.y[i] - 15 &&
+            bulletState.x[j] <= aliensState.x[i] + 15 &&
+            bulletState.x[j] >= aliensState.x[i] - 15
           ) {
-            console.log(
-              "hit",
-              aliensState.x[i],
-              aliensState.y[i],
-              bulletState.x[j],
-              bulletState.y[j]
-            )
+            // console.log(
+            //   "hit",
+            //   aliensState.x[i],
+            //   aliensState.y[i],
+            //   bulletState.x[j],
+            //   bulletState.y[j]
+            // )
             aliensState.x.splice(i, 1)
             aliensState.y.splice(i, 1)
             score++
@@ -100,6 +101,7 @@ export default function Game() {
         if (aliensState.y[i] > canvas.current.height) {
           aliensState.y.shift()
           aliensState.x.shift()
+          missed++
         }
       }
     }
@@ -157,6 +159,7 @@ export default function Game() {
       gameOver = true
       score = 0
       numSeconds = 0
+      missed = 0
     }
 
     function render() {
@@ -204,20 +207,17 @@ export default function Game() {
         ctx.fillText("Time: " + numSeconds + "s", 20, 70)
         ctx.fillText("HI Score: " + score, 20, 90)
 
-        //console.log('score relation', score / numSeconds)
-        let scoreRelation = score / numSeconds
-        if (
-          (numSeconds > 30 && score <= 0) ||
-          (scoreRelation < 0.05 && scoreRelation > 0)
-        ) {
+        if (missed > 0) {
           resetGame()
         }
 
         ctx.restore()
       } else {
         ctx.fillStyle = "#282a35"
-        ctx.font = '24px "PT Mono"'
+        ctx.font = '12px "PT Mono"'
         ctx.textAlign = "center"
+        ctx.fillText("This game is still in beta. Submit a PR to github.com/geekcampsg/geekcampsg.github.io to improve the game. Thanks!", midX, 50)
+        ctx.font = '24px "PT Mono"'
         ctx.fillText("Start game", midX, 200)
         ctx.font = '20px "PT Mono"'
         ctx.fillText("Press 'p' key to start game", midX, 300)
@@ -235,7 +235,7 @@ export default function Game() {
 
   return (
     <Console light>
-      <Console.Controls></Console.Controls>
+      <Console.Controls subTitle='BETA v0.0.1'></Console.Controls>
       <canvas ref={canvas} width={848} height={480} />
     </Console>
   )
