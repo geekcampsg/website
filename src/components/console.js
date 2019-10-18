@@ -5,8 +5,9 @@ const Console = styled.div`
   width: 850px;
   max-width: 100%;
   margin-bottom: 1rem;
-  background: #282a35;
+  background: ${props => (props.light ? "white" : "#282a35")};
   border-radius: 8px;
+  ${props => (props.light ? "border: 1px solid #C4C4C4" : "")};
 
   @media screen and (min-width: 768px) {
     margin-bottom: 1.7rem;
@@ -14,6 +15,8 @@ const Console = styled.div`
 `
 
 const TopBar = styled.div`
+  display: flex;
+  justify-content: space-between;
   margin-top: 0.5rem;
   margin-left: 0.65rem;
   svg {
@@ -28,6 +31,12 @@ const TopBar = styled.div`
       width: auto;
     }
   }
+`
+
+const SubTitle = styled.div`
+  color: #282A35;
+  font-family: "PT Mono", "Courier New", Courier, monospace;
+  padding-right: 1em;
 `
 
 const Code = styled.pre`
@@ -54,8 +63,8 @@ const Code = styled.pre`
       display: none;
     }
     ${({ lineNumbers }) =>
-      lineNumbers &&
-      `
+    lineNumbers &&
+    `
         &::before {
       content: counter(line);
       counter-increment: line;
@@ -78,7 +87,7 @@ const Code = styled.pre`
   }
 `
 
-Console.Controls = () => (
+Console.Controls = ({ subTitle }) => (
   <TopBar>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -113,6 +122,7 @@ Console.Controls = () => (
         ></circle>
       </g>
     </svg>
+    <SubTitle>{subTitle}</SubTitle>
   </TopBar>
 )
 
