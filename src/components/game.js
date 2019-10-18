@@ -134,10 +134,10 @@ export default function Game() {
           numBullets = bulletState.x.length
           break
         case 37:
-          deltaX -= 20
+          deltaX -= 30
           break
         case 39:
-          deltaX += 20
+          deltaX += 30
           break
         default:
           break
@@ -207,7 +207,7 @@ export default function Game() {
         ctx.fillText("Time: " + numSeconds + "s", 20, 70)
         ctx.fillText("HI Score: " + score, 20, 90)
 
-        if (missed > 0) {
+        if (missed > 5) {
           resetGame()
         }
 
