@@ -111,6 +111,7 @@ export default ({ title }) => {
               <code>
                 {`  `}
                 <i className="c-g">{`}`}</i>
+                <i className="c-g">,</i>
               </code>
               <code>
                 {`  `}
