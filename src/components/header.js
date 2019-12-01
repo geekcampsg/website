@@ -2,7 +2,6 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import Logo from "../images/geekcamp-logo.svg"
-import Button from "./Button"
 
 const StyledHeader = styled.header`
   padding-top: 1.5rem;
@@ -23,13 +22,6 @@ const StyledHeader = styled.header`
     max-width: 80%;
   }
 
-  @media screen and (max-width: 400px) {
-    ${Button} {
-      font-size: 0.825rem;
-      line-height: 3;
-      padding: 0 0.75rem;
-    }
-  }
   @media screen and (min-width: 481px) {
     padding-top: 2rem;
   }
@@ -62,13 +54,6 @@ const Header = () => {
           <img src={Logo} alt={data.site.siteMetadata.title} />
         </Link>
       </h1>
-      <Button
-        href="https://geekcampsg2019.eventbrite.sg"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        Register now
-      </Button>
     </StyledHeader>
   )
 }

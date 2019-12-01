@@ -1,6 +1,4 @@
 import React from "react"
-import { css } from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
 import { Row, Col } from "../components/Grid"
 import nushackers from "../../static/images/partners/nushackers.svg"
 import twelvegeeks from "../../static/images/partners/12geeks.png"
