@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import Console from "../components/console"
 import wwc from "../../static/images/partners/womenwhocode.png"
 
@@ -108,7 +108,7 @@ export default () => (
               <Console id="ml-workshop">
                 <Console.Controls />
                 <Console.Code>
-                  <img src={wwc} />
+                  <img alt="Women Who Code" src={wwc} />
                   <code>
                     GeekcampSG has partnered with{" "}
                     <a
