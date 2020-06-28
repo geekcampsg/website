@@ -96,7 +96,7 @@ export default ({ handleToggleGame }) => {
         window.scroll(0, theY)
       } else if (theY > window.scrollY + window.innerHeight - height - 26) {
         // below
-        window.requestAnimationFrame(function() {
+        window.requestAnimationFrame(function () {
           const { top, height } = inputRef.current.getBoundingClientRect()
           const theY = window.scrollY + top
           window.scroll(0, theY - window.innerHeight + height + 26)
@@ -126,7 +126,7 @@ export default ({ handleToggleGame }) => {
         } else {
           if (cmd === "help") {
             // val = ["> register", "> speakers", "> location"]
-            val = "Available commands: register, speakers, location, archives"
+            val = "Available commands: cfp, location, archives"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
             val = "/geekcamp/2019"
@@ -134,23 +134,26 @@ export default ({ handleToggleGame }) => {
             setLog([])
             e.target.value = ""
             return
-          } else if (cmd === "register") {
+          } else if (cmd === 'cpf') {
+            val = "Call for Proposals at <a href='https://www.papercall.io/geekcamppsg2020' rel='noopender noreferrer' target='_blank'>https://www.papercall.io/geekcamppsg2020</a>"
+            window.open("https://www.papercall.io/geekcamppsg2020")
+          }
+          // else if (cmd === "register") {
+          //   val =
+          //     "Register now at <a href='https://geekcampsg2019.eventbrite.sg' rel='noopener noreferrer' target='_blank'>https://geekcampsg2019.eventbrite.sg</a>"
+          //   window.open("https://geekcampsg2019.eventbrite.sg")
+          // } 
+          else if (cmd === "location") {
             val =
-              "Register now at <a href='https://geekcampsg2019.eventbrite.sg' rel='noopener noreferrer' target='_blank'>https://geekcampsg2019.eventbrite.sg</a>"
-            window.open("https://geekcampsg2019.eventbrite.sg")
-          } else if (cmd === "location") {
-            val =
-              "<a href='https://goo.gl/maps/f4TMkMJKBrrXtbWd6' rel='noopener noreferrer' target='_blank'>📍 Shaw Foundation Alumni House, NUS. Auditorium Level 2, 11 Kent Ridge Drive, Singapore 119244</a>"
+              "Online!!"
           } else if (cmd === "dir") {
             val = "Bad command or file name"
           } else if (cmd === "ls") {
             val = "These are not the files you are looking for."
           } else if (cmd === "date") {
-            val = "Saturday, 19th Oct 2019"
+            val = "Monday, 19th Oct 2020 & Tuesday, 20th Oct 2020"
           } else if (cmd === "contact") {
             val = "geekcampsingapore @t gmail dott com"
-          } else if (cmd === "sponsors") {
-            val = "Platinum: [SPDigital], Gold: [Shopify], Silver: [Microsoft]"
           } else if (cmd === "bonus") {
             navigate("#bonus")
           } else if (cmd === "archives") {
