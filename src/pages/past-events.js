@@ -5,10 +5,12 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 import { Schedule, ScheduleItem } from "../components/Schedule"
 
+import Event2019 from '../../data/archive/2019'
 import Event2018Plus from "../../data/archive/2018"
 import Event2017 from "../../data/archive/2017"
 
 const events = [
+  ["GeekcampSG 2019", Event2019],
   ["GeekcampSG 2018+", Event2018Plus],
   ["GeekcampSG 2017", Event2017],
 ]
@@ -52,7 +54,7 @@ const TalkVideo = styled.a`
 `
 
 const PastEvents = () => {
-  const [event, setEvent] = useState(Event2018Plus)
+  const [event, setEvent] = useState(Event2019)
 
   return (
     <Layout>
@@ -65,14 +67,16 @@ const PastEvents = () => {
             <div className="left">
               <h2>Past Events</h2>
               <SideLinks>
-                {events.map(evt => (
-                  <li
+                {events.map(evt => {
+                  console.log(evt)
+                  return <li
                     className={event === evt[1] ? "is-active" : null}
                     onClick={() => setEvent(evt[1])}
+                    key={evt[0]}
                   >
                     {evt[0]}
                   </li>
-                ))}
+                })}
               </SideLinks>
             </div>
             <div className="right">
@@ -80,7 +84,7 @@ const PastEvents = () => {
               <EventDate>{event.date}</EventDate>
               <Schedule>
                 {event.talks.map(talk => (
-                  <ScheduleItem>
+                  <ScheduleItem key={talk.title}>
                     <h3>
                       {talk.title}{" "}
                       {talk.video ? (
