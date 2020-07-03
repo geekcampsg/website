@@ -1,0 +1,10 @@
+# All build settings https://gist.github.com/DavidWells/43884f15aed7e4dcb3a6dad06430b756
+
+[template.environment]
+  RUBY_VERSION = '2.7.1'
+  NODE_VERSION = '12.8.0'
+
+# detect gatsby
+# https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#netlifytoml-dev-block
+[dev]
+  framework = "#auto"
