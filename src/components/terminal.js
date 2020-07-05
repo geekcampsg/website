@@ -134,7 +134,7 @@ export default ({ handleToggleGame }) => {
             setLog([])
             e.target.value = ""
             return
-          } else if (cmd === 'cpf') {
+          } else if (cmd === 'cfp') {
             val = "Call for Proposals at <a href='https://www.papercall.io/geekcamppsg2020' rel='noopender noreferrer' target='_blank'>https://www.papercall.io/geekcamppsg2020</a>"
             window.open("https://www.papercall.io/geekcamppsg2020")
           }
