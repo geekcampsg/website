@@ -46,7 +46,7 @@ export default () => (
                 (SORBET) Project: a COVID-19 response
               </h3>
               <time dateTime="2020-09-19T15:15:00">1515 - 1545</time>
-              <h4>Kennth Y T Lim, Ahmed Hazyl Hilmy</h4>
+              <h4>Kenneth Y T Lim, Ahmed Hazyl Hilmy</h4>
             </ScheduleItem>
             <ScheduleItem id="speaker-juan-araya">
               <h3>Workshop: Hiding PII and malware with Stegware</h3>
