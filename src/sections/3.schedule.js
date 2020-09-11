@@ -1,180 +1,113 @@
 import React from "react"
-import { ScheduleTime, ScheduleItem } from "../components/Schedule"
+import {
+  ScheduleTime,
+  ScheduleItem,
+  ScheduleTitle,
+} from "../components/Schedule"
 
 export default () => (
   <section className="section-schedule" id="schedule">
     <div className="contain">
       <div className="vessel cols">
         <div className="left">
-          <h2>
-            schedule <br /> 19 Oct 19
-          </h2>
+          <h2>schedule</h2>
         </div>
         <div className="right">
+          <ScheduleTitle>Day 1 : 19 September</ScheduleTitle>
           <ScheduleTime>
             <ScheduleItem>
-              <h3>Registration</h3>
-              <time dateTime="2019-10-19T08:30:00">0830 - 0930</time>
+              <h3>Ushering</h3>
+              <time dateTime="2020-09-19T13:45:00">1345 - 1355</time>
             </ScheduleItem>
             <ScheduleItem>
               <h3>Opening</h3>
-              <time dateTime="2019-10-19T09:30:00">0930 - 0945</time>
+              <time dateTime="2020-09-19T13:55:00">1355 - 1400</time>
             </ScheduleItem>
-            <ScheduleItem id="speaker-sau-sheong">
+            <ScheduleItem id="speaker-chong-jia-yi">
               <h3>
-                How to create a web application in multiple programming
-                languages
+                Bridging the Cyber-Physical World with Robotics and Smart
+                Sensors
               </h3>
-              <time dateTime="2019-10-19T09:45:00">0945 - 1015</time>
-              <h4>Chang Sau Sheong</h4>
-              <p>
-                Tanuki is a polyglot web framework that allows you to develop
-                web applications and services in multiple programming languages.
-              </p>
+              <time dateTime="2020-09-19T14:00:00">1400 - 1430</time>
+              <h4>Chong Jia Yi</h4>
             </ScheduleItem>
-            <ScheduleItem id="speaker-kendrick">
-              <h3>Building Web-Based Audio Player for Obscure Audio Format</h3>
-              <time dateTime="2019-10-19T10:15:00">1015 - 1045</time>
-              <h4>Kenrick</h4>
-              <p>
-                BRSTM is an audio file format that are used on Nintendo Wii
-                games and many others. This talk will cover the journey in
-                building this player which decodes the BRSTM file entirely on
-                browser and plays it back using Web Audio API.
-              </p>
+            <ScheduleItem id="speaker-isham-mohammed">
+              <h3>CBOR: For Faster M2M Communication</h3>
+              <time dateTime="2020-09-19T14:30:00">1430 - 1500</time>
+              <h4>Isham Mohammed</h4>
             </ScheduleItem>
             <ScheduleItem>
               <h3>Break</h3>
-              <time dateTime="2019-10-19T10:45:00">1045 - 1115</time>
+              <time dateTime="2020-09-19T15:00:00">1500 - 1515</time>
             </ScheduleItem>
-            <ScheduleItem id="speaker-renaldi">
+            <ScheduleItem id="speaker-kenneth-yt-lim-ahmed">
               <h3>
-                Implementing Open Source-Based Motion Controlled Robotic Arms
-                with Python and C
+                The Socially Responsible Behaviour through Embodied Thinking
+                (SORBET) Project: a COVID-19 response
               </h3>
-              <time dateTime="2019-10-19T11:15:00">1115 - 1145</time>
-              <h4>Renaldi Gondosubroto</h4>
-              <p>
-                This talk will demonstrate how to easily program two DIY open
-                source motion-controlled robotic arms, demonstrating how to
-                start your own mechatronics-related projects easily.
-              </p>
+              <time dateTime="2020-09-19T15:15:00">1515 - 1545</time>
+              <h4>Kennth Y T Lim, Ahmed Hazyl Hilmy</h4>
             </ScheduleItem>
-            <ScheduleItem id="speaker-hazwan">
+            <ScheduleItem id="speaker-juan-araya">
+              <h3>Workshop: Hiding PII and malware with Stegware</h3>
+              <time dateTime="2020-09-19T15:45:00">1545 - 1615</time>
+              <h4>Juan Araya</h4>
+            </ScheduleItem>
+            <ScheduleItem id="speaker-nicolas-frankel">
               <h3>
-                Don’t let your Internet Of Things become an Internet Of Targets
+                A Change-Data-Capture use-case: designing an evergreen cache
               </h3>
-              <time dateTime="2019-10-19T11:45:00">1145 - 1215</time>
-              <h4>Hazwan Hassan</h4>
-              <p>
-                As current and future homes become pre-wired for connectivity
-                and home renovators start providing “smart home” services, it is
-                time to take a look at how they can be setup to ensure safety.
-                We will explore how network segregation techniques can be used
-                at home to keep the network safe.
-              </p>
+              <time dateTime="2020-09-19T16:15:00">1615 - 1645</time>
+              <h4>Nicolas Frankel</h4>
             </ScheduleItem>
-            <ScheduleItem id="speaker-subh">
-              <h3>Creating Art from Music</h3>
-              <time dateTime="2019-10-19T12:15:00">1215 - 1245</time>
-              <h4>Subhransu Behera</h4>
-              <p>
-                3 years ago I wanted to work on a project where I wanted to
-                convert any image (art piece, selfie, random portrait) into
-                music. The idea is based on mapping colors to musical notes. I
-                spoke to a pianist and he asked - can you create an art from
-                music instead. A unique art when someone plays music.
-              </p>
+          </ScheduleTime>
+          <ScheduleTitle>Day 2 : 20 September</ScheduleTitle>
+          <ScheduleTime>
+            <ScheduleItem>
+              <h3>Ushering</h3>
+              <time dateTime="2020-09-20T13:45:00">1345 - 1355</time>
             </ScheduleItem>
             <ScheduleItem>
-              <h3>Group Photo</h3>
-              <time dateTime="2019-10-19T12:45:00">1245 - 1255</time>
+              <h3>Opening</h3>
+              <time dateTime="2020-09-20T13:55:00">1355 - 1400</time>
             </ScheduleItem>
-            <ScheduleItem>
-              <h3>Lunch</h3>
-              <time dateTime="2019-10-19T12:55:00">1255 - 1355</time>
+            <ScheduleItem id="speaker-adrienne-tacke">
+              <h3>Don't be Afraid of the Terminal</h3>
+              <time dateTime="2020-09-20T14:00:00">1400 - 1430</time>
+              <h4>Adrienne Tacke</h4>
             </ScheduleItem>
-            <ScheduleItem id="speaker-yos">
-              <h3>Workshop 1: Getting Started with Smart Contracts</h3>
-              <time dateTime="2019-10-19T13:55:00">1355 - 1445</time>
-              <h4>Yos Riady</h4>
-              <p>
-                Come and discover how you can write smart contracts and build
-                decentralized applications! In this workshop, get a practical
-                hands-on with the Solidity programming language.
-              </p>
-            </ScheduleItem>
-            <ScheduleItem id="speaker-sudharshan">
+            <ScheduleItem id="speaker-tan-li-yuan-marcus-siddhant">
               <h3>
-                Love At First Byte: a romantic journey into the future of us
+                Securing Singapore with Augmented Reality: a pandemic-proof
+                prototype
               </h3>
-              <time dateTime="2019-10-19T14:45:00">1445 - 1515</time>
-              <h4>Sudharshan</h4>
-              <p>
-                Love At First Byte, is a talk about humans, and how technology
-                is going to shape us in the future. Discussing concepts like
-                assistive technologies, brain machine interfaces, flying drones
-                telepathically, and virtual realities. Simply put, this talk is
-                a love story between mind and machine.
-              </p>
-            </ScheduleItem>
-            <ScheduleItem id="speaker-weiyuan">
-              <h3>Implementing Trigonometry in SCSS, and lessons learnt</h3>
-              <time dateTime="2019-10-19T15:15:00">1515 - 1545</time>
-              <h4>Liu Weiyuan</h4>
-              <p>
-                Basic CSS is insufficient. We use Sass (SCSS) to push the
-                stylesheet language to the limit, where it’s similar to a
-                programming language. Through implementing Trigonometry in SCSS
-                as an example, we harness engineering principles such as code
-                reuse, and perform unit-testing of SCSS functions.
-              </p>
+              <time dateTime="2020-09-20T14:30:00">1430 - 1500</time>
+              <h4>Tan Li Yuan Marcus, Siddhant Shrivastava</h4>
             </ScheduleItem>
             <ScheduleItem>
               <h3>Break</h3>
-              <time dateTime="2019-10-19T15:45:00">1545 - 1615</time>
+              <time dateTime="2020-09-20T15:00:00">1500 - 1515</time>
             </ScheduleItem>
-            <ScheduleItem>
-              <h3>Workshop 2: Virtual Network Testbed Using GNS3</h3>
-              <h4>Hazwan Hassan</h4>
-              <time dateTime="2019-10-19T16:15:00">1615 - 1705</time>
-              <p>
-                Ever wanted to build complex virtual networks to test and
-                practice networking concepts or build a test production
-                environment for practicing software development but find
-                building such networks difficult? In this workshop, learn about
-                GNS3 and how to build and manage virtual networks visually.
-              </p>
+            <ScheduleItem id="speaker-melvin-zhang">
+              <h3>META II: A compiler-compiler that generates its own code</h3>
+              <time dateTime="2020-09-20T15:15:00">1515 - 1545</time>
+              <h4>Melvin Zhang</h4>
             </ScheduleItem>
-            <ScheduleItem id="speaker-dipesh">
+            <ScheduleItem id="speaker-milecia-mcgregor">
               <h3>
-                WebThings: A secure gateway to connect your things to Internet
+                Workshop: Making VR More Interesting with React and Brain.js
               </h3>
-              <time dateTime="2019-10-19T17:05:00">1705 - 1735</time>
-              <h4>Dipesh Monga</h4>
-              <p>
-                With the advent of the IoT, are we really making our lives
-                simpler or drowning ourselves in a vast ocean by uploading our
-                lives to the internet? WebThings is an open platform for
-                monitoring and controlling devices over the web that comes to
-                the rescue.
-              </p>
-            </ScheduleItem>
-            <ScheduleItem id="speaker-michael">
-              <h3>The Singapore Tech Community - A 10 year retrospective</h3>
-              <time dateTime="2019-10-19T17:35:00">1735 - 1805</time>
-              <h4>Michael Cheng</h4>
-              <p>
-                A talk on the development of the local technology meetup scene
-                through the eyes of a community builder & organizer. I’ll show
-                the progression from our humble beginnings and how foreign
-                talent and different overseas student exchange programs have
-                shaped the local tech and startup scene.
-              </p>
+              <time dateTime="2020-09-20T15:45:00">1545 - 1615</time>
+              <h4>Milecia McGregor</h4>
             </ScheduleItem>
             <ScheduleItem>
-              <h3>Closing</h3>
-              <time dateTime="2019-10-19T18:05:00">1805 - 1810</time>
+              <h3>Break</h3>
+              <time dateTime="2020-09-20T16:15:00">1615 - 16:30</time>
+            </ScheduleItem>
+            <ScheduleItem id="speaker-tamas-piros">
+              <h3>Supercharge your JavaScript with Web Assembly</h3>
+              <time dateTime="2020-09-20T16:30:00">1630 - 1700</time>
+              <h4>Tamas Piros</h4>
             </ScheduleItem>
           </ScheduleTime>
         </div>

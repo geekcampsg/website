@@ -127,7 +127,7 @@ export default ({ handleToggleGame }) => {
         } else {
           if (cmd === "help") {
             // val = ["> register", "> speakers", "> location"]
-            val = "Available commands: cfp, location, archives"
+            val = "Available commands: register, location, archives"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
             val = "/geekcamp/2019"
@@ -135,18 +135,19 @@ export default ({ handleToggleGame }) => {
             setLog([])
             e.target.value = ""
             return
-          } else if (cmd === "cfp") {
-            val = "Call for Proposals at <a href='https://www.papercall.io/geekcamppsg2020' rel='noopender noreferrer' target='_blank'>https://www.papercall.io/geekcamppsg2020</a>"
-            window.open("https://www.papercall.io/geekcamppsg2020")
           }
-          // else if (cmd === "register") {
-          //   val =
-          //     "Register now at <a href='https://geekcampsg2019.eventbrite.sg' rel='noopener noreferrer' target='_blank'>https://geekcampsg2019.eventbrite.sg</a>"
-          //   window.open("https://geekcampsg2019.eventbrite.sg")
-          // } 
-          else if (cmd === "location") {
+          //  else if (cmd === "cfp") {
+          //   val = "Call for Proposals at <a href='https://www.papercall.io/geekcamppsg2020' rel='noopender noreferrer' target='_blank'>https://www.papercall.io/geekcamppsg2020</a>"
+          //   window.open("https://www.papercall.io/geekcamppsg2020")
+          // }
+          else if (cmd === "register") {
             val =
-              "Online!!"
+              "Register now at <a href='https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?fbclid=IwAR1JbM3AjAIMMrpF5oQhsuvdgdrMh8-gEvxjccYzXU5mFGgzkPzbciHmzso' rel='noopener noreferrer' target='_blank'>eventbrite</a>"
+            window.open(
+              "https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?fbclid=IwAR1JbM3AjAIMMrpF5oQhsuvdgdrMh8-gEvxjccYzXU5mFGgzkPzbciHmzso"
+            )
+          } else if (cmd === "location") {
+            val = "Online!!"
           } else if (cmd === "dir") {
             val = "Bad command or file name"
           } else if (cmd === "ls") {

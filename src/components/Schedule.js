@@ -1,5 +1,14 @@
 import styled from "styled-components"
 
+const ScheduleTitle = styled.h1`
+  margin-bottom: 1rem;
+  font-size: 1.6em;
+
+  @media screen and (min-with: 768px) {
+    font-size: 2em;
+  }
+`
+
 const Schedule = styled.ul`
   list-style: none;
   margin-left: 0;
@@ -77,4 +86,4 @@ const ScheduleItem = styled.li`
   }
 `
 
-export { Schedule, ScheduleTime, ScheduleItem }
+export { Schedule, ScheduleTime, ScheduleItem, ScheduleTitle }
