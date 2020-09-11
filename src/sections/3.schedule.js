@@ -58,7 +58,7 @@ export default () => (
                 A Change-Data-Capture use-case: designing an evergreen cache
               </h3>
               <time dateTime="2020-09-19T16:15:00">1615 - 1645</time>
-              <h4>Nicolas frankel</h4>
+              <h4>Nicolas Frankel</h4>
             </ScheduleItem>
           </ScheduleTime>
           <ScheduleTitle>Day 2 : 20 September</ScheduleTitle>
@@ -76,13 +76,13 @@ export default () => (
               <time dateTime="2020-09-20T14:00:00">1400 - 1430</time>
               <h4>Adrienne Tacke</h4>
             </ScheduleItem>
-            <ScheduleItem id="speaker-adrienne-tacke">
+            <ScheduleItem id="speaker-tan-li-yuan-marcus-siddhant">
               <h3>
                 Securing Singapore with Augmented Reality: a pandemic-proof
                 prototype
               </h3>
               <time dateTime="2020-09-20T14:30:00">1430 - 1500</time>
-              <h4>Adrienne Tacke</h4>
+              <h4>Tan Li Yuan Marcus, Siddhant Shrivastava</h4>
             </ScheduleItem>
             <ScheduleItem>
               <h3>Break</h3>
