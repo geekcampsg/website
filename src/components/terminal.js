@@ -130,7 +130,7 @@ export default ({ handleToggleGame }) => {
             val = "Available commands: register, location, archives"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
-            val = "/geekcamp/2019"
+            val = "/geekcamp/2020"
           } else if (cmd === "clear") {
             setLog([])
             e.target.value = ""
