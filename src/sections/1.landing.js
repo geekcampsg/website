@@ -148,7 +148,7 @@ export default ({ title }) => {
               </code>
               <code>
                 {`    `}
-                <i>geek talks.</i>
+                <i>afternoon geek talks.</i>
                 <i className="c-b">"</i>
               </code>
               <code>
@@ -160,7 +160,7 @@ export default ({ title }) => {
                 <i className="c-b">
                   "
                   <a
-                    href="https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?fbclid=IwAR1JbM3AjAIMMrpF5oQhsuvdgdrMh8-gEvxjccYzXU5mFGgzkPzbciHmzso"
+                    href="https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?aff=ebdssbeac"
                     rel="noopener noreferrer"
                     target="_blank"
                   >

@@ -142,9 +142,9 @@ export default ({ handleToggleGame }) => {
           // }
           else if (cmd === "register") {
             val =
-              "Register now at <a href='https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?fbclid=IwAR1JbM3AjAIMMrpF5oQhsuvdgdrMh8-gEvxjccYzXU5mFGgzkPzbciHmzso' rel='noopener noreferrer' target='_blank'>eventbrite</a>"
+              "Register now at <a href='https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?aff=ebdssbeac' rel='noopener noreferrer' target='_blank'>eventbrite</a>"
             window.open(
-              "https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?fbclid=IwAR1JbM3AjAIMMrpF5oQhsuvdgdrMh8-gEvxjccYzXU5mFGgzkPzbciHmzso"
+              "https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?aff=ebdssbeac"
             )
           } else if (cmd === "location") {
             val = "Online!!"
@@ -153,9 +153,9 @@ export default ({ handleToggleGame }) => {
           } else if (cmd === "ls") {
             val = "These are not the files you are looking for."
           } else if (cmd === "date") {
-            val = "Monday, 19th Oct 2020 & Tuesday, 20th Oct 2020"
+            val = "Saturday, 19th Sept 2020 & Sunday, 20th Sept 2020"
           } else if (cmd === "contact") {
-            val = "geekcampsingapore @t gmail dott com"
+            val = "geekcampsingapore @t gmail dot com"
           } else if (cmd === "bonus") {
             navigate("#bonus")
           } else if (cmd === "archives") {
@@ -174,10 +174,10 @@ export default ({ handleToggleGame }) => {
         } else if (cmd === "speakers") {
           if (arg && arg === "--all") {
             val =
-              "Chang Sau Sheong, Subhransu Behera, Hazwan Hassan, Michael Cheng, Kenrick, Renaldi Gondosubroto, Yos Riady, Sudharshan, Liu Weiyuan, Dipesh Monga"
+              "Melvin Zhang, Chong Jia Yi, Isham Mohammed, Kenneth Y T Lim, Ahmed Hazyl Hilmy, Juan Araya, Nicolas Frankel, Tan Li Yuan Marcus, Siddhant Shrivastava, Tamas Piros, Adrienne Tacke, Milecia McGregor"
           } else {
             val =
-              "Chang Sau Sheong, Subhransu Behera, Hazwan Hassan, Michael Cheng, and many more (--all)"
+              "Melvin Zhang, Chong Jia Yi, Nicolas Frankel,Tamas Piros, and many more (--all)"
           }
         } else if (cmd === "cd") {
           val = "You are already where you are supposed to be."
