@@ -84,5 +84,57 @@
       "title": "GeekcampSG x Women Who Code Singapore",
       "summary": "Machines Learning and Edge Computing Workshop. This workshop will help you get familiarised with the powerful use of deep learning models on the small devices. We will tackle the problem of recognising hand gestures by using the RealSense depth sensing camera and then run our model on the edge using Intel’s Neural Compute Stick."
     }
+  ],
+  "speakers-bio": [
+    {
+      "speaker": "Chang Sau Sheong",
+      "position": "CEO, SP Digital",
+      "img": "speakers/past/sausheong.jpg"
+    },
+    {
+      "speaker": "Micheal Cheng",
+      "position": "Lead Engineer, GovTech",
+      "img": "speakers/past/michael_cheng.jpeg"
+    },
+    {
+      "speaker": "Kenrick",
+      "position": "Front-End Engineer, Shopee",
+      "img": "speakers/past/kenrick.jpeg"
+    },
+    {
+      "speaker": "Renaldi Gondosubroto",
+      "position": "Founder and CEO, GReS Studio",
+      "img": "speakers/past/Renaldi-Gondosubroto.png"
+    },
+    {
+      "speaker": "Hazwan Hassan",
+      "position": "Cyber Security Enthusiast",
+      "img": "speakers/past/muhammad_hazwan.jpg"
+    },
+    {
+      "speaker": "Subhransu Behera",
+      "position": "Principal Software Engineer, SP Digital",
+      "img": "speakers/past/subhransu_behera.jpg"
+    },
+    {
+      "speaker": "Yos Riady",
+      "position": "Software Engineer, TenX",
+      "img": "speakers/past/yosss.jpg"
+    },
+    {
+      "speaker": "Sudharshan",
+      "position": "Hacker, Maker, Coder, Tech-Enthusiast",
+      "img": "speakers/past/Sudharshan.jpeg"
+    },
+    {
+      "speaker": "Liu Weiyuan",
+      "position": "Full Stack Engineer, Rakuten Viki",
+      "img": "speakers/past/weiyuan.jpg"
+    },
+    {
+      "speaker": "Dipesh Mong",
+      "position": "Tech Speaker, Mozilla",
+      "img": "speakers/past/dipesh.jpg"
+    }
   ]
 }
