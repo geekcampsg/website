@@ -160,7 +160,7 @@ export default ({ title }) => {
                 <i className="c-b">
                   "
                   <a
-                    href="https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?aff=ebdssbeac"
+                    href="https://geekcampsg2020.eventbrite.sg/"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
