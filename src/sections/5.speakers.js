@@ -12,8 +12,8 @@ const Grid = styled.div`
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      michael: file(
-        relativePath: { eq: "speakers/featured/michael_cheng.jpeg" }
+      adrienne: file(
+        relativePath: { eq: "speakers/featured/adrienne_atacke.jpg" }
       ) {
         childImageSharp {
           fixed(width: 400, height: 400) {
@@ -21,8 +21,22 @@ export default () => {
           }
         }
       }
-      hazwan: file(
-        relativePath: { eq: "speakers/featured/muhammad_hazwan.jpg" }
+      jiayi: file(relativePath: { eq: "speakers/featured/chong_jia_yi.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      isham: file(relativePath: { eq: "speakers/featured/isham_mohamed.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      juan: file(
+        relativePath: { eq: "speakers/featured/juan_antonio_araya.jpg" }
       ) {
         childImageSharp {
           fixed(width: 400, height: 400) {
@@ -30,62 +44,23 @@ export default () => {
           }
         }
       }
-      sausheong: file(relativePath: { eq: "speakers/featured/sausheong.jpg" }) {
+      tamas: file(relativePath: { eq: "speakers/featured/tamas_piros.jpg" }) {
         childImageSharp {
           fixed(width: 400, height: 400) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      subh: file(
-        relativePath: { eq: "speakers/featured/subhransu_behera.jpg" }
+      ahmed: file(relativePath: { eq: "speakers/featured/ahmed_hazyl.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      kenneth: file(
+        relativePath: { eq: "speakers/featured/kennethytlim.jpg" }
       ) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      kenrick: file(relativePath: { eq: "speakers/featured/kenrick.jpeg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      renaldi: file(
-        relativePath: { eq: "speakers/featured/Renaldi-Gondosubroto.png" }
-      ) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      yos: file(relativePath: { eq: "speakers/featured/yosss.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      sudharshan: file(
-        relativePath: { eq: "speakers/featured/Sudharshan.jpeg" }
-      ) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      weiyuan: file(relativePath: { eq: "speakers/featured/weiyuan.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      dipesh: file(relativePath: { eq: "speakers/featured/dipesh.jpg" }) {
         childImageSharp {
           fixed(width: 400, height: 400) {
             ...GatsbyImageSharpFixed
@@ -101,71 +76,53 @@ export default () => {
         <div className="vessel cols">
           <div className="left">
             <h2>
-              2019
+              2020
               <br /> Speakers
             </h2>
           </div>
           <div className="right">
             <Grid>
               <SpeakerImage
-                name="Chang Sau Sheong"
-                position="CEO, SP Digital"
-                fixed={data.sausheong.childImageSharp.fixed}
-                target="speaker-sau-sheong"
+                name="Chong Jia Yi"
+                position="Distinguished Engineer, GovTech"
+                fixed={data.jiayi.childImageSharp.fixed}
+                target="speaker-chong-jia-yi"
               />
               <SpeakerImage
-                name="Kenrick"
-                position="Front-End Engineer, Shopee"
-                fixed={data.kenrick.childImageSharp.fixed}
-                target="speaker-kendrick"
+                name="Adrienne Tacke"
+                position="Senior Developer Advocate, MongoDB"
+                fixed={data.adrienne.childImageSharp.fixed}
+                target="speaker-adrienne-tacke"
               />
               <SpeakerImage
-                name="Renaldi Gondosubroto"
-                position="Founder and CEO, GReS Studio"
-                fixed={data.renaldi.childImageSharp.fixed}
-                target="speaker-renaldi"
+                name="Isham Mohammed"
+                position="Lead Software Developer, Kloudynet Technologies"
+                fixed={data.isham.childImageSharp.fixed}
+                target="speaker-isham-mohammed"
               />
               <SpeakerImage
-                name="Hazwan Hassan"
-                position="Cyber Security Enthusiast"
-                fixed={data.hazwan.childImageSharp.fixed}
-                target="speaker-hazwan"
+                name="Juan Araya"
+                position="Cybersecurity Specialist"
+                fixed={data.juan.childImageSharp.fixed}
+                target="speaker-juan-araya"
               />
               <SpeakerImage
-                name="Subhransu Behera"
-                position="Principal Software Engineer, SP Digital"
-                fixed={data.subh.childImageSharp.fixed}
-                target="speaker-subh"
+                name="Tamas Piros"
+                position="Google Developer Expert in Web Tech"
+                fixed={data.tamas.childImageSharp.fixed}
+                target="speaker-tamas-piros"
               />
               <SpeakerImage
-                name="Yos Riady"
-                position="Software Engineer, TenX"
-                fixed={data.yos.childImageSharp.fixed}
-                target="speaker-yos"
+                name="Kennth Y T Lim"
+                position="Research Scientist at NIE"
+                fixed={data.kenneth.childImageSharp.fixed}
+                target="speaker-kenneth-yt-lim-ahmed"
               />
               <SpeakerImage
-                name="Sudharshan"
-                position="Hacker, Maker, Coder, Tech-Enthusiast"
-                fixed={data.sudharshan.childImageSharp.fixed}
-                target="speaker-sudharshan"
-              />
-              <SpeakerImage
-                name="Liu Weiyuan"
-                position="Full Stack Engineer, Rakuten Viki"
-                fixed={data.weiyuan.childImageSharp.fixed}
-                target="speaker-weiyuan"
-              />
-              <SpeakerImage
-                name="Dipesh Monga"
-                position="Tech Speaker, Mozilla"
-                fixed={data.dipesh.childImageSharp.fixed}
-                target="speaker-dipesh"
-              />
-              <SpeakerImage
-                name="Michael Cheng"
-                position="Lead Engineer, GovTech"
-                fixed={data.michael.childImageSharp.fixed}
-                target="speaker-michael"
+                name="Ahmed Hazyl Hilmy"
+                position="passion for AR, virtual worlds & IoT for authentic learning"
+                fixed={data.ahmed.childImageSharp.fixed}
+                target="speaker-kenneth-yt-lim-ahmed"
               />
             </Grid>
           </div>
