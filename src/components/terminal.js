@@ -142,9 +142,9 @@ export default ({ handleToggleGame }) => {
           // }
           else if (cmd === "register") {
             val =
-              "Register now at <a href='https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?aff=ebdssbeac' rel='noopener noreferrer' target='_blank'>eventbrite</a>"
+              "Register now at <a href='https://geekcampsg2020.eventbrite.sg/' target='_blank'>eventbrite</a>"
             window.open(
-              "https://www.eventbrite.sg/e/geekcamp-singapore-2020-tickets-118585914663?aff=ebdssbeac"
+              "https://geekcampsg2020.eventbrite.sg/"
             )
           } else if (cmd === "location") {
             val = "Online!!"
