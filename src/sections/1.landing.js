@@ -87,7 +87,6 @@ export default ({ title }) => {
                 <i className="c-g">: </i>
                 <i className="c-b">"</i>2020-09-19T18:00
                 <i className="c-b">"</i>
-                <i className="c-g">,</i>
               </code>
               <code>
                 {`    `}
@@ -118,11 +117,10 @@ export default ({ title }) => {
                 <i className="c-g">: </i>
                 <i className="c-b">"</i>2020-09-20T18:00
                 <i className="c-b">"</i>
-                <i className="c-g">,</i>
               </code>
               <code>
                 {`    `}
-                <i className="c-g">{`}`},</i>
+                <i className="c-g">{`}`}</i>
               </code>
               <code>
                 {`  `}
@@ -133,7 +131,7 @@ export default ({ title }) => {
                 <i className="c-b">"</i>
                 <i className="c-r">location</i>
                 <i className="c-b">"</i>
-                <i className="c-g">:</i>
+                <i className="c-g">: </i>
                 <i className="c-b">"</i>Online
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
@@ -149,12 +147,12 @@ export default ({ title }) => {
               <code>
                 {`    `}
                 <i>afternoon geek talks.</i>
-                <i className="c-b">"</i>
+                <i className="c-b">",</i>
               </code>
               <code>
                 {`  `}
                 <i className="c-b">"</i>
-                <i className="c-y">Registration</i>
+                <i className="c-y">registration</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
                 <i className="c-b">
@@ -168,7 +166,6 @@ export default ({ title }) => {
                   </a>
                 </i>
                 <i className="c-b">"</i>
-                <i className="c-g">,</i>
               </code>
               <code>
                 <i className="c-g">{`}`}</i>
