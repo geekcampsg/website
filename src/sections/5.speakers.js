@@ -44,7 +44,7 @@ export default () => {
           }
         }
       }
-      tamas: file(relativePath: { eq: "speakers/featured/tamas_piros.jpg" }) {
+      tamas: file(relativePath: { eq: "speakers/featured/tamas_piros.png" }) {
         childImageSharp {
           fixed(width: 400, height: 400) {
             ...GatsbyImageSharpFixed
@@ -61,6 +61,20 @@ export default () => {
       kenneth: file(
         relativePath: { eq: "speakers/featured/kennethytlim.jpg" }
       ) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      siddhant: file(relativePath: { eq: "speakers/featured/siddhant.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      marcus: file(relativePath: { eq: "speakers/featured/marcusliyuan.jpg" }) {
         childImageSharp {
           fixed(width: 400, height: 400) {
             ...GatsbyImageSharpFixed
@@ -123,6 +137,18 @@ export default () => {
                 position="passion for AR, virtual worlds & IoT for authentic learning"
                 fixed={data.ahmed.childImageSharp.fixed}
                 target="speaker-kenneth-yt-lim-ahmed"
+              />
+              <SpeakerImage
+                name="Tan Li Yuan, Marcus"
+                position="Undergraduate of ISTD, Computer Science at SUTD"
+                fixed={data.marcus.childImageSharp.fixed}
+                target="speaker-tan-li-yuan-marcus-siddhant"
+              />
+              <SpeakerImage
+                name="Siddhant Shrivastava"
+                position="Researcher of iTrust Center for Research in Cyber Security at SUTD"
+                fixed={data.siddhant.childImageSharp.fixed}
+                target="speaker-tan-li-yuan-marcus-siddhant"
               />
             </Grid>
           </div>
