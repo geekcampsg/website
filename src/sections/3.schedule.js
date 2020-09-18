@@ -143,22 +143,9 @@ export default () => (
                 compiler-compiler itself in only 26 lines of the DSL.
               </p>
             </ScheduleItem>
-            <ScheduleItem id="speaker-milecia-mcgregor">
-              <h3>
-                Workshop: Making VR More Interesting with React and Brain.js
-              </h3>
-              <time dateTime="2020-09-20T15:45:00">1545 - 1615</time>
-              <h4>Milecia McGregor</h4>
-              <p>
-                In this workshop learn how to make VR apps with React. Once you
-                have your VR app ready to go, let's add Brain.js to use machine
-                learning to make real-time updates to the UI and get insights on
-                how users interact with your app.
-              </p>
-            </ScheduleItem>
             <ScheduleItem>
               <h3>Break</h3>
-              <time dateTime="2020-09-20T16:15:00">1615 - 16:30</time>
+              <time dateTime="2020-09-20T15:45:00">1545 - 1630</time>
             </ScheduleItem>
             <ScheduleItem id="speaker-tamas-piros">
               <h3>Supercharge your JavaScript with Web Assembly</h3>
