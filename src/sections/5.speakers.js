@@ -81,6 +81,20 @@ export default () => {
           }
         }
       }
+      melvin: file(relativePath: { eq: "speakers/featured/melvin_zhang.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      nicolas: file(relativePath: { eq: "speakers/featured/nicolas_frankel.jpg" }) {
+        childImageSharp {
+          fixed(width: 400, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
 
@@ -149,6 +163,18 @@ export default () => {
                 position="Emerging Tech Researcher at iTrust Centre for Research in Cyber Security, SUTD"
                 fixed={data.siddhant.childImageSharp.fixed}
                 target="speaker-tan-li-yuan-marcus-siddhant"
+              />
+              <SpeakerImage
+                name="Melvin Zhang"
+                position="Research Engineer (Digital Learning), Solve Education!"
+                fixed={data.melvin.childImageSharp.fixed}
+                target="speaker-melvin-zhang"
+              />
+              <SpeakerImage
+                name="Nicolas Frankel"
+                position="Developer Advocate, Hazelcast"
+                fixed={data.nicolas.childImageSharp.fixed}
+                target="speaker-nicolas-frankel"
               />
             </Grid>
           </div>
