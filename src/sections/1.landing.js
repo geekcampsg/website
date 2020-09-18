@@ -132,7 +132,17 @@ export default ({ title }) => {
                 <i className="c-r">location</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i>Online
+                <i className="c-b">"<a href="https://bit.ly/geekcampsg2020" rel="noopener noreferrer" target="_blank">bit.ly/geekcampsg2020</a></i>
+                <i className="c-b">"</i>
+                <i className="c-g">,</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
+                <i className="c-r">breakout</i>
+                <i className="c-b">"</i>
+                <i className="c-g">: </i>
+                <i className="c-b">"<a href="https://bit.ly/geekcampsg2020-watercooler" rel="noopener noreferrer" target="_blank">bit.ly/geekcampsg2020-watercooler</a></i>
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>
@@ -147,24 +157,6 @@ export default ({ title }) => {
               <code>
                 {`    `}
                 <i>afternoon geek talks.</i>
-                <i className="c-b">",</i>
-              </code>
-              <code>
-                {`  `}
-                <i className="c-b">"</i>
-                <i className="c-y">registration</i>
-                <i className="c-b">"</i>
-                <i className="c-g">: </i>
-                <i className="c-b">
-                  "
-                  <a
-                    href="https://geekcampsg2020.eventbrite.sg/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Register here
-                  </a>
-                </i>
                 <i className="c-b">"</i>
               </code>
               <code>
