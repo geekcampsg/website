@@ -127,7 +127,7 @@ export default () => {
                 target="speaker-tamas-piros"
               />
               <SpeakerImage
-                name="Kennth Y T Lim"
+                name="Kenneth Y T Lim"
                 position="Research Scientist, NIE"
                 fixed={data.kenneth.childImageSharp.fixed}
                 target="speaker-kenneth-yt-lim-ahmed"
