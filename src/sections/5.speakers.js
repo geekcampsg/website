@@ -69,7 +69,7 @@ export default () => {
       }
       siddhant: file(relativePath: { eq: "speakers/featured/siddhant.jpg" }) {
         childImageSharp {
-          fixed(width: 400, height: 400) {
+          fixed(width: 400, height: 400, cropFocus: NORTH) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -128,13 +128,13 @@ export default () => {
               />
               <SpeakerImage
                 name="Kennth Y T Lim"
-                position="Research Scientist at NIE"
+                position="Research Scientist, NIE"
                 fixed={data.kenneth.childImageSharp.fixed}
                 target="speaker-kenneth-yt-lim-ahmed"
               />
               <SpeakerImage
                 name="Ahmed Hazyl Hilmy"
-                position="passion for AR, virtual worlds & IoT for authentic learning"
+                position="Passion for AR, virtual worlds & IoT for authentic learning"
                 fixed={data.ahmed.childImageSharp.fixed}
                 target="speaker-kenneth-yt-lim-ahmed"
               />
@@ -146,7 +146,7 @@ export default () => {
               />
               <SpeakerImage
                 name="Siddhant Shrivastava"
-                position="Researcher of iTrust Center for Research in Cyber Security at SUTD"
+                position="Emerging Tech Researcher at iTrust Centre for Research in Cyber Security, SUTD"
                 fixed={data.siddhant.childImageSharp.fixed}
                 target="speaker-tan-li-yuan-marcus-siddhant"
               />
