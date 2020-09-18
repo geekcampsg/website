@@ -12,6 +12,7 @@ import Speakers from "../sections/5.speakers"
 import Marquee from "../sections/6.marquee"
 import PastSpeakers from "../sections/7.past-speakers"
 import Testimonials from "../sections/8.testimonials"
+import Sponsors from "../sections/10.sponsors"
 import CoC from "../sections/9.coc"
 
 import SEO from "../components/seo"
@@ -27,6 +28,7 @@ const IndexPage = () => {
       <Marquee />
       <PastSpeakers />
       <Testimonials />
+      <Sponsors/>
       <CoC />
     </Layout>
   )

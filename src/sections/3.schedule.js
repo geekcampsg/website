@@ -22,6 +22,7 @@ export default () => (
             <ScheduleItem>
               <h3>Opening</h3>
               <time dateTime="2020-09-19T13:55:00">1355 - 1400</time>
+              <h4>Ambrose</h4>
             </ScheduleItem>
             <ScheduleItem id="speaker-chong-jia-yi">
               <h3>
@@ -89,6 +90,14 @@ export default () => (
                 can be leveraged to get a cache that is never stale.
               </p>
             </ScheduleItem>
+            <ScheduleItem id="speaker-closing">
+              <h3>Closing</h3>
+              <time dateTime="2020-09-19T16:15:00">1645 - 1650</time>
+              <h4>Ambrose</h4>
+              <p>
+                Thanks all & see you tmr!
+              </p>
+            </ScheduleItem>
           </ScheduleTime>
           <ScheduleTitle>Day 2 : 20 September</ScheduleTitle>
           <ScheduleTime>
@@ -99,6 +108,7 @@ export default () => (
             <ScheduleItem>
               <h3>Opening</h3>
               <time dateTime="2020-09-20T13:55:00">1355 - 1400</time>
+              <h4>Terence</h4>
             </ScheduleItem>
             <ScheduleItem id="speaker-adrienne-tacke">
               <h3>Don't be Afraid of the Terminal</h3>
@@ -143,13 +153,9 @@ export default () => (
                 compiler-compiler itself in only 26 lines of the DSL.
               </p>
             </ScheduleItem>
-            <ScheduleItem>
-              <h3>Break</h3>
-              <time dateTime="2020-09-20T15:45:00">1545 - 1630</time>
-            </ScheduleItem>
             <ScheduleItem id="speaker-tamas-piros">
               <h3>Supercharge your JavaScript with Web Assembly</h3>
-              <time dateTime="2020-09-20T16:30:00">1630 - 1700</time>
+              <time dateTime="2020-09-20T15:45:00">1545 - 1615</time>
               <h4>Tamas Piros</h4>
               <p>
                 Browser & Web APIs along with JavaScript have seen an incredible
@@ -157,6 +163,14 @@ export default () => (
                 have certain limitations. With the rise of Web Assembly we can
                 easily enhance JavaScript and give application(s) access to
                 low-level processing & transform web experiences.
+              </p>
+            </ScheduleItem>
+            <ScheduleItem id="speaker-closing">
+              <h3>Closing</h3>
+              <time dateTime="2020-09-20T16:15:00">1615 - 1620</time>
+              <h4>Terence</h4>
+              <p>
+                Thanks all!
               </p>
             </ScheduleItem>
           </ScheduleTime>
