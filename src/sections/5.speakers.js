@@ -81,7 +81,7 @@ export default () => {
           }
         }
       }
-      melvin: file(relativePath: { eq: "speakers/featured/melvin_zhang.jpg" }) {
+      melvin: file(relativePath: { eq: "speakers/featured/melvin_zhang.png" }) {
         childImageSharp {
           fixed(width: 400, height: 400) {
             ...GatsbyImageSharpFixed
@@ -136,7 +136,7 @@ export default () => {
               />
               <SpeakerImage
                 name="Tamas Piros"
-                position="Google Developer Expert in Web Tech"
+                position="Developer Evangelist, Cloudinary"
                 fixed={data.tamas.childImageSharp.fixed}
                 target="speaker-tamas-piros"
               />
