@@ -127,7 +127,7 @@ export default ({ siteTitle }) => {
               </li>
               <li>
                 <a
-                  href="https://engineers.sg/episodes/search?search=GeekcampSG"
+                  href="https://www.youtube.com/c/GeekcampSgRox/playlists"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
