@@ -68,7 +68,11 @@ export default ({ handleToggleGame }) => {
 
   const inputRef = useRef()
   useEffect(() => {
-    inputRef.current.focus()
+    // only focus on terminal when the terminal is within view
+    // to avoid annoying jump
+    if (inputRef.current && isInView(inputRef.current)) {
+      inputRef.current.focus();
+    }
   }, [])
 
   function handleKeyPress(e) {
@@ -240,4 +244,9 @@ export default ({ handleToggleGame }) => {
       </Console.Code>
     </Terminal>
   )
+}
+
+function isInView(element) {
+  let box = element.getBoundingClientRect();
+  return box.top < window.innerHeight && box.bottom >= 0;
 }
