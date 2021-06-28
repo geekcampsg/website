@@ -134,7 +134,7 @@ export default ({ handleToggleGame }) => {
             val = "Available commands: register, location, archives"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
-            val = "/geekcamp/2020"
+            val = "/geekcamp/2021"
           } else if (cmd === "clear") {
             setLog([])
             e.target.value = ""
@@ -145,11 +145,12 @@ export default ({ handleToggleGame }) => {
           //   window.open("https://www.papercall.io/geekcamppsg2020")
           // }
           else if (cmd === "register") {
-            val =
-              "Register now at <a href='https://geekcampsg2020.eventbrite.sg/' target='_blank'>eventbrite</a>"
-            window.open(
-              "https://geekcampsg2020.eventbrite.sg/"
-            )
+            val = "Registration will be opened soon."
+            // val =
+            //   "Register now at <a href='https://geekcampsg2020.eventbrite.sg/' target='_blank'>eventbrite</a>"
+            // window.open(
+            //   "https://geekcampsg2020.eventbrite.sg/"
+            // )
           } else if (cmd === "location") {
             val = "Online!!"
           } else if (cmd === "dir") {
@@ -157,7 +158,7 @@ export default ({ handleToggleGame }) => {
           } else if (cmd === "ls") {
             val = "These are not the files you are looking for."
           } else if (cmd === "date") {
-            val = "Saturday, 19th Sept 2020 & Sunday, 20th Sept 2020"
+            val = "Saturday, 6th Nov 2021 & Sunday, 7th Nov 2021"
           } else if (cmd === "contact") {
             val = "geekcampsingapore @t gmail dot com"
           } else if (cmd === "bonus") {
@@ -177,11 +178,10 @@ export default ({ handleToggleGame }) => {
           val = arg || "" // print newline if no args
         } else if (cmd === "speakers") {
           if (arg && arg === "--all") {
-            val =
-              "Melvin Zhang, Chong Jia Yi, Isham Mohammed, Kenneth Y T Lim, Ahmed Hazyl Hilmy, Juan Araya, Nicolas Frankel, Tan Li Yuan Marcus, Siddhant Shrivastava, Tamas Piros, Adrienne Tacke, Milecia McGregor"
+            val = "Send in your talks to be a speaker"
           } else {
             val =
-              "Melvin Zhang, Chong Jia Yi, Nicolas Frankel,Tamas Piros, and many more (--all)"
+              "Send in your talks to be a speaker (--all)"
           }
         } else if (cmd === "cd") {
           val = "You are already where you are supposed to be."

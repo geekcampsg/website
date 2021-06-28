@@ -51,7 +51,7 @@ export default ({ title }) => {
                 <i className="c-y">title</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i>GeekcampSG 2020 Online
+                <i className="c-b">"</i>GeekcampSG 2021 Online
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>
@@ -75,7 +75,7 @@ export default ({ title }) => {
                 <i className="c-y">start</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i>2020-09-19T14:00
+                <i className="c-b">"</i>2021-11-06TXX:XX
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>
@@ -85,7 +85,7 @@ export default ({ title }) => {
                 <i className="c-y">end</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i>2020-09-19T18:00
+                <i className="c-b">"</i>2021-11-06TXX:XX
                 <i className="c-b">"</i>
               </code>
               <code>
@@ -105,7 +105,7 @@ export default ({ title }) => {
                 <i className="c-y">start</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i>2020-09-20T14:00
+                <i className="c-b">"</i>2021-11-07TXX:XX
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>
@@ -115,7 +115,7 @@ export default ({ title }) => {
                 <i className="c-y">end</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i>2020-09-20T18:00
+                <i className="c-b">"</i>2021-11-07TXX:XX
                 <i className="c-b">"</i>
               </code>
               <code>
@@ -129,20 +129,10 @@ export default ({ title }) => {
               <code>
                 {`  `}
                 <i className="c-b">"</i>
-                <i className="c-r">location</i>
+                <i className="c-r">CFP</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"<a href="https://bit.ly/geekcampsg2020" rel="noopener noreferrer" target="_blank">bit.ly/geekcampsg2020</a></i>
-                <i className="c-b">"</i>
-                <i className="c-g">,</i>
-              </code>
-              <code>
-                {`  `}
-                <i className="c-b">"</i>
-                <i className="c-r">breakout</i>
-                <i className="c-b">"</i>
-                <i className="c-g">: </i>
-                <i className="c-b">"<a href="https://bit.ly/geekcampsg2020-watercooler" rel="noopener noreferrer" target="_blank">bit.ly/geekcampsg2020-watercooler</a></i>
+                <i className="c-b">"<a href="https://www.papercall.io/geekcamppsg2021" rel="noopener noreferrer" target="_blank">https://www.papercall.io/geekcamppsg2021</a></i>
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>
