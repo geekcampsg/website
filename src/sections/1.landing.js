@@ -115,7 +115,7 @@ export default ({ title }) => {
                 <i className="c-y">end</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i>2021-11-07XX:XX
+                <i className="c-b">"</i>2021-11-07TXX:XX
                 <i className="c-b">"</i>
               </code>
               <code>

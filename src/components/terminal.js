@@ -181,7 +181,7 @@ export default ({ handleToggleGame }) => {
             val = "Send in your talks to be a speaker"
           } else {
             val =
-              "Send end in your talks to be a speaker (--all)"
+              "Send in your talks to be a speaker (--all)"
           }
         } else if (cmd === "cd") {
           val = "You are already where you are supposed to be."
