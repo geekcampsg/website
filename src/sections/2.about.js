@@ -29,14 +29,14 @@ const AboutText = styled.p`
 
 export default () => (
   <section className="section-about" id="about">
-    <Photos>
+    {/* <Photos>
       <figure>
         <img src={Photos1} alt="" />
       </figure>
       <figure>
         <img src={Photos2} alt="" />
       </figure>
-    </Photos>
+    </Photos> */}
     <div className="contain">
       <div className="vessel cols">
         <div className="left">

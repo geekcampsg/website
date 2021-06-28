@@ -71,13 +71,13 @@ export default ({ siteTitle }) => {
     <Footer>
       <div className="contain">
         <Inner className="vessel">
-          <div style={{ flexBasis: "25%" }}>
+          {/* <div style={{ flexBasis: "25%" }}>
             <h4 style={{ color: "var(--red)" }}>Register Tickets</h4>
             <p>
               Register now to sign up for the conference. It’s on the house for
               everyone.
             </p>
-          </div>
+          </div> */}
           <div>
             <h4 style={{ color: "var(--yellow)" }}>Geekcamp SG</h4>
             <ul>
@@ -139,7 +139,7 @@ export default ({ siteTitle }) => {
           <div className="branding">
             <img src={Logo} alt={data.site.siteMetadata.title} />
             <div className="copyright">
-              Copyright &copy; 2020. All rights reserved.
+              Copyright &copy; 2021. All rights reserved.
             </div>
           </div>
         </Inner>

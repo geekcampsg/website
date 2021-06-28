@@ -23,12 +23,12 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Landing />
       <About />
-      <Speakers />
-      <Schedule />
+      {/* <Speakers />
+      <Schedule /> */}
       <Marquee />
-      <PastSpeakers />
+      {/* <PastSpeakers /> */}
       <Testimonials />
-      <Sponsors/>
+      {/* <Sponsors/> */}
       <CoC />
     </Layout>
   )
