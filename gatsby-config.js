@@ -35,9 +35,13 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Work Sans:400,700", "Staatliches", "PT Mono"],
+          families: ["Work Sans:400,700", "Staatliches", "Fira Code"],
         },
       },
+      // https://cdn.jsdelivr.net/gh/wernight/powerline-web-fonts@ba4426cb0c0b05eb6cb342c7719776a41e1f2114/PowerlineFonts.css
+      // custom: {
+      //   families: ["Source Code Pro", monospace]
+      // }
     },
     {
       resolve: "gatsby-plugin-google-tagmanager",

@@ -20,15 +20,15 @@ const Main = styled.div`
   flex: 1;
   padding: 1rem;
   display: flex;
-  align-items: center;
   flex-direction: column;
   justify-content: center;
+
   @media screen and (min-width: 768px) {
     padding: 1.7rem;
   }
 `
 
-export default ({ title }) => {
+const Landing = ({ title }) => {
   const [toggleGame, setToggleGame] = useState(false)
   return (
     <LandingSection className="contain">
@@ -40,8 +40,11 @@ export default ({ title }) => {
           <Game />
         ) : (
           <Console>
-            <Console.Controls />
-            <Console.Code lineNumbers>
+            <Console.Controls subTitle="geekcamp@sg~online" />
+            <Console.Code>
+              {`=> `}We're online
+            </Console.Code>
+            {/* <Console.Code lineNumbers>
               <code>
                 <i className="c-g">{`{`}</i>
               </code>
@@ -152,7 +155,7 @@ export default ({ title }) => {
               <code>
                 <i className="c-g">{`}`}</i>
               </code>
-            </Console.Code>
+            </Console.Code> */}
           </Console>
         )}
         <Terminal
@@ -164,3 +167,5 @@ export default ({ title }) => {
     </LandingSection>
   )
 }
+
+export default Landing;
