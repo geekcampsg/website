@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { navigate } from "gatsby"
 import Console from "./console"
 
-const Terminal = styled(Console)`
+const Terminal = styled(Console.Code)`
   height: auto;
   margin-bottom: 0;
   display: flex;
@@ -225,7 +225,6 @@ const TerminalScreen = ({ handleToggleGame }) => {
 
   return (
     <Terminal onClick={handleClick}>
-      <Console.Code>
         <div className="output">
           {log.map((entry, i) => (
             <code key={i} dangerouslySetInnerHTML={{ __html: entry }} />
@@ -242,7 +241,6 @@ const TerminalScreen = ({ handleToggleGame }) => {
             autoCapitalize="none"
           ></input>
         </code>
-      </Console.Code>
     </Terminal>
   )
 }

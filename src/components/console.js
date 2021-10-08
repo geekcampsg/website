@@ -48,7 +48,7 @@ const Code = styled.pre`
   font-size: 2.35vw;
   color: #fff;
   margin-bottom: 0;
-  margin-top: auto;
+  margin-top: auto;                                         
 
   i {
     font-style: normal;
