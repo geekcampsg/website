@@ -1,42 +1,16 @@
 import React from "react"
 import styled from "styled-components"
-import Photos1 from "../images/photos-1.jpg"
-import Photos2 from "../images/photos-2.jpg"
 
-const Photos = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5rem;
-  figure {
-    flex: 1;
-  }
-  img {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-  }
-`
+const SectionAbout = styled.section`
+  margin-top: 3.5rem;
+`;
 
 const AboutText = styled.p`
   font-size: 1.555555556rem;
 `
 
-export default () => (
-  <section className="section-about" id="about">
-    {/* <Photos>
-      <figure>
-        <img src={Photos1} alt="" />
-      </figure>
-      <figure>
-        <img src={Photos2} alt="" />
-      </figure>
-    </Photos> */}
+const About = () => (
+  <SectionAbout className="section-about" id="about">
     <div className="contain">
       <div className="vessel cols">
         <div className="left">
@@ -54,5 +28,7 @@ export default () => (
         </div>
       </div>
     </div>
-  </section>
+  </SectionAbout>
 )
+
+export default About;

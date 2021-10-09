@@ -34,12 +34,15 @@ const TopBar = styled.div`
 `
 
 const SubTitle = styled.div`
-  color: #282A35;
+  color: var(--white);
   font-family: "PT Mono", "Courier New", Courier, monospace;
-  padding-right: 1em;
+  padding-right: 80px;
+  margin: auto;
+
 `
 
 const Code = styled.pre`
+  font-family: "Fira Code", "PT Mono", "Courier New", Courier, monospace;
   counter-reset: line;
   padding-left: 2rem;
   font-size: 2.35vw;
@@ -53,7 +56,7 @@ const Code = styled.pre`
 
   code {
     line-height: 1.26;
-    font-family: "PT Mono", "Courier New", Courier, monospace;
+    font-family: "Fira Code", "PT Mono", "Courier New", Courier, monospace;
     display: block;
     position: relative;
     padding: 0;
@@ -65,7 +68,7 @@ const Code = styled.pre`
     ${({ lineNumbers }) =>
     lineNumbers &&
     `
-        &::before {
+      &::before {
       content: counter(line);
       counter-increment: line;
       position: absolute;

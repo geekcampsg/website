@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { navigate } from "gatsby"
 import Console from "./console"
 
-const Terminal = styled(Console)`
+const Terminal = styled(Console.Code)`
   height: auto;
   margin-bottom: 0;
   display: flex;
@@ -43,7 +43,7 @@ const Terminal = styled(Console)`
   }
 `
 
-export default ({ handleToggleGame }) => {
+const TerminalScreen = ({ handleToggleGame }) => {
   const [log, setLog] = useState([
     "Enter command. Type help to see available commands",
   ])
@@ -67,6 +67,7 @@ export default ({ handleToggleGame }) => {
   ]
 
   const inputRef = useRef()
+
   useEffect(() => {
     // only focus on terminal when the terminal is within view
     // to avoid annoying jump
@@ -115,7 +116,7 @@ export default ({ handleToggleGame }) => {
       const trimmed = userInput.trim()
       let invalidCmd = false
       if (!trimmed) {
-        newLog.push("$")
+        newLog.push("=>")
         setLog(newLog)
         e.target.value = ""
         return false
@@ -195,9 +196,9 @@ export default ({ handleToggleGame }) => {
         }
       }
       if (invalidCmd) {
-        newLog.push(`$ ${cmd.split(/\s+/)[0]}`)
+        newLog.push(`=> ${cmd.split(/\s+/)[0]}`)
       } else {
-        newLog.push(`$ ${trimmed}`)
+        newLog.push(`=> ${trimmed}`)
       }
       if (Array.isArray(val)) {
         newLog = newLog.concat(val)
@@ -224,14 +225,13 @@ export default ({ handleToggleGame }) => {
 
   return (
     <Terminal onClick={handleClick}>
-      <Console.Code>
         <div className="output">
           {log.map((entry, i) => (
             <code key={i} dangerouslySetInnerHTML={{ __html: entry }} />
           ))}
         </div>
         <code className="promptline">
-          <i className="prompt">$</i>
+          <i className="prompt">{`=>`}</i>
           <input
             ref={inputRef}
             onKeyDown={handleKeyPress}
@@ -241,7 +241,6 @@ export default ({ handleToggleGame }) => {
             autoCapitalize="none"
           ></input>
         </code>
-      </Console.Code>
     </Terminal>
   )
 }
@@ -250,3 +249,5 @@ function isInView(element) {
   let box = element.getBoundingClientRect();
   return box.top < window.innerHeight && box.bottom >= 0;
 }
+
+export default TerminalScreen;

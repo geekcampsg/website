@@ -3,6 +3,11 @@
   --yellow: #f0cf61;
   --green: #61bfad;
   --blue: #0bbcd6;
+  --black: hsla(0, 0%, 0%, 0.8);
+  --darkblue: #4E5264;
+  --coal: #1B1C22;
+  --white: #F1F1F1;
+  --darkgray: #282A35;
 }
 
 body {
@@ -112,7 +117,7 @@ a:hover {
 @media screen and (min-width: 1280px) {
   .vessel {
     padding-left: 3rem;
-    padding-right: 3rem;
+    padding-right: 3rem; 
   }
   h2 {
     font-size: 4.888888889rem;

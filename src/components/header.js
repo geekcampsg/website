@@ -1,7 +1,7 @@
 import { Link, useStaticQuery, graphql } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import Logo from "../images/geekcamp-logo.svg"
+import Logo from "../images/geekcamp-logo-light.svg"
 
 const StyledHeader = styled.header`
   padding-top: 1.5rem;
