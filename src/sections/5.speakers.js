@@ -12,87 +12,56 @@ const Grid = styled.div`
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      adrienne: file(
-        relativePath: { eq: "speakers/featured/adrienne_atacke.jpg" }
+      tanjianzhen: file(
+        relativePath: { eq: "speakers/featured/tan_jian_zhen.jpg" }
       ) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...profile
       }
-      jiayi: file(relativePath: { eq: "speakers/featured/chong_jia_yi.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      isham: file(relativePath: { eq: "speakers/featured/isham_mohamed.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      juan: file(
-        relativePath: { eq: "speakers/featured/juan_antonio_araya.jpg" }
+      mohammadshahbazalam: file(
+        relativePath: { eq: "speakers/featured/mohammad_shahbaz_alam.png" }
       ) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...profile
       }
-      tamas: file(relativePath: { eq: "speakers/featured/tamas_piros.png" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      ahmed: file(relativePath: { eq: "speakers/featured/ahmed_hazyl.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      kenneth: file(
-        relativePath: { eq: "speakers/featured/kennethytlim.jpg" }
+      eladshechter: file(
+        relativePath: { eq: "speakers/featured/elad_shechter.jpg" }
       ) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...profile
       }
-      siddhant: file(relativePath: { eq: "speakers/featured/siddhant.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400, cropFocus: NORTH) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+      henningschwentner: file(
+        relativePath: { eq: "speakers/featured/henning_schwendtner.jpg" }
+      ) {
+        ...profile
       }
-      marcus: file(relativePath: { eq: "speakers/featured/marcusliyuan.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+      meteatamel: file(
+        relativePath: { eq: "speakers/featured/mete_atamel.jpg" }
+      ) {
+        ...profile
       }
-      melvin: file(relativePath: { eq: "speakers/featured/melvin_zhang.png" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+      dmitryvinnik: file(
+        relativePath: { eq: "speakers/featured/dmitry_vinnik.jpg" }
+      ) {
+        ...profile
       }
-      nicolas: file(relativePath: { eq: "speakers/featured/nicolas_frankel.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
+      kenziewoodbridge: file(
+        relativePath: { eq: "speakers/featured/kenzie_woodbridge.jpg" }
+      ) {
+        ...profile
+      }
+      robrichardson: file(
+        relativePath: { eq: "speakers/featured/rob_richardson.png" }
+      ) {
+        ...profile
+      }
+      karanbalkar: file(
+        relativePath: { eq: "speakers/featured/karan_balkar.png" }
+      ) {
+        ...profile
+      }
+    }
+    fragment profile on File {
+      childImageSharp {
+        fixed(width: 400, height: 400) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
@@ -104,77 +73,69 @@ export default () => {
         <div className="vessel cols">
           <div className="left">
             <h2>
-              2020
+              2021
               <br /> Speakers
             </h2>
           </div>
           <div className="right">
             <Grid>
               <SpeakerImage
-                name="Chong Jia Yi"
-                position="Distinguished Engineer, GovTech"
-                fixed={data.jiayi.childImageSharp.fixed}
-                target="speaker-chong-jia-yi"
+                name="Tan Jian Zhen"
+                position="Web Developer, Doyobi"
+                fixed={data.tanjianzhen.childImageSharp.fixed}
+                target="speaker-tan-jian-zhen"
+              />{" "}
+              {/* Needs check */}
+              <SpeakerImage
+                name="Mohammad Shahbaz Alam"
+                position="Developer Advocate, Magic"
+                fixed={data.mohammadshahbazalam.childImageSharp.fixed}
+                target="speaker-mohammad-shahbaz-alam"
               />
               <SpeakerImage
-                name="Adrienne Tacke"
-                position="Senior Developer Advocate, MongoDB"
-                fixed={data.adrienne.childImageSharp.fixed}
-                target="speaker-adrienne-tacke"
+                name="Elad Shechter"
+                position="CSS/HTML Architect"
+                fixed={data.eladshechter.childImageSharp.fixed}
+                target="speaker-elad-shechter"
               />
               <SpeakerImage
-                name="Isham Mohammed"
-                position="Lead Software Developer, Kloudynet Technologies"
-                fixed={data.isham.childImageSharp.fixed}
-                target="speaker-isham-mohammed"
+                name="Henning Schwentner"
+                position="Consultant, WPS - Workplace Solutions"
+                fixed={data.henningschwentner.childImageSharp.fixed}
+                target="speaker-henning-schwentner"
+              />{" "}
+              {/* Needs check */}
+              <SpeakerImage
+                name="Mete Atamel"
+                position="Developer Advocate, Google"
+                fixed={data.meteatamel.childImageSharp.fixed}
+                target="speaker-mete-atamel"
               />
               <SpeakerImage
-                name="Juan Araya"
-                position="Cybersecurity Specialist"
-                fixed={data.juan.childImageSharp.fixed}
-                target="speaker-juan-araya"
-              />
+                name="Dmitry Vinnik"
+                position="Open Source Developer Advocate, Facebook"
+                fixed={data.dmitryvinnik.childImageSharp.fixed}
+                target="speaker-dmitry-vinnik"
+              />{" "}
+              {/* Needs check */}
               <SpeakerImage
-                name="Tamas Piros"
-                position="Developer Evangelist, Cloudinary"
-                fixed={data.tamas.childImageSharp.fixed}
-                target="speaker-tamas-piros"
-              />
+                name="Kenzie Woodbridge"
+                position="British Columbia Institute of Technology"
+                fixed={data.kenziewoodbridge.childImageSharp.fixed}
+                target="speaker-kenzie-woodbridge"
+              />{" "}
+              {/* Needs check */}
               <SpeakerImage
-                name="Kenneth Y T Lim"
-                position="Research Scientist, NIE"
-                fixed={data.kenneth.childImageSharp.fixed}
-                target="speaker-kenneth-yt-lim-ahmed"
-              />
+                name="Rob Richardson"
+                fixed={data.robrichardson.childImageSharp.fixed}
+                target="speaker-rob-richardson"
+              />{" "}
+              {/* Needs check */}
               <SpeakerImage
-                name="Ahmed Hazyl Hilmy"
-                position="Passion for AR, virtual worlds & IoT for authentic learning"
-                fixed={data.ahmed.childImageSharp.fixed}
-                target="speaker-kenneth-yt-lim-ahmed"
-              />
-              <SpeakerImage
-                name="Tan Li Yuan, Marcus"
-                position="Undergraduate of ISTD, Computer Science at SUTD"
-                fixed={data.marcus.childImageSharp.fixed}
-                target="speaker-tan-li-yuan-marcus-siddhant"
-              />
-              <SpeakerImage
-                name="Siddhant Shrivastava"
-                position="Emerging Tech Researcher at iTrust Centre for Research in Cyber Security, SUTD"
-                fixed={data.siddhant.childImageSharp.fixed}
-                target="speaker-tan-li-yuan-marcus-siddhant"
-              />
-              <SpeakerImage
-                name="Melvin Zhang"
-                position="Research Engineer (Digital Learning), Solve Education!"
-                fixed={data.melvin.childImageSharp.fixed}
-                target="speaker-melvin-zhang"
-              />
-              <SpeakerImage
-                name="Nicolas Frankel"
-                position="Developer Advocate, Hazelcast"
-                fixed={data.nicolas.childImageSharp.fixed}
-                target="speaker-nicolas-frankel"
+                name="Karan Balkar"
+                position="Team Lead, LTI"
+                fixed={data.karanbalkar.childImageSharp.fixed}
+                target="speaker-karan-balkar"
               />
             </Grid>
           </div>
