@@ -43,7 +43,7 @@ const Landing = ({ title }) => {
             <Console.Code>
               {`=> `}We're online
               <code className="prompt">{`=> `}
-              geekcamp Singapore 2021 will be held virtually on the first weekend of November. Registration will be opening soon.
+              geekcamp Singapore 2021 will be held virtually on the first weekend of November. Registration is <a href="https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763" target="_blank">open</a>!
               </code>
             </Console.Code>
             <Terminal
