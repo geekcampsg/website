@@ -146,12 +146,11 @@ const TerminalScreen = ({ handleToggleGame }) => {
           //   window.open("https://www.papercall.io/geekcamppsg2020")
           // }
           else if (cmd === "register") {
-            val = "Registration will be opened soon."
-            // val =
-            //   "Register now at <a href='https://geekcampsg2020.eventbrite.sg/' target='_blank'>eventbrite</a>"
-            // window.open(
-            //   "https://geekcampsg2020.eventbrite.sg/"
-            // )
+            val =
+              "Register now at <a href='https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763' target='_blank'>eventbrite</a>"
+            window.open(
+              "https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763"
+            )
           } else if (cmd === "location") {
             val = "Online!!"
           } else if (cmd === "dir") {
