@@ -42,10 +42,11 @@ const Terminal = styled(Console.Code)`
     color: var(--green);
   }
 `
+const ENTER_COMMAND_TEXT = "Enter command. Type help to see available commands";
 
 const TerminalScreen = ({ handleToggleGame }) => {
   const [log, setLog] = useState([
-    "Enter command. Type help to see available commands",
+    ENTER_COMMAND_TEXT,
   ])
 
   const cmdWithoutArg = [
@@ -63,6 +64,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
     "archives",
     "contact",
     "game",
+    "schedule",
     "q",
   ]
 
@@ -132,12 +134,12 @@ const TerminalScreen = ({ handleToggleGame }) => {
         } else {
           if (cmd === "help") {
             // val = ["> register", "> speakers", "> location"]
-            val = "Available commands: register, location, archives"
+            val = "Available commands: register, location, archives, schedule"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
             val = "/geekcamp/2021"
           } else if (cmd === "clear") {
-            setLog([])
+            setLog([ENTER_COMMAND_TEXT])
             e.target.value = ""
             return
           }
@@ -171,6 +173,9 @@ const TerminalScreen = ({ handleToggleGame }) => {
           } else if (cmd === "q") {
             val = "Quitting game..."
             handleToggleGame(false)
+          } else if (cmd === "schedule") {
+            //val = "/schedule"
+            navigate("#schedule")
           }
         }
       } else {
