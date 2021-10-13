@@ -42,12 +42,10 @@ const Terminal = styled(Console.Code)`
     color: var(--green);
   }
 `
-const ENTER_COMMAND_TEXT = "Enter command. Type help to see available commands";
+const ENTER_COMMAND_TEXT = "Enter command. Type help to see available commands"
 
 const TerminalScreen = ({ handleToggleGame }) => {
-  const [log, setLog] = useState([
-    ENTER_COMMAND_TEXT,
-  ])
+  const [log, setLog] = useState([ENTER_COMMAND_TEXT])
 
   const cmdWithoutArg = [
     "help",
@@ -66,6 +64,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
     "game",
     "schedule",
     "q",
+    "search",
   ]
 
   const inputRef = useRef()
@@ -74,7 +73,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
     // only focus on terminal when the terminal is within view
     // to avoid annoying jump
     if (inputRef.current && isInView(inputRef.current)) {
-      inputRef.current.focus();
+      inputRef.current.focus()
     }
   }, [])
 
@@ -127,6 +126,8 @@ const TerminalScreen = ({ handleToggleGame }) => {
       const cmd = matched[1]
       const arg = matched[matched.length - 1]
 
+      const notes = ["🌅☕️", "👋🏼🌏", "🤓🥚🎉", "🔼⏺⏹", "⛺️🤓🤓"]
+
       if (cmdWithoutArg.indexOf(cmd) > -1) {
         // display error if arguments found
         if (arg) {
@@ -134,7 +135,8 @@ const TerminalScreen = ({ handleToggleGame }) => {
         } else {
           if (cmd === "help") {
             // val = ["> register", "> speakers", "> location"]
-            val = "Available commands: register, location, archives, schedule"
+            val =
+              "Available commands: register, location, archives, schedule, search"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
             val = "/geekcamp/2021"
@@ -176,6 +178,9 @@ const TerminalScreen = ({ handleToggleGame }) => {
           } else if (cmd === "schedule") {
             //val = "/schedule"
             navigate("#schedule")
+          } else if (cmd === "search") {
+            val =
+              "Congrats! You found some boxes, what are you going to do with them?"
           }
         }
       } else {
@@ -185,8 +190,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
           if (arg && arg === "--all") {
             val = "Send in your talks to be a speaker"
           } else {
-            val =
-              "Send in your talks to be a speaker (--all)"
+            val = "Send in your talks to be a speaker (--all)"
           }
         } else if (cmd === "cd") {
           val = "You are already where you are supposed to be."
@@ -194,6 +198,10 @@ const TerminalScreen = ({ handleToggleGame }) => {
           val = "Permission denied"
         } else if (cmd === "sudo") {
           val = "Your sudo has no power here."
+        } else if (cmd === "unbox") {
+          val = `You found something that seems like a Eventbrite discount code: ${
+            notes[Math.floor(Math.random() * (notes.length - 1))]
+          }`
         } else {
           invalidCmd = true
           val = `command not found: ${cmd}`
@@ -229,29 +237,29 @@ const TerminalScreen = ({ handleToggleGame }) => {
 
   return (
     <Terminal onClick={handleClick}>
-        <div className="output">
-          {log.map((entry, i) => (
-            <code key={i} dangerouslySetInnerHTML={{ __html: entry }} />
-          ))}
-        </div>
-        <code className="promptline">
-          <i className="prompt">{`=>`}</i>
-          <input
-            ref={inputRef}
-            onKeyDown={handleKeyPress}
-            className="input"
-            type="email"
-            autoCorrect="off"
-            autoCapitalize="none"
-          ></input>
-        </code>
+      <div className="output">
+        {log.map((entry, i) => (
+          <code key={i} dangerouslySetInnerHTML={{ __html: entry }} />
+        ))}
+      </div>
+      <code className="promptline">
+        <i className="prompt">{`=>`}</i>
+        <input
+          ref={inputRef}
+          onKeyDown={handleKeyPress}
+          className="input"
+          type="email"
+          autoCorrect="off"
+          autoCapitalize="none"
+        ></input>
+      </code>
     </Terminal>
   )
 }
 
 function isInView(element) {
-  let box = element.getBoundingClientRect();
-  return box.top < window.innerHeight && box.bottom >= 0;
+  let box = element.getBoundingClientRect()
+  return box.top < window.innerHeight && box.bottom >= 0
 }
 
-export default TerminalScreen;
+export default TerminalScreen
