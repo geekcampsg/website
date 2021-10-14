@@ -28,7 +28,7 @@ const IndexPage = () => {
       <About />
       <Schedule />
       <Speakers />
-	  {/* <Marquee />
+      {/* <Marquee />
       <PastSpeakers />
       <Testimonials />
       <Sponsors/> */}

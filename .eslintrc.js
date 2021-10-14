@@ -6,4 +6,5 @@ module.exports = {
   rules: {
     "no-trailing-spaces": ["error", { ignoreComments: true }],
   },
+  plugins: ["json-format"]
 }

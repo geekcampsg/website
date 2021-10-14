@@ -216,7 +216,11 @@ export default function Game() {
         ctx.fillStyle = "#282a35"
         ctx.font = '12px "PT Mono"'
         ctx.textAlign = "center"
-        ctx.fillText("This game is still in beta. Submit a PR to github.com/geekcampsg/geekcampsg.github.io to improve the game. Thanks!", midX, 50)
+        ctx.fillText(
+          "This game is still in beta. Submit a PR to github.com/geekcampsg/geekcampsg.github.io to improve the game. Thanks!",
+          midX,
+          50
+        )
         ctx.font = '24px "PT Mono"'
         ctx.fillText("Start game", midX, 200)
         ctx.font = '20px "PT Mono"'
@@ -235,7 +239,7 @@ export default function Game() {
 
   return (
     <Console light>
-      <Console.Controls subTitle='BETA v0.0.1'></Console.Controls>
+      <Console.Controls subTitle="BETA v0.0.1"></Console.Controls>
       <canvas ref={canvas} width={848} height={480} />
     </Console>
   )

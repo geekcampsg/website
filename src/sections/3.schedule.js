@@ -5,7 +5,7 @@ import {
   ScheduleTitle,
 } from "../components/Schedule"
 
-export default () => (
+const Schdedule = () => (
   <section className="section-schedule" id="schedule">
     <div className="contain">
       <div className="vessel cols">
@@ -61,7 +61,7 @@ export default () => (
                 create pure CSS games, based on the Coronavirus game he made:{" "}
                 <a
                   href="https://codepen.io/elad2412/pen/wvabjXy"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   https://codepen.io/elad2412/pen/wvabjXy
                 </a>
@@ -182,3 +182,5 @@ export default () => (
     </div>
   </section>
 )
+
+export default Schdedule;

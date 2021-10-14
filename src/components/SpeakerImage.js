@@ -32,7 +32,7 @@ const Figure = styled.figure`
     padding: 0 0.6rem 0.6rem;
     color: #fff;
     text-transform: uppercase;
-    font-size: ${props => (props.past ? ".888888889rem" : "1.5rem")};
+    font-size: ${(props) => (props.past ? ".888888889rem" : "1.5rem")};
     line-height: 1;
     font-family: "Staatliches", "Franklin Gothic Medium", "Arial Narrow", Arial;
 
@@ -56,7 +56,7 @@ const Figure = styled.figure`
     }
   }
 
-  ${props =>
+  ${(props) =>
     props.portrait &&
     `
       padding-bottom: 150%;
