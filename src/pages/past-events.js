@@ -84,7 +84,7 @@ const PastEvents = () => {
             </div>
             <div className="right">
               <EventTitle>GeekcampSG {event.year}</EventTitle>
-              {event.dates && event.dates.map((evtDate) => {
+              {event.dates.map((evtDate) => {
                   return (
                     <React.Fragment key={evtDate.date}>
                       <EventDate>{evtDate.date}</EventDate>
