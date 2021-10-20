@@ -81,11 +81,10 @@ export default () => {
             <Grid>
               <SpeakerImage
                 name="Tan Jian Zhen"
-                position="Web Developer, Doyobi"
+                position="Tech Lead, Syte"
                 fixed={data.tanjianzhen.childImageSharp.fixed}
                 target="speaker-tan-jian-zhen"
-              />{" "}
-              {/* Needs check */}
+              />
               <SpeakerImage
                 name="Mohammad Shahbaz Alam"
                 position="Developer Advocate, Magic"
@@ -103,8 +102,7 @@ export default () => {
                 position="Consultant, WPS - Workplace Solutions"
                 fixed={data.henningschwentner.childImageSharp.fixed}
                 target="speaker-henning-schwentner"
-              />{" "}
-              {/* Needs check */}
+              />
               <SpeakerImage
                 name="Mete Atamel"
                 position="Developer Advocate, Google"
@@ -116,20 +114,20 @@ export default () => {
                 position="Open Source Developer Advocate, Facebook"
                 fixed={data.dmitryvinnik.childImageSharp.fixed}
                 target="speaker-dmitry-vinnik"
-              />{" "}
+              />
               {/* Needs check */}
               <SpeakerImage
                 name="Kenzie Woodbridge"
                 position="British Columbia Institute of Technology"
                 fixed={data.kenziewoodbridge.childImageSharp.fixed}
                 target="speaker-kenzie-woodbridge"
-              />{" "}
+              />
               {/* Needs check */}
               <SpeakerImage
                 name="Rob Richardson"
                 fixed={data.robrichardson.childImageSharp.fixed}
                 target="speaker-rob-richardson"
-              />{" "}
+              />
               {/* Needs check */}
               <SpeakerImage
                 name="Karan Balkar"
