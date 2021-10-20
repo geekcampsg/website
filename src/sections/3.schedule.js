@@ -1,4 +1,7 @@
 import React from "react"
+import dayjs from "dayjs"
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
 import {
   ScheduleTime,
@@ -9,18 +12,11 @@ import Event2021 from "../../data/current/2021.json";
 
 const xss = require("xss");
 
-const padZero = (timeComp, places) => {
-  let result = timeComp.toString();
-  while (result.length < places) {
-    result = "0" + result;
-  }
-  return result;
-}
+dayjs.extend(utc)
+dayjs.extend(timezone)
 
 const formatTime = (time) => {
-  const fDate = new Date(time);
-  const strDate = padZero(fDate.getHours(), 2) + padZero(fDate.getMinutes(), 2);
-  return strDate;
+  return dayjs(time).tz("Asia/Singapore").format("HHmm");
 }
 
 const Schedule = () => (

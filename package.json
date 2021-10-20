@@ -24,6 +24,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "dayjs": "^1.10.7",
     "gatsby": "^3.7.1",
     "gatsby-image": "^3.7.1",
     "gatsby-plugin-google-tagmanager": "^3.7.1",
