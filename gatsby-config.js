@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Geekcamp Singapore 2020`,
+    title: `Geekcamp Singapore 2021`,
     description: `A one day event that brings together hundreds of geeks to share about technologies and knowledge.`,
     url: "http://geekcamp.sg/",
     image: "/images/logo-padded.png",
