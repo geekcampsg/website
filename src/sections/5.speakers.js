@@ -81,7 +81,7 @@ export default () => {
             <Grid>
               <SpeakerImage
                 name="Tan Jian Zhen"
-                position="Web Developer, Doyobi"
+                position="Tech Lead, Syte"
                 fixed={data.tanjianzhen.childImageSharp.fixed}
                 target="speaker-tan-jian-zhen"
               />{" "}
