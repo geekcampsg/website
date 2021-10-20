@@ -41,21 +41,29 @@ const Landing = ({ title }) => {
             <Console.Controls subTitle="geekcamp@sg~online" />
             <Console.Code>
               {`=> `}We're online
-              <code className="prompt">{`=> `}
-              geekcamp Singapore 2021 will be held virtually on the first weekend of November. Registration is <a href="https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763" target="_blank" rel="noreferrer">open</a>!
+              <code className="prompt">
+                {`=> `}
+                geekcamp Singapore 2021 will be held virtually on the first
+                weekend of November. Registration is{" "}
+                <a
+                  href="https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763"
+                  target="_blank" rel="noreferrer"
+                >
+                  open
+                </a>
+                !
               </code>
             </Console.Code>
             <Terminal
-          handleToggleGame={(showGame) => {
-            setToggleGame(showGame)
-          }}
-        />
+              handleToggleGame={(showGame) => {
+                setToggleGame(showGame)
+              }}
+            />
           </Console>
         )}
-
       </Main>
     </LandingSection>
   )
 }
 
-export default Landing;
+export default Landing

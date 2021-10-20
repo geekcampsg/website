@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const SectionAbout = styled.section`
   margin-top: 3.5rem;
-`;
+`
 
 const AboutText = styled.p`
   font-size: 1.555555556rem;
@@ -31,4 +31,4 @@ const About = () => (
   </SectionAbout>
 )
 
-export default About;
+export default About

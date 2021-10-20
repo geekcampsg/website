@@ -5,11 +5,13 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 import { Schedule, ScheduleItem } from "../components/Schedule"
 
-import Event2019 from '../../data/archive/2019'
+import Event2020 from "../../data/archive/2020"
+import Event2019 from "../../data/archive/2019"
 import Event2018Plus from "../../data/archive/2018"
 import Event2017 from "../../data/archive/2017"
 
 const events = [
+  ["GeekcampSG 2020", Event2020],
   ["GeekcampSG 2019", Event2019],
   ["GeekcampSG 2018+", Event2018Plus],
   ["GeekcampSG 2017", Event2017],
@@ -67,41 +69,51 @@ const PastEvents = () => {
             <div className="left">
               <h2>Past Events</h2>
               <SideLinks>
-                {events.map(evt => {
-                  console.log(evt)
-                  return <li
-                    className={event === evt[1] ? "is-active" : null}
-                    onClick={() => setEvent(evt[1])}
-                    key={evt[0]}
-                  >
-                    {evt[0]}
-                  </li>
+                {events.map((evt) => {
+                  return (
+                    <li
+                      className={event === evt[1] ? "is-active" : null}
+                      onClick={() => setEvent(evt[1])}
+                      key={evt[0]}
+                    >
+                      {evt[0]}
+                    </li>
+                  )
                 })}
               </SideLinks>
             </div>
             <div className="right">
               <EventTitle>GeekcampSG {event.year}</EventTitle>
-              <EventDate>{event.date}</EventDate>
-              <Schedule>
-                {event.talks.map(talk => (
-                  <ScheduleItem key={talk.title}>
-                    <h3>
-                      {talk.title}{" "}
-                      {talk.video ? (
-                        <TalkVideo
-                          href={talk.video}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                        >
-                          Video
-                        </TalkVideo>
-                      ) : null}
-                    </h3>
-                    <h4>{talk.speaker}</h4>
-                    <p>{talk.summary}</p>
-                  </ScheduleItem>
-                ))}
-              </Schedule>
+              {event.dates.map((evtDate) => {
+                  return (
+                    <React.Fragment key={evtDate.date}>
+                      <EventDate>{evtDate.date}</EventDate>
+                      <Schedule>
+                        {evtDate.talks && evtDate.talks.map((talk) => {
+                          return (
+                            <ScheduleItem key={talk.title}>
+                              <h3>
+                                {talk.title}{" "}
+                                {talk.video ? (
+                                  <TalkVideo
+                                    href={talk.video}
+                                    target="_blank"
+                                    rel="noreferrer noopener"
+                                  >
+                                    Video
+                                  </TalkVideo>
+                                ) : null}
+                              </h3>
+                              <h4>{talk.speaker}</h4>
+                              <p>{talk.summary}</p>
+                            </ScheduleItem>
+                          )
+                        })}
+                      </Schedule>
+                    </React.Fragment>
+                  )
+                })
+              }
             </div>
           </div>
         </div>
