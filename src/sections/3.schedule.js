@@ -1,22 +1,22 @@
 import React from "react"
 import dayjs from "dayjs"
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
+import utc from "dayjs/plugin/utc"
+import timezone from "dayjs/plugin/timezone"
 
 import {
   ScheduleTime,
   ScheduleItem,
   ScheduleTitle,
 } from "../components/Schedule"
-import Event2021 from "../../data/current/2021.json";
+import Event2021 from "../../data/current/2021.json"
 
-const xss = require("xss");
+const xss = require("xss")
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
 const formatTime = (time) => {
-  return dayjs(time).tz("Asia/Singapore").format("HHmm");
+  return dayjs(time).tz("Asia/Singapore").format("HHmm")
 }
 
 const Schedule = () => (
@@ -31,18 +31,31 @@ const Schedule = () => (
           {Event2021.dates.map((day, index) => {
             return (
               <React.Fragment key={`${day}-${index}`}>
-                <ScheduleTitle>Day {index+1} : {day.date}</ScheduleTitle>
+                <ScheduleTitle>
+                  Day {index + 1} : {day.date}
+                </ScheduleTitle>
                 <ScheduleTime>
                   {day.talks.map((talk, index) => {
-                    const start = formatTime(talk.startTime);
-                    const end = formatTime(talk.endTime);
+                    const start = formatTime(talk.startTime)
+                    const end = formatTime(talk.endTime)
 
                     return (
-                      <ScheduleItem key={`${talk.title}-${index}`} id={talk.speakerId}>
+                      <ScheduleItem
+                        key={`${talk.title}-${index}`}
+                        id={talk.speakerId}
+                      >
                         <h3>{talk.title}</h3>
-                        <time dateTime={talk.startTime}>{`${start} - ${end}`}</time>
+                        <time
+                          dateTime={talk.startTime}
+                        >{`${start} - ${end}`}</time>
                         {talk.speaker && <h4>{talk.speaker}</h4>}
-                        {talk.summary && <p dangerouslySetInnerHTML={{ __html: xss(talk.summary)}} />}
+                        {talk.summary && (
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: xss(talk.summary),
+                            }}
+                          />
+                        )}
                       </ScheduleItem>
                     )
                   })}
@@ -56,4 +69,4 @@ const Schedule = () => (
   </section>
 )
 
-export default Schedule;
+export default Schedule

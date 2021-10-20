@@ -85,11 +85,12 @@ const PastEvents = () => {
             <div className="right">
               <EventTitle>GeekcampSG {event.year}</EventTitle>
               {event.dates.map((evtDate) => {
-                  return (
-                    <React.Fragment key={evtDate.date}>
-                      <EventDate>{evtDate.date}</EventDate>
-                      <Schedule>
-                        {evtDate.talks && evtDate.talks.map((talk) => {
+                return (
+                  <React.Fragment key={evtDate.date}>
+                    <EventDate>{evtDate.date}</EventDate>
+                    <Schedule>
+                      {evtDate.talks &&
+                        evtDate.talks.map((talk) => {
                           return (
                             <ScheduleItem key={talk.title}>
                               <h3>
@@ -109,11 +110,10 @@ const PastEvents = () => {
                             </ScheduleItem>
                           )
                         })}
-                      </Schedule>
-                    </React.Fragment>
-                  )
-                })
-              }
+                    </Schedule>
+                  </React.Fragment>
+                )
+              })}
             </div>
           </div>
         </div>

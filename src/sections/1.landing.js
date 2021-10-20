@@ -47,7 +47,8 @@ const Landing = ({ title }) => {
                 weekend of November. Registration is{" "}
                 <a
                   href="https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763"
-                  target="_blank" rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   open
                 </a>
