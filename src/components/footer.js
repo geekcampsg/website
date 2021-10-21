@@ -101,6 +101,15 @@ export default ({ siteTitle }) => {
               </li>
               <li>
                 <a
+                  href="https://www.instagram.com/geekcampsg"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://join.slack.com/t/geekcampattendees/shared_invite/enQtNzM3MDc0ODM1MDYxLWEzODZjZjliMzFlMjhmNzMwZjUwYTc1NTUwZDY4NmQ1MmVmODI4NGNhMmVlODhjNTBiZWFiYzU4MGYxYzRmNjI"
                   target="_blank"
                   rel="noreferrer noopener"
