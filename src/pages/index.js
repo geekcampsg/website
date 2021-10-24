@@ -16,6 +16,8 @@ import Testimonials from "../sections/8.testimonials"
 // import Sponsors from "../sections/10.sponsors"
 import CoC from "../sections/9.coc"
 
+import Committee from "../sections/13.committee"
+
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -28,6 +30,7 @@ const IndexPage = () => {
       <About />
       <Schedule />
       <Speakers />
+      <Committee />
       {/* <Marquee />
       <PastSpeakers />
       <Testimonials />
