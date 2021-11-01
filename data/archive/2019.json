@@ -4,7 +4,8 @@
   "venue": "Shaw Foundation Alumni House, NUS, Auditorium Level 2, 11 Kent Ridge Drive, Singapore 119244",
   "dates": [
     {
-      "date": "Saturday, 19th October 2019",
+      "date": "2019-10-19T00:00:00",
+      "timeZone": "Asia/Singapore",
       "talks": [
         {
           "title": "How to create a web application in multiple programming languages",

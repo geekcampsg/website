@@ -1,5 +1,8 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import dayjs from "dayjs"
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
 import Layout from "../components/layout"
 import Header from "../components/header"
@@ -9,6 +12,9 @@ import Event2020 from "../../data/archive/2020"
 import Event2019 from "../../data/archive/2019"
 import Event2018Plus from "../../data/archive/2018"
 import Event2017 from "../../data/archive/2017"
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
 
 const events = [
   ["GeekcampSG 2020", Event2020],
@@ -85,12 +91,12 @@ const PastEvents = () => {
             <div className="right">
               <EventTitle>GeekcampSG {event.year}</EventTitle>
               {event.dates.map((evtDate) => {
-                return (
-                  <React.Fragment key={evtDate.date}>
-                    <EventDate>{evtDate.date}</EventDate>
-                    <Schedule>
-                      {evtDate.talks &&
-                        evtDate.talks.map((talk) => {
+                  const dateFmt = dayjs(evtDate.date).tz(evtDate.timeZone).format("dddd, D MMMM YYYY")
+                  return (
+                    <React.Fragment key={evtDate.date}>
+                      <EventDate>{dateFmt}</EventDate>
+                      <Schedule>
+                        {evtDate.talks && evtDate.talks.map((talk) => {
                           return (
                             <ScheduleItem key={talk.title}>
                               <h3>

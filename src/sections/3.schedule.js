@@ -15,8 +15,8 @@ const xss = require("xss")
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
-const formatTime = (time) => {
-  return dayjs(time).tz("Asia/Singapore").format("HHmm")
+const formatTime = (time, timeZone) => {
+  return dayjs(time).tz(timeZone).format("HHmm");
 }
 
 const Schedule = () => (
@@ -29,15 +29,14 @@ const Schedule = () => (
         <div className="right">
           <p>Time shown is in SGT (UTC+8)</p>
           {Event2021.dates.map((day, index) => {
+            const dateFmt = dayjs(day.date).tz(day.timeZone).format("dddd, D MMMM YYYY")
             return (
               <React.Fragment key={`${day}-${index}`}>
-                <ScheduleTitle>
-                  Day {index + 1} : {day.date}
-                </ScheduleTitle>
+                <ScheduleTitle>Day {index+1} : {dateFmt}</ScheduleTitle>
                 <ScheduleTime>
                   {day.talks.map((talk, index) => {
-                    const start = formatTime(talk.startTime)
-                    const end = formatTime(talk.endTime)
+                    const start = formatTime(talk.startTime, day.timeZone);
+                    const end = formatTime(talk.endTime, day.timeZone);
 
                     return (
                       <ScheduleItem

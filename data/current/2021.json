@@ -3,8 +3,8 @@
   "venue": "Online live stream",
   "dates": [
     {
-      "date": "6 November 2021",
-      "day": "Saturday",
+      "date": "2021-11-06T00:00:00",
+      "timeZone": "Asia/Singapore",
       "talks": [
         {
           "title": "Say hi!",
@@ -80,8 +80,8 @@
       ]
     },
     {
-      "date": "7 November 2021",
-      "day": "Sunday",
+      "date": "2021-11-07T00:00:00",
+      "timeZone": "Asia/Singapore",
       "talks": [
         {
           "title": "Say hi!",

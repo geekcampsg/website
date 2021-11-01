@@ -4,8 +4,8 @@
   "venue": "Online live stream",
   "dates": [
     {
-      "date": "Saturday, 19 September 2020",
-      "day": "",
+      "date": "2020-09-19T00:00:00",
+      "timeZone": "Asia/Singapore",
       "talks": [
         {
           "title": "Bridging the Cyber-Physical World with Robotics and Smart Sensors",
@@ -53,8 +53,8 @@
       ]
     },
     {
-      "date": "Sunday, 20 September 2020",
-      "day": "",
+      "date": "2020-09-20T00:00:00",
+      "timeZone": "Asia/Singapore",
       "talks": [
         {
           "title": "Don't be Afraid of the Terminal",
