@@ -4,7 +4,8 @@
   "venue": "Microsoft Singapore, Level 21, 1 Marina Boulevard, Singapore 018989",
   "dates": [
     {
-      "date": "Saturday, 18th November 2017",
+      "date": "2017-11-18T00:00:00",
+      "timeZone": "Asia/Singapore",
       "talks": [
         {
           "title": "Think twice before dropping ACID and throw your CAP away",

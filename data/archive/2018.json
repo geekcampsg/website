@@ -4,7 +4,8 @@
   "venue": "Microsoft Singapore, Level 21, 1 Marina Boulevard, Singapore 018989",
   "dates": [
     {
-      "date": "Saturday, 5th January 2019",
+      "date": "2019-01-05T00:00:00",
+      "timeZone": "Asia/Singapore",
       "talks": [
         {
           "title": "Genetic Algorithms in Go",
