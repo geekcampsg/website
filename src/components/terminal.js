@@ -136,7 +136,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
           if (cmd === "help") {
             // val = ["> register", "> speakers", "> location"]
             val =
-              "Available commands: register, location, archives, schedule, search"
+              "Available commands: location, archives, schedule, search"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
             val = "/geekcamp/2021"
@@ -149,13 +149,14 @@ const TerminalScreen = ({ handleToggleGame }) => {
           //   val = "Call for Proposals at <a href='https://www.papercall.io/geekcamppsg2020' rel='noopender noreferrer' target='_blank'>https://www.papercall.io/geekcamppsg2020</a>"
           //   window.open("https://www.papercall.io/geekcamppsg2020")
           // }
-          else if (cmd === "register") {
-            val =
-              "Register now at <a href='https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763' target='_blank'>eventbrite</a>"
-            window.open(
-              "https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763"
-            )
-          } else if (cmd === "location") {
+          // else if (cmd === "register") {
+          //   val =
+          //     "Register now at <a href='https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763' target='_blank'>eventbrite</a>"
+          //   window.open(
+          //     "https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763"
+          //   )
+          // } 
+          else if (cmd === "location") {
             val = "Online!!"
           } else if (cmd === "dir") {
             val = "Bad command or file name"
