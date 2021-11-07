@@ -40,19 +40,11 @@ const Landing = ({ title }) => {
           <Console>
             <Console.Controls subTitle="geekcamp@sg~online" />
             <Console.Code>
-              {`=> `}We're online
+              {`=> `}Event has ended.
               <code className="prompt">
                 {`=> `}
-                geekcamp Singapore 2021 will be held virtually on the first
-                weekend of November. Registration is{" "}
-                <a
-                  href="https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  open
-                </a>
-                !
+                Thank you for attending geekcamp Singapore 2021 virtually at gather.town.
+                See you again next time!
               </code>
             </Console.Code>
             <Terminal
