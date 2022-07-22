@@ -148,7 +148,7 @@ export default ({ siteTitle }) => {
           <div className="branding">
             <img src={Logo} alt={data.site.siteMetadata.title} />
             <div className="copyright">
-              Copyright &copy; 2021. All rights reserved.
+              Copyright &copy; 2022. All rights reserved.
             </div>
           </div>
         </Inner>
