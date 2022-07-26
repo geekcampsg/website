@@ -2,7 +2,7 @@
 
 [template.environment]
   RUBY_VERSION = '2.7.1'
-  NODE_VERSION = '14.15.0'
+  NODE_VERSION = '16.16.0'
 
 # detect gatsby
 # https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#netlifytoml-dev-block

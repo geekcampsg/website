@@ -60,9 +60,7 @@ export default () => {
     }
     fragment profile on File {
       childImageSharp {
-        fixed(width: 400, height: 400) {
-          ...GatsbyImageSharpFixed
-        }
+	    gatsbyImageData(height: 400, placeholder: BLURRED)
       }
     }
   `)
@@ -82,57 +80,57 @@ export default () => {
               <SpeakerImage
                 name="Tan Jian Zhen"
                 position="Tech Lead, Syte"
-                fixed={data.tanjianzhen.childImageSharp.fixed}
+                image={data.tanjianzhen.childImageSharp}
                 target="speaker-tan-jian-zhen"
               />
               <SpeakerImage
                 name="Mohammad Shahbaz Alam"
                 position="Developer Advocate, Magic"
-                fixed={data.mohammadshahbazalam.childImageSharp.fixed}
+                image={data.mohammadshahbazalam.childImageSharp}
                 target="speaker-mohammad-shahbaz-alam"
               />
               <SpeakerImage
                 name="Elad Shechter"
                 position="CSS/HTML Architect"
-                fixed={data.eladshechter.childImageSharp.fixed}
+                image={data.eladshechter.childImageSharp}
                 target="speaker-elad-shechter"
               />
               <SpeakerImage
                 name="Henning Schwentner"
                 position="Consultant, WPS - Workplace Solutions"
-                fixed={data.henningschwentner.childImageSharp.fixed}
+                image={data.henningschwentner.childImageSharp}
                 target="speaker-henning-schwentner"
               />
               <SpeakerImage
                 name="Mete Atamel"
                 position="Developer Advocate, Google"
-                fixed={data.meteatamel.childImageSharp.fixed}
+                image={data.meteatamel.childImageSharp}
                 target="speaker-mete-atamel"
               />
               <SpeakerImage
                 name="Dmitry Vinnik"
                 position="Open Source Developer Advocate, Facebook"
-                fixed={data.dmitryvinnik.childImageSharp.fixed}
+                image={data.dmitryvinnik.childImageSharp}
                 target="speaker-dmitry-vinnik"
               />
               {/* Needs check */}
               <SpeakerImage
                 name="Kenzie Woodbridge"
                 position="British Columbia Institute of Technology"
-                fixed={data.kenziewoodbridge.childImageSharp.fixed}
+                image={data.kenziewoodbridge.childImageSharp}
                 target="speaker-kenzie-woodbridge"
               />
               {/* Needs check */}
               <SpeakerImage
                 name="Rob Richardson"
-                fixed={data.robrichardson.childImageSharp.fixed}
+                image={data.robrichardson.childImageSharp}
                 target="speaker-rob-richardson"
               />
               {/* Needs check */}
               <SpeakerImage
                 name="Karan Balkar"
                 position="Team Lead, LTI"
-                fixed={data.karanbalkar.childImageSharp.fixed}
+                image={data.karanbalkar.childImageSharp}
                 target="speaker-karan-balkar"
               />
             </Grid>

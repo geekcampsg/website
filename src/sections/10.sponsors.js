@@ -1,42 +1,32 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-plugin-image"
+import { GatsbyImage, getImage} from "gatsby-plugin-image"
 import { Row, Col } from "../components/Grid"
 
 export default () => {
   const data = useStaticQuery(graphql`
     query {
       spdigital: file(relativePath: { eq: "sponsors/spdigital.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+	    ...sponsor
       }
       microsoft: file(relativePath: { eq: "sponsors/microsoft.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+	    ...sponsor
       }
       shopify: file(relativePath: { eq: "sponsors/shopify.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+	    ...sponsor
       }
       prolive: file(relativePath: { eq: "sponsors/prolive.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+	    ...sponsor
+      }
+    }
+    fragment sponsor on File {
+      childImageSharp {
+	    gatsbyImageData(height: 300, placeholder: BLURRED)
       }
     }
   `)
 
+const image = getImage(data.prolive.childImageSharp);
   return (
     <section className="section-sponsors" id="sponsors">
       <div className="contain">
@@ -61,7 +51,7 @@ export default () => {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <Img fluid={data.prolive.childImageSharp.fluid} />
+                  <GatsbyImage image={image} />
                 </a>
               </Col>
             </Row>

@@ -15,48 +15,29 @@ export default () => {
       vivian: file(
         relativePath: { eq: "speakers/past/dr_vivian_balakrishnan.jpg" }
       ) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...profile
       }
       michelle: file(relativePath: { eq: "speakers/past/michelle_lye.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...profile
       }
       omer: file(relativePath: { eq: "speakers/past/omer_iqbal.jpg" }) {
-        childImageSharp {
-          fixed(width: 300, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...profile
       }
       sebastiaan: file(
         relativePath: { eq: "speakers/past/sebastiaan_deckers.jpg" }
       ) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...profile
       }
       bunnie: file(relativePath: { eq: "speakers/past/bunnie_huang.jpg" }) {
-        childImageSharp {
-          fixed(width: 400, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...profile
       }
       melvin: file(relativePath: { eq: "speakers/past/melvin_zhang.jpg" }) {
-        childImageSharp {
-          fixed(width: 300, height: 400) {
-            ...GatsbyImageSharpFixed
-          }
-        }
+        ...profile
+      }
+    }
+    fragment profile on File {
+      childImageSharp {
+	    gatsbyImageData(height: 400, placeholder: BLURRED)
       }
     }
   `)
@@ -75,7 +56,7 @@ export default () => {
                 portrait
                 name="Dr Vivian Balakrishnan"
                 position="Minister"
-                image={data.vivian.childImageSharp.fixed}
+                image={data.vivian.childImageSharp}
                 past
               />
               <SpeakerImage
@@ -83,35 +64,35 @@ export default () => {
                 name="Sebastiaan Deckers"
                 position="Staff Software Engineer, Zendesk"
                 objectPosition="0% 0%"
+                image={data.sebastiaan.childImageSharp}
                 past
-                image={data.sebastiaan.childImageSharp.fixed}
               />
               <SpeakerImage
                 portrait
                 name="Michelle Lye"
                 position="Product Manager, AIS Cube"
-                image={data.michelle.childImageSharp.fixed}
+                image={data.michelle.childImageSharp}
                 past
               />
               <SpeakerImage
                 portrait
                 name="Omer Iqbal"
                 position="iOS Dev, SEA"
-                image={data.omer.childImageSharp.fixed}
+                image={data.omer.childImageSharp}
                 past
               />
               <SpeakerImage
                 portrait
                 name="Bunnie Huang"
                 position="Hacker, Bunnie Studios"
-                image={data.bunnie.childImageSharp.fixed}
+                image={data.bunnie.childImageSharp}
                 past
               />
               <SpeakerImage
                 portrait
                 position="VP of Software, The Intelligent Warehouse"
                 name="Melvin Zhang"
-                image={data.melvin.childImageSharp.fixed}
+                image={data.melvin.childImageSharp}
                 past
               />
             </Grid>
