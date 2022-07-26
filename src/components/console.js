@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Console = styled.div`
-  width: 850px;
+  width: 900px;
   max-width: 100%;
   margin-bottom: 1rem;
   background: ${(props) => (props.light ? "white" : "#282a35")};

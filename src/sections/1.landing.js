@@ -106,6 +106,16 @@ const Landing = ({ title }) => {
               <code>
                 {`  `}
                 <i className="c-b">"</i>
+                <i className="c-r">volunteer</i>
+                <i className="c-b">"</i>
+                <i className="c-g">: </i>
+                <i className="c-b">"</i><a href="https://forms.gle/YkAHhJFhc3eBhhe37">https://forms.gle/YkAHhJFhc3eBhhe37</a>
+                <i className="c-b">"</i>
+                <i className="c-g">,</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
                 <i className="c-y">description</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
