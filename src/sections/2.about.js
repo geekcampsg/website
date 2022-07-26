@@ -20,10 +20,7 @@ const About = () => (
         </div>
         <div className="right">
           <AboutText>
-            A one day event that brings together hundreds of geeks to share
-            about technologies and knowledge. We are celebrating our 11th
-            anniversary this year as we continue to connect the community
-            through curated talks, <b>by Geeks, for Geeks</b>.
+			A one-stop event to get acquainted and grow your tech network in Singapore: a hybrid online + in-person GeekcampSG. The end goal: <strong>to reignite vibrant and inspiring meetups in the tech community</strong>.
           </AboutText>
         </div>
       </div>

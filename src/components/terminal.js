@@ -54,6 +54,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
     "clear",
     "ls",
     "register",
+	"volunteer",
     "location",
     "dir",
     "date",
@@ -64,7 +65,6 @@ const TerminalScreen = ({ handleToggleGame }) => {
     "game",
     "schedule",
     "q",
-    "search",
   ]
 
   const inputRef = useRef()
@@ -136,7 +136,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
           if (cmd === "help") {
             // val = ["> register", "> speakers", "> location"]
             val =
-              "Available commands: location, archives, schedule, search"
+              "Available commands: cfp, register, volunteer, location, date, archives"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
             val = "/geekcamp/2021"
@@ -144,28 +144,26 @@ const TerminalScreen = ({ handleToggleGame }) => {
             setLog([ENTER_COMMAND_TEXT])
             e.target.value = ""
             return
-          }
-          //  else if (cmd === "cfp") {
-          //   val = "Call for Proposals at <a href='https://www.papercall.io/geekcamppsg2020' rel='noopender noreferrer' target='_blank'>https://www.papercall.io/geekcamppsg2020</a>"
-          //   window.open("https://www.papercall.io/geekcamppsg2020")
-          // }
-          // else if (cmd === "register") {
-          //   val =
-          //     "Register now at <a href='https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763' target='_blank'>eventbrite</a>"
-          //   window.open(
-          //     "https://www.eventbrite.sg/e/geekcamp-singapore-2021-tickets-159282338763"
-          //   )
-          // } 
-          else if (cmd === "location") {
-            val = "Online!!"
+          } else if (cmd === "cfp") {
+			const link = "https://www.papercall.io/geekcamppsg2022"
+            val = "Call for Proposals at <a href='" + link + "' rel='noopender noreferrer' target='_blank'>" + link + "</a>"
+            window.open(link)
+          } else if (cmd === "register") {
+            val = "Registration is not open yet"
+          } else if (cmd === "volunteer") {
+			const link = "https://forms.gle/YkAHhJFhc3eBhhe37"
+            val = "Volunteer by signing up at <a href='" + link + "' rel='noopender noreferrer' target='_blank'>" + link + "</a>"
+            window.open(link)
+          } else if (cmd === "location") {
+            val = "In-person: To be confirmed<br>Online: Discord"
           } else if (cmd === "dir") {
             val = "Bad command or file name"
           } else if (cmd === "ls") {
             val = "These are not the files you are looking for."
           } else if (cmd === "date") {
-            val = "Saturday, 6th Nov 2021 & Sunday, 7th Nov 2021"
+            val = "Saturday, 29th of October 2022"
           } else if (cmd === "contact") {
-            val = "geekcampsingapore @t gmail dot com"
+            val = "geekcampsingapore at gmail dot com"
           } else if (cmd === "bonus") {
             navigate("#bonus")
           } else if (cmd === "archives") {
@@ -177,11 +175,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
             val = "Quitting game..."
             handleToggleGame(false)
           } else if (cmd === "schedule") {
-            //val = "/schedule"
             navigate("#schedule")
-          } else if (cmd === "search") {
-            val =
-              "Congrats! You found some boxes, what are you going to do with them?"
           }
         }
       } else {
@@ -199,10 +193,6 @@ const TerminalScreen = ({ handleToggleGame }) => {
           val = "Permission denied"
         } else if (cmd === "sudo") {
           val = "Your sudo has no power here."
-        } else if (cmd === "unbox") {
-          val = `You found something that seems like a Eventbrite discount code: ${
-            notes[Math.floor(Math.random() * (notes.length - 1))]
-          }`
         } else {
           invalidCmd = true
           val = `command not found: ${cmd}`

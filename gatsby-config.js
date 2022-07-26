@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Geekcamp Singapore 2021`,
+    title: `Geekcamp Singapore 2022`,
     description: `A one day event that brings together hundreds of geeks to share about technologies and knowledge.`,
     url: "http://geekcamp.sg/",
     image: "/images/logo-padded.png",
@@ -28,6 +28,7 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-image`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

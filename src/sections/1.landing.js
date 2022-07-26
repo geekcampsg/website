@@ -38,13 +38,96 @@ const Landing = ({ title }) => {
           <Game />
         ) : (
           <Console>
-            <Console.Controls subTitle="geekcamp@sg~online" />
+            <Console.Controls subTitle="geekcamp@sg" />
             <Console.Code>
-              {`=> `}Event has ended.
-              <code className="prompt">
-                {`=> `}
-                Thank you for attending geekcamp Singapore 2021 virtually at gather.town.
-                See you again next time!
+			              <code>
+                <i className="c-g">{`{`}</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
+                <i className="c-y">title</i>
+                <i className="c-b">"</i>
+                <i className="c-g">: </i>
+                <i className="c-b">"</i>GeekcampSG 2022
+                <i className="c-b">"</i>
+                <i className="c-g">,</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
+                <i className="c-y">date</i>
+                <i className="c-b">"</i>
+                <i className="c-g">: </i>
+                <i className="c-b">"</i>2022-10-29
+                <i className="c-b">"</i>
+                <i className="c-g">,</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
+                <i className="c-r">inPersonLocation</i>
+                <i className="c-b">"</i>
+                <i className="c-g">:</i>
+                <i className="c-b">"</i>To be confirmed
+                <i className="c-b">"</i>
+                <i className="c-g">,</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
+                <i className="c-r">onlineLocation</i>
+                <i className="c-b">"</i>
+                <i className="c-g">:</i>
+                <i className="c-b">"</i>Discord, YouTube
+                <i className="c-b">"</i>
+                <i className="c-g">,</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
+                <i className="c-r">registration</i>
+                <i className="c-b">"</i>
+                <i className="c-g">: </i>
+                <i className="c-b">"</i>Opening sooon
+                <i className="c-b">"</i>
+                <i className="c-g">,</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
+                <i className="c-r">cfp</i>
+                <i className="c-b">"</i>
+                <i className="c-g">: </i>
+                <i className="c-b">"</i><a href="https://www.papercall.io/geekcamppsg2022">https://www.papercall.io/geekcamppsg2022</a>
+                <i className="c-b">"</i>
+                <i className="c-g">,</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
+                <i className="c-r">volunteer</i>
+                <i className="c-b">"</i>
+                <i className="c-g">: </i>
+                <i className="c-b">"</i><a href="https://forms.gle/YkAHhJFhc3eBhhe37">https://forms.gle/YkAHhJFhc3eBhhe37</a>
+                <i className="c-b">"</i>
+                <i className="c-g">,</i>
+              </code>
+              <code>
+                {`  `}
+                <i className="c-b">"</i>
+                <i className="c-y">description</i>
+                <i className="c-b">"</i>
+                <i className="c-g">: </i>
+                <i className="c-b">"</i>Join us for an eventful day of
+              </code>
+              <code>
+                {`    `}
+                <i>geek talks.</i>
+                <i className="c-b">"</i>
+              </code>
+              <code>
+                <i className="c-g">{`}`}</i>
               </code>
             </Console.Code>
             <Terminal

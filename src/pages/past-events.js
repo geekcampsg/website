@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 import { Schedule, ScheduleItem } from "../components/Schedule"
 
+import Event2021 from "../../data/archive/2021"
 import Event2020 from "../../data/archive/2020"
 import Event2019 from "../../data/archive/2019"
 import Event2018Plus from "../../data/archive/2018"
@@ -17,6 +18,7 @@ dayjs.extend(utc)
 dayjs.extend(timezone)
 
 const events = [
+  ["GeekcampSG 2021", Event2021],
   ["GeekcampSG 2020", Event2020],
   ["GeekcampSG 2019", Event2019],
   ["GeekcampSG 2018+", Event2018Plus],
@@ -62,7 +64,7 @@ const TalkVideo = styled.a`
 `
 
 const PastEvents = () => {
-  const [event, setEvent] = useState(Event2019)
+  const [event, setEvent] = useState(Event2021)
 
   return (
     <Layout>
