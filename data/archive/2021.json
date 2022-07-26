@@ -1,5 +1,6 @@
 {
   "year": "2021",
+  "video": "https://www.youtube.com/watch?v=MZOxONeEzig&list=PL7fTdQ2ppzdB2vAbBQHqjCR3UJ2t66-rL",
   "venue": "Online live stream",
   "dates": [
     {
@@ -7,22 +8,13 @@
       "timeZone": "Asia/Singapore",
       "talks": [
         {
-          "title": "Say hi!",
-          "startTime": "2021-11-06T13:30:00+08:00",
-          "endTime": "2021-11-06T14:00:00+08:00"
-        },
-        {
-          "title": "Opening",
-          "startTime": "2021-11-06T14:00:00+08:00",
-          "endTime": "2021-11-06T14:10:00+08:00"
-        },
-        {
           "title": "Machine Learning Supercharged with Elixir",
           "summary": "Machine learning is traditionally done on Python and Jupyter Notebooks, but a small team looked at the issues of the traditional way of doing things and the strengths of Elixir and made an amazing workflow. Ideally, the goal is to introduce people to the strengths of Elixir.",
           "speaker": "Tan Jian Zhen",
           "speakerId": "tan-jian-zhen",
           "startTime": "2021-11-06T14:10:00+08:00",
-          "endTime": "2021-11-06T14:50:00+08:00"
+          "endTime": "2021-11-06T14:50:00+08:00",
+          "video": "https://www.youtube.com/watch?v=uLjdrkM9V0A&list=PL7fTdQ2ppzdB2vAbBQHqjCR3UJ2t66-rL&index=4"
         },
         {
           "title": "Passwords are old, use WebAuthn",
@@ -30,12 +22,8 @@
           "speaker": "Mohammad Shahbaz Alam",
           "speakerId": "mohammad-shahbaz-alam",
           "startTime": "2021-11-06T14:50:00+08:00",
-          "endTime": "2021-11-06T15:30:00+08:00"
-        },
-        {
-          "title": "Break",
-          "startTime": "2021-11-06T15:30:00+08:00",
-          "endTime": "2021-11-06T15:50:00+08:00"
+          "endTime": "2021-11-06T15:30:00+08:00",
+		  "video": "https://www.youtube.com/watch?v=LcDSaE7zPHc&list=PL7fTdQ2ppzdB2vAbBQHqjCR3UJ2t66-rL&index=5"
         },
         {
           "title": "How to Create Pure CSS Games",
@@ -43,7 +31,8 @@
           "speaker": "Elad Shechter",
           "speakerId": "elad-shechter",
           "startTime": "2021-11-06T15:50:00+08:00",
-          "endTime": "2021-11-06T16:30:00+08:00"
+          "endTime": "2021-11-06T16:30:00+08:00",
+		  "video": "https://www.youtube.com/watch?v=QqBZsCV2ODs&list=PL7fTdQ2ppzdB2vAbBQHqjCR3UJ2t66-rL&index=6"
         },
         {
           "title": "(An introduction to) Domain Storytelling",
@@ -54,28 +43,12 @@
           "endTime": "2021-11-06T17:10:00+08:00"
         },
         {
-          "title": "Break",
-          "startTime": "2021-11-06T17:10:00+08:00",
-          "endTime": "2021-11-06T17:30:00+08:00"
-        },
-        {
           "title": "Choreography vs Orchestration in serverless microservices",
           "summary": "Should there be a central orchestrator controlling all interactions between services or should each service work independently and only interact through shared events? In this talk, we’ll explore the Choreography vs Orchestration question and see demos of some of the tools that can help.",
           "speaker": "Mete Atamel",
           "speakerId": "mete-atamel",
           "startTime": "2021-11-06T17:30:00+08:00",
           "endTime": "2021-11-06T18:10:00+08:00"
-        },
-        {
-          "title": "Closing",
-          "startTime": "2021-11-06T18:10:00+08:00",
-          "endTime": "2021-11-06T18:20:00+08:00"
-        },
-        {
-          "title": "Social",
-          "startTime": "2021-11-06T18:20:00+08:00",
-          "endTime": "2021-11-06T19:00:00+08:00",
-          "summary": "Meet other people in our virtual space"
         }
       ]
     },
@@ -84,35 +57,22 @@
       "timeZone": "Asia/Singapore",
       "talks": [
         {
-          "title": "Say hi!",
-          "startTime": "2021-11-07T08:30:00+08:00",
-          "endTime": "2021-11-07T09:00:00+08:00"
-        },
-        {
-          "title": "Opening",
-          "startTime": "2021-11-07T09:00:00",
-          "endTime": "2021-11-07T09:10:00"
-        },
-        {
           "title": "The 10,000 Steps of Open Source Project Health",
           "summary": "In this talk, we will look at the approach that Facebook Open Source team takes to measure the current state of Facebook open source projects, and how we use these metrics to prioritize and to direct our DevRel focus. We aim to show how by looking at information about your open source communities.",
           "speaker": "Dmitry Vinnik",
           "speakerId": "dmitry-vinnik",
-          "startTime": "2021-11-07T09:10:00",
-          "endTime": "2021-11-07T09:50:00"
+          "startTime": "2021-11-07T09:10:00+08:00",
+          "endTime": "2021-11-07T09:50:00+08:00",
+		  "video": "https://www.youtube.com/watch?v=pthB2d9k8lU&list=PL7fTdQ2ppzdB2vAbBQHqjCR3UJ2t66-rL&index=7"
         },
         {
           "title": "Everyone's a player (in a mid-90s MUD)",
           "summary": "This talk takes the approach of applying Player Type Theory (from game design) to getting people involved and engaged in technical and documentation projects in a technical environment. Practical tips are offered for dealing with lack of engagement, human-caused delays, and even workplace bullying.",
           "speaker": "Kenzie Woodbridge",
           "speakerId": "kenzie-woodbridge",
-          "startTime": "2021-11-07T09:50:00",
-          "endTime": "2021-11-07T10:30:00"
-        },
-        {
-          "title": "Break",
-          "startTime": "2021-11-07T10:10:30+08:00",
-          "endTime": "2021-11-07T10:50:00+08:00"
+          "startTime": "2021-11-07T09:50:00+08:00",
+          "endTime": "2021-11-07T10:30:00+08:00",
+		  "video": "https://www.youtube.com/watch?v=Xcuj7wWAtFk&list=PL7fTdQ2ppzdB2vAbBQHqjCR3UJ2t66-rL&index=8"
         },
         {
           "title": "The Definitive Deep Dive into the .git Folder",
@@ -120,7 +80,8 @@
           "speaker": "Rob Richardson",
           "speakerId": "rob-richardson",
           "startTime": "2021-11-07T10:50:00+08:00",
-          "endTime": "2021-11-07T11:30:00+08:00"
+          "endTime": "2021-11-07T11:30:00+08:00",
+		  "video": "https://www.youtube.com/watch?v=cRY8TXt9n4U&list=PL7fTdQ2ppzdB2vAbBQHqjCR3UJ2t66-rL&index=10"
         },
         {
           "title": "Demystifying the Java Flight Recorder API",
@@ -128,18 +89,8 @@
           "speaker": "Karan Balkar",
           "speakerId": "karan-balkar",
           "startTime": "2021-11-07T11:30:50+08:00",
-          "endTime": "2021-11-07T12:10:00+08:00"
-        },
-        {
-          "title": "Closing",
-          "startTime": "2021-11-07T12:10:00+08:00",
-          "endTime": "2021-11-07T12:20:00+08:00"
-        },
-        {
-          "title": "Social",
-          "startTime": "2021-11-07T12:20:00+08:00",
-          "endTime": "2021-11-07T13:30:00+08:00",
-          "summary": "Meet other people in our virtual space"
+          "endTime": "2021-11-07T12:10:00+08:00",
+		  "video": "https://www.youtube.com/watch?v=o4oQQPb8At4&list=PL7fTdQ2ppzdB2vAbBQHqjCR3UJ2t66-rL&index=9"
         }
       ]
     }

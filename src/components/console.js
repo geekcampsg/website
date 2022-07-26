@@ -18,6 +18,7 @@ const TopBar = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   margin-left: 0.65rem;
   svg {
     height: 15px;
@@ -25,6 +26,7 @@ const TopBar = styled.div`
   }
   @media screen and (min-width: 768px) {
     margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-left: 1.25rem;
     svg {
       height: auto;
