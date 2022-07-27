@@ -64,6 +64,7 @@ section {
 }
 .section-schedule h2::after,
 .section-past-speakers h2::after,
+.section-local-communities h2::after,
 .section-coc h2::after {
   background-color: var(--green);
 }

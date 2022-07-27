@@ -19,6 +19,8 @@ import CoC from "../sections/9.coc"
 //import Committee from "../sections/13.committee"
 
 import SEO from "../components/seo"
+import Partners from "../sections/12.partners"
+import LocalTechCommunities from "../sections/14.local-communities"
 
 const IndexPage = () => {
   return (
@@ -28,6 +30,7 @@ const IndexPage = () => {
       <Landing />
       <Divider />
       <About />
+      <LocalTechCommunities/>
 	  {/*<Schedule />*/}
 	  {/*<Speakers />*/}
 	  {/*<Committee />*/}
@@ -36,6 +39,7 @@ const IndexPage = () => {
 	  {/*<Sponsors/>*/}
       <Testimonials />
       <CoC />
+      <Partners/>
     </Layout>
   )
 }
