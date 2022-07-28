@@ -24,7 +24,7 @@ const CallForPapers = () => (
             It could be targeted at the general audience (headline track) or a technical deep-dive you're excited to share about (parallel track).
           </CallForPapersText>
           <CallForPapersText>
-            Send us your ideas and proposals here: <a href="https://www.papercall.io/geekcamppsg2022">https://www.papercall.io/geekcamppsg2022</a>
+            Send us your ideas and proposals here: <a href="https://www.papercall.io/geekcampsg2022">https://www.papercall.io/geekcampsg2022</a>
           </CallForPapersText>
         </div>
       </div>
