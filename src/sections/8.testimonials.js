@@ -74,23 +74,23 @@ export default () => (
             <Row>
               <Console.Code className="testimonials-holder" lineNumbers>
                 <code>/*</code>
-                <code>Talking about browser </code>
-                <code>extensions was never </code>
-                <code>ever so exciting! It was</code>
-                <code>worth flying all over</code>
-                <code>from India for @geekcamp</code>
-                <code>\o/</code>
-                <code>- Jyotsna Gupta</code>
+                <code>  Talking about browser </code>
+                <code>  extensions was never </code>
+                <code>  ever so exciting! It was</code>
+                <code>  worth flying all over</code>
+                <code>  from India for @geekcamp</code>
+                <code>  \o/</code>
+                <code>  - Jyotsna Gupta</code>
                 <code>*/</code>
                 <code className="break"> </code>
                 <code>/*</code>
-                <code>Subtle things why I</code>
-                <code>love SG: Singapore</code>
-                <code>Minister Balakrishnan</code>
-                <code>giving a talk about his</code>
-                <code>Arduino endeavors</code>
-                <code>@geekcamp :D</code>
-                <code>- Thomas Gorissen</code>
+                <code>  Subtle things why I</code>
+                <code>  love SG: Singapore</code>
+                <code>  Minister Balakrishnan</code>
+                <code>  giving a talk about his</code>
+                <code>  Arduino endeavors</code>
+                <code>  @geekcamp :D</code>
+                <code>  - Thomas Gorissen</code>
                 <code>*/</code>
               </Console.Code>
               <Console.Code className="ascii-holder">
