@@ -19,6 +19,7 @@ import CoC from "../sections/9.coc"
 //import Committee from "../sections/13.committee"
 
 import SEO from "../components/seo"
+import CallForPapers from "../sections/3.cfp";
 
 const IndexPage = () => {
   return (
@@ -28,6 +29,7 @@ const IndexPage = () => {
       <Landing />
       <Divider />
       <About />
+      <CallForPapers />
 	  {/*<Schedule />*/}
 	  {/*<Speakers />*/}
 	  {/*<Committee />*/}
