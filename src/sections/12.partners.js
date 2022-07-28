@@ -33,64 +33,6 @@ export default () => (
               }
             `}
           >
-            <Row>
-              <Col>
-                <a
-                  href="https://www.nushackers.org/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <img alt="NUS Hackers" src={nushackers} />
-                </a>
-              </Col>
-              <Col>
-                <a
-                  href="https://12geeks.com/community/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <img alt="12Geeks" src={twelvegeeks} />
-                </a>
-              </Col>
-              <Col>
-                <a
-                  href="https://singapore.hackjunction.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <img alt="Junction X Singapore" src={junction} />
-                </a>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <a
-                  href="https://engineers.sg/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <img alt="Engineers.sg" src={engineerssg} />
-                </a>
-              </Col>
-              <Col>
-                <a
-                  href="https://www.womenwhocode.com/singapore"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <img alt="Women Who Code Singapore" src={womenwhocode} />
-                </a>
-              </Col>
-              <Col>
-                <a
-                  href="https://osilayer8.makerforce.io/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <img alt="OSI Layer 8" src={osilayer8} />
-                </a>
-              </Col>
-            </Row>
           </section>
         </div>
       </div>
