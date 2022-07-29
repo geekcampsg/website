@@ -5,10 +5,6 @@ const SectionCallForPapers = styled.section`
   margin-top: 3.5rem;
 `
 
-const CallForPapersText = styled.p`
-  font-size: 1.555555556rem;
-`
-
 const CallForPapers = () => (
   <SectionCallForPapers className="section-cfp" id="about">
     <div className="contain">
