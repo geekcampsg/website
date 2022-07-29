@@ -14,18 +14,17 @@ export default () => (
         <div className="right">
           <section className="meetupgrps">
             <p>
-              We would love to invite the local tech communities to present a talk!
+              Local tech communities are most welcome to present a talk and get involved!
             </p>
             <p>
-              Rally your community to submit talk proposals relevant to your community. 
-              We do have limited slots for Headline and parallel tracks, 
-              so it will be on a first come first serve basis. 
-              We will work closely with you to promote your meetup group to GeekcampSG 
-              attendees and our social media
+              Rally your community to submit talk proposals relevant to your interest areas.
+              There are limited slots for both headline and parallel tracks,
+              so submit early to avoid disappointment!
+              If your talk is accepted, we will work closely with you to promote it to GeekcampSG
+              attendees and our social media.
             </p>
-
             <p>
-              For more information, you may contact any of the organisers you know :) 
+              For more information, get in touch with the organiser who contacted you. :)
             </p>
           </section>
         </div>
