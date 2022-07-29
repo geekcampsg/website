@@ -145,7 +145,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
             e.target.value = ""
             return
           } else if (cmd === "cfp") {
-			const link = "https://www.papercall.io/geekcamppsg2022"
+			const link = "https://www.papercall.io/geekcampsg2022"
             val = "Call for Proposals at <a href='" + link + "' rel='noopender noreferrer' target='_blank'>" + link + "</a>"
             window.open(link)
           } else if (cmd === "register") {
