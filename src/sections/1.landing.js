@@ -99,7 +99,7 @@ const Landing = ({ title }) => {
                 <i className="c-r">cfp</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i><a href="https://www.papercall.io/geekcamppsg2022">https://www.papercall.io/geekcamppsg2022</a>
+                <i className="c-b">"</i><a href="https://www.papercall.io/geekcampsg2022">https://www.papercall.io/geekcampsg2022</a>
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>

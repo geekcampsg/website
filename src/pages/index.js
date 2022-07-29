@@ -19,6 +19,7 @@ import CoC from "../sections/9.coc"
 //import Committee from "../sections/13.committee"
 
 import SEO from "../components/seo"
+import CallForPapers from "../sections/3.cfp";
 import Partners from "../sections/12.partners"
 import LocalTechCommunities from "../sections/14.local-communities"
 
@@ -30,6 +31,7 @@ const IndexPage = () => {
       <Landing />
       <Divider />
       <About />
+      <CallForPapers />
       <LocalTechCommunities/>
 	  {/*<Schedule />*/}
 	  {/*<Speakers />*/}

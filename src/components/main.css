@@ -72,6 +72,7 @@ section {
 .section-testimonials h2::after {
   background-color: var(--blue);
 }
+.section-cfp h2::after,
 .section-venue h2::after,
 .section-committee h2::after,
 .section-sponsors h2::after {
