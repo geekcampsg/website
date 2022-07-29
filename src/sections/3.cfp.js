@@ -15,17 +15,17 @@ const CallForPapers = () => (
       <div className="vessel cols">
         <div className="left">
           <h2>
-            Give a <br /> Talk?
+            Calling <br /> for papers!
           </h2>
         </div>
         <div className="right">
-          <CallForPapersText>
+          <p>
             We are calling for volunteers and talk proposals to craft / build / hack an experience that every participant will never forget.
             It could be targeted at the general audience (headline track) or a technical deep-dive you're excited to share about (parallel track).
-          </CallForPapersText>
-          <CallForPapersText>
+          </p>
+          <p>
             Send us your ideas and proposals here: <a href="https://www.papercall.io/geekcampsg2022">https://www.papercall.io/geekcampsg2022</a>
-          </CallForPapersText>
+          </p>
         </div>
       </div>
     </div>
