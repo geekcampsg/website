@@ -79,7 +79,7 @@ const Landing = ({ title }) => {
                 <i className="c-r">onlineLocation</i>
                 <i className="c-b">"</i>
                 <i className="c-g">:</i>
-                <i className="c-b">"</i>Discord, YouTube
+                <i className="c-b">"</i><a href="https://bit.ly/geekcampsg-discord">Discord</a>, YouTube
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>

@@ -101,6 +101,15 @@ export default ({ siteTitle }) => {
               </li>
               <li>
                 <a
+                  href="https://bit.ly/geekcampsg-discord"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Discord
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://www.instagram.com/geekcampsg"
                   target="_blank"
                   rel="noreferrer noopener"
