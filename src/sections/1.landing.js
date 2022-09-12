@@ -69,7 +69,7 @@ const Landing = ({ title }) => {
                 <i className="c-r">inPersonLocation</i>
                 <i className="c-b">"</i>
                 <i className="c-g">:</i>
-                <i className="c-b">"</i>To be confirmed
+                <i className="c-b">"</i>SP Digital, 180 Clemenceau Ave, Singapore 239922.
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>
