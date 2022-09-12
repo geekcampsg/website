@@ -89,7 +89,7 @@ const Landing = ({ title }) => {
                 <i className="c-r">registration</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i>Opening sooon
+                <i className="c-b">"</i><a href="https://bit.ly/geekcampsg-barcampsg-2022">Get tickets!</a>
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>
