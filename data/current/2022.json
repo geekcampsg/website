@@ -1,145 +1,304 @@
 {
   "year": "2022",
-  "venue": "",
-  "dates": [
+  "timeZone": "Asia/Singapore",
+  "tracks": [
     {
-      "date": "2021-11-06T00:00:00",
-      "timeZone": "Asia/Singapore",
+      "track": "1",
       "talks": [
         {
-          "title": "Say hi!",
-          "startTime": "2021-11-06T13:30:00+08:00",
-          "endTime": "2021-11-06T14:00:00+08:00"
-        },
-        {
           "title": "Opening",
-          "startTime": "2021-11-06T14:00:00+08:00",
-          "endTime": "2021-11-06T14:10:00+08:00"
+          "startTime": "2022-10-29T10:00:00+08:00",
+          "endTime": "2022-10-29T10:30:00+08:00",
+          "id": "opening"
         },
         {
-          "title": "Machine Learning Supercharged with Elixir",
-          "summary": "Machine learning is traditionally done on Python and Jupyter Notebooks, but a small team looked at the issues of the traditional way of doing things and the strengths of Elixir and made an amazing workflow. Ideally, the goal is to introduce people to the strengths of Elixir.",
-          "speaker": "Tan Jian Zhen",
-          "speakerId": "tan-jian-zhen",
-          "startTime": "2021-11-06T14:10:00+08:00",
-          "endTime": "2021-11-06T14:50:00+08:00"
+          "title": "The horizontal overflow problem",
+          "summary": "Have you ever visited a website on a phone only to find that when you want to scroll down, the entire page also sways from left to right due to some mysterious horizontal overflow?Unintended horizontal overscrolling is not a great experience. Let's break the problem down and also try to solve it.",
+          "startTime": "2022-10-29T10:30:00+08:00",
+          "endTime": "2022-10-29T11:15:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Chen Hui Jing",
+              "id": "chen-hui-jing"
+            },
+            {
+              "name": "Gao Wei",
+              "id": "gao-wei"
+            }
+          ],
+          "id": "the-horizontal-overflow-problem"
         },
         {
-          "title": "Passwords are old, use WebAuthn",
-          "summary": "What if we could build our authentication processes in a way the user doesn’t need a password? I will give a quick overview of the past, present, and future of authentication. From basic authentication to passwordless biometric authentication using web authentication API, and everything in between.",
-          "speaker": "Mohammad Shahbaz Alam",
-          "speakerId": "mohammad-shahbaz-alam",
-          "startTime": "2021-11-06T14:50:00+08:00",
-          "endTime": "2021-11-06T15:30:00+08:00"
+          "title": "Let's learn about the Life2Well Project without frying your brain",
+          "summary": "What might the collision of maker culture, data science, electroencephalograms, the Internet of Things, and climate science look like? In this session, we share a student-initiated project which explores this very intersection. Come join us and BYOCM (bring your own craft materials)!",
+          "startTime": "2022-10-29T11:15:00+08:00",
+          "endTime": "2022-10-29T12:00:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Nguyen Duc Minh Anh",
+              "id": "nguyen-duc-minh-anh"
+            },
+            {
+              "name": "Nguyen Thien Minh Tuan",
+              "id": "nguyen-thien-minh-tuan"
+            },
+            {
+              "name": "Kenneth Y T Lim",
+              "id": "kenneth-y-t-lim"
+            }
+          ],
+          "id": "let-s-learn-about-the-life-well-project-without-frying-your-brain"
         },
         {
-          "title": "Break",
-          "startTime": "2021-11-06T15:30:00+08:00",
-          "endTime": "2021-11-06T15:50:00+08:00"
+          "title": "Better migrations in PostgreSQL using Squawk",
+          "summary": "Learn how Squawk can help improve your migrations and schema definitions in PostgreSQL. We will discuss the various rules that Squawk lints against and how they can lead to more resilient database design in PostgreSQL.",
+          "startTime": "2022-10-29T12:15:00+08:00",
+          "endTime": "2022-10-29T13:00:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Kenny Shen",
+              "id": "kenny-shen"
+            }
+          ],
+          "id": "better-migrations-in-postgresql-using-squawk"
         },
         {
-          "title": "How to Create Pure CSS Games",
-          "summary": "Elad Shechter took his free time at home to create a pure CSS game. He will explain to you lots of tips and tricks on how to create pure CSS games, based on the Coronavirus game he made: <a href='https://codepen.io/elad2412/pen/wvabjXy' target='_blank' rel='noreferrer'>https://codepen.io/elad2412/pen/wvabjXy</a>.",
-          "speaker": "Elad Shechter",
-          "speakerId": "elad-shechter",
-          "startTime": "2021-11-06T15:50:00+08:00",
-          "endTime": "2021-11-06T16:30:00+08:00"
+          "title": "Parsing Differential Problem",
+          "summary": "As microservices have become popular in the current software engineering landscape, it is of increased importance to consider security risks arising from interactions between components within a system.We will explore the parsing differential problem, and discuss remedies with examples.",
+          "startTime": "2022-10-29T14:00:00+08:00",
+          "endTime": "2022-10-29T14:15:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Sim Cher Boon",
+              "id": "sim-cher-boon"
+            }
+          ],
+          "id": "parsing-differential-problem"
         },
         {
-          "title": "(An introduction to) Domain Storytelling",
-          "summary": "Domain Storytelling is a collaborative modeling method. It brings together domain experts and development teams. It means that we let our users tell us stories about their work. While listening, we record the stories using a pictographic language.",
-          "speaker": "Henning Schwentner",
-          "speakerId": "henning-schwentner",
-          "startTime": "2021-11-06T16:30:00+08:00",
-          "endTime": "2021-11-06T17:10:00+08:00"
+          "title": "ChIPs - Polycube (Voxel) Construction Set",
+          "summary": "Have you wanted to use a construction set to build a model, but don't want to deal with complicated techniques to remove studs / build sideways? Not Square? Too many different types of bricks? Something you can freely 3D print cheaply? etc. Look no further, this is the construction set for you!",
+          "startTime": "2022-10-29T14:15:00+08:00",
+          "endTime": "2022-10-29T14:30:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Liao Choon Way",
+              "id": "liao-choon-way"
+            }
+          ],
+          "id": "chips-polycube-voxel-construction-set"
         },
         {
-          "title": "Break",
-          "startTime": "2021-11-06T17:10:00+08:00",
-          "endTime": "2021-11-06T17:30:00+08:00"
+          "title": "The Lord of the Monorepos: An efficient setup with pnpm and NX",
+          "summary": "One setup to rule all your repositories, One setup to find them,One setup to bring them all, and in the darkness bind themOn the laptop of the developer where the node_modules lie.",
+          "startTime": "2022-10-29T14:45:00+08:00",
+          "endTime": "2022-10-29T15:30:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Thomas Huchedé",
+              "id": "thomas-huchede"
+            }
+          ],
+          "id": "the-lord-of-the-monorepos-an-efficient-setup-with-pnpm-and-nx"
         },
         {
-          "title": "Choreography vs Orchestration in serverless microservices",
-          "summary": "Should there be a central orchestrator controlling all interactions between services or should each service work independently and only interact through shared events? In this talk, we’ll explore the Choreography vs Orchestration question and see demos of some of the tools that can help.",
-          "speaker": "Mete Atamel",
-          "speakerId": "mete-atamel",
-          "startTime": "2021-11-06T17:30:00+08:00",
-          "endTime": "2021-11-06T18:10:00+08:00"
+          "title": "The unreasonable effectiveness of values",
+          "summary": "There are many ways to solve a problem, some better than others: copy from stackoverflow, use a popular library, callbacks, promises, goroutines, meta programming, queue, regexes… But there’s one dumb approach that keeps ending up as the better solution in surprisingly many situations: plain values.",
+          "startTime": "2022-10-29T15:45:00+08:00",
+          "endTime": "2022-10-29T16:00:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Chew Choon Keat",
+              "id": "chew-choon-keat"
+            }
+          ],
+          "id": "the-unreasonable-effectiveness-of-values"
         },
         {
-          "title": "Closing",
-          "startTime": "2021-11-06T18:10:00+08:00",
-          "endTime": "2021-11-06T18:20:00+08:00"
+          "title": "Creating Art From Databases",
+          "summary": "When I ask, what does a database look like? An ER Diagram may come to mind. How about, what does a DB sound like? Hmm.. maybe, the screams of one being accidentally deleted. Ultimately, art is made up of data. A song has notes, a painting has pixels etc. So, why not turn our databases into art?",
+          "startTime": "2022-10-29T16:00:00+08:00",
+          "endTime": "2022-10-29T16:15:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Sam Poder",
+              "id": "sam-poder"
+            }
+          ],
+          "id": "creating-art-from-databases"
         },
         {
-          "title": "Social",
-          "startTime": "2021-11-06T18:20:00+08:00",
-          "endTime": "2021-11-06T19:00:00+08:00",
-          "summary": "Meet other people in our virtual space"
+          "title": "Software best practices in a Hard(ware) world",
+          "summary": "Software processes and best practices like version control, build automation and CI/CD are widely adopted in the software industry, but how to adapt these ideas to hardware design and development? Does git work on schematics? Can I automate hardware testing? Let's explore!",
+          "startTime": "2022-10-29T16:15:00+08:00",
+          "endTime": "2022-10-29T16:30:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Chinmay Pendharkar",
+              "id": "chinmay-pendharkar"
+            }
+          ],
+          "id": "software-best-practices-in-a-hard-ware-world"
+        },
+        {
+          "title": "Understanding the TLS Ecosystem By Probing the Internet",
+          "summary": "In this talk, we look at how to perform an internet wide scan supporting TLSv1.3. We collect data from the entire IPv4 space on port 443 and analyze 9,461,056 data points to baseline the state of the TLS ecosystem. We conclude the talk by looking at how the ecosystem can be improved.",
+          "startTime": "2022-10-29T16:30:00+08:00",
+          "endTime": "2022-10-29T17:15:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "Wong Wai Tuck",
+              "id": "wong-wai-tuck"
+            }
+          ],
+          "id": "understanding-the-tls-ecosystem-by-probing-the-internet"
+        },
+        {
+          "title": "Using math, statistics, and javascript - to automate the solving of WORDLE - so I will never need to do so again",
+          "summary": "My wife is really addicted to Wordle, and she's been bugging me to try it every day, and compete for a better score then me ....But I suck at Wordle!So I used math, statistics, and javascript - to automate solving of wordle for me (so I will never need to do so again)",
+          "startTime": "2022-10-29T17:15:00+08:00",
+          "endTime": "2022-10-29T18:00:00+08:00",
+          "track": "1",
+          "speakers": [
+            {
+              "name": "PicoCreator",
+              "id": "picocreator"
+            }
+          ],
+          "id": "using-math-statistics-and-javascript-to-automate-the-solving-of-wordle-so-i-will-never-need-to-do-so-again"
         }
       ]
     },
     {
-      "date": "2021-11-07T00:00:00",
-      "timeZone": "Asia/Singapore",
+      "track": "2",
       "talks": [
         {
-          "title": "Say hi!",
-          "startTime": "2021-11-07T08:30:00+08:00",
-          "endTime": "2021-11-07T09:00:00+08:00"
-        },
-        {
           "title": "Opening",
-          "startTime": "2021-11-07T09:00:00",
-          "endTime": "2021-11-07T09:10:00"
+          "startTime": "2022-10-29T10:00:00+08:00",
+          "endTime": "2022-10-29T10:30:00+08:00",
+          "id": "opening"
         },
         {
-          "title": "The 10,000 Steps of Open Source Project Health",
-          "summary": "In this talk, we will look at the approach that Facebook Open Source team takes to measure the current state of Facebook open source projects, and how we use these metrics to prioritize and to direct our DevRel focus. We aim to show how by looking at information about your open source communities.",
-          "speaker": "Dmitry Vinnik",
-          "speakerId": "dmitry-vinnik",
-          "startTime": "2021-11-07T09:10:00",
-          "endTime": "2021-11-07T09:50:00"
+          "title": "Don't be shy - how to ask your senior devs for help",
+          "summary": "As a junior dev, have you ever wanted to ask your senior dev for help, but feel paiseh (Singlish for embarrassed)? My senior is so busy all the time... What if my question too bodoh (Singlish for stupid) and irritates my senior? Let me teach you the art of asking good questions.",
+          "startTime": "2022-10-29T10:30:00+08:00",
+          "endTime": "2022-10-29T11:15:00+08:00",
+          "track": "2",
+          "speakers": [
+            {
+              "name": "Shi Ling",
+              "id": "shi-ling"
+            }
+          ],
+          "id": "don-t-be-shy-how-to-ask-your-senior-devs-for-help"
         },
         {
-          "title": "Everyone's a player (in a mid-90s MUD)",
-          "summary": "This talk takes the approach of applying Player Type Theory (from game design) to getting people involved and engaged in technical and documentation projects in a technical environment. Practical tips are offered for dealing with lack of engagement, human-caused delays, and even workplace bullying.",
-          "speaker": "Kenzie Woodbridge",
-          "speakerId": "kenzie-woodbridge",
-          "startTime": "2021-11-07T09:50:00",
-          "endTime": "2021-11-07T10:30:00"
+          "title": "Rolling Your Own Cryptography: Why You Shouldn't",
+          "summary": "In 2019, a trivial flaw existed on Flickr that allowed user impersonation. It's one of many that come from flaws in the use of cryptography: And it's not the developer's fault; Crypto is fragile. This talk describes the wide contexts crypto is used (and attacked) and all that can go wrong.",
+          "startTime": "2022-10-29T11:15:00+08:00",
+          "endTime": "2022-10-29T12:00:00+08:00",
+          "track": "2",
+          "speakers": [
+            {
+              "name": "Jules Poon",
+              "id": "jules-poon"
+            }
+          ],
+          "id": "rolling-your-own-cryptography-why-you-shouldn-t"
         },
         {
-          "title": "Break",
-          "startTime": "2021-11-07T10:10:30+08:00",
-          "endTime": "2021-11-07T10:50:00+08:00"
+          "title": "A Day in Cyber Security",
+          "summary": "In the past edition of Geekcamp.SG, I received a lot of queries on what it takes to start in CyberSecurity. This workshop is part presentation and part hands-on on some of the tasks the different roles that a Cyber Security Blue Teamer might carry out.",
+          "startTime": "2022-10-29T12:15:00+08:00",
+          "endTime": "2022-10-29T13:15:00+08:00",
+          "track": "2",
+          "speakers": [
+            {
+              "name": "Muhammad Hazwan Bin Hassan Mokyi",
+              "id": "muhammad-hazwan-bin-hassan-mokyi"
+            }
+          ],
+          "id": "a-day-in-cyber-security"
         },
         {
-          "title": "The Definitive Deep Dive into the .git Folder",
-          "summary": "What’s in the .git folder? We’ll dive deep into the objects folder, unpack commits, look at the types of DAG nodes, examine object content, and build a complete visualization of the stored content. We’ll also quickly look through Git hooks, Git config, and ref logs. Come experience the zen of git.",
-          "speaker": "Rob Richardson",
-          "speakerId": "rob-richardson",
-          "startTime": "2021-11-07T10:50:00+08:00",
-          "endTime": "2021-11-07T11:30:00+08:00"
+          "title": "Storage and Retrieval in databases from scratch",
+          "summary": "Based on content from Martin Kleppmann's Designing Data Intensive Applications, go under the hood of databases and simulate with code examples (in JS), how DBs read and write files: append-only, hash index, LSMTrees and B+Trees. Also will touch on Online Analysis Processing DB strategies",
+          "startTime": "2022-10-29T14:00:00+08:00",
+          "endTime": "2022-10-29T14:45:00+08:00",
+          "track": "2",
+          "speakers": [
+            {
+              "name": "Zhi-Yang Ten",
+              "id": "zhi-yang-ten"
+            }
+          ],
+          "id": "storage-and-retrieval-in-databases-from-scratch"
         },
         {
-          "title": "Demystifying the Java Flight Recorder API",
-          "summary": "This talk will be useful for developers who wish to monitor the performance of the applications especially in case of heavy data loads. It will help developers to understand how to use and integrate the JFR APIs in their existing Java based projects seamlessly along with the best practices.",
-          "speaker": "Karan Balkar",
-          "speakerId": "karan-balkar",
-          "startTime": "2021-11-07T11:30:50+08:00",
-          "endTime": "2021-11-07T12:10:00+08:00"
+          "title": "Verifiable Computing Project - Building truly open source compute hardware",
+          "summary": "Processors are at the heart of our devices. As they become more integrated with other functions, what do we know about they work? Do we trust their designers?We present a computer design with a FPGA RISC-V processor implementation, allowing for the underlying hardware to be inspected.",
+          "startTime": "2022-10-29T14:45:00+08:00",
+          "endTime": "2022-10-29T15:30:00+08:00",
+          "track": "2",
+          "speakers": [
+            {
+              "name": "Joyce Ng",
+              "id": "joyce-ng"
+            }
+          ],
+          "id": "verifiable-computing-project-building-truly-open-source-compute-hardware"
         },
         {
-          "title": "Closing",
-          "startTime": "2021-11-07T12:10:00+08:00",
-          "endTime": "2021-11-07T12:20:00+08:00"
+          "title": "Bitcoin, Blockchain & Cryptography, Part II: A look back of blockchain evolution over the last 10 years.",
+          "summary": "I gave a Geekcamp opening keynote in 2012 titled \"Bitcoin – How it is safer than you bank\", when Bitcoin was barely known outside of a small group of users.This is a no-hype talk that covers both my personal journey in the blockchain scene, as well as evolution of blockchain, from my eyes.",
+          "startTime": "2022-10-29T15:45:00+08:00",
+          "endTime": "2022-10-29T16:30:00+08:00",
+          "track": "2",
+          "speakers": [
+            {
+              "name": "U-Zyn Chua",
+              "id": "u-zyn-chua"
+            }
+          ],
+          "id": "bitcoin-blockchain-cryptography-part-ii-a-look-back-of-blockchain-evolution-over-the-last-years"
         },
         {
-          "title": "Social",
-          "startTime": "2021-11-07T12:20:00+08:00",
-          "endTime": "2021-11-07T13:30:00+08:00",
-          "summary": "Meet other people in our virtual space"
+          "title": "How Python 3.11 is Speeding Up",
+          "summary": "Speed is coming to Python. After years of mostly stagnant year-on-year Python performance improvements, Python 3.11 is 25% faster than Python 3.10 thanks to various contributors. I'd love to share the technical details of how this was achieved.",
+          "startTime": "2022-10-29T16:30:00+08:00",
+          "endTime": "2022-10-29T17:15:00+08:00",
+          "track": "2",
+          "speakers": [
+            {
+              "name": "Ken Jin",
+              "id": "ken-jin"
+            }
+          ],
+          "id": "how-python-is-speeding-up"
+        },
+        {
+          "title": "The L4 Compiler: a toolchain for a DSL for law",
+          "summary": "Programmers and lawyers do the same thing: we anticipate a range of future scenarios and try to say what is, and is not, supposed to happen in each one. But lawyers program in English. What if CS had been invented before law? What would lawyers be programming in instead?",
+          "startTime": "2022-10-29T17:15:00+08:00",
+          "endTime": "2022-10-29T18:00:00+08:00",
+          "track": "2",
+          "speakers": [
+            {
+              "name": "Meng Weng Wong",
+              "id": "meng-weng-wong"
+            }
+          ],
+          "id": "the-l-compiler-a-toolchain-for-a-dsl-for-law"
         }
       ]
     }

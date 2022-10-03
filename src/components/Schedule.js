@@ -1,6 +1,15 @@
 import styled from "styled-components"
 
-const ScheduleTitle = styled.h1`
+const ScheduleDate = styled.h2`
+  margin-bottom: 1rem;
+  font-size: 1.6em;
+
+  @media screen and (min-with: 768px) {
+    font-size: 2em;
+  }
+`
+
+const ScheduleTitle = styled.h3`
   margin-bottom: 1rem;
   font-size: 1.6em;
 
@@ -86,4 +95,4 @@ const ScheduleItem = styled.li`
   }
 `
 
-export { Schedule, ScheduleTime, ScheduleItem, ScheduleTitle }
+export { Schedule, ScheduleDate, ScheduleTime, ScheduleItem, ScheduleTitle }

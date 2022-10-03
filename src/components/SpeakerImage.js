@@ -1,5 +1,5 @@
 import React from "react"
-import {GatsbyImage, getImage} from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 function SpeakerLink({ target, children }) {
@@ -71,23 +71,23 @@ export default ({
   position = "",
   ...props
 }) => {
-	const image = getImage(props.image);
-	return (
-  <SpeakerLink target={target}>
-    <Figure past={past} portrait={portrait}>
-      <GatsbyImage
-        alt={name}
-        style={{ position: "absolute", width: "100%", height: "100%" }}
-        {...props}
-		image={image}
-      />
-      {name && (
-        <figcaption>
-          {name}
-          {position && <span>{position}</span>}
-        </figcaption>
-      )}
-    </Figure>
-  </SpeakerLink>
-)
+  const image = getImage(props.image)
+  return (
+    <div id={target}>
+      <Figure past={past} portrait={portrait}>
+        <GatsbyImage
+          alt={name}
+          style={{ position: "absolute", width: "100%", height: "100%" }}
+          {...props}
+          image={image}
+        />
+        {name && (
+          <figcaption>
+            {name}
+            {position && <span>{position}</span>}
+          </figcaption>
+        )}
+      </Figure>
+    </div>
+  )
 }
