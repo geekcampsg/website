@@ -106,7 +106,7 @@ export default () => {
         ...profile
       }
       zhiyangten: file(
-        relativePath: { eq: "speakers/featured/zhi-yang-ten.jpg" }
+        relativePath: { eq: "speakers/featured/zhi-yang-ten.png" }
       ) {
         ...profile
       }
