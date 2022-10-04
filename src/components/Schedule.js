@@ -95,7 +95,13 @@ const ScheduleItem = styled.li`
 `
 
 const ScheduleTrack = styled.div`
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  background: ${(props) => (props.track === "0" ? "#258fa7" : "#b59317")};
+  color: black;
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
 `
 
 export {

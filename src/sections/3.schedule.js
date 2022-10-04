@@ -26,10 +26,9 @@ const Schedule = () => (
     <div className="contain">
       <div className="vessel cols">
         <div className="left">
-          <h2>schedule</h2>
+          <h2>schedule - Oct 29, 2022</h2>
         </div>
         <div className="right">
-          <ScheduleDate>Oct 29, 2022</ScheduleDate>
           <p>Time shown is in SGT (UTC+8)</p>
           <ScheduleTime>
             {Event2022.talks.map((talk, index) => {
@@ -50,7 +49,7 @@ const Schedule = () => (
                     </h4>
                   ) : null}
                   {talk.track ? (
-                    <ScheduleTrack>Track {talk.track}</ScheduleTrack>
+                    <ScheduleTrack track={talk.track}>Track {talk.track}</ScheduleTrack>
                   ) : null}
                   {talk.summary && (
                     <p
