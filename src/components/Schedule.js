@@ -73,7 +73,6 @@ const ScheduleItem = styled.li`
     color: #808081;
     font-weight: normal;
     font-size: 1.333333333rem;
-    margin-bottom: 1.5rem;
     text-transform: none;
   }
 
@@ -95,4 +94,15 @@ const ScheduleItem = styled.li`
   }
 `
 
-export { Schedule, ScheduleDate, ScheduleTime, ScheduleItem, ScheduleTitle }
+const ScheduleTrack = styled.div`
+  margin-bottom: 1.5rem;
+`
+
+export {
+  Schedule,
+  ScheduleDate,
+  ScheduleTime,
+  ScheduleItem,
+  ScheduleTitle,
+  ScheduleTrack,
+}
