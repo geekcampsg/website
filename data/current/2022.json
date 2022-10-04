@@ -175,7 +175,7 @@
       "id": "verifiable-computing-project-building-truly-open-source-compute-hardware"
     },
     {
-      "title": "The unreasonable effectiveness of values",
+      "title": "The Unreasonable Effectiveness of Dumb Values",
       "summary": "There are many ways to solve a problem, some better than others: copy from stackoverflow, use a popular library, callbacks, promises, goroutines, meta programming, queue, regexes… But there’s one dumb approach that keeps ending up as the better solution in surprisingly many situations: plain values.",
       "startTime": "2022-10-29T15:45:00+08:00",
       "endTime": "2022-10-29T16:00:00+08:00",
@@ -231,7 +231,7 @@
       "id": "software-best-practices-in-a-hard-ware-world"
     },
     {
-      "title": "Understanding the TLS Ecosystem By Probing the Internet",
+      "title": "Understanding the TLS Ecosystem by Probing the Internet",
       "summary": "In this talk, we look at how to perform an internet wide scan supporting TLSv1.3. We collect data from the entire IPv4 space on port 443 and analyze 9,461,056 data points to baseline the state of the TLS ecosystem. We conclude the talk by looking at how the ecosystem can be improved.",
       "startTime": "2022-10-29T16:30:00+08:00",
       "endTime": "2022-10-29T17:15:00+08:00",
