@@ -105,8 +105,8 @@ export default () => {
       ) {
         ...profile
       }
-      zhiyangten: file(
-        relativePath: { eq: "speakers/featured/zhi-yang-ten.png" }
+      tenzhiyang: file(
+        relativePath: { eq: "speakers/featured/ten-zhi-yang.png" }
       ) {
         ...profile
       }
@@ -292,6 +292,14 @@ const speakers = [
     twitter: "cherboon",
   },
   {
+    name: "Ten Zhi-Yang",
+    target: "ten-zhi-yang",
+    imgId: "tenzhiyang",
+    position: "Software Developer, Shopify",
+    bio: 'I strongly believe in the saying "We build the things we can buy, so that we have the skills to build the things we can\'t buy" - Adam SavageA software developer transitioning from front end to full stack, I enjoy building small weekend projects. Code, Hardware, Carpentry, anything that tickles my fancy I will attempt. Many failures and a few successes, but most times, I will get something to talk about.',
+    twitter: "tzyinc",
+  },
+  {
     name: "Thomas Huchedé",
     target: "thomas-huchede",
     imgId: "thomashuchede",
@@ -314,13 +322,5 @@ const speakers = [
     position: "Senior Penetration Tester",
     bio: "Wai Tuck is a Senior Penetration Tester working on improving privacy and security on the internet. He is broadly interested in deep technical research and scaling the process of finding security vulnerabilities in novel systems. He was previously a contributor to Nmap, most notably writing the first stable scanner for Sambacry (CVE-2017-7494). He holds a number of security certifications and accolades, including a Black Badge with the team CTFSG in DEFCON26. He is concurrently pursuing a PhD in Computer Science, researching on the weaknesses of artificial intelligence systems and devising new methods to make them more robust.",
     twitter: "waituckk",
-  },
-  {
-    name: "Zhi-Yang Ten",
-    target: "zhi-yang-ten",
-    imgId: "zhiyangten",
-    position: "Software Developer, Shopify",
-    bio: 'I strongly believe in the saying "We build the things we can buy, so that we have the skills to build the things we can\'t buy" - Adam SavageA software developer transitioning from front end to full stack, I enjoy building small weekend projects. Code, Hardware, Carpentry, anything that tickles my fancy I will attempt. Many failures and a few successes, but most times, I will get something to talk about.',
-    twitter: "tzyinc",
   },
 ]
