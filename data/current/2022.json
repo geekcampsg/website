@@ -266,8 +266,8 @@
       "track": "0",
       "speakers": [
         {
-          "name": "PicoCreator",
-          "id": "picocreator"
+          "name": "Eugene Cheah",
+          "id": "eugene-cheah"
         }
       ],
       "id": "using-math-statistics-and-javascript-to-automate-the-solving-of-wordle-so-i-will-never-need-to-do-so-again"
@@ -280,8 +280,8 @@
       "track": "1",
       "speakers": [
         {
-          "name": "Meng Weng Wong",
-          "id": "meng-weng-wong"
+          "name": "Wong Meng Weng",
+          "id": "wong-meng-weng"
         }
       ],
       "id": "the-l-compiler-a-toolchain-for-a-dsl-for-law"
