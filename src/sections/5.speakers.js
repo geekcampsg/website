@@ -296,7 +296,7 @@ const speakers = [
     target: "ten-zhi-yang",
     imgId: "tenzhiyang",
     position: "Software Developer, Shopify",
-    bio: 'I strongly believe in the saying "We build the things we can buy, so that we have the skills to build the things we can\'t buy" - Adam SavageA software developer transitioning from front end to full stack, I enjoy building small weekend projects. Code, Hardware, Carpentry, anything that tickles my fancy I will attempt. Many failures and a few successes, but most times, I will get something to talk about.',
+    bio: 'I strongly believe in the saying "We build the things we can buy, so that we have the skills to build the things we can\'t buy" - Adam Savage.\nA software developer transitioning from front end to full stack, I enjoy building small weekend projects. Code, Hardware, Carpentry, anything that tickles my fancy I will attempt. Many failures and a few successes, but most times, I will get something to talk about.',
     twitter: "tzyinc",
   },
   {
