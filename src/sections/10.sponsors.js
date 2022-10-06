@@ -26,7 +26,7 @@ export default () => {
     }
   `)
 
-const image = getImage(data.prolive.childImageSharp);
+const spdigitalImage = getImage(data.spdigital.childImageSharp);
   return (
     <section className="section-sponsors" id="sponsors">
       <div className="contain">
@@ -47,11 +47,11 @@ const image = getImage(data.prolive.childImageSharp);
             <Row css="@media screen and (min-width: 768px) {margin-bottom: 3rem;}">
               <Col>
                 <a
-                  href="https://prolive.co"
+                  href="https://www.spdigital.sg/about-us.html"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <GatsbyImage image={image} />
+                  <GatsbyImage image={spdigitalImage} />
                 </a>
               </Col>
             </Row>
