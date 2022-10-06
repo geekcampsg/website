@@ -1,6 +1,15 @@
 import styled from "styled-components"
 
-const ScheduleTitle = styled.h1`
+const ScheduleDate = styled.h2`
+  margin-bottom: 1rem;
+  font-size: 1.6em;
+
+  @media screen and (min-with: 768px) {
+    font-size: 2em;
+  }
+`
+
+const ScheduleTitle = styled.h3`
   margin-bottom: 1rem;
   font-size: 1.6em;
 
@@ -64,7 +73,6 @@ const ScheduleItem = styled.li`
     color: #808081;
     font-weight: normal;
     font-size: 1.333333333rem;
-    margin-bottom: 1.5rem;
     text-transform: none;
   }
 
@@ -86,4 +94,21 @@ const ScheduleItem = styled.li`
   }
 `
 
-export { Schedule, ScheduleTime, ScheduleItem, ScheduleTitle }
+const ScheduleTrack = styled.div`
+  margin-bottom: 1rem;
+  background: ${(props) => (props.track === "0" ? "#258fa7" : "#b59317")};
+  color: black;
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+`
+
+export {
+  Schedule,
+  ScheduleDate,
+  ScheduleTime,
+  ScheduleItem,
+  ScheduleTitle,
+  ScheduleTrack,
+}
