@@ -155,7 +155,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
             val = "Volunteer by signing up at <a href='" + link + "' rel='noopender noreferrer' target='_blank'>" + link + "</a>"
             window.open(link)
           } else if (cmd === "location") {
-            val = "In-person: To be confirmed<br>Online: Discord"
+            val = "In-person: <a href=\"https://goo.gl/maps/2TyAFjJJQk1YrSYT8\">SP Digital, 180 Clemenceau Ave, Singapore 239922.</a><br>Online: Discord"
           } else if (cmd === "dir") {
             val = "Bad command or file name"
           } else if (cmd === "ls") {
