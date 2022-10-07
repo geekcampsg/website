@@ -47,7 +47,7 @@ const spdigitalImage = getImage(data.spdigital.childImageSharp);
             <Row css="@media screen and (min-width: 768px) {margin-bottom: 3rem;}">
               <Col>
                 <a
-                  href="https://www.spdigital.sg/about-us.html"
+                  href="https://www.spdigital.sg"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
