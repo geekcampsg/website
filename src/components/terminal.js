@@ -153,7 +153,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
             val = "<a href=" + link + ">Get tickets!</a>"
           } else if (cmd === "volunteer") {
 			const link = "https://forms.gle/YkAHhJFhc3eBhhe37"
-            val = "Volunteer with us at <a href='" + link + "' rel='noopender noreferrer' target='_blank'>" + link + "</a>"
+            val = "<a href=" + link + ">Volunteer with us</a>"
             // window.open(link)
           } else if (cmd === "location") {
             val = "In-person: <a href=\"https://goo.gl/maps/2TyAFjJJQk1YrSYT8\">SP Digital, 180 Clemenceau Ave, Singapore 239922.</a><br>Online: <a hred=\"https://bit.ly/geekcampsg-discord\">Discord</a>"
