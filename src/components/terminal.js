@@ -139,7 +139,7 @@ const TerminalScreen = ({ handleToggleGame }) => {
               "Available commands: cfp, register, volunteer, location, date, archives"
             // } else if (cmd.match(/^pw(d$|d\s+)/)) {
           } else if (cmd === "pwd") {
-            val = "/geekcamp/2021"
+            val = "/geekcamp/2022"
           } else if (cmd === "clear") {
             setLog([ENTER_COMMAND_TEXT])
             e.target.value = ""
@@ -149,13 +149,14 @@ const TerminalScreen = ({ handleToggleGame }) => {
             val = "Call for Proposals is now closed. Thank you for your interest."
             // window.open(link)
           } else if (cmd === "register") {
-            val = "Registration is not open yet"
+            const link = "https://bit.ly/geekcampsg-barcampsg-2022"
+            val = "<a href=" + link + ">Get tickets!</a>"
           } else if (cmd === "volunteer") {
 			const link = "https://forms.gle/YkAHhJFhc3eBhhe37"
             val = "Volunteer by signing up at <a href='" + link + "' rel='noopender noreferrer' target='_blank'>" + link + "</a>"
             window.open(link)
           } else if (cmd === "location") {
-            val = "In-person: <a href=\"https://goo.gl/maps/2TyAFjJJQk1YrSYT8\">SP Digital, 180 Clemenceau Ave, Singapore 239922.</a><br>Online: Discord"
+            val = "In-person: <a href=\"https://goo.gl/maps/2TyAFjJJQk1YrSYT8\">SP Digital, 180 Clemenceau Ave, Singapore 239922.</a><br>Online: <a hred=\"https://bit.ly/geekcampsg-discord\">Discord</a>"
           } else if (cmd === "dir") {
             val = "Bad command or file name"
           } else if (cmd === "ls") {
