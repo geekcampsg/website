@@ -69,7 +69,7 @@ const Landing = ({ title }) => {
                 <i className="c-r">inPersonLocation</i>
                 <i className="c-b">"</i>
                 <i className="c-g">:</i>
-                <i className="c-b">"</i><a href="https://goo.gl/maps/2TyAFjJJQk1YrSYT8">SP Digital, 180 Clemenceau Ave, Singapore 239922.</a>
+                <i className="c-b">"</i><a href="https://goo.gl/maps/2TyAFjJJQk1YrSYT8">SP Digital, 180 Clemenceau Ave, Singapore 239922</a>
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>
@@ -110,7 +110,7 @@ const Landing = ({ title }) => {
                 <i className="c-r">volunteer</i>
                 <i className="c-b">"</i>
                 <i className="c-g">: </i>
-                <i className="c-b">"</i><a href="https://bit.ly/geekcampsg-volunteer-2022">https://bit.ly/geekcampsg-volunteer-2022</a>
+                <i className="c-b">"</i><a href="https://bit.ly/geekcampsg-volunteer-2022">Volunteer with us</a>
                 <i className="c-b">"</i>
                 <i className="c-g">,</i>
               </code>
