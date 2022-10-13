@@ -1,0 +1,17 @@
+---
+import Tweet from "./Tweet.astro"
+
+export interface Props {
+  tweetIds: string[]
+}
+const { tweetIds } = Astro.props
+
+const response = await fetch(
+  `https://syndication.twitter.com/tweets.json?ids=${tweetIds.join(",")}`
+)
+const isOk = response.status === 200
+const data = await response.json()
+// somehow after hot-reloading this stop working
+---
+
+{tweetIds.map((id) => <Tweet html={isOk ? data[id] : ""} />)}

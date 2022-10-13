@@ -1,17 +1,18 @@
 ---
-import TwitterWidgetScript from './TwitterWidgetScript.svelte';
-import Tweet from './Tweet.astro';
+import Tweets from "./Tweets.astro"
+const tweetIds = [
+  "1562416772866707456",
+  "1185475318858928129",
+  "1185354142803361792",
+];
 ---
-<section id='testimonials' class='rows'>
+
+<section id="testimonials" class="rows">
   <div>
     <h2>What People Said</h2>
   </div>
-  <div class='tweet-container'>
-    <Tweet tweetId="1562416772866707456" />
-    <Tweet tweetId="1185475318858928129" />
-    <Tweet tweetId="1185354142803361792" />
-
-    <TwitterWidgetScript client:visible client:idle />
+  <div class="tweet-container" style={`--num-tweets: ${tweetIds.length};`}>
+    <Tweets tweetIds={tweetIds} />
   </div>
 </section>
 
@@ -22,7 +23,7 @@ import Tweet from './Tweet.astro';
 
   .tweet-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(var(--num-tweets), 1fr);
     gap: 1rem;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;

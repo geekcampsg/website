@@ -1,25 +1,17 @@
 ---
 export interface Props {
-  tweetId: string
+  html: string
 }
-const { tweetId } = Astro.props
-
-const response = await fetch(
-  `https://syndication.twitter.com/tweets.json?ids=${tweetId}`,
-  {}
-)
-const isOk = response.status === 200
-const data = await response.json()
-let html = isOk ? data[tweetId] : ""
-html = html
-  .replace(/data-src-1x=/g, 'src=')
+const { html } = Astro.props
+const formattedHtml = html
+  .replace(/data-src-1x=/g, "src=")
   .replace(
-    /data-image="(.+)"\s+data-image-format="(.+)"/gm,
-    'src="$1.$2"'
+    /data-image="([^"]+)"(?:\s+data-image-format="([^"]+)")?/gm,
+    (_, url, format = "jpg") => `src="${url}.${format}"`
   )
 ---
 
-{isOk ? <div class="tweet" set:html={html} /> : null}
+<div class="tweet" set:html={formattedHtml}></div>
 
 <style>
   .tweet {
