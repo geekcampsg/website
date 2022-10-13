@@ -148,7 +148,7 @@
     },
     {
       "title": "The Lord of the Monorepos: An efficient setup with pnpm and NX",
-      "summary": "One setup to rule all your repositories, One setup to find them,One setup to bring them all, and in the darkness bind them. On the laptop of the developer where the node_modules lie.",
+      "summary": "One setup to rule all your repositories, One setup to find them, One setup to bring them all, and in the darkness bind them. On the laptop of the developer where the node_modules lie.",
       "startTime": "2022-10-29T14:45:00+08:00",
       "endTime": "2022-10-29T15:30:00+08:00",
       "track": "0",
@@ -162,7 +162,7 @@
     },
     {
       "title": "Verifiable Computing Project - Building truly open source compute hardware",
-      "summary": "Processors are at the heart of our devices. As they become more integrated with other functions, what do we know about they work? Do we trust their designers? We present a computer design with a FPGA RISC-V processor implementation, allowing for the underlying hardware to be inspected.",
+      "summary": "Processors are at the heart of our devices. As they become more integrated with other functions, what do we know about how they work? Do we trust their designers? We present a computer design with a FPGA RISC-V processor implementation, allowing for the underlying hardware to be inspected.",
       "startTime": "2022-10-29T14:45:00+08:00",
       "endTime": "2022-10-29T15:30:00+08:00",
       "track": "1",
@@ -259,8 +259,8 @@
       "id": "how-python-is-speeding-up"
     },
     {
-      "title": "Using math, statistics, and javascript - to automate the solving of WORDLE - so I will never need to do so again",
-      "summary": "My wife is really addicted to Wordle, and she's been bugging me to try it every day, and compete for a better score then me ....But I suck at Wordle! So I used math, statistics, and javascript - to automate solving of wordle for me (so I will never need to do so again)",
+      "title": "Using math, statistics, and JavaScript - to automate the solving of WORDLE - so I will never need to do so again",
+      "summary": "My wife is really addicted to Wordle, and she's been bugging me to try it every day, and compete for a better score then me ....But I suck at Wordle! So I used math, statistics, and JavaScript - to automate solving of wordle for me (so I will never need to do so again)",
       "startTime": "2022-10-29T17:15:00+08:00",
       "endTime": "2022-10-29T18:00:00+08:00",
       "track": "0",
