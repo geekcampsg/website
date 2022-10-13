@@ -1,0 +1,41 @@
+---
+import Schedules from './_/Schedules.svelte';
+import { schedule, tracks } from '@src/data/schedules/2022';
+import { formatDateLong } from '@src/utils/date-format';
+---
+
+{
+  schedule.dates.map((date) => {
+    return (
+      <section id='schedule' class='rows'>
+        <>
+          <div>
+            <h2>Schedule - {formatDateLong(date.date)}</h2>
+          </div>
+          <div>
+            <p>Time shown is in SGT (UTC+8)</p>
+            <Schedules
+              scheduleTalks={date.talks}
+              tracks={tracks}
+              client:visible
+            />
+          </div>
+        </>
+      </section>
+    );
+  })
+}
+
+<style>
+  h2 {
+    --stroke-color: var(--green);
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    margin: 0;
+  }
+</style>

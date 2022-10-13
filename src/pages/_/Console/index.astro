@@ -1,0 +1,36 @@
+---
+import ConsoleControls from './Controls.astro';
+import ConsoleCode from './Code.astro';
+
+export interface Props {
+  controls?: boolean;
+  lineNumbers?: boolean;
+}
+
+const { controls = true, lineNumbers = false } = Astro.props;
+---
+
+<div>
+  {controls ? <ConsoleControls subTitle='geekcamp@sg' /> : null}
+  <ConsoleCode lineNumbers={lineNumbers}>
+    <slot />
+  </ConsoleCode>
+</div>
+
+<style>
+  div {
+    --margin: 1rem;
+    width: 900px;
+    max-width: calc(100% - 2 * var(--margin));
+    margin: var(--margin);
+    background: #282a35;
+    border-radius: 8px;
+    overflow: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    div {
+      --margin: 2rem;
+    }
+  }
+</style>

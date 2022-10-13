@@ -1,0 +1,72 @@
+---
+import Logo from '@src/components/Logo.astro';
+import Console from '../Console/index.astro';
+import formatter from './formatter';
+import ConsoleClient from './Console.svelte';
+import * as cfp from '@src/data/cfp';
+import {
+  discordLink,
+  ticketLink,
+  venueLink,
+  venueName,
+  volunteerLink,
+} from '@src/data/links';
+import { schedule } from '@src/data/schedules/current';
+
+const data = formatter()
+  .addEntry('title', 'GeekcampSG 2022')
+  .addEntry('date', '2022-10-29')
+  .addEntry('inPersonLocation', `<a href="${venueLink}">${venueName}</a>`, true)
+  .addEntry(
+    'onlineLocation',
+    `<a href="${discordLink}">Discord</a>, YouTube`,
+    true
+  )
+  .addEntry('registration', `<a href="${ticketLink}">Get tickets!</a>`, true)
+  .addEntry(
+    'cfp',
+    +Date.now() > +cfp.deadline
+      ? 'CFP is now closed.'
+      : `<a href="${cfp.link}">${cfp.link}</a>`,
+    true
+  )
+  .addEntry(
+    'volunteer',
+    `<a href="${volunteerLink}">Volunteer with us</a>`,
+    true
+  )
+  .addEntry('description', 'Join us for an eventful day of geek talks.')
+  .toString();
+---
+
+<hr />
+
+<section>
+  <Logo />
+
+  <Console>
+    <ConsoleClient client:idle geekcampDate={schedule.dates[0].date}>
+      <pre set:html={data} slot="data" />
+    </ConsoleClient>
+  </Console>
+</section>
+
+<hr />
+
+<style>
+  hr {
+    width: 100%;
+    background: url('/images/bgsquare.svg') repeat-x;
+    height: 20px;
+    outine: 0;
+    border: none;
+    margin: 0;
+  }
+  pre {
+    white-space: break-spaces;
+    line-height: 1.26;
+  }
+  hr:nth-of-type(2) {
+    margin-bottom: 3.5rem;
+  }
+</style>

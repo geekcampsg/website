@@ -1,0 +1,53 @@
+---
+import spdigitalImage from './logos/spdigital.png?w=500';
+
+const sponsors = [
+  {
+    title: '',
+    sponsors: [{ link: 'https://www.spdigital.sg', image: spdigitalImage }],
+  },
+];
+---
+
+<section id='sponsors' class='rows'>
+  <div>
+    <h2>Sponsor</h2>
+  </div>
+  <div>
+    {
+      sponsors.map((category) => {
+        return (
+          <div class='row'>
+            {category.title}
+            <div>
+              {category.sponsors.map((sponsor) => (
+                <a
+                  href={sponsor.link}
+                  target='_blank'
+                  rel='noreferrer noopener'
+                >
+                  <img src={sponsor.image} loading="lazy" />
+                </a>
+              ))}
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
+
+<style>
+  h2 {
+    --stroke-color: var(--yellow);
+  }
+  @media screen and (min-width: 768px) {
+    .row {
+      margin-bottom: 3rem;
+      max-width: 500px;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+</style>

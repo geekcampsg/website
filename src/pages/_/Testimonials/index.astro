@@ -1,0 +1,94 @@
+---
+import TwitterWidgetScript from './TwitterWidgetScript.svelte';
+---
+<section id='testimonials' class='rows'>
+  <div>
+    <h2>What People Said</h2>
+  </div>
+  <div class='tweet-container'>
+    <div class='tweet'>
+      <blockquote class='twitter-tweet' data-dnt='true' data-theme='dark' data-lang="en">
+        <p lang='en' dir='ltr'>
+          This talk was in the making for more than two years. <br /><br />My
+          biggest inspiration for this topic is my nine-year-old (then seven)
+          daughter, Shayna, who loves to draw.<a
+            href='https://twitter.com/geekcamp?ref_src=twsrc%5Etfw'>@geekcamp</a
+          > is also one of the fantastic events where I met with many like-minded
+          friends in Singapore. <a href='https://t.co/avMPP1Gvug'
+            >https://t.co/avMPP1Gvug</a
+          >
+        </p>&mdash; Subhransu (@subhransu) <a
+          href='https://twitter.com/subhransu/status/1562416772866707456?ref_src=twsrc%5Etfw'
+          >August 24, 2022</a
+        >
+      </blockquote>
+    </div>
+    <div class='tweet'>
+      <blockquote class='twitter-tweet' data-dnt='true' data-theme='dark' data-lang="en">
+        <p lang='en' dir='ltr'>
+          Really good talks on various topics <a
+            href='https://twitter.com/geekcamp?ref_src=twsrc%5Etfw'>@geekcamp</a
+          > Singapore today! <a
+            href='https://twitter.com/hashtag/dev?src=hash&ref_src=twsrc%5Etfw'
+            >#dev</a
+          >
+          <a
+            href='https://twitter.com/hashtag/robotics?src=hash&ref_src=twsrc%5Etfw'
+            >#robotics</a
+          >
+          <a href='https://twitter.com/hashtag/art?src=hash&ref_src=twsrc%5Etfw'
+            >#art</a
+          >
+          <a
+            href='https://twitter.com/hashtag/music?src=hash&ref_src=twsrc%5Etfw'
+            >#music</a
+          >
+          <a
+            href='https://twitter.com/hashtag/future?src=hash&ref_src=twsrc%5Etfw'
+            >#future</a
+          >
+          <a href='https://t.co/0I4tRaQreC'>pic.twitter.com/0I4tRaQreC</a>
+        </p>&mdash; Nguyen Trieu Khang (@Knguyentrieu) <a
+          href='https://twitter.com/Knguyentrieu/status/1185475318858928129?ref_src=twsrc%5Etfw'
+          >October 19, 2019</a
+        >
+      </blockquote>
+    </div>
+    <div class='tweet'>
+      <blockquote class='twitter-tweet' data-dnt='true' data-theme='dark' data-lang="en">
+        <p lang='en' dir='ltr'>
+          On my way to <a
+            href='https://twitter.com/geekcamp?ref_src=twsrc%5Etfw'>@geekcamp</a
+          > , can&#39;t wait to check out the awesome talks this year. <a
+            href='https://t.co/f0MyOivq4x'>pic.twitter.com/f0MyOivq4x</a
+          >
+        </p>&mdash; Eric (@wgx731) <a
+          href='https://twitter.com/wgx731/status/1185354142803361792?ref_src=twsrc%5Etfw'
+          >October 19, 2019</a
+        >
+      </blockquote>
+    </div>
+
+    <TwitterWidgetScript client:visible client:idle />
+  </div>
+</section>
+
+<style>
+  h2 {
+    --stroke-color: var(--blue);
+  }
+
+  .tweet-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+
+  .tweet {
+    display: inline-block;
+    scroll-snap-align: start;
+    width: 550px;
+  }
+</style>
