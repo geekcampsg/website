@@ -1,0 +1,31 @@
+---
+import Tweets from "./Tweets.astro"
+const tweetIds = [
+  "1562416772866707456",
+  "1185475318858928129",
+  "1185354142803361792",
+];
+---
+
+<section id="testimonials" class="rows">
+  <div>
+    <h2>What People Said</h2>
+  </div>
+  <div class="tweet-container" style={`--num-tweets: ${tweetIds.length};`}>
+    <Tweets tweetIds={tweetIds} />
+  </div>
+</section>
+
+<style>
+  h2 {
+    --stroke-color: var(--blue);
+  }
+
+  .tweet-container {
+    display: grid;
+    grid-template-columns: repeat(var(--num-tweets), 1fr);
+    gap: 1rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+</style>

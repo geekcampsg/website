@@ -1,0 +1,137 @@
+:root {
+  --red: #ff8b8b;
+  --yellow: #f0cf61;
+  --green: #61bfad;
+  --blue: #0bbcd6;
+  --black: hsla(0, 0%, 0%, 0.8);
+  --darkblue: #4e5264;
+  --coal: #1b1c22;
+  --white: #f1f1f1;
+  --darkgray: #282a35;
+  --padding: 1.69rem;
+  --code-font: 'Fira Code', 'Courier New', Courier, monospace;
+  --title-font: 'Staatliches', 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+  sans-serif;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--coal);
+  color: var(--white);
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.5;
+  font-weight: normal;
+  word-wrap: break-word;
+}
+
+pre {
+  font-family: var(--code-font);
+}
+
+h2 {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 0.9375;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-size: 3rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+  margin: 0;
+  margin-bottom: 1.5rem;
+  color: #535b6c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 br {
+  display: none;
+}
+
+h2::after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--stroke-color, var(--red));
+}
+
+section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+h3 {
+  font-size: 1.777777778rem;
+  line-height: 1;
+  margin-bottom: 0.25em;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  color: var(--link-color, var(--green));
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--hover-link-color, var(--blue));
+}
+
+.c-y {
+  color: var(--yellow);
+}
+.c-b {
+  color: var(--blue);
+}
+.c-r {
+  color: var(--red);
+}
+.c-g {
+  color: var(--green);
+}
+
+.rows {
+  display: block;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+}
+
+@media screen and (min-width: 1280px) {
+  .rows {
+    display: grid;
+    grid-template-columns: 30fr 65fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  :root {
+    --padding: 3rem;
+  }
+  h2 {
+    font-size: 5.5rem;
+    margin-bottom: 4rem;
+  }
+  h2 br {
+    display: initial;
+  }
+}

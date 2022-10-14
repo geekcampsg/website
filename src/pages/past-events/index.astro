@@ -1,0 +1,167 @@
+---
+import Logo from '@src/components/Logo.astro';
+import Layout from '@src/layouts/Layout.astro';
+import Selector from './_/Selector.svelte';
+import schedule2017 from '@src/data/schedules/2017';
+import schedule2018 from '@src/data/schedules/2018';
+import schedule2019 from '@src/data/schedules/2019';
+import schedule2020 from '@src/data/schedules/2020';
+import schedule2021 from '@src/data/schedules/2021';
+import xss from 'xss';
+import { formatDateFull } from '@src/utils/date-format';
+
+const schedules = [
+  ['GeekcampSG 2021', schedule2021],
+  ['GeekcampSG 2020', schedule2020],
+  ['GeekcampSG 2019', schedule2019],
+  ['GeekcampSG 2018+', schedule2018],
+  ['GeekcampSG 2017', schedule2017],
+] as const;
+---
+
+<Layout title='Past Events'>
+  <section>
+    <Logo />
+  </section>
+  <section class='rows'>
+    <div class="sidenav">
+      <h2>Past Events</h2>
+      <Selector
+        client:load
+        schedules={schedules.map(([name, schedule]) => ([name, schedule.year]))} />
+    </div>
+    <div>
+      <ul>
+        {schedules.map(([name, schedule]) => 
+          (
+            <li id={schedule.year}>
+              <h3>{name}</h3>
+              {schedule.dates.map((evtDate) => (
+                <div class="date">{formatDateFull(evtDate.date)}</div>
+                <ul>
+                  {evtDate.talks && evtDate.talks.map((talk) => (
+                    <li class="schedule-item">
+                      <h4>
+                        {talk.title}{" "}
+                        {talk.video ? (
+                          <a
+                            href={talk.video}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                          >
+                            Video
+                          </a>
+                        ) : null}
+                      </h4>
+                      <div class="speakers">{talk.speakers.map(speaker=> (speaker.name))}</div>
+                      <p set:html={xss(talk.summary)} />
+                    </li>
+                  ))}
+                </ul>
+              ))}
+            </li>
+          )
+        )}
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @media screen and (min-width: 1280px) {
+    .sidenav {
+      position: sticky;
+      top: var(--padding);
+      margin-bottom: auto;
+    }
+  }
+  li[id] {
+    display: none;
+    scroll-padding: var(--padding);
+  }
+  li[id]:target {
+    display: block !important;
+  }
+  h3 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0 0;
+    border-top: 2px solid var(--yellow);
+    padding-top: 1rem;
+    }
+  @media screen and (min-width: 1280px) {
+    h3 {
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+  .date {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+  }
+  .schedule-item {
+    position: relative;
+    padding: 0 0 3.5rem 2rem;
+    margin-bottom: 0;
+  }
+  .schedule-item::before {
+    content: "";
+    background: #61bfad;
+    border-radius: 100%;
+    width: 1.38888rem;
+    height: 1.38888rem;
+    position: absolute;
+    margin-left: -1px;
+    left: 0;
+    top: 0.277777778rem;
+    z-index: 1;
+  }
+
+  .schedule-item::after {
+    content: "";
+    position: absolute;
+    top: 0.277777778rem;
+    bottom: -0.277777778rem;
+    border-left: 1px solid #2b292d;
+    left: 0;
+    margin-left: 0.625rem;
+  }
+  .schedule-item:last-child::after {
+    display: none;
+  }
+  
+  .speakers {
+    display: block;
+    color: #808081;
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-transform: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .schedule-item::before {
+      transform: translateX(-50%);
+    }
+    .schedule-item::after {
+      left: -1px;
+      margin-left: 0;
+    }
+  }
+  h4 {
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 0.25em;
+  }
+  a {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  p {
+    margin: 0;
+  }
+</style>

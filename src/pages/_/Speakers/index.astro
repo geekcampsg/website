@@ -1,0 +1,35 @@
+---
+import { speakers } from '@src/data/schedules/2022';
+import { year } from '@src/data/date';
+import Speakers from './Speakers.svelte';
+---
+
+<section id='speakers' class='rows'>
+  <div>
+    <h2>
+      {year}
+      <br /> Speakers
+    </h2>
+  </div>
+  <div class='grid'>
+    <Speakers speakers={speakers} client:visible />
+  </div>
+</section>
+
+<style>
+  h2 {
+    --stroke-color: var(--red);
+  }
+  .grid {
+    --columns: 2;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-gap: 1rem;
+  }
+
+  @media screen and (min-width: 960px) {
+    .grid {
+      --columns: 3;
+    }
+  }
+</style>

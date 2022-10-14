@@ -1,0 +1,106 @@
+---
+import engineersSg from './logos/engineers.sg.png?w=300';
+import engineersSg_2x from './logos/engineers.sg@2x.png?w=300';
+// import geekcamp from "./logos/geekcamp.png"
+// import geekcamp_2x from "./logos/geekcamp@2x.png"
+import geekhacking from './logos/geekhacking.png?w=300';
+import geekhacking_2x from './logos/geekhacking@2x.png?w=300';
+import goSg from './logos/go.sg.png?w=300';
+import goSg_2x from './logos/go.sg@2x.png?w=300';
+import hackerspace from './logos/hackerspace.png?w=300';
+import hackerspace_2x from './logos/hackerspace@2x.png?w=300';
+import python from './logos/python.png?w=300';
+import python_2x from './logos/python@2x.png?w=300';
+import rubySg from './logos/ruby.sg.png?w=300';
+import rubySg_2x from './logos/ruby.sg@2x.png?w=300';
+import singaporecss from './logos/singaporecss.png?w=300';
+import singaporecss_2x from './logos/singaporecss@2x.png?w=300';
+import singaporejs from './logos/singaporejs.png?w=300';
+import singaporejs_2x from './logos/singaporejs@2x.png?w=300';
+
+const partners = [
+  {
+    name: 'Engineers.SG',
+    images: [engineersSg, engineersSg_2x],
+    link: 'https://engineers.sg/',
+  },
+  {
+    name: 'GeeksHacking',
+    images: [geekhacking, geekhacking_2x],
+    link: 'https://geekshacking.com',
+  },
+  {
+    name: 'GoSG',
+    images: [goSg, goSg_2x],
+    link: 'https://www.meetup.com/golangsg/',
+  },
+  {
+    name: 'HackerspaceSG',
+    images: [hackerspace, hackerspace_2x],
+    link: 'https://hackerspace.sg/',
+  },
+  {
+    name: 'PUGS',
+    images: [python, python_2x],
+    link: 'https://pugs.org.sg/',
+  },
+  {
+    name: 'RubySG',
+    images: [rubySg, rubySg_2x],
+    link: 'https://ruby.sg/',
+  },
+  {
+    name: 'SingaporeCSS',
+    images: [singaporecss, singaporecss_2x],
+    link: 'https://github.com/SingaporeCSS/talk.css',
+  },
+  {
+    name: 'SingaporeJS',
+    images: [singaporejs, singaporejs_2x],
+    link: 'https://www.meetup.com/Singapore-JS/',
+  },
+];
+---
+
+<section id='partners' class='rows'>
+  <div>
+    <h2>Partners</h2>
+  </div>
+  <div class='partners'>
+    {
+      partners.map(({ name, images: [img1x, img2x], link }) => (
+        <a href={link}>
+          <img loading="lazy" src={img1x} alt={name} srcset={`${img2x} 2x`} />
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  h2 {
+    --stroke-color: var(--red);
+  }
+  .partners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  @media screen and (min-width: 768px) {
+    .partners {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    .partners {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  img {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+</style>

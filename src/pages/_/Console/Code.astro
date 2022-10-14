@@ -1,0 +1,39 @@
+---
+export interface Props {
+  lineNumbers?: boolean;
+}
+
+const { lineNumbers = false } = Astro.props;
+---
+
+<pre class={lineNumbers ? 'lineNumbers' : ''}><slot /></pre>
+
+<style>
+  pre {
+    counter-reset: line;
+    padding: 1.45rem;
+    padding-left: 2rem;
+    font-size: 2.35vw;
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: auto;
+    line-height: 1.26;
+  }
+
+  pre :global(i) {
+    font-style: normal;
+  }
+
+  @media screen and (min-width: 375px) {
+    pre {
+      font-size: 2.65vw;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    pre {
+      padding-left: 4rem;
+      font-size: 1.5rem;
+    }
+  }
+</style>

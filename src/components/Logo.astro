@@ -1,0 +1,38 @@
+---
+import Logo from '@src/components/geekcamp-logo-light.svg';
+import { year } from '@src/data/date';
+---
+
+<header>
+  <h1>
+    <a href='/'><img src={Logo} alt={`Geekcamp Singapore ${year}`} /></a>
+  </h1>
+</header>
+
+<style>
+  header {
+    padding: 1.5rem var(--padding) 0 var(--padding);
+    text-align: left;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  img {
+    margin-bottom: 0;
+    max-width: 80%;
+  }
+
+  @media screen and (min-width: 481px) {
+    header {
+      padding-top: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    img {
+      max-width: none;
+    }
+  }
+</style>
