@@ -121,6 +121,10 @@ a:hover {
     grid-template-columns: 30fr 65fr;
     gap: 2rem;
   }
+  h2 {
+    position: sticky;
+    top: var(--padding);
+  }
 }
 
 @media screen and (min-width: 1280px) {
