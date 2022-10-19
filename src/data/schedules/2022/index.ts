@@ -85,9 +85,9 @@ const schedule = {
         ],
       },
       {
-        title: "Don't be shy - how to ask your senior devs for help",
+        title: "Don't be shy - how to ask your senior devs for the help",
         summary:
-          'As a junior dev, have you ever wanted to ask your senior dev for help, but feel paiseh (Singlish for embarrassed)? My senior is so busy all the time... What if my question too bodoh (Singlish for stupid) and irritates my senior? Let me teach you the art of asking good questions.',
+          'As a junior dev, have you ever wanted to ask your senior dev for help, but felt paiseh (Singlish for embarrassed)? My senior is so busy all the time... What if my question is too bodoh (Singlish for stupid) and irritates my senior? Let me teach you the art of asking good questions.',
         startTime: '2022-10-29T10:30:00+08:00',
         endTime: '2022-10-29T11:15:00+08:00',
         track: '1',
@@ -180,7 +180,7 @@ const schedule = {
       {
         title: 'A Day in Cyber Security',
         summary:
-          'In the past edition of Geekcamp.SG, I received a lot of queries on what it takes to start in CyberSecurity. This workshop is part presentation and part hands-on on some of the tasks the different roles that a Cyber Security Blue Teamer might carry out.',
+          'In the past edition of "Geekcamp.SG", I received a lot of queries on what it takes to start in CyberSecurity. This workshop is part presentation and part hands-on on some of the tasks and the different roles that a Cyber Security Blue Teamer might carry out.',
         startTime: '2022-10-29T12:15:00+08:00',
         endTime: '2022-10-29T13:15:00+08:00',
         track: '1',
@@ -199,7 +199,7 @@ const schedule = {
       {
         title: 'Parsing Differential Problem',
         summary:
-          'As microservices have become popular in the current software engineering landscape, it is of increaseimportance to consider security risks arising from interactions between components within a system. We will explore the parsing differential problem, and discuss remedies with examples.',
+          'As microservices have become popular in the current software engineering landscape, it is important to consider security risks arising from interactions between components within a system. We will explore the parsing differential problem and discuss remedies with examples.',
         startTime: '2022-10-29T14:00:00+08:00',
         endTime: '2022-10-29T14:15:00+08:00',
         track: '0',
@@ -237,7 +237,7 @@ const schedule = {
       {
         title: 'ChIPs - Polycube (Voxel) Construction Set',
         summary:
-          "Have you wanted to use a construction set to build a model, but don't want to deal with complicated techniques to remove studs / build sideways? Not Square? Too many different types of bricks? Something you can freely 3D print cheaply? etc. Look no further, this is the construction set for you!",
+          "Have you wanted to use a construction set to build a model but don't want to deal with complicated techniques to remove studs/build sideways? Not Square? Too many different types of bricks? Something you can freely 3D print cheaply? etc. Look no further; this is the construction set for you!",
         startTime: '2022-10-29T14:15:00+08:00',
         endTime: '2022-10-29T14:30:00+08:00',
         track: '0',
@@ -274,7 +274,7 @@ const schedule = {
       },
       {
         title:
-          'Verifiable Computing Project - Building truly open source compute hardware',
+          'Verifiable Computing Project - Building truly open-source computing hardware',
         summary:
           'Processors are at the heart of our devices. As they become more integrated with other functions, what do we know about how they work? Do we trust their designers? We present a computer design with a FPGA RISC-V processor implementation, allowing for the underlying hardware to be inspected.',
         startTime: '2022-10-29T14:45:00+08:00',
@@ -295,7 +295,7 @@ const schedule = {
       {
         title: 'The Unreasonable Effectiveness of Dumb Values',
         summary:
-          'There are many ways to solve a problem, some better than others: copy from stackoverflow, use a popular library, callbacks, promises, goroutines, meta programming, queue, regexes… But there’s one dumb approach that keeps ending up as the better solution in surprisingly many situations: plain values.',
+          'There are many ways to solve a problem, some better than others: copy from StackOverflow, use a popular library, callbacks, promises, goroutines, meta programming, queue, regexes, and so on. But there’s one dumb approach that keeps ending up as the better solution in many situations: plain values.',
         startTime: '2022-10-29T15:45:00+08:00',
         endTime: '2022-10-29T16:00:00+08:00',
         track: '0',
@@ -372,7 +372,7 @@ const schedule = {
       {
         title: 'Understanding the TLS Ecosystem by Probing the Internet',
         summary:
-          'In this talk, we look at how to perform an internet wide scan supporting TLSv1.3. We collect data from the entire IPv4 space on port 443 and analyze 9,461,056 data points to baseline the state of the TLS ecosystem. We conclude the talk by looking at how the ecosystem can be improved.',
+          'This talk looks at how to perform an internet-wide scan supporting TLSv1.3. We collect data from the entire IPv4 space on port 443 and analyze 9,461,056 data points to baseline the state of the TLS ecosystem. We conclude the talk by looking at how the ecosystem can be improved.',
         startTime: '2022-10-29T16:30:00+08:00',
         endTime: '2022-10-29T17:15:00+08:00',
         track: '0',
@@ -391,7 +391,7 @@ const schedule = {
       {
         title: 'How Python 3.11 is Speeding Up',
         summary:
-          "Speed is coming to Python. After years of mostly stagnant year-on-year Python performance improvements, Python 3.11 is 25% faster than Python 3.10 thanks to various contributors. I'd love to share the technical details of how this was achieved.",
+          "Speed is coming to Python. After years of mostly stagnant year-on-year Python performance improvements, Python 3.11 is 25% faster than Python 3.10, thanks to various contributors. I'd love to share the technical details of how this was achieved.",
         startTime: '2022-10-29T16:30:00+08:00',
         endTime: '2022-10-29T17:15:00+08:00',
         track: '1',
