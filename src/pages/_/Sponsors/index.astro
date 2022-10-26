@@ -1,15 +1,34 @@
 ---
-import spdigitalImage from './logos/spdigital.png?w=500';
+import spdigitalImage from "./logos/spdigital.png?w=500"
+import proliveImage from "./logos/prolive.jpg?w=500"
+import imtokenImage from "./logos/imtoken.png?w=500"
 
-const sponsors = [
+const sponsors: Array<{
+  title: string
+  sponsors: Array<{ link: string; image: string; style?: string }>
+}> = [
   {
-    title: '',
-    sponsors: [{ link: 'https://www.spdigital.sg', image: spdigitalImage }],
+    title: "Venue Sponsor",
+    sponsors: [{ link: "https://www.spdigital.sg", image: spdigitalImage }],
   },
-];
+  {
+    title: "Food Sponsor",
+    sponsors: [
+      {
+        link: "https://token.im",
+        image: imtokenImage,
+        style: "padding:1rem;background:white;",
+      },
+    ],
+  },
+  {
+    title: "Silver Sponsor",
+    sponsors: [{ link: "https://prolive.co", image: proliveImage }],
+  },
+]
 ---
 
-<section id='sponsors' class='rows'>
+<section id="sponsors" class="rows">
   <div>
     <h2>Sponsor</h2>
   </div>
@@ -17,21 +36,25 @@ const sponsors = [
     {
       sponsors.map((category) => {
         return (
-          <div class='row'>
-            {category.title}
+          <div class="row">
+            <div class="title">{category.title}</div>
             <div>
               {category.sponsors.map((sponsor) => (
                 <a
                   href={sponsor.link}
-                  target='_blank'
-                  rel='noreferrer noopener'
+                  target="_blank"
+                  rel="noreferrer noopener"
                 >
-                  <img src={sponsor.image} loading="lazy" />
+                  <img
+                    src={sponsor.image}
+                    loading="lazy"
+                    style={sponsor.style}
+                  />
                 </a>
               ))}
             </div>
           </div>
-        );
+        )
       })
     }
   </div>
@@ -46,6 +69,10 @@ const sponsors = [
       margin-bottom: 3rem;
       max-width: 500px;
     }
+  }
+  .title {
+    margin: 1rem 0;
+    text-transform: uppercase;
   }
   img {
     max-width: 100%;
