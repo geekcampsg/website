@@ -1,37 +1,71 @@
 ---
-import spdigitalImage from './logos/spdigital.png?w=500';
+import spdigitalImage from "./logos/spdigital.png?w=600"
+import imtokenImage from "./logos/imtoken.png?w=600"
+import cakeDefiImage from "./logos/cake-defi.png?w=450"
+import proliveImage from "./logos/prolive.jpg?w=300"
 
-const sponsors = [
+const sponsors: Array<{
+  title: string
+  size: number
+  sponsors: Array<{ link: string; image: string; style?: string }>
+}> = [
   {
-    title: '',
-    sponsors: [{ link: 'https://www.spdigital.sg', image: spdigitalImage }],
+    title: "Venue Sponsor",
+    size: 600,
+    sponsors: [{ link: "https://www.spdigital.sg", image: spdigitalImage }],
   },
-];
+  {
+    title: "Food Sponsor",
+    size: 600,
+    sponsors: [
+      {
+        link: "https://token.im",
+        image: imtokenImage,
+        style: "padding:1rem;background:white;",
+      },
+    ],
+  },
+  {
+    title: "Gold Sponsor",
+    size: 450,
+    sponsors: [{ link: "https://www.cakedefi.com", image: cakeDefiImage }],
+  },
+  {
+    title: "Silver Sponsor",
+    size: 300,
+    sponsors: [{ link: "https://prolive.co", image: proliveImage }],
+  },
+]
 ---
 
-<section id='sponsors' class='rows'>
+<section id="sponsors" class="rows">
   <div>
-    <h2>Sponsor</h2>
+    <h2>Sponsors</h2>
   </div>
   <div>
     {
       sponsors.map((category) => {
         return (
-          <div class='row'>
-            {category.title}
+          <div class="row">
+            <div class="title">{category.title}</div>
             <div>
               {category.sponsors.map((sponsor) => (
                 <a
                   href={sponsor.link}
-                  target='_blank'
-                  rel='noreferrer noopener'
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style={`display:inline-block;max-width:${category.size}px`}
                 >
-                  <img src={sponsor.image} loading="lazy" />
+                  <img
+                    src={sponsor.image}
+                    loading="lazy"
+                    style={sponsor.style}
+                  />
                 </a>
               ))}
             </div>
           </div>
-        );
+        )
       })
     }
   </div>
@@ -41,11 +75,17 @@ const sponsors = [
   h2 {
     --stroke-color: var(--yellow);
   }
+  .row {
+    margin-bottom: 2rem;
+  }
   @media screen and (min-width: 768px) {
     .row {
       margin-bottom: 3rem;
-      max-width: 500px;
     }
+  }
+  .title {
+    margin: 1rem 0 2rem;
+    text-transform: uppercase;
   }
   img {
     max-width: 100%;
