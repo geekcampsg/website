@@ -1,18 +1,22 @@
 ---
-import spdigitalImage from "./logos/spdigital.png?w=500"
-import proliveImage from "./logos/prolive.jpg?w=500"
-import imtokenImage from "./logos/imtoken.png?w=500"
+import spdigitalImage from "./logos/spdigital.png?w=600"
+import imtokenImage from "./logos/imtoken.png?w=600"
+import cakeDefiImage from "./logos/cake-defi.png?w=450"
+import proliveImage from "./logos/prolive.jpg?w=300"
 
 const sponsors: Array<{
   title: string
+  size: number
   sponsors: Array<{ link: string; image: string; style?: string }>
 }> = [
   {
     title: "Venue Sponsor",
+    size: 600,
     sponsors: [{ link: "https://www.spdigital.sg", image: spdigitalImage }],
   },
   {
     title: "Food Sponsor",
+    size: 600,
     sponsors: [
       {
         link: "https://token.im",
@@ -22,7 +26,13 @@ const sponsors: Array<{
     ],
   },
   {
+    title: "Gold Sponsor",
+    size: 450,
+    sponsors: [{ link: "https://www.cakedefi.com", image: cakeDefiImage }],
+  },
+  {
     title: "Silver Sponsor",
+    size: 300,
     sponsors: [{ link: "https://prolive.co", image: proliveImage }],
   },
 ]
@@ -30,7 +40,7 @@ const sponsors: Array<{
 
 <section id="sponsors" class="rows">
   <div>
-    <h2>Sponsor</h2>
+    <h2>Sponsors</h2>
   </div>
   <div>
     {
@@ -44,6 +54,7 @@ const sponsors: Array<{
                   href={sponsor.link}
                   target="_blank"
                   rel="noreferrer noopener"
+                  style={`display:inline-block;max-width:${category.size}px`}
                 >
                   <img
                     src={sponsor.image}
@@ -64,14 +75,16 @@ const sponsors: Array<{
   h2 {
     --stroke-color: var(--yellow);
   }
+  .row {
+    margin-bottom: 2rem;
+  }
   @media screen and (min-width: 768px) {
     .row {
       margin-bottom: 3rem;
-      max-width: 500px;
     }
   }
   .title {
-    margin: 1rem 0;
+    margin: 1rem 0 2rem;
     text-transform: uppercase;
   }
   img {
