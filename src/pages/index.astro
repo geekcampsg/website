@@ -1,19 +1,20 @@
 ---
-import Hero from './_/Hero/index.astro';
-import Layout from '@src/layouts/Layout.astro';
-import About from './_/About.astro';
-import LocalTechCommunities from './_/LocalTechCommunities.astro';
-import Schedule from './_/Schedule/index.astro';
-import Speakers from './_/Speakers/index.astro';
-import Testimonials from './_/Testimonials/index.astro';
-import CodeOfConduct from './_/CodeOfConduct.astro';
-import Sponsors from './_/Sponsors/index.astro';
-import Partners from './_/Partners/index.astro';
-import CallForPaper from './_/CallForPaper.astro';
-import * as cfp from '@src/data/cfp';
+import Hero from "./_/Hero/index.astro"
+import Layout from "@src/layouts/Layout.astro"
+import About from "./_/About.astro"
+import LocalTechCommunities from "./_/LocalTechCommunities.astro"
+import Schedule from "./_/Schedule/index.astro"
+import Speakers from "./_/Speakers/index.astro"
+import Testimonials from "./_/Testimonials/index.astro"
+import CodeOfConduct from "./_/CodeOfConduct.astro"
+import Sponsors from "./_/Sponsors/index.astro"
+import Partners from "./_/Partners/index.astro"
+import Organisers from "./_/Organisers/index.astro"
+import CallForPaper from "./_/CallForPaper.astro"
+import * as cfp from "@src/data/cfp"
 ---
 
-<Layout title='Home'>
+<Layout title="Home">
   <Hero />
   <About />
   {+Date.now() > +cfp.deadline ? null : <CallForPaper />}
@@ -24,5 +25,5 @@ import * as cfp from '@src/data/cfp';
   <CodeOfConduct />
   <Sponsors />
   <Partners />
+  <Organisers />
 </Layout>
-
