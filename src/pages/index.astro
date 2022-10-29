@@ -11,11 +11,13 @@ import Sponsors from "./_/Sponsors/index.astro"
 import Partners from "./_/Partners/index.astro"
 import Organisers from "./_/Organisers/index.astro"
 import CallForPaper from "./_/CallForPaper.astro"
+import Live from "./_/Live/index.astro"
 import * as cfp from "@src/data/cfp"
 ---
 
 <Layout title="Home">
   <Hero />
+  <Live />
   <About />
   {+Date.now() > +cfp.deadline ? null : <CallForPaper />}
   <LocalTechCommunities />
