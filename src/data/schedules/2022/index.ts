@@ -147,6 +147,7 @@ const schedule = {
         endTime: '2022-10-29T12:00:00+08:00',
         track: '1',
         id: 'rolling-your-own-cryptography-why-you-shouldn-t',
+        slides: 'https://docs.google.com/presentation/d/1aTNLh7NwL5uu-KYpv3l6ct2_9IDkLM5I3NgiQMImAAw/edit?usp=drivesdk',
         speakers: [
           {
             name: 'Jules Poon',
@@ -223,6 +224,7 @@ const schedule = {
         endTime: '2022-10-29T14:45:00+08:00',
         track: '1',
         id: 'storage-and-retrieval-in-databases-from-scratch',
+        slides: 'https://slides.com/tzyinc/ddia-ch-3',
         speakers: [
           {
             name: 'Zhi-Yang Ten',
@@ -261,6 +263,7 @@ const schedule = {
         endTime: '2022-10-29T15:30:00+08:00',
         track: '0',
         id: 'the-lord-of-the-monorepos-an-efficient-setup-with-pnpm-and-nx',
+        slides: 'https://github.com/thuchede/pnpm-nx-demo',
         speakers: [
           {
             name: 'Thomas Huchedé',
@@ -281,6 +284,7 @@ const schedule = {
         endTime: '2022-10-29T15:30:00+08:00',
         track: '1',
         id: 'verifiable-computing-project-building-truly-open-source-compute-hardware',
+        slides: '/files/2022/Verifiable_Computing_Project.pdf',
         speakers: [
           {
             name: 'Joyce Ng',
@@ -338,6 +342,7 @@ const schedule = {
         startTime: '2022-10-29T16:00:00+08:00',
         endTime: '2022-10-29T16:15:00+08:00',
         track: '0',
+        slides: 'https://github.com/sampoder/explorations-into-database-art',
         id: 'creating-art-from-databases',
         speakers: [
           {
@@ -358,6 +363,7 @@ const schedule = {
         endTime: '2022-10-29T16:30:00+08:00',
         track: '0',
         id: 'software-best-practices-in-a-hard-ware-world',
+        slides: 'https://chinmay.audio/talks/hardware-best-practices/',
         speakers: [
           {
             name: 'Chinmay Pendharkar',
@@ -396,6 +402,7 @@ const schedule = {
         endTime: '2022-10-29T17:15:00+08:00',
         track: '1',
         id: 'how-python-is-speeding-up',
+        slides: 'https://docs.google.com/presentation/d/1guh-SNyLgKeA5uFl0nQreyqzNT0tqgbXzWWQf-Z90w4/edit?usp=sharing',
         speakers: [
           {
             name: 'Ken Jin',
