@@ -92,6 +92,7 @@ const schedule = {
         endTime: '2022-10-29T11:15:00+08:00',
         track: '1',
         id: 'don-t-be-shy-how-to-ask-your-senior-devs-for-help',
+        slides: 'https://docs.google.com/presentation/d/1zpB1j0u6boTRZqW0I1B30CMcxPiBcbhGPxv4AfxH6oY/edit?usp=sharing',
         speakers: [
           {
             name: 'Shi Ling',
