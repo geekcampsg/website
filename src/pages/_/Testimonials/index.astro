@@ -1,9 +1,11 @@
 ---
 import Tweets from "./Tweets.astro"
-const tweetIds = [
-  "1562416772866707456",
-  "1185475318858928129",
-  "1185354142803361792",
+const tweetUrls = [
+  "https://twitter.com/subhransu/status/1562416772866707456",
+  "https://twitter.com/arashnrim/status/1587004027153559552",
+  "https://twitter.com/Knguyentrieu/status/1185475318858928129",
+  "https://twitter.com/wgx731/status/1185354142803361792",
+  "https://twitter.com/sylviang/status/1587062622251208704",
 ];
 ---
 
@@ -11,8 +13,8 @@ const tweetIds = [
   <div>
     <h2>What People Said</h2>
   </div>
-  <div class="tweet-container" style={`--num-tweets: ${tweetIds.length};`}>
-    <Tweets tweetIds={tweetIds} />
+  <div class="tweet-container" style={`--num-tweets: ${tweetUrls.length};`}>
+    <Tweets urls={tweetUrls} />
   </div>
 </section>
 
