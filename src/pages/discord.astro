@@ -1,0 +1,23 @@
+---
+import Layout from "@src/layouts/Layout.astro"
+import { discordInviteUrl } from "../data/links"
+---
+
+<meta http-equiv="refresh" content={`100;url=${discordInviteUrl}`} />
+
+<Layout title="Discord">
+  <section class="larger">
+    <h1>Opening our Discord invite</h1>
+    <p><a href={discordInviteUrl}>Not loading? Try this link</a></div>
+  </section>
+</Layout>
+
+<style>
+.larger {
+  padding: 20vh 3.5rem;
+  min-height: 90vh;
+
+  text-align: center;
+}
+</style>
+

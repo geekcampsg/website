@@ -11,8 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/svelte": "^1.0.1",
-    "astro": "^1.4.6",
+    "@astrojs/svelte": "^3.1.0",
+    "astro": "^2.7.2",
     "svelte": "^3.51.0",
     "svelte-knobby": "^0.3.4",
     "vite-imagetools": "^4.0.11",
