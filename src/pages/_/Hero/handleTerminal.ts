@@ -46,7 +46,7 @@ export default function handleTerminal({
   clear: () => void;
   clearLogs: () => void;
   reply: (string: string) => void;
-  geekcampDate: string;
+  geekcampDate: string | undefined;
 }) {
   if (ctrl) {
     if (key === 'u') {
@@ -132,9 +132,11 @@ export default function handleTerminal({
           val = 'These are not the files you are looking for.';
         } else if (cmd === 'date') {
           const today = new Date();
-          const firstDay = new Date(geekcampDate);
+          const firstDay = geekcampDate ? new Date(geekcampDate) : undefined;
           val = `Today is <b>${formatDateFull(today)}</b>.`;
-          if (+firstDay > +today) {
+          if (!firstDay) {
+            val += `<br />Geekcamp SG date is not confirmed!`;
+          } else if (+firstDay > +today) {
             val += `<br />Geekcamp SG is on <b>${formatDateFull(
               firstDay
             )}.</b><br /><br />`;

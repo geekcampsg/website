@@ -14,15 +14,15 @@ import {
 import { schedule } from '@src/data/schedules/current';
 
 const data = formatter()
-  .addEntry('title', 'GeekcampSG 2022')
-  .addEntry('date', '2022-10-29')
-  .addEntry('inPersonLocation', `<a href="${venueLink}">${venueName}</a>`, true)
+  .addEntry('title', 'GeekcampSG 2023')
+  .addEntry('date', '2023-10')
+  .addEntry('inPersonLocation', 'TBC') //`<a href="${venueLink}">${venueName}</a>`, true)
   .addEntry(
     'onlineLocation',
     `<a href="${discordLink}">Discord</a>, YouTube`,
     true
   )
-  .addEntry('registration', `<a href="${ticketLink}">Get tickets!</a>`, true)
+  .addEntry('registration', 'TBC') //`<a href="${ticketLink}">Get tickets!</a>`, true)
   .addEntry(
     'cfp',
     +Date.now() > +cfp.deadline
@@ -32,7 +32,7 @@ const data = formatter()
   )
   .addEntry(
     'volunteer',
-    `<a href="${volunteerLink}">Volunteer with us</a>`,
+    'TBC', // `<a href="${volunteerLink}">Volunteer with us</a>`,
     true
   )
   .addEntry('description', 'Join us for an eventful day of geek talks.')
@@ -45,7 +45,7 @@ const data = formatter()
   <Logo />
 
   <Console>
-    <ConsoleClient client:idle geekcampDate={schedule.dates[0].date}>
+    <ConsoleClient client:idle geekcampDate={schedule.dates[0]?.date}>
       <pre set:html={data} slot="data" />
     </ConsoleClient>
   </Console>

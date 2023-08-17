@@ -21,6 +21,7 @@ import iosconf from './logos/iosconf.png?w=300';
 import iosconf_2x from './logos/iosconf@2x.png?w=300';
 
 const partners = [
+  /*
   {
     name: 'Engineers.SG',
     images: [engineersSg, engineersSg_2x],
@@ -66,9 +67,11 @@ const partners = [
     images: [iosconf, iosconf_2x],
     link: 'https://2022.iosconf.sg/',
   },
+  */
 ];
 ---
 
+{partners.length > 0 ? 
 <section id='partners' class='rows'>
   <div>
     <h2>Partners</h2>
@@ -83,6 +86,7 @@ const partners = [
     }
   </div>
 </section>
+: null}
 
 <style>
   h2 {
