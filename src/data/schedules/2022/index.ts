@@ -42,10 +42,9 @@ import wongwaituck from './images/wong-wai-tuck.png?h=400';
 import wongwaituckWebp from './images/wong-wai-tuck.png?h=400&webp';
 import tenzhiyang from './images/ten-zhi-yang.png?h=400';
 import tenzhiyangWebp from './images/ten-zhi-yang.png?h=400&webp';
-import { year } from '@src/data/date';
 
 const schedule = {
-  year,
+  year: 2022,
   timeZone: 'Asia/Singapore',
   dates: [{
     date: '2022-10-29T00:00:00',

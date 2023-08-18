@@ -9,7 +9,7 @@ const sponsors: Array<{
   size: number
   sponsors: Array<{ link: string; image: string; style?: string }>
 }> = [
-  {
+  /*{
     title: "Platinum Sponsor",
     size: 600,
     sponsors: [
@@ -30,10 +30,11 @@ const sponsors: Array<{
     title: "Silver Sponsor",
     size: 300,
     sponsors: [{ link: "https://prolive.co", image: proliveImage }],
-  },
+  },*/
 ]
 ---
 
+{sponsors.length > 0 ? 
 <section id="sponsors" class="rows">
   <div>
     <h2>Sponsors</h2>
@@ -66,6 +67,7 @@ const sponsors: Array<{
     }
   </div>
 </section>
+: null}
 
 <style>
   h2 {

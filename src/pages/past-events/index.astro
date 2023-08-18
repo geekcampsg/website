@@ -7,10 +7,12 @@ import schedule2018 from '@src/data/schedules/2018';
 import schedule2019 from '@src/data/schedules/2019';
 import schedule2020 from '@src/data/schedules/2020';
 import schedule2021 from '@src/data/schedules/2021';
+import { schedule as schedule2022 } from '@src/data/schedules/2022';
 import xss from 'xss';
 import { formatDateFull } from '@src/utils/date-format';
 
 const schedules = [
+  ['GeekcampSG 2022', schedule2022],
   ['GeekcampSG 2021', schedule2021],
   ['GeekcampSG 2020', schedule2020],
   ['GeekcampSG 2019', schedule2019],
@@ -53,7 +55,7 @@ const schedules = [
                           </a>
                         ) : null}
                       </h4>
-                      <div class="speakers">{talk.speakers.map(speaker=> (speaker.name))}</div>
+                      {talk.speakers ? <div class="speakers">{talk.speakers.map(speaker=> (speaker.name))}</div> : null}
                       <p set:html={xss(talk.summary)} />
                     </li>
                   ))}
