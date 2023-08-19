@@ -15,24 +15,22 @@ import { schedule } from '@src/data/schedules/current';
 
 const data = formatter()
   .addEntry('title', 'GeekcampSG 2023')
-  .addEntry('date', '2023-10')
-  .addEntry('inPersonLocation', 'TBC') //`<a href="${venueLink}">${venueName}</a>`, true)
+  .addEntry('date', '2023-10-14')
+  .addEntry('inPersonLocation', `<a href="${venueLink}">${venueName}</a>`, true)
   .addEntry(
     'onlineLocation',
-    `<a href="${discordLink}">Discord</a>, YouTube`,
-    true
+    `<a href="${discordLink}">Discord</a>, <a href="https://www.youtube.com/@geekcampsg">YouTube</a>`,
   )
   .addEntry('registration', 'TBC') //`<a href="${ticketLink}">Get tickets!</a>`, true)
+  .addEntry(
+    'volunteer',
+    `<a href="${volunteerLink}">Apply now!</a>`,
+  )
   .addEntry(
     'cfp',
     +Date.now() > +cfp.deadline
       ? 'CFP is now closed.'
-      : `<a href="${cfp.link}">${cfp.link}</a>`,
-    true
-  )
-  .addEntry(
-    'volunteer',
-    'TBC', // `<a href="${volunteerLink}">Volunteer with us</a>`,
+      : `<a href="${cfp.link}">${cfp.name}</a>`,
     true
   )
   .addEntry('description', 'Join us for an eventful day of geek talks.')
