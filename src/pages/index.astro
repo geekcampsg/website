@@ -18,10 +18,10 @@ import { schedule, speakers } from '@src/data/schedules/current';
 
 <Layout title="Home">
   <Hero />
-  <Live />
-  <About />
   {+Date.now() > +cfp.deadline ? null : <CallForPaper />}
-  <LocalTechCommunities />
+  {schedule.dates.length > 0 ? <Live /> : null}
+  <About />
+  <!-- <LocalTechCommunities /> -->
   {schedule.dates.length > 0 ? <Schedule /> : null}
   {speakers.length > 0 ? <Speakers /> : null}
   <Testimonials />
