@@ -64,6 +64,7 @@ const schedule = {
         endTime: '2022-10-29T11:15:00+08:00',
         track: '0',
         id: 'the-horizontal-overflow-problem',
+        video: 'https://youtu.be/jBSexKI935w',
         speakers: [
           {
             name: 'Chen Hui Jing',
@@ -92,6 +93,7 @@ const schedule = {
         track: '1',
         id: 'don-t-be-shy-how-to-ask-your-senior-devs-for-help',
         slides: 'https://docs.google.com/presentation/d/1zpB1j0u6boTRZqW0I1B30CMcxPiBcbhGPxv4AfxH6oY/edit?usp=sharing',
+        video: 'https://youtu.be/HFwUl4AEIeI',
         speakers: [
           {
             name: 'Shi Ling',
@@ -112,6 +114,7 @@ const schedule = {
         endTime: '2022-10-29T12:00:00+08:00',
         track: '0',
         id: 'let-s-learn-about-the-life-well-project-without-frying-your-brain',
+        video: 'https://youtu.be/y2tLl7eCEaI',
         speakers: [
           {
             name: 'Nguyen Duc Minh Anh',
@@ -148,6 +151,7 @@ const schedule = {
         track: '1',
         id: 'rolling-your-own-cryptography-why-you-shouldn-t',
         slides: 'https://docs.google.com/presentation/d/1aTNLh7NwL5uu-KYpv3l6ct2_9IDkLM5I3NgiQMImAAw/edit?usp=drivesdk',
+        video: 'https://youtu.be/bWEpR07TZGA',
         speakers: [
           {
             name: 'Jules Poon',
@@ -186,6 +190,7 @@ const schedule = {
         endTime: '2022-10-29T13:15:00+08:00',
         track: '1',
         id: 'a-day-in-cyber-security',
+        video: 'https://youtu.be/4yB7GAokKqU',
         speakers: [
           {
             name: 'Muhammad Hazwan',
@@ -205,6 +210,7 @@ const schedule = {
         endTime: '2022-10-29T14:15:00+08:00',
         track: '0',
         id: 'parsing-differential-problem',
+        video: 'https://youtu.be/ToIEwSyoptw',
         speakers: [
           {
             name: 'Sim Cher Boon',
@@ -225,6 +231,7 @@ const schedule = {
         track: '1',
         id: 'storage-and-retrieval-in-databases-from-scratch',
         slides: 'https://slides.com/tzyinc/ddia-ch-3',
+        video: 'https://youtu.be/Cv8IzmuSqYM',
         speakers: [
           {
             name: 'Zhi-Yang Ten',
@@ -244,6 +251,7 @@ const schedule = {
         endTime: '2022-10-29T14:30:00+08:00',
         track: '0',
         id: 'chips-polycube-voxel-construction-set',
+        video: 'https://youtu.be/mP51MMglsnw',
         speakers: [
           {
             name: 'Liao Choon Way',
@@ -264,6 +272,7 @@ const schedule = {
         track: '0',
         id: 'the-lord-of-the-monorepos-an-efficient-setup-with-pnpm-and-nx',
         slides: 'https://github.com/thuchede/pnpm-nx-demo',
+        video: 'https://youtu.be/dexPrvu70sA',
         speakers: [
           {
             name: 'Thomas Huchedé',
@@ -285,6 +294,7 @@ const schedule = {
         track: '1',
         id: 'verifiable-computing-project-building-truly-open-source-compute-hardware',
         slides: '/files/2022/Verifiable_Computing_Project.pdf',
+        video: 'https://youtu.be/T94lGIzIpYU',
         speakers: [
           {
             name: 'Joyce Ng',
@@ -304,6 +314,7 @@ const schedule = {
         endTime: '2022-10-29T16:00:00+08:00',
         track: '0',
         id: 'the-unreasonable-effectiveness-of-values',
+        video: 'https://youtu.be/VP0sEUg-xW4',
         speakers: [
           {
             name: 'Chew Choon Keat',
@@ -324,6 +335,7 @@ const schedule = {
         endTime: '2022-10-29T16:30:00+08:00',
         track: '1',
         id: 'bitcoin-blockchain-cryptography-part-ii-a-look-back-of-blockchain-evolution-over-the-last-years',
+        video: 'https://youtu.be/i0QwZ7VPjYc',
         speakers: [
           {
             name: 'U-Zyn Chua',
@@ -343,6 +355,7 @@ const schedule = {
         endTime: '2022-10-29T16:15:00+08:00',
         track: '0',
         slides: 'https://github.com/sampoder/explorations-into-database-art',
+        video: 'https://youtu.be/rKdtwhdaGHI',
         id: 'creating-art-from-databases',
         speakers: [
           {
@@ -364,6 +377,7 @@ const schedule = {
         track: '0',
         id: 'software-best-practices-in-a-hard-ware-world',
         slides: 'https://chinmay.audio/talks/hardware-best-practices/',
+        video: 'https://youtu.be/ai4jFSuiEAk',
         speakers: [
           {
             name: 'Chinmay Pendharkar',
@@ -383,6 +397,7 @@ const schedule = {
         endTime: '2022-10-29T17:15:00+08:00',
         track: '0',
         id: 'understanding-the-tls-ecosystem-by-probing-the-internet',
+        video: 'https://youtu.be/GxsUVFGKGi8',
         speakers: [
           {
             name: 'Wong Wai Tuck',
@@ -403,6 +418,7 @@ const schedule = {
         track: '1',
         id: 'how-python-is-speeding-up',
         slides: 'https://docs.google.com/presentation/d/1guh-SNyLgKeA5uFl0nQreyqzNT0tqgbXzWWQf-Z90w4/edit?usp=sharing',
+        video: 'https://youtu.be/YrG95v4Sgh0',
         speakers: [
           {
             name: 'Ken Jin',
@@ -423,6 +439,7 @@ const schedule = {
         endTime: '2022-10-29T18:00:00+08:00',
         track: '0',
         id: 'using-math-statistics-and-javascript-to-automate-the-solving-of-wordle-so-i-will-never-need-to-do-so-again',
+        video: 'https://youtu.be/fqpzRgQu9os',
         speakers: [
           {
             name: 'Eugene Cheah',
@@ -442,6 +459,7 @@ const schedule = {
         endTime: '2022-10-29T18:00:00+08:00',
         track: '1',
         id: 'the-l-compiler-a-toolchain-for-a-dsl-for-law',
+        video: 'https://youtu.be/VfA4rIX2VuU',
         speakers: [
           {
             name: 'Wong Meng Weng',
