@@ -8,8 +8,6 @@
     return handleTerminal || (handleTerminal = import('./handleTerminal'));
   }
 
-  export let geekcampDate;
-
   const ENTER_COMMAND_TEXT =
     'Enter command. Type help to see available commands';
 
@@ -27,7 +25,6 @@
       clearLogs: (initialise) =>
         (logs = initialise ? [ENTER_COMMAND_TEXT] : []),
       reply: (text) => (logs = [...logs, text]),
-      geekcampDate,
     };
     getHandleTerminal().then((fn) => {
       fn.default(obj);

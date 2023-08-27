@@ -1,40 +1,42 @@
 ---
-import Logo from '@src/components/Logo.astro';
-import Console from '../Console/index.astro';
-import formatter from './formatter';
-import ConsoleClient from './Console.svelte';
-import * as cfp from '@src/data/cfp';
+import Logo from "@src/components/Logo.astro"
+import Console from "../Console/index.astro"
+import formatter from "./formatter"
+import ConsoleClient from "./Console.svelte"
+import * as cfp from "@src/data/cfp"
 import {
   discordLink,
   ticketLink,
   venueLink,
   venueName,
   volunteerLink,
-} from '@src/data/links';
-import { schedule } from '@src/data/schedules/current';
+} from "@src/data/links"
+import { year, date } from "@src/data/date"
 
 const data = formatter()
-  .addEntry('title', 'GeekcampSG 2023')
-  .addEntry('date', '2023-10-14')
-  .addEntry('inPersonLocation', `<a href="${venueLink}">${venueName}</a>`, true)
+  .addEntry("title", `GeekcampSG ${year}`)
   .addEntry(
-    'onlineLocation',
-    `<a href="${discordLink}">Discord</a>, <a href="https://www.youtube.com/@geekcampsg">YouTube</a>`,
+    "date",
+    date
+      ? `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+      : "TBC"
   )
-  .addEntry('registration', 'TBC') //`<a href="${ticketLink}">Get tickets!</a>`, true)
+  .addEntry("inPersonLocation", `<a href="${venueLink}">${venueName}</a>`, true)
   .addEntry(
-    'volunteer',
-    `<a href="${volunteerLink}">Apply now!</a>`,
+    "onlineLocation",
+    `<a href="${discordLink}">Discord</a>, <a href="https://www.youtube.com/@geekcampsg">YouTube</a>`
   )
+  .addEntry("registration", "TBC") //`<a href="${ticketLink}">Get tickets!</a>`, true)
+  .addEntry("volunteer", `<a href="${volunteerLink}">Apply now!</a>`)
   .addEntry(
-    'cfp',
+    "cfp",
     +Date.now() > +cfp.deadline
-      ? 'CFP is now closed.'
+      ? "CFP is now closed."
       : `<a href="${cfp.link}">${cfp.name}</a>`,
     true
   )
-  .addEntry('description', 'Join us for an eventful day of geek talks.')
-  .toString();
+  .addEntry("description", "Join us for an eventful day of geek talks.")
+  .toString()
 ---
 
 <hr />
@@ -43,8 +45,8 @@ const data = formatter()
   <Logo />
 
   <Console>
-    <ConsoleClient client:idle geekcampDate={schedule.dates[0]?.date}>
-      <pre set:html={data} slot="data" />
+    <ConsoleClient client:idle>
+      <pre set:html={data} slot="data"></pre>
     </ConsoleClient>
   </Console>
 </section>
@@ -54,7 +56,7 @@ const data = formatter()
 <style>
   hr {
     width: 100%;
-    background: url('/images/bgsquare.svg') repeat-x;
+    background: url("/images/bgsquare.svg") repeat-x;
     height: 20px;
     outine: 0;
     border: none;
