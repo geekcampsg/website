@@ -1,7 +1,6 @@
 <script>
   import Terminal from './Terminal.svelte';
   let gameMode = false;
-  export let geekcampDate;
 </script>
 
 {#if gameMode}
@@ -21,7 +20,6 @@
     <slot name="data" />
   </div>
   <Terminal
-    {geekcampDate}
     on:gameOn={() => {
       gameMode = true;
     }}

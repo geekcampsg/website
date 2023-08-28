@@ -1,12 +1,14 @@
 import * as cfp from '@src/data/cfp';
-import { year } from '@src/data/date';
+import { year, date } from '@src/data/date';
 import {
+  discordInviteUrl,
   ticketLink,
   venueLink,
   venueName,
   volunteerLink,
 } from '@src/data/links';
 import { formatDateFull } from '@src/utils/date-format';
+import { speakers } from '@src/data/schedules/current';
 
 const cmdWithoutArg = [
   'help',
@@ -36,7 +38,6 @@ export default function handleTerminal({
   clear,
   clearLogs,
   reply,
-  geekcampDate,
 }: {
   ctrl: boolean;
   key: string;
@@ -46,7 +47,6 @@ export default function handleTerminal({
   clear: () => void;
   clearLogs: () => void;
   reply: (string: string) => void;
-  geekcampDate: string | undefined;
 }) {
   if (ctrl) {
     if (key === 'u') {
@@ -114,7 +114,7 @@ export default function handleTerminal({
             val =
               "Call for Proposals is now closed. Thank you for your interest. Check out the <a href='#schedule'>schedule here</a>";
           } else {
-            window.open(cfp.link);
+            val = `<a href="${cfp.link}">Submit your talk proposal</a>`;
           }
         } else if (cmd === 'register') {
           if (ticketLink) {
@@ -125,23 +125,22 @@ export default function handleTerminal({
         } else if (cmd === 'volunteer') {
           val = `<a href="${volunteerLink}">Volunteer with us</a>`;
         } else if (cmd === 'location') {
-          val = `In-person: <a href="${venueLink}">${venueName}</a><br>Online: Discord`;
+          val = `In-person: <a href="${venueLink}">${venueName}</a><br>Online: <a href="${discordInviteUrl}">Discord</a>`;
         } else if (cmd === 'dir') {
           val = 'Bad command or file name';
         } else if (cmd === 'ls') {
           val = 'These are not the files you are looking for.';
         } else if (cmd === 'date') {
           const today = new Date();
-          const firstDay = geekcampDate ? new Date(geekcampDate) : undefined;
           val = `Today is <b>${formatDateFull(today)}</b>.`;
-          if (!firstDay) {
+          if (!date) {
             val += `<br />Geekcamp SG date is not confirmed!`;
-          } else if (+firstDay > +today) {
+          } else if (+date > +today) {
             val += `<br />Geekcamp SG is on <b>${formatDateFull(
-              firstDay
+              date
             )}.</b><br /><br />`;
             const diff = Math.round(
-              (+firstDay - +today) /
+              (+date - +today) /
               1000 /* milliseconds */ /
               60 /* seconds */ /
               60 /* minutes */ /
@@ -152,7 +151,7 @@ export default function handleTerminal({
         } else if (cmd === 'contact') {
           val = 'geekcampsingapore at gmail dot com';
         } else if (cmd === 'archives') {
-          location.href = '/past-events';
+          val = '<a href="/past-events">View past events</a>';
         } else if (cmd === 'game') {
           val = 'Starting game...';
           import('./Game/index.svelte').then(() => {
@@ -166,10 +165,13 @@ export default function handleTerminal({
       if (cmd === 'print' || cmd === 'echo') {
         val = arg || ''; // print newline if no args
       } else if (cmd === 'speakers') {
-        if (arg && arg === '--all') {
-          val = 'Send in your talks to be a speaker';
+        if (speakers.length === 0) {
+          val = 'Speakers not confirmed.';
+          if (+Date.now() < +cfp.deadline) {
+            val += `<br /><a href="${cfp.link}">Submit your talk proposal</a>`;
+          }
         } else {
-          val = 'Send in your talks to be a speaker (--all)';
+          val = '<a href="#speakers">View speakers</a>';
         }
       } else if (cmd === 'cd') {
         val = 'You are already where you are supposed to be.';
