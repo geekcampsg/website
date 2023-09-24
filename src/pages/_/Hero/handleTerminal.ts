@@ -1,7 +1,7 @@
 import * as cfp from '@src/data/cfp';
 import { year, date } from '@src/data/date';
 import {
-  discordInviteUrl,
+  discordLink,
   ticketLink,
   venueLink,
   venueName,
@@ -125,7 +125,7 @@ export default function handleTerminal({
         } else if (cmd === 'volunteer') {
           val = `<a href="${volunteerLink}">Volunteer with us</a>`;
         } else if (cmd === 'location') {
-          val = `In-person: <a href="${venueLink}">${venueName}</a><br>Online: <a href="${discordInviteUrl}">Discord</a>`;
+          val = `In-person: <a href="${venueLink}">${venueName}</a><br>Online: <a href="${discordLink}">Discord</a>`;
         } else if (cmd === 'dir') {
           val = 'Bad command or file name';
         } else if (cmd === 'ls') {
