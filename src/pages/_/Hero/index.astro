@@ -11,15 +11,19 @@ import {
   venueName,
   volunteerLink,
 } from "@src/data/links"
-import { year, date } from "@src/data/date"
+import { year, startDate, endDate } from "@src/data/date"
+
+const format = new Intl.DateTimeFormat("default", { dateStyle: 'short', timeStyle: 'short', timeZone: 'Asia/Singapore' });
 
 const data = formatter()
   .addEntry("title", `GeekcampSG ${year}`)
   .addEntry(
-    "date",
-    date
-      ? `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
-      : "TBC"
+    "startDate",
+    startDate ? `${format.format(startDate)}` : "TBC"
+  )
+  .addEntry(
+    "endDate",
+    endDate ? `${format.format(endDate)}` : "TBC"
   )
   .addEntry("inPersonLocation", `<a href="${venueLink}">${venueName}</a>`)
   .addEntry("onlineLocation", `<a href="${discordLink}">Discord</a>`)

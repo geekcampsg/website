@@ -62,7 +62,9 @@
         on:outrostart={() => (detail.style.background = 'unset')}
       />
       <picture>
+		{#if imgUrl.webp}
         <source type="image/webp" srcset={imgUrl.webp} />
+		{/if}
         <img
           in:crossfadeIn={{ key: 'img' }}
           out:crossfadeOut={{ key: 'img' }}

@@ -19,6 +19,12 @@
         return "#258fa7"
       case "1":
         return "#b59317"
+      case "0 (2F)":
+        return "var(--green)"
+      case "1 (2F)":
+        return "#258fa7"
+      case "2 (2G)":
+        return "#b59317"
       default:
         return "var(--green)"
     }
@@ -52,7 +58,9 @@
           {#each talk.speakers as speaker}
             <a href={`#${speaker.id}`}>
               <picture>
+				{#if speaker.imgUrl.webp}
                 <source type="image/webp" srcset={speaker.imgUrl.webp} />
+				{/if}
                 <img
                   loading="lazy"
                   src={speaker.imgUrl.default}
