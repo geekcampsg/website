@@ -1,12 +1,12 @@
 ---
 export interface Props {
-  lineNumbers?: boolean;
+  lineNumbers?: boolean
 }
 
-const { lineNumbers = false } = Astro.props;
+const { lineNumbers = false } = Astro.props
 ---
 
-<pre class={lineNumbers ? 'lineNumbers' : ''}><slot /></pre>
+<pre class={lineNumbers ? "lineNumbers" : ""}><slot /></pre>
 
 <style>
   pre {

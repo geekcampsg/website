@@ -11,9 +11,9 @@ export default class GameObject {
     this.game.register(this);
     this.id = id();
   }
-  render(ctx: CanvasRenderingContext2D) { }
-  tick(delta: number) { }
-  keyHandler(key: string) { }
+  render(ctx: CanvasRenderingContext2D) {}
+  tick(delta: number) {}
+  keyHandler(key: string) {}
   destroy() {
     this.game.unregister(this);
     return this;

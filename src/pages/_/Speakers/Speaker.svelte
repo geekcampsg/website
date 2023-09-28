@@ -1,4 +1,6 @@
 <script>
+import { Image } from 'astro:assets';
+
   import { createEventDispatcher } from 'svelte';
   import { crossfade, fade, scale } from 'svelte/transition';
   import { cubicInOut } from 'svelte/easing';
@@ -45,6 +47,7 @@
   // this allow us to scale the backdrop without messing with the measurements
   // but the backdrop can't cover all if the detail is scrollable
   let detail;
+
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -62,7 +65,9 @@
         on:outrostart={() => (detail.style.background = 'unset')}
       />
       <picture>
+		{#if imgUrl.webp}
         <source type="image/webp" srcset={imgUrl.webp} />
+		{/if}
         <img
           in:crossfadeIn={{ key: 'img' }}
           out:crossfadeOut={{ key: 'img' }}

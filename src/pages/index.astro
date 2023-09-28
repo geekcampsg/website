@@ -13,13 +13,13 @@ import Organisers from "./_/Organisers/index.astro"
 import CallForPaper from "./_/CallForPaper.astro"
 import Live from "./_/Live/index.astro"
 import * as cfp from "@src/data/cfp"
-import { schedule, speakers } from '@src/data/schedules/current';
+import { schedule, speakers } from "@src/data/schedules/current"
 ---
 
 <Layout title="Home">
   <Hero />
   {+Date.now() > +cfp.deadline ? null : <CallForPaper />}
-  {schedule.dates.length > 0 ? <Live /> : null}
+  <!-- {schedule.dates.length > 0 ? <Live /> : null} -->
   <About />
   <!-- <LocalTechCommunities /> -->
   {schedule.dates.length > 0 ? <Schedule /> : null}

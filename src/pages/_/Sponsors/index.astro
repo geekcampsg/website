@@ -1,8 +1,10 @@
 ---
-import spdigitalImage from "./logos/spdigital.png?w=600"
-import imtokenImage from "./logos/imtoken.png?w=600"
-import cakeDefiImage from "./logos/cake-defi.png?w=450"
-import proliveImage from "./logos/prolive.jpg?w=300"
+import { Image } from 'astro:assets';
+
+import spdigitalImage from "./logos/spdigital.png"
+import imtokenImage from "./logos/imtoken.png"
+import cakeDefiImage from "./logos/cake-defi.png"
+import proliveImage from "./logos/prolive.jpg"
 
 const sponsors: Array<{
   title: string
@@ -34,40 +36,39 @@ const sponsors: Array<{
 ]
 ---
 
-{sponsors.length > 0 ? 
-<section id="sponsors" class="rows">
-  <div>
-    <h2>Sponsors</h2>
-  </div>
-  <div>
-    {
-      sponsors.map((category) => {
-        return (
-          <div class="row">
-            <div class="title">{category.title}</div>
-            <div>
-              {category.sponsors.map((sponsor) => (
-                <a
-                  href={sponsor.link}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  style={`display:inline-block;max-width:${category.size}px`}
-                >
-                  <img
-                    src={sponsor.image}
-                    loading="lazy"
-                    style={sponsor.style}
-                  />
-                </a>
-              ))}
+{
+  sponsors.length > 0 ? (
+    <section id="sponsors" class="rows">
+      <div>
+        <h2>Sponsors</h2>
+      </div>
+      <div>
+        {sponsors.map((category) => {
+          return (
+            <div class="row">
+              <div class="title">{category.title}</div>
+              <div>
+                {category.sponsors.map((sponsor) => (
+                  <a
+                    href={sponsor.link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    style={`display:inline-block;max-width:${category.size}px`}
+                  >
+                    <Image
+                      src={sponsor.image}
+                      style={sponsor.style}
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        )
-      })
-    }
-  </div>
-</section>
-: null}
+          )
+        })}
+      </div>
+    </section>
+  ) : null
+}
 
 <style>
   h2 {

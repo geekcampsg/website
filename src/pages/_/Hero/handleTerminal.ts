@@ -137,14 +137,14 @@ export default function handleTerminal({
             val += `<br />Geekcamp SG date is not confirmed!`;
           } else if (+date > +today) {
             val += `<br />Geekcamp SG is on <b>${formatDateFull(
-              date
+              date,
             )}.</b><br /><br />`;
             const diff = Math.round(
               (+date - +today) /
-              1000 /* milliseconds */ /
-              60 /* seconds */ /
-              60 /* minutes */ /
-              24 /* hours */
+                1000 /* milliseconds */ /
+                60 /* seconds */ /
+                60 /* minutes */ /
+                24 /* hours */,
             );
             val += `${diff} more day${diff > 1 ? 's' : ''} to go!`;
           }

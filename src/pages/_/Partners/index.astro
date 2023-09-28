@@ -1,24 +1,26 @@
 ---
-import engineersSg from './logos/engineers.sg.png?w=300';
-import engineersSg_2x from './logos/engineers.sg@2x.png?w=300';
+import { Image } from "astro:assets"
+
+import engineersSg from "./logos/engineers.sg.png"
+import engineersSg_2x from "./logos/engineers.sg@2x.png"
 // import geekcamp from "./logos/geekcamp.png"
 // import geekcamp_2x from "./logos/geekcamp@2x.png"
-import geekhacking from './logos/geekhacking.png?w=300';
-import geekhacking_2x from './logos/geekhacking@2x.png?w=300';
-import goSg from './logos/go.sg.png?w=300';
-import goSg_2x from './logos/go.sg@2x.png?w=300';
-import hackerspace from './logos/hackerspace.png?w=300';
-import hackerspace_2x from './logos/hackerspace@2x.png?w=300';
-import python from './logos/python.png?w=300';
-import python_2x from './logos/python@2x.png?w=300';
-import rubySg from './logos/ruby.sg.png?w=300';
-import rubySg_2x from './logos/ruby.sg@2x.png?w=300';
-import singaporecss from './logos/singaporecss.png?w=300';
-import singaporecss_2x from './logos/singaporecss@2x.png?w=300';
-import singaporejs from './logos/singaporejs.png?w=300';
-import singaporejs_2x from './logos/singaporejs@2x.png?w=300';
-import iosconf from './logos/iosconf.png?w=300';
-import iosconf_2x from './logos/iosconf@2x.png?w=300';
+import geekhacking from "./logos/geekhacking.png"
+import geekhacking_2x from "./logos/geekhacking@2x.png"
+import goSg from "./logos/go.sg.png"
+import goSg_2x from "./logos/go.sg@2x.png"
+import hackerspace from "./logos/hackerspace.png"
+import hackerspace_2x from "./logos/hackerspace@2x.png"
+import python from "./logos/python.png"
+import python_2x from "./logos/python@2x.png"
+import rubySg from "./logos/ruby.sg.png"
+import rubySg_2x from "./logos/ruby.sg@2x.png"
+import singaporecss from "./logos/singaporecss.png"
+import singaporecss_2x from "./logos/singaporecss@2x.png"
+import singaporejs from "./logos/singaporejs.png"
+import singaporejs_2x from "./logos/singaporejs@2x.png"
+import iosconf from "./logos/iosconf.png"
+import iosconf_2x from "./logos/iosconf@2x.png"
 
 const partners = [
   /*
@@ -68,25 +70,25 @@ const partners = [
     link: 'https://2022.iosconf.sg/',
   },
   */
-];
+]
 ---
 
-{partners.length > 0 ? 
-<section id='partners' class='rows'>
-  <div>
-    <h2>Partners</h2>
-  </div>
-  <div class='partners'>
-    {
-      partners.map(({ name, images: [img1x, img2x], link }) => (
-        <a href={link}>
-          <img loading="lazy" src={img1x} alt={name} srcset={`${img2x} 2x`} />
-        </a>
-      ))
-    }
-  </div>
-</section>
-: null}
+{
+  partners.length > 0 ? (
+    <section id="partners" class="rows">
+      <div>
+        <h2>Partners</h2>
+      </div>
+      <div class="partners">
+        {partners.map(({ name, images: [img1x, img2x], link }) => (
+          <a href={link}>
+            <Image src={img1x} alt={name} />
+          </a>
+        ))}
+      </div>
+    </section>
+  ) : null
+}
 
 <style>
   h2 {

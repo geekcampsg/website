@@ -1,11 +1,13 @@
 ---
-import Logo from '@src/components/geekcamp-logo-light.svg';
-import { year } from '@src/data/date';
+import { Image } from 'astro:assets';
+
+import Logo from "./geekcamp-logo-light.svg"
+import { year } from "../data/date"
 ---
 
 <header>
   <h1>
-    <a href='/'><img src={Logo} alt={`Geekcamp Singapore ${year}`} /></a>
+    <a href="/"><Image src={Logo} alt={`Geekcamp Singapore ${year}`} /></a>
   </h1>
 </header>
 

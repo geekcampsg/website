@@ -1,31 +1,33 @@
 ---
-import alan from "./images/alan.png?width=100"
-import alvin from "./images/alvin.png?width=100"
-import ambrose from "./images/ambrose.jpeg?width=100"
-import brian from "./images/brian.png?width=100"
-import don from "./images/don.png?width=100"
-import hazel from "./images/hazel.png?width=100"
-import hongkheng from "./images/hongkheng.png?width=100"
-import jianzhen from "./images/jianzhen.png?width=100"
-import juliana from "./images/juliana.png?width=100"
-import lihautan from "./images/lihautan.png?width=100"
-import luther from "./images/luther.png?width=100"
-import mrgi from "./images/mrgi.png?width=100"
-import patricia from "./images/patricia.png?width=100"
-import perwyl from "./images/perwyl.png?width=100"
-import sam from "./images/sam.png?width=100"
-import sampoder from "./images/sampoder.jpeg?width=100"
-import shao from "./images/shao.png?width=100"
-import sreedhar from "./images/sreedhar.jpeg?width=100"
-import stephanie from "./images/stephanie.png?width=100"
-import terence from "./images/terence.png?width=100"
-import thye from "./images/thye.png?width=100"
-import tomoe from "./images/tomoe.png?width=100"
-import vina from "./images/vina.png?width=100"
-import weitat from "./images/weitat.png?width=100"
-import chiran from "./images/chiran.png?width=100"
-import eliot from "./images/eliot.png?width=100"
-import nori from "./images/nori.png?width=100"
+import { Image } from "astro:assets"
+
+import alan from "./images/alan.png"
+import alvin from "./images/alvin.png"
+import ambrose from "./images/ambrose.jpeg"
+import brian from "./images/brian.png"
+import don from "./images/don.png"
+import hazel from "./images/hazel.png"
+import hongkheng from "./images/hongkheng.png"
+import jianzhen from "./images/jianzhen.png"
+import juliana from "./images/juliana.png"
+import lihautan from "./images/lihautan.png"
+import luther from "./images/luther.png"
+import mrgi from "./images/mrgi.png"
+import patricia from "./images/patricia.png"
+import perwyl from "./images/perwyl.png"
+import sam from "./images/sam.png"
+import sampoder from "./images/sampoder.jpeg"
+import shao from "./images/shao.png"
+import sreedhar from "./images/sreedhar.jpeg"
+import stephanie from "./images/stephanie.png"
+import terence from "./images/terence.png"
+import thye from "./images/thye.png"
+import tomoe from "./images/tomoe.png"
+import vina from "./images/vina.png"
+import weitat from "./images/weitat.png"
+import chiran from "./images/chiran.png"
+import eliot from "./images/eliot.png"
+import nori from "./images/nori.png"
 
 const organisers = [
   //{ name: "Alan", image: alan },
@@ -68,7 +70,7 @@ const organisers = [
         return (
           <div class="organiser">
             <div class="container">
-              <img loading="lazy" src={organiser.image} alt={organiser.name} />
+              <Image src={organiser.image} alt={organiser.name} width={200} />
             </div>
             {organiser.name}
           </div>
