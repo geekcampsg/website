@@ -1,6 +1,6 @@
 ---
 import Schedules from "./_/Schedules.svelte"
-import { schedule, tracks } from "@src/data/schedules/current"
+import { schedule, tracks, gridUrl } from "@src/data/schedules/current"
 import { formatDateLong } from "@src/utils/date-format"
 ---
 
@@ -13,7 +13,10 @@ import { formatDateLong } from "@src/utils/date-format"
             <h2>Schedule - {formatDateLong(date.date)}</h2>
           </div>
           <div>
-            <p>Time shown is in SGT (UTC+8)</p>
+            <p>
+			Time shown is in SGT (UTC+8).
+			{gridUrl ? (<><a href={gridUrl}>View in a grid</a>.</>) : ""}
+			</p>
             <Schedules
               scheduleTalks={date.talks}
               tracks={tracks}
