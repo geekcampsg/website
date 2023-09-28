@@ -1,3 +1,5 @@
+import { textToHtml } from '@src/utils/text-to-html';
+
 const sessionizeScheduleUrl =
   'https://sessionize.com/api/v2/sedrhdzi/view/GridSmart';
 const sessionizeSchedule = await (await fetch(sessionizeScheduleUrl)).json();
@@ -30,7 +32,7 @@ const schedule = {
       .flatMap((room) =>
         room.sessions.map((session) => ({
           title: session.title,
-          summary: session.description,
+          summary: textToHtml(session.description),
           startTime: session.startsAt,
           endTime: session.endsAt,
           track: session.room.replace('Track ', ''),
