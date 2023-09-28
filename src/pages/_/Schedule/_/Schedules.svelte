@@ -62,7 +62,6 @@
                 <source type="image/webp" srcset={speaker.imgUrl.webp} />
 				{/if}
                 <img
-                  loading="lazy"
                   src={speaker.imgUrl.default}
                   alt={speaker.name}
                 />

@@ -1,8 +1,10 @@
 ---
-import spdigitalImage from "./logos/spdigital.png?w=600"
-import imtokenImage from "./logos/imtoken.png?w=600"
-import cakeDefiImage from "./logos/cake-defi.png?w=450"
-import proliveImage from "./logos/prolive.jpg?w=300"
+import { Image } from 'astro:assets';
+
+import spdigitalImage from "./logos/spdigital.png"
+import imtokenImage from "./logos/imtoken.png"
+import cakeDefiImage from "./logos/cake-defi.png"
+import proliveImage from "./logos/prolive.jpg"
 
 const sponsors: Array<{
   title: string
@@ -53,9 +55,8 @@ const sponsors: Array<{
                     rel="noreferrer noopener"
                     style={`display:inline-block;max-width:${category.size}px`}
                   >
-                    <img
+                    <Image
                       src={sponsor.image}
-                      loading="lazy"
                       style={sponsor.style}
                     />
                   </a>

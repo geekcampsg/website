@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 import { year } from "@src/data/date"
 import Logo from "./geekcamp-logo-light.svg"
 
@@ -53,7 +55,7 @@ const archives = [
     </ul>
   </div>
   <div class="branding">
-    <img src={Logo} alt={`Geekcamp Singapore ${year}`} />
+    <Image src={Logo} alt={`Geekcamp Singapore ${year}`} />
     <div class="copyright">Copyright &copy; {year}. All rights reserved.</div>
   </div>
 </div>

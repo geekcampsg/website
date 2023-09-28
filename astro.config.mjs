@@ -9,4 +9,7 @@ export default defineConfig({
   vite: {
     plugins: [imagetools()],
   },
+  image: {
+    remotePatterns: [{ protocol: 'https' }],
+  },
 });
