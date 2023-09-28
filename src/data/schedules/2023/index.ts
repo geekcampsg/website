@@ -15,7 +15,7 @@ const speakers = sessionizeSpeakers
     id: `sessionize-${speaker.id}`,
     imgUrl: { default: speaker.profilePicture },
     position: speaker.tagLine,
-    bio: speaker.bio,
+    bio: textToHtml(speaker.bio),
     twitter: speaker.links
       ?.filter((link) => link.linkType == 'Twitter')
       .map((link) => link.url.split('/').pop())
