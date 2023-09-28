@@ -9,4 +9,4 @@ export default writable(false, (set) => {
   onUpdate();
   mediaQuery.addEventListener('change', onUpdate);
   return () => mediaQuery.removeEventListener('chnage', onUpdate);
-})
+});

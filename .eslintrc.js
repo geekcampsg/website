@@ -4,7 +4,7 @@ module.exports = {
   },
   extends: `react-app`,
   rules: {
-    "no-trailing-spaces": ["error", { ignoreComments: true }],
+    'no-trailing-spaces': ['error', { ignoreComments: true }],
   },
-  plugins: ["json-format"]
-}
+  plugins: ['json-format'],
+};

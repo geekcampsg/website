@@ -1,17 +1,17 @@
 ---
-import { speakers } from '@src/data/schedules/current';
-import { year } from '@src/data/date';
-import Speakers from './Speakers.svelte';
+import { speakers } from "@src/data/schedules/current"
+import { year } from "@src/data/date"
+import Speakers from "./Speakers.svelte"
 ---
 
-<section id='speakers' class='rows'>
+<section id="speakers" class="rows">
   <div>
     <h2>
       {year}
       <br /> Speakers
     </h2>
   </div>
-  <div class='grid'>
+  <div class="grid">
     <Speakers speakers={speakers} client:visible />
   </div>
 </section>

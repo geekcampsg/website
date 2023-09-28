@@ -13,18 +13,16 @@ import {
 } from "@src/data/links"
 import { year, startDate, endDate } from "@src/data/date"
 
-const format = new Intl.DateTimeFormat("default", { dateStyle: 'short', timeStyle: 'short', timeZone: 'Asia/Singapore' });
+const format = new Intl.DateTimeFormat("default", {
+  dateStyle: "short",
+  timeStyle: "short",
+  timeZone: "Asia/Singapore",
+})
 
 const data = formatter()
   .addEntry("title", `GeekcampSG ${year}`)
-  .addEntry(
-    "startDate",
-    startDate ? `${format.format(startDate)}` : "TBC"
-  )
-  .addEntry(
-    "endDate",
-    endDate ? `${format.format(endDate)}` : "TBC"
-  )
+  .addEntry("startDate", startDate ? `${format.format(startDate)}` : "TBC")
+  .addEntry("endDate", endDate ? `${format.format(endDate)}` : "TBC")
   .addEntry("inPersonLocation", `<a href="${venueLink}">${venueName}</a>`)
   .addEntry("onlineLocation", `<a href="${discordLink}">Discord</a>`)
   .addEntry("registration", `<a href="${ticketLink}">Get tickets!</a>`, true)
@@ -46,7 +44,7 @@ const data = formatter()
 
   <Console>
     <ConsoleClient client:idle>
-      <pre set:html={data} slot="data"></pre>
+      <pre set:html={data} slot="data" />
     </ConsoleClient>
   </Console>
 </section>

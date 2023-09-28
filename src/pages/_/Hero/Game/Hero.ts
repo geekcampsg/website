@@ -25,10 +25,10 @@ export default class Hero extends GameObject {
   bulletCount: number = 0;
   unsubscribe: () => void;
   constructor(game: any) {
-    super(game)
+    super(game);
     this.reset();
 
-    this.unsubscribe = game.GLOBALS.subscribe($global => {
+    this.unsubscribe = game.GLOBALS.subscribe(($global) => {
       this.maxSpeed = $global.MAX_SPEED;
       this.maxAcceleration = $global.MAX_ACCELERATION;
       this.accelerationDelta = $global.ACCELERATION;
@@ -48,19 +48,25 @@ export default class Hero extends GameObject {
       ctx.drawImage(
         geekcampTent,
         this.x - TRIANGLE_HALF_BASE,
-        this.game.HEIGHT - TRIANGLE_HEIGHT
+        this.game.HEIGHT - TRIANGLE_HEIGHT,
       );
     } else {
       ctx.fillStyle = 'black';
       ctx.beginPath();
-      ctx.moveTo(this.x, this.game.HEIGHT - TRIANGLE_HEIGHT + TRIANGLE_TOP_PADDING);
+      ctx.moveTo(
+        this.x,
+        this.game.HEIGHT - TRIANGLE_HEIGHT + TRIANGLE_TOP_PADDING,
+      );
       ctx.lineTo(this.x - TRIANGLE_HALF_BASE, this.game.HEIGHT);
       ctx.lineTo(this.x + TRIANGLE_HALF_BASE, this.game.HEIGHT);
       ctx.fill();
     }
   }
   tick() {
-    this.speed = Math.min(Math.max(this.speed + this.acceleration, -this.maxSpeed), this.maxSpeed);
+    this.speed = Math.min(
+      Math.max(this.speed + this.acceleration, -this.maxSpeed),
+      this.maxSpeed,
+    );
     this.x = this.x + this.speed;
     if (this.x > this.game.WIDTH - TRIANGLE_HALF_BASE) {
       this.x = this.game.WIDTH - TRIANGLE_HALF_BASE;
@@ -76,13 +82,25 @@ export default class Hero extends GameObject {
     switch (key) {
       case 'ArrowLeft':
       case 'ArrowRight':
-        this.acceleration = Math.min(Math.max(this.acceleration + (key === 'ArrowLeft' ? -this.accelerationDelta : this.accelerationDelta), -this.maxAcceleration), this.maxAcceleration);
+        this.acceleration = Math.min(
+          Math.max(
+            this.acceleration +
+              (key === 'ArrowLeft'
+                ? -this.accelerationDelta
+                : this.accelerationDelta),
+            -this.maxAcceleration,
+          ),
+          this.maxAcceleration,
+        );
         break;
       case 'Shift': {
         let delta = 0;
         for (let i = 0; i < this.bulletCount; i++) {
-          this.game.dispatch('hero:shoot', { x: this.x + delta, y: this.game.HEIGHT - BULLET_INIT_Y });
-          delta = (delta <= 0) ? delta * -1 + 5 : delta * -1;
+          this.game.dispatch('hero:shoot', {
+            x: this.x + delta,
+            y: this.game.HEIGHT - BULLET_INIT_Y,
+          });
+          delta = delta <= 0 ? delta * -1 + 5 : delta * -1;
         }
         break;
       }

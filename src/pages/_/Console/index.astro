@@ -1,17 +1,17 @@
 ---
-import ConsoleControls from './Controls.astro';
-import ConsoleCode from './Code.astro';
+import ConsoleControls from "./Controls.astro"
+import ConsoleCode from "./Code.astro"
 
 export interface Props {
-  controls?: boolean;
-  lineNumbers?: boolean;
+  controls?: boolean
+  lineNumbers?: boolean
 }
 
-const { controls = true, lineNumbers = false } = Astro.props;
+const { controls = true, lineNumbers = false } = Astro.props
 ---
 
 <div>
-  {controls ? <ConsoleControls subTitle='you@geekcampsg' /> : null}
+  {controls ? <ConsoleControls subTitle="you@geekcampsg" /> : null}
   <ConsoleCode lineNumbers={lineNumbers}>
     <slot />
   </ConsoleCode>

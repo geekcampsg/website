@@ -16,7 +16,7 @@ export default function formatter() {
           '<i class="c-b">"</i>',
           value,
           '<i class="c-b">"</i>',
-        ].join('')
+        ].join(''),
       );
       return obj;
     },
