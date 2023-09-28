@@ -1,3 +1,5 @@
+import { textToHtml } from '@src/utils/text-to-html';
+
 const sessionizeScheduleUrl =
   'https://sessionize.com/api/v2/sedrhdzi/view/GridSmart';
 const sessionizeSchedule = await (await fetch(sessionizeScheduleUrl)).json();
@@ -13,7 +15,7 @@ const speakers = sessionizeSpeakers
     id: `sessionize-${speaker.id}`,
     imgUrl: { default: speaker.profilePicture },
     position: speaker.tagLine,
-    bio: speaker.bio,
+    bio: textToHtml(speaker.bio),
     twitter: speaker.links
       ?.filter((link) => link.linkType == 'Twitter')
       .map((link) => link.url.split('/').pop())
@@ -30,7 +32,7 @@ const schedule = {
       .flatMap((room) =>
         room.sessions.map((session) => ({
           title: session.title,
-          summary: session.description,
+          summary: textToHtml(session.description),
           startTime: session.startsAt,
           endTime: session.endsAt,
           track: session.room.replace('Track ', ''),
