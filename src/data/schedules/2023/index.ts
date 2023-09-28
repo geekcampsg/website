@@ -8,6 +8,9 @@ const sessionizeSpeakersUrl =
   'https://sessionize.com/api/v2/sedrhdzi/view/Speakers';
 const sessionizeSpeakers = await (await fetch(sessionizeSpeakersUrl)).json();
 
+const gridUrl =
+  'https://sessionize.com/view/aeqxg387/GridSmart?format=Embed_Styled_Html&isDark=True&title=GeekcampSG%202023';
+
 const speakers = sessionizeSpeakers
   .filter((speaker) => !speaker.fullName.includes('Barcamp'))
   .map((speaker) => ({
@@ -64,4 +67,4 @@ const tracks = Array.from(
   ),
 );
 
-export { schedule, speakers, tracks };
+export { schedule, speakers, tracks, gridUrl };
