@@ -1,16 +1,37 @@
 ---
 import { Image } from 'astro:assets';
+import { textToHtml } from '@src/utils/text-to-html';
 
-import spdigitalImage from "./logos/spdigital.png"
-import imtokenImage from "./logos/imtoken.png"
-import cakeDefiImage from "./logos/cake-defi.png"
-import proliveImage from "./logos/prolive.jpg"
+import angelHackImage from './logos/angelhack.png';
+import spdigitalImage from './logos/spdigital.png';
+import imtokenImage from './logos/imtoken.png';
+import cakeDefiImage from './logos/cake-defi.png';
+import proliveImage from './logos/prolive.jpg';
 
 const sponsors: Array<{
-  title: string
-  size: number
-  sponsors: Array<{ link: string; image: string; style?: string }>
+  title: string;
+  size: number;
+  sponsors: Array<{
+    link: string;
+    image: ImageMetadata;
+    name: string;
+    description: string;
+    style?: string;
+  }>;
 }> = [
+  {
+    title: '',
+    size: 600,
+    sponsors: [
+      {
+        link: 'https://angelhack.com/',
+        image: angelHackImage,
+        name: 'AngelHack',
+        description:
+          'AngelHack (https://angelhack.com/) is one of the world’s largest and most diverse developer ecosystems. Known as the pioneer of global developer hackathons, AngelHack has a community of more than 300,000 developers across 65 countries. Over the past 10 years, AngelHack has partnered with Amazon Web Services, Dell Technologies, IBM, MasterCard, Web3 Foundation (Polkadot), Protocol Labs (Filecoin/IPFS), Celo Foundation, and even Algorand Foundation to run global hackathons and drive innovation.',
+      },
+    ],
+  },
   /*{
     title: "Platinum Sponsor",
     size: 600,
@@ -33,7 +54,7 @@ const sponsors: Array<{
     size: 300,
     sponsors: [{ link: "https://prolive.co", image: proliveImage }],
   },*/
-]
+];
 ---
 
 {
@@ -46,24 +67,31 @@ const sponsors: Array<{
         {sponsors.map((category) => {
           return (
             <div class="row">
-              <div class="title">{category.title}</div>
+              {category.title ? (
+                <div class="title">{category.title}</div>
+              ) : null}
               <div>
                 {category.sponsors.map((sponsor) => (
-                  <a
-                    href={sponsor.link}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    style={`display:inline-block;max-width:${category.size}px`}
-                  >
-                    <Image
-                      src={sponsor.image}
-                      style={sponsor.style}
-                    />
-                  </a>
+                  <div>
+                    <a
+                      href={sponsor.link}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      style={`display:inline-block;max-width:${category.size}px`}
+                    >
+                      <Image
+                        src={sponsor.image}
+                        alt={sponsor.name}
+                        style={sponsor.style}
+                        width={category.size}
+                      />
+                    </a>
+                    <div set:html={textToHtml(sponsor.description)} />
+                  </div>
                 ))}
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </section>
