@@ -21,12 +21,15 @@ const format = new Intl.DateTimeFormat("default", {
 
 const data = formatter()
   .addEntry("title", `GeekcampSG ${year}`)
-  .addEntry("startDate", startDate ? `${format.format(startDate)}` : "TBC")
+  .addEntry("startDate", startDate ? `${format.format(startDate)}` : "TBC", true)
   .addEntry("endDate", endDate ? `${format.format(endDate)}` : "TBC")
-  .addEntry("inPersonLocation", `<a href="${venueLink}">${venueName}</a>`)
+//.addEntry("inPersonLocation", `<a href="${venueLink}">${venueName}</a>`)
+  .addEntry("inPersonLocation", `${venueName}`)
+
   .addEntry("onlineLocation", `<a href="${discordLink}">Discord</a>`)
-  .addEntry("registration", `<a href="${ticketLink}">Get tickets!</a>`, true)
-  .addEntry("volunteer", `<a href="${volunteerLink}">Apply now!</a>`)
+//  .addEntry("registration", `<a href="${ticketLink}">Get tickets!</a>`, true)
+  .addEntry("registration", `TBC`)
+  .addEntry("volunteer", `<a href="${volunteerLink}">Join us!</a>`, true)
   .addEntry(
     "cfp",
     +Date.now() > +cfp.deadline

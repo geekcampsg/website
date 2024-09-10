@@ -16,6 +16,7 @@ const image = '/images/logo-padded.png';
 <!DOCTYPE html>
 <html lang='en'>
   <head>
+    <!-- Existing Meta Tags -->
     <meta name='description' content={description} />
     <meta property='og:title' content={title} />
     <meta property='og:description' content={description} />
@@ -25,8 +26,8 @@ const image = '/images/logo-padded.png';
     <meta name='twitter:creator' content='geekcamp' />
     <meta name='twitter:title' content={title} />
     <meta name='twitter:description' content={description} />
-	<meta name="twitter:widgets:theme" content="dark" />
-	<link rel="me" href="https://twitter.com/geekcampsg" />
+    <meta name="twitter:widgets:theme" content="dark" />
+    <link rel="me" href="https://twitter.com/geekcampsg" />
     <meta name='format-detection' content='telephone=no' />
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
@@ -44,6 +45,11 @@ const image = '/images/logo-padded.png';
     />
     <meta name='generator' content={Astro.generator} />
     <title>{`${title} | Geekcamp Singapore ${year}`}</title>
+    
+    <meta name="twitter:description" content="Geekcamp Singapore">
+    <meta name="twitter:image" content="https://geekcamp.sg/favicon.png">
+    <meta name="twitter:title" content="Geekcamp Singapore">
+    <meta property="og:image" content="https://geekcamp.sg/favicon.png">
   </head>
 
   <body>
