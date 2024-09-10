@@ -32,10 +32,9 @@ const data = formatter()
   .addEntry("volunteer", `<a href="${volunteerLink}">Join us!</a>`, true)
   .addEntry(
     "cfp",
-    /*+Date.now() > +cfp.deadline
+    +Date.now() > +cfp.deadline
       ? "CFP is now closed."
-      : `<a href="${cfp.link}">${cfp.name}</a>`*/
-      'TBC'
+      : `<a href="${cfp.link}">${cfp.name}</a>`
   )
   .addEntry("description", "Join us for an eventful day of geek talks.")
   .toString()
