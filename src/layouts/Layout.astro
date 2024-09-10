@@ -10,7 +10,7 @@ export interface Props {
 const { title } = Astro.props;
 const description =
   'A one day event that brings together hundreds of geeks to share about technologies and knowledge.';
-const image = '/images/logo-padded.png';
+const image = '/images/og-image-banner.jpg';
 ---
 
 <!DOCTYPE html>
@@ -47,9 +47,8 @@ const image = '/images/logo-padded.png';
     <title>{`${title} | Geekcamp Singapore ${year}`}</title>
     
     <meta name="twitter:description" content="Geekcamp Singapore">
-    <meta name="twitter:image" content="https://geekcamp.sg/favicon.png">
+    <meta name="twitter:image" content="https://geekcamp.sg/images/og-image-banner.jpg">
     <meta name="twitter:title" content="Geekcamp Singapore">
-    <meta property="og:image" content="https://geekcamp.sg/favicon.png">
   </head>
 
   <body>
