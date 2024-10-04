@@ -17,10 +17,10 @@
     "remark-gfm": "^4.0.0",
     "remark-html": "^16.0.1",
     "remark-parse": "^11.0.0",
-    "svelte": "^3.59.2",
-    "svelte-knobby": "^0.3.4",
+    "svelte": "^4.2.19",
+    "svelte-knobby": "^0.1.9",
     "unified": "^11.0.3",
-    "vite-imagetools": "^4.0.11",
+    "vite-imagetools": "^7.0.4",
     "xss": "^1.0.14"
   },
   "devDependencies": {
