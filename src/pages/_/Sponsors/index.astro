@@ -2,11 +2,14 @@
 import { Image } from 'astro:assets';
 import { textToHtml } from '@src/utils/text-to-html';
 
-import angelHackImage from './logos/angelhack.png';
-import spdigitalImage from './logos/spdigital.png';
-import imtokenImage from './logos/imtoken.png';
-import cakeDefiImage from './logos/cake-defi.png';
-import proliveImage from './logos/prolive.jpg';
+// import angelHackImage from './logos/angelhack.png';
+// import spdigitalImage from './logos/spdigital.png';
+// import imtokenImage from './logos/imtoken.png';
+// import cakeDefiImage from './logos/cake-defi.png';
+// import proliveImage from './logos/prolive.jpg';
+import smuai from './logos/smuai.webp';
+import smuiie from './logos/smuiie.webp';
+
 
 const sponsors: Array<{
   title: string;
@@ -23,13 +26,30 @@ const sponsors: Array<{
     title: '',
     size: 600,
     sponsors: [
+      // {
+      //   link: 'https://angelhack.com/',
+      //   image: angelHackImage,
+      //   name: 'AngelHack',
+      //   description:
+      //     'AngelHack (https://angelhack.com/) is one of the world’s largest and most diverse developer ecosystems. Known as the pioneer of global developer hackathons, AngelHack has a community of more than 300,000 developers across 65 countries. Over the past 10 years, AngelHack has partnered with Amazon Web Services, Dell Technologies, IBM, MasterCard, Web3 Foundation (Polkadot), Protocol Labs (Filecoin/IPFS), Celo Foundation, and even Algorand Foundation to run global hackathons and drive innovation.',
+      // },
+
       {
-        link: 'https://angelhack.com/',
-        image: angelHackImage,
-        name: 'AngelHack',
+        link: 'https://www.smuai.me/',
+        image: smuai,
+        name: 'SmuAI',
         description:
-          'AngelHack (https://angelhack.com/) is one of the world’s largest and most diverse developer ecosystems. Known as the pioneer of global developer hackathons, AngelHack has a community of more than 300,000 developers across 65 countries. Over the past 10 years, AngelHack has partnered with Amazon Web Services, Dell Technologies, IBM, MasterCard, Web3 Foundation (Polkadot), Protocol Labs (Filecoin/IPFS), Celo Foundation, and even Algorand Foundation to run global hackathons and drive innovation.',
+          'SmuAI (https://www.smuai.me/) is a student-led ThinkTank that facilitates the sharing of ideas in the field of Artificial Intelligence.',
       },
+
+      {
+        link: 'https://iie.smu.edu.sg/',
+        image: smuiie,
+        name: 'SMU Institute of Innovation and Entrepreneurship (IIE)',
+        description:
+          'At SMU Institute of Innovation and Entrepreneurship (IIE), we understand what it means to be an entrepreneur. We strive to help aspiring innovators build their foundation and seed the entrepreneurial mindset. Powered by knowledge and driven by heart, we nurture changemakers and founders who aspire to make the world a better place.',
+      },
+
     ],
   },
   /*{
