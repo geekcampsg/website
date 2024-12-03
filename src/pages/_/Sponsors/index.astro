@@ -2,14 +2,9 @@
 import { Image } from 'astro:assets';
 import { textToHtml } from '@src/utils/text-to-html';
 
-// import angelHackImage from './logos/angelhack.png';
-// import spdigitalImage from './logos/spdigital.png';
-// import imtokenImage from './logos/imtoken.png';
-// import cakeDefiImage from './logos/cake-defi.png';
-// import proliveImage from './logos/prolive.jpg';
-import smuai from './logos/smuai.webp';
-import smuiie from './logos/smuiie.webp';
-
+import smuai from './logos/smuai.png';
+import smuiie from './logos/smuiie.png';
+import stack from './logos/STACK.png';
 
 const sponsors: Array<{
   title: string;
@@ -20,20 +15,12 @@ const sponsors: Array<{
     name: string;
     description: string;
     style?: string;
-  }>;
+  }>[];
 }> = [
   {
-    title: '',
+    title: '📌Venue Sponsor',
     size: 600,
     sponsors: [
-      // {
-      //   link: 'https://angelhack.com/',
-      //   image: angelHackImage,
-      //   name: 'AngelHack',
-      //   description:
-      //     'AngelHack (https://angelhack.com/) is one of the world’s largest and most diverse developer ecosystems. Known as the pioneer of global developer hackathons, AngelHack has a community of more than 300,000 developers across 65 countries. Over the past 10 years, AngelHack has partnered with Amazon Web Services, Dell Technologies, IBM, MasterCard, Web3 Foundation (Polkadot), Protocol Labs (Filecoin/IPFS), Celo Foundation, and even Algorand Foundation to run global hackathons and drive innovation.',
-      // },
-
       {
         link: 'https://www.smuai.me/',
         image: smuai,
@@ -49,31 +36,21 @@ const sponsors: Array<{
         description:
           'At SMU Institute of Innovation and Entrepreneurship (IIE), we understand what it means to be an entrepreneur. We strive to help aspiring innovators build their foundation and seed the entrepreneurial mindset. Powered by knowledge and driven by heart, we nurture changemakers and founders who aspire to make the world a better place.',
       },
-
     ],
   },
-  /*{
-    title: "Platinum Sponsor",
+
+  {
+    title: '🍕 Food Sponsor',
     size: 600,
     sponsors: [
-      { link: "https://www.spdigital.sg", image: spdigitalImage },
       {
-        link: "https://token.im",
-        image: imtokenImage,
-        style: "padding:1rem;background:white;",
+        link: 'https://www.meetup.com/stack-by-govtech-singapore/',
+        image: stack,
+        name: 'STACK Community by GovTech',
+        description: 'The STACK Community(https://www.meetup.com/stack-by-govtech-singapore/) is the growing tech community by GovTech to gather everyone who shares this same excitement about using technology to improve the lives of everyday Singaporeans. Our aim is to collectively build a Smart Nation on the Singapore Government Tech Stack.',
       },
     ],
   },
-  {
-    title: "Gold Sponsor",
-    size: 450,
-    sponsors: [{ link: "https://www.cakedefi.com", image: cakeDefiImage }],
-  },
-  {
-    title: "Silver Sponsor",
-    size: 300,
-    sponsors: [{ link: "https://prolive.co", image: proliveImage }],
-  },*/
 ];
 ---
 
@@ -134,7 +111,16 @@ const sponsors: Array<{
     margin: 1rem 0 2rem;
     text-transform: uppercase;
   }
+  .sponsor-item {
+    margin-bottom: 1rem;
+  }
+  .image-wrapper {
+    width: 100%;
+    max-width: 100%; /* Prevents squishing */
+    height: auto; /* Maintains aspect ratio */
+  }
   img {
     max-width: 100%;
+    height: auto; /* Prevents squishing and maintains aspect ratio */
   }
 </style>
