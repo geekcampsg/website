@@ -21,12 +21,12 @@ import { schedule, speakers } from "@src/data/schedules/current"
   {+Date.now() > +cfp.deadline ? null : <CallForPaper />}
   <!-- {schedule.dates.length > 0 ? <Live /> : null} -->
   <About />
+  <Partners />
   <!-- <LocalTechCommunities /> -->
   {schedule.dates.length > 0 ? <Schedule /> : null}
   {speakers.length > 0 ? <Speakers /> : null}
   <Testimonials />
   <CodeOfConduct />
   <Sponsors /> 
-  <Partners />
   <Organisers />
 </Layout>
