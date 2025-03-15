@@ -38,7 +38,7 @@ const schedules = [
         {
           schedules.map(([name, schedule]) => (
             <li id={schedule.year}>
-              <h3>{name}</h3>
+              <h3>{name} </h3>
               {schedule.dates.map((evtDate) => (
                 <div>
                   <div class="date">{formatDateFull(evtDate.date)}</div>
@@ -77,7 +77,7 @@ const schedules = [
                           </h4>
                           {talk.speakers ? (
                             <div class="speakers">
-                              {talk.speakers.map((speaker) => speaker.name)}
+                              {talk.speakers.map((speaker) => speaker.name).join(", ")}
                             </div>
                           ) : null}
                           <p set:html={xss(talk.summary)} />
