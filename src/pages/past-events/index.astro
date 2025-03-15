@@ -10,6 +10,8 @@ import schedule2021 from "@src/data/schedules/2021"
 import { schedule as schedule2022 } from "@src/data/schedules/2022"
 import { schedule as schedule2023 } from "@src/data/schedules/2023"
 import { schedule as schedule2024 } from "@src/data/schedules/2024"
+// print out schedule2022 in console
+console.log(JSON.stringify(schedule2023, null, 2)) 
 
 import xss from "xss"
 import { formatDateFull } from "@src/utils/date-format"
@@ -48,8 +50,7 @@ const schedules = [
                 <div>
                   <div class="date">{formatDateFull(evtDate.date)}</div>
                   <ul>
-                    {evtDate.talks &&
-                      evtDate.talks.map((talk) => (
+                    {evtDate.talks?.filter(talk => talk.speakers?.length > 0).map((talk) => (
                         <li class="schedule-item">
                           <h4>
                             {talk.title}{" "}
