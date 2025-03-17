@@ -7,11 +7,11 @@ import schedule2018 from "@src/data/schedules/2018"
 import schedule2019 from "@src/data/schedules/2019"
 import schedule2020 from "@src/data/schedules/2020"
 import schedule2021 from "@src/data/schedules/2021"
-import { schedule as schedule2022 } from "@src/data/schedules/2022"
-import { schedule as schedule2023 } from "@src/data/schedules/2023"
-import { schedule as schedule2024 } from "@src/data/schedules/2024"
-// print out schedule2022 in console
-console.log(JSON.stringify(schedule2023, null, 2)) 
+import schedule2022 from "@src/data/schedules/2022"
+import schedule2023 from "@src/data/schedules/2023"
+import schedule2024 from "@src/data/schedules/2024"
+// import { schedule as schedule2025 } from "@src/data/schedules/2025"
+
 
 import xss from "xss"
 import { formatDateFull } from "@src/utils/date-format"
@@ -41,6 +41,9 @@ const schedules = [
       />
     </div>
     <div>
+      <!-- Janky ass way to get the json because package-lock scares me
+      <pre>      {JSON.stringify(schedule2024, null, 2)}
+      </pre> -->
       <ul>
         {
           schedules.map(([name, schedule]) => (
