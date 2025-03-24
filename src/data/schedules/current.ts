@@ -1,1 +1,1 @@
-export * from './2024';
+export * from './2024/index.ts';
