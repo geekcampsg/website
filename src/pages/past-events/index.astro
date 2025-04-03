@@ -7,11 +7,18 @@ import schedule2018 from "@src/data/schedules/2018"
 import schedule2019 from "@src/data/schedules/2019"
 import schedule2020 from "@src/data/schedules/2020"
 import schedule2021 from "@src/data/schedules/2021"
-import { schedule as schedule2022 } from "@src/data/schedules/2022"
+import schedule2022 from "@src/data/schedules/2022"
+import schedule2023 from "@src/data/schedules/2023"
+import schedule2024 from "@src/data/schedules/2024"
+// import { schedule as schedule2025 } from "@src/data/schedules/2025"
+
+
 import xss from "xss"
 import { formatDateFull } from "@src/utils/date-format"
 
 const schedules = [
+  ["GeekcampSG 2024", schedule2024],
+  ["GeekcampSG 2023", schedule2023],
   ["GeekcampSG 2022", schedule2022],
   ["GeekcampSG 2021", schedule2021],
   ["GeekcampSG 2020", schedule2020],
@@ -34,17 +41,19 @@ const schedules = [
       />
     </div>
     <div>
+      <!-- Janky ass way to get the json because package-lock scares me
+      <pre>      {JSON.stringify(schedule2024, null, 2)}
+      </pre> -->
       <ul>
         {
           schedules.map(([name, schedule]) => (
             <li id={schedule.year}>
-              <h3>{name}</h3>
+              <h3>{name} </h3>
               {schedule.dates.map((evtDate) => (
                 <div>
                   <div class="date">{formatDateFull(evtDate.date)}</div>
                   <ul>
-                    {evtDate.talks &&
-                      evtDate.talks.map((talk) => (
+                    {evtDate.talks?.filter(talk => talk.speakers?.length > 0).map((talk) => (
                         <li class="schedule-item">
                           <h4>
                             {talk.title}{" "}
@@ -77,7 +86,7 @@ const schedules = [
                           </h4>
                           {talk.speakers ? (
                             <div class="speakers">
-                              {talk.speakers.map((speaker) => speaker.name)}
+                              {talk.speakers.map((speaker) => speaker.name).join(", ")}
                             </div>
                           ) : null}
                           <p set:html={xss(talk.summary)} />
