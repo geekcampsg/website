@@ -69,7 +69,7 @@ export default {
           "endTime": "2023-10-14T12:00:00",
           "track": "1 (2F)",
           "id": "sessionize-543024",
-          "video": null,
+          "video": "https://youtu.be/PMZgb2328SU",
           "speakers": [
             {
               "id": "sessionize-63f6e111-c7e4-4b1f-b9d8-a2f7c8f11428",
@@ -105,7 +105,7 @@ export default {
           "endTime": "2023-10-14T12:45:00",
           "track": "1 (2F)",
           "id": "sessionize-542932",
-          "video": null,
+          "video": "https://youtu.be/N2_tgA-pAbM",
           "speakers": [
             {
               "id": "sessionize-cf0f06eb-e436-4f5c-8b94-c4958f17b6e2",
@@ -151,7 +151,7 @@ export default {
           "endTime": "2023-10-14T14:00:00",
           "track": "1 (2F)",
           "id": "sessionize-543406",
-          "video": null,
+          "video": "https://youtu.be/dHF5P1JrPIA",
           "speakers": [
             {
               "id": "sessionize-cda13a35-9d05-47aa-ada5-86ae1ef2a899",
@@ -187,7 +187,7 @@ export default {
           "endTime": "2023-10-14T14:45:00",
           "track": "1 (2F)",
           "id": "sessionize-541470",
-          "video": null,
+          "video": "https://youtu.be/53Ggig5OyK0",
           "speakers": [
             {
               "id": "sessionize-ad204a47-938a-44c0-87a1-e01bc672e98d",
