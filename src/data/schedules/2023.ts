@@ -33,7 +33,7 @@ export default {
           "endTime": "2023-10-14T11:45:00",
           "track": "1 (2F)",
           "id": "sessionize-541432",
-          "video": null,
+          "video": "https://youtu.be/W5QAODes3is",
           "speakers": [
             {
               "id": "sessionize-21563d44-3251-40d4-8fbc-34237956f5ec",
@@ -51,7 +51,7 @@ export default {
           "endTime": "2023-10-14T11:45:00",
           "track": "2 (2G)",
           "id": "sessionize-540181",
-          "video": null,
+          "video": "https://youtu.be/EPBSWluY0S4",
           "speakers": [
             {
               "id": "sessionize-049630c7-6daf-4365-8cd6-d832adebae12",
@@ -69,7 +69,7 @@ export default {
           "endTime": "2023-10-14T12:00:00",
           "track": "1 (2F)",
           "id": "sessionize-543024",
-          "video": null,
+          "video": "https://youtu.be/PMZgb2328SU",
           "speakers": [
             {
               "id": "sessionize-63f6e111-c7e4-4b1f-b9d8-a2f7c8f11428",
@@ -87,7 +87,7 @@ export default {
           "endTime": "2023-10-14T12:00:00",
           "track": "2 (2G)",
           "id": "sessionize-543903",
-          "video": null,
+          "video": "https://youtu.be/PEea50JOFII",
           "speakers": [
             {
               "id": "sessionize-a189cebe-6b5c-4a4e-8074-3c27a2631854",
@@ -105,7 +105,7 @@ export default {
           "endTime": "2023-10-14T12:45:00",
           "track": "1 (2F)",
           "id": "sessionize-542932",
-          "video": null,
+          "video": "https://youtu.be/N2_tgA-pAbM",
           "speakers": [
             {
               "id": "sessionize-cf0f06eb-e436-4f5c-8b94-c4958f17b6e2",
@@ -123,7 +123,7 @@ export default {
           "endTime": "2023-10-14T12:45:00",
           "track": "2 (2G)",
           "id": "sessionize-533639",
-          "video": null,
+          "video": "https://youtu.be/K9lckS1c6Xc",
           "speakers": [
             {
               "id": "sessionize-56d0a432-6d7d-450f-ba13-d173e5b2bc25",
@@ -151,7 +151,7 @@ export default {
           "endTime": "2023-10-14T14:00:00",
           "track": "1 (2F)",
           "id": "sessionize-543406",
-          "video": null,
+          "video": "https://youtu.be/dHF5P1JrPIA",
           "speakers": [
             {
               "id": "sessionize-cda13a35-9d05-47aa-ada5-86ae1ef2a899",
@@ -169,7 +169,7 @@ export default {
           "endTime": "2023-10-14T14:00:00",
           "track": "2 (2G)",
           "id": "sessionize-541533",
-          "video": null,
+          "video": "https://youtu.be/0Dmm0z4lZBQ",
           "speakers": [
             {
               "id": "sessionize-e7718d8b-56af-437f-b83f-5c3474538ff8",
@@ -187,7 +187,7 @@ export default {
           "endTime": "2023-10-14T14:45:00",
           "track": "1 (2F)",
           "id": "sessionize-541470",
-          "video": null,
+          "video": "https://youtu.be/53Ggig5OyK0",
           "speakers": [
             {
               "id": "sessionize-ad204a47-938a-44c0-87a1-e01bc672e98d",
@@ -205,7 +205,7 @@ export default {
           "endTime": "2023-10-14T14:45:00",
           "track": "2 (2G)",
           "id": "sessionize-532277",
-          "video": null,
+          "video": "https://youtu.be/6nr5MQlNs_E",
           "speakers": [
             {
               "id": "sessionize-f3ae3c0f-b3b1-45e4-bdfb-8ce8f08cb949",
@@ -223,7 +223,7 @@ export default {
           "endTime": "2023-10-14T15:30:00",
           "track": "1 (2F)",
           "id": "sessionize-539063",
-          "video": null,
+          "video": "https://youtu.be/xL0kcQQlJMs",
           "speakers": [
             {
               "id": "sessionize-cc087580-0a8e-4f53-b876-c7009316366e",
@@ -241,7 +241,7 @@ export default {
           "endTime": "2023-10-14T15:30:00",
           "track": "2 (2G)",
           "id": "sessionize-543058",
-          "video": null,
+          "video": "https://youtu.be/zpQxBkvfWh8",
           "speakers": [
             {
               "id": "sessionize-816b6113-3728-4efb-bcde-d9408eb9b48b",
@@ -269,7 +269,7 @@ export default {
           "endTime": "2023-10-14T16:30:00",
           "track": "1 (2F)",
           "id": "sessionize-538837",
-          "video": null,
+          "video": "https://youtu.be/jkfVJ36zWZY",
           "speakers": [
             {
               "id": "sessionize-28f7be5a-4f9a-40ee-85c9-6795dc4d76e6",
@@ -287,7 +287,7 @@ export default {
           "endTime": "2023-10-14T16:30:00",
           "track": "2 (2G)",
           "id": "sessionize-531881",
-          "video": null,
+          "video": "https://youtu.be/uCznoc3TJiw",
           "speakers": [
             {
               "id": "sessionize-bf33144d-d1d6-467e-ae92-6e0912d5962d",
@@ -305,7 +305,7 @@ export default {
           "endTime": "2023-10-14T17:15:00",
           "track": "1 (2F)",
           "id": "sessionize-531856",
-          "video": null,
+          "video": "https://youtu.be/qCRVcSdktH8",
           "speakers": [
             {
               "id": "sessionize-5b3a7424-01af-4aef-987f-6f95d5080292",
@@ -337,7 +337,7 @@ export default {
           "endTime": "2023-10-14T17:15:00",
           "track": "2 (2G)",
           "id": "sessionize-540870",
-          "video": null,
+          "video": "https://youtu.be/iHKFZqZ76Bc",
           "speakers": [
             {
               "id": "sessionize-c08d5f08-100d-4c1d-8a85-39fba979d24f",
@@ -355,7 +355,7 @@ export default {
           "endTime": "2023-10-14T17:30:00",
           "track": "1 (2F)",
           "id": "sessionize-542029",
-          "video": null,
+          "video": "https://youtu.be/yO6BRDKUM8s",
           "speakers": [
             {
               "id": "sessionize-f80f101e-778f-4849-bc66-96a61b1ddd88",
@@ -373,7 +373,7 @@ export default {
           "endTime": "2023-10-14T17:30:00",
           "track": "2 (2G)",
           "id": "sessionize-542940",
-          "video": null,
+          "video": "https://youtu.be/0PXd8fykAKc",
           "speakers": [
             {
               "id": "sessionize-749e9525-8b22-4e9f-ae89-60e55e0a50e0",
