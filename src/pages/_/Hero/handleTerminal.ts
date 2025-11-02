@@ -123,7 +123,11 @@ export default function handleTerminal({
             val = 'Registration is not open yet';
           }
         } else if (cmd === 'volunteer') {
-          val = `<a href="${volunteerLink}">Volunteer with us</a>`;
+          if (volunteerLink) {
+            val = `<a href="${volunteerLink}">Volunteer with us!</a>`;
+          } else {
+            val = 'Shoot a message in the <a href="${discordLink}">Discord</a> if you are interested!';
+          }
         } else if (cmd === 'location') {
           val = `In-person: <a href="${venueLink}">${venueName}</a><br>Online: <a href="${discordLink}">Discord</a>`;
         } else if (cmd === 'dir') {
@@ -149,7 +153,7 @@ export default function handleTerminal({
             val += `${diff} more day${diff > 1 ? 's' : ''} to go!`;
           }
         } else if (cmd === 'contact') {
-          val = 'geekcampsingapore at gmail dot com';
+          val = 'please send a message in <a href="${discordLink}">Discord</a>!';
         } else if (cmd === 'archives') {
           val = '<a href="/past-events">View past events</a>';
         } else if (cmd === 'game') {

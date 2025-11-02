@@ -1,11 +1,12 @@
 ---
 import Schedules from "./_/Schedules.svelte"
+import * as cfp from '@src/data/cfp';
 import { schedule, tracks, gridUrl } from "@src/data/schedules/current"
 import { formatDateLong } from "@src/utils/date-format"
 ---
 
 {
-  schedule.dates.map((date) => {
+  /* schedule.dates.map((date) => {
     return (
       <section id="schedule" class="rows">
         <>
@@ -26,7 +27,19 @@ import { formatDateLong } from "@src/utils/date-format"
         </>
       </section>
     )
-  })
+  }) */
+ <section id="schedule" class="rows">
+        <>
+          <div>
+            <h2>Schedule - 2025</h2>
+          </div>
+          <div>
+            <p>
+			        Watch this space! Want to speak? Submit a talk proposal via <a href={cfp.link}>sessionize</a>!
+            </p>
+          </div>
+        </>
+      </section>
 }
 
 <style>

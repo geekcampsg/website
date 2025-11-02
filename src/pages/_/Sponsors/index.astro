@@ -6,7 +6,7 @@ import smuai from './logos/smuai.png';
 import smuiie from './logos/smuiie.png';
 import stack from './logos/STACK.png';
 
-const sponsors: Array<{
+/* const sponsors: Array<{
   title: string;
   size: number;
   sponsors: Array<{
@@ -27,15 +27,7 @@ const sponsors: Array<{
         name: 'SmuAI',
         description:
           'SmuAI (https://www.smuai.me/) is a student-led ThinkTank that facilitates the sharing of ideas in the field of Artificial Intelligence.',
-      },
-
-      {
-        link: 'https://iie.smu.edu.sg/',
-        image: smuiie,
-        name: 'SMU Institute of Innovation and Entrepreneurship (IIE)',
-        description:
-          'At SMU Institute of Innovation and Entrepreneurship (IIE), we understand what it means to be an entrepreneur. We strive to help aspiring innovators build their foundation and seed the entrepreneurial mindset. Powered by knowledge and driven by heart, we nurture changemakers and founders who aspire to make the world a better place.',
-      },
+      }
     ],
   },
 
@@ -51,17 +43,19 @@ const sponsors: Array<{
       },
     ],
   },
-];
+]; */
 ---
 
 {
-  sponsors.length > 0 ? (
-    <section id="sponsors" class="rows">
+/*   sponsors.length > 0 ? (
+ committing out for now*/ 
+      true ? (   
+      <section id="sponsors" class="rows">
       <div>
         <h2>Sponsors</h2>
       </div>
       <div>
-        {sponsors.map((category) => {
+        {/* {sponsors.map((category) => {
           return (
             <div class="row">
               {category.title ? (
@@ -89,7 +83,8 @@ const sponsors: Array<{
               </div>
             </div>
           );
-        })}
+        })} */}
+      Interested in possibly sponsoring GeekcampSG? Reach out to us on <a href="/discord">Discord</a>!
       </div>
     </section>
   ) : null
