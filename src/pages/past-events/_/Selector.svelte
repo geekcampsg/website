@@ -1,10 +1,12 @@
 <script lang="ts">
+import type schedule2024 from '@src/data/schedules/2024';
+
 interface Props {
-  schedules: [string, number][];
+  schedules: Array<[string, typeof schedule2024]>;
 }
 
 const { schedules }: Props = $props();
-let selectedYear = $state(schedules[0][1]);
+let selectedYear = $state(schedules[0][1].year);
 
 $effect(() => {
   if (typeof window !== 'undefined') {
@@ -14,13 +16,13 @@ $effect(() => {
 </script>
 
 <ul>
-  {#each schedules as [name, year]}
-    <li class:selected={selectedYear === year}>
+  {#each schedules as [name, schedule]}
+    <li class:selected={selectedYear === schedule.year}>
       <label>
         <input
           type="radio"
           name="year"
-          value={year}
+          value={schedule.year}
           bind:group={selectedYear}
         />
         {name}
