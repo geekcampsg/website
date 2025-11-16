@@ -1,15 +1,24 @@
-<script>
-  import Terminal from './Terminal.svelte';
-  let gameMode = false;
+<script lang="ts">
+import type { Snippet } from 'svelte';
+import Terminal from './Terminal.svelte';
+
+interface Props {
+  data?: Snippet;
+}
+
+const { data }: Props = $props();
+let gameMode = $state(false);
 </script>
 
 {#if gameMode}
   {#await import('./Game/index.svelte')}
     Loading game bundles...
-  {:then { default: Component }}
-    <Component
-      on:quit={() => {
-        gameMode = false;
+  {:then { default: Game }}
+    <Game
+      onGameEvent={(event) => {
+        if (event === 'quit') {
+          gameMode = false;
+        }
       }}
     />
   {:catch}
@@ -17,11 +26,18 @@
   {/await}
 {:else}
   <div>
-    <slot name="data" />
+    {@render data?.()}
   </div>
   <Terminal
-    on:gameOn={() => {
-      gameMode = true;
+    onTerminalEvent={(event: string) => {
+      if (event === 'gameOn') {
+        gameMode = true;
+      }
     }}
   />
 {/if}
+<style>
+  div {
+    margin-top: -1em;
+  }
+</style>

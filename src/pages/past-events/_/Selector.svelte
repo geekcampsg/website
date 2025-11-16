@@ -1,10 +1,16 @@
-<script>
-  export let schedules;
-  let selectedYear = schedules[0][1];
+<script lang="ts">
+interface Props {
+  schedules: [string, number][];
+}
 
-  $: if (typeof window !== 'undefined') {
-    window.location.hash = selectedYear;
+const { schedules }: Props = $props();
+let selectedYear = $state(schedules[0][1]);
+
+$effect(() => {
+  if (typeof window !== 'undefined') {
+    window.location.hash = String(selectedYear);
   }
+});
 </script>
 
 <ul>

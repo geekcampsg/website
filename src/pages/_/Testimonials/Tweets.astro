@@ -1,10 +1,10 @@
 ---
-import Tweet from "./Tweet.astro"
+import Tweet from './Tweet.astro';
 
 export interface Props {
-  urls: string[]
+  urls: string[];
 }
-const { urls } = Astro.props
+const { urls } = Astro.props;
 ---
 
 {urls.map((url) => <Tweet url={url} />)}
