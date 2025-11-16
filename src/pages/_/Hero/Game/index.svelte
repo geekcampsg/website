@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { createEventDispatcher, onMount } from 'svelte';
-  import * as knobby from 'svelte-knobby';
+  import { onMount } from 'svelte';
+  import { writable } from 'svelte/store';
   import Alien from './Alien';
   import Bullet from './Bullet';
   import type GameObject from './GameObject';
@@ -8,64 +8,33 @@
   import { getRandom } from './utils';
 
   let canvas: HTMLCanvasElement;
-  const dispatch = createEventDispatcher();
+
+  interface Props {
+    onGameEvent: (event: string) => void;
+  }
+
+  const { onGameEvent }: Props = $props();
 
   const LOCALSTORAGE_KEY = 'geekcamp:shooter';
   const INITIAL_ALIEN_SPAWN_PERIOD = 3_000; // 3s
   const INITIAL_LIVES = 5;
   const INITIAL_WIDTH = 750;
   const INITIAL_HEIGHT = 600;
-  let fullscreen = false;
-  $: width = fullscreen ? windowWidth : INITIAL_WIDTH;
-  $: height = fullscreen ? windowHeight : INITIAL_HEIGHT;
-  let windowHeight: number;
-  let windowWidth: number;
+  let fullscreen = $state(false);
+  let windowHeight = $state(0);
+  let windowWidth = $state(0);
+  let width = $derived(fullscreen ? windowWidth : INITIAL_WIDTH);
+  let height = $derived(fullscreen ? windowHeight : INITIAL_HEIGHT);
 
-  const GLOBALS = knobby.panel({
-    ALIEN_SPAWN_PERIOD: {
-      value: INITIAL_ALIEN_SPAWN_PERIOD,
-      min: 0,
-      max: 10000,
-      step: 1,
-    },
-    LIVES: {
-      value: INITIAL_LIVES,
-      min: 0,
-      max: 10000,
-      step: 1,
-    },
-    MAX_SPEED: {
-      value: 30,
-      min: 0,
-      max: 100,
-      step: 0.1,
-    },
-    MAX_ACCELERATION: {
-      value: 5,
-      min: 0,
-      max: 100,
-      step: 0.1,
-    },
-    ACCELERATION: {
-      value: 1.75,
-      min: 0,
-      max: 100,
-      step: 0.01,
-    },
-    FRICTION: {
-      value: 0.9,
-      min: 0,
-      max: 1,
-      step: 0.001,
-    },
-    BULLET_COUNT: {
-      value: 1,
-      min: 1,
-      max: 100,
-      step: 1,
-    },
+  const GLOBALS = writable({
+    ALIEN_SPAWN_PERIOD: INITIAL_ALIEN_SPAWN_PERIOD,
+    LIVES: INITIAL_LIVES,
+    MAX_SPEED: 30,
+    MAX_ACCELERATION: 5,
+    ACCELERATION: 1.75,
+    FRICTION: 0.9,
+    BULLET_COUNT: 1,
   });
-  knobby.toggle(false);
 
   const children: GameObject[] = [];
   const game = {
@@ -84,7 +53,7 @@
     get GLOBALS() {
       return GLOBALS;
     },
-    dispatch: (event: string, data: any) => {
+    dispatch: (event: string, data: unknown) => {
       switch (event) {
         case 'alien:win': {
           aliens.splice(aliens.indexOf(data), 1);
@@ -104,17 +73,18 @@
     },
   };
 
-  const aliens: Alien[] = [];
-  const bullets: Bullet[] = [];
+  let aliens = $state<Alien[]>([]);
+  let bullets = $state<Bullet[]>([]);
   const hero = new Hero(game);
-  let score = 0;
-  let startTime = 0;
-  let endTime = 0;
-  let gameOver = true;
-  let highscore =
+  let score = $state(0);
+  let startTime = $state(0);
+  let endTime = $state(0);
+  let gameOver = $state(true);
+  let highscore = $state(
     JSON.parse(window.localStorage.getItem(LOCALSTORAGE_KEY) || '{}')
-      .highscore || 0;
-  let nextAlienSpawn: number;
+      .highscore || 0
+  );
+  let nextAlienSpawn = $state<number>(0);
   function spawnAliens() {
     const timeNow = Date.now();
     if (!nextAlienSpawn || nextAlienSpawn < timeNow) {
@@ -142,9 +112,13 @@
   }
 
   function cleanup() {
-    aliens.forEach((alien) => alien.destroy());
+    aliens.forEach((alien) => {
+      alien.destroy();
+    });
     aliens.splice(0, aliens.length);
-    bullets.forEach((bullet) => bullet.destroy());
+    bullets.forEach((bullet) => {
+      bullet.destroy();
+    });
     bullets.splice(0, bullets.length);
   }
 
@@ -179,8 +153,7 @@
         }
         case 'Q':
         case 'q': {
-          dispatch('quit');
-          knobby.toggle(false);
+          onGameEvent('quit');
           break;
         }
         case 'F':
@@ -287,12 +260,12 @@
     );
     ctx.fillText("Press 'q' key to quit game", 20, 80);
     ctx.fillText(
-      'Time: ' + Math.round((Date.now() - startTime) / 1000) + 's',
+      `Time: ${Math.round((Date.now() - startTime) / 1000)}s`,
       20,
       110
     );
-    ctx.fillText('Score: ' + score, 20, 130);
-    ctx.fillText('Lives: ' + $GLOBALS.LIVES, 20, 150);
+    ctx.fillText(`Score: ${score}`, 20, 130);
+    ctx.fillText(`Lives: ${$GLOBALS.LIVES}`, 20, 150);
   }
 
   let gameRunning = false;
@@ -311,37 +284,14 @@
     }
   }
 
-  // Up, Up, Down, Down, Left, Right, Left, Right, B, A
-  const cheatCode = [
-    'arrowup',
-    'arrowdown',
-    'arrowup',
-    'arrowdown',
-    'arrowleft',
-    'arrowright',
-    'arrowleft',
-    'arrowright',
-    'a',
-    'b',
-  ];
-  let konamiState = 0;
-  function checkKonamiCode(key: string) {
-    if (key.toLowerCase() === cheatCode[konamiState]) {
-      if (++konamiState === cheatCode.length) {
-        knobby.toggle(true);
-        konamiState = 0;
-      }
-    } else {
-      konamiState = 0;
-    }
-  }
-  let lastKey: string | undefined;
+  let lastKey = $state<string | undefined>(undefined);
   function onKeyDown(event: KeyboardEvent) {
     lastKey = event.key;
-    checkKonamiCode(lastKey);
   }
 
-  $: if (gameOver) cleanup();
+  $effect(() => {
+    if (gameOver) cleanup();
+  });
 
   onMount(() => {
     resetGame();
@@ -359,7 +309,7 @@
 
 <svelte:window bind:innerHeight={windowHeight} bind:innerWidth={windowWidth} />
 
-<canvas class:fullscreen bind:this={canvas} {width} {height} />
+<canvas class:fullscreen bind:this={canvas} {width} {height}></canvas>
 
 <style>
   .fullscreen {

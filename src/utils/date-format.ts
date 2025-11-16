@@ -3,8 +3,8 @@ const formatter = new Intl.DateTimeFormat('en-SG', {
   timeZone: 'Asia/Singapore',
 });
 export function formatDateFull(date: string | Date) {
-  date = new Date(date);
-  return formatter.format(date);
+  const dateObj = new Date(date);
+  return formatter.format(dateObj);
 }
 
 const dateFormatter2 = new Intl.DateTimeFormat('en-US', {
@@ -14,8 +14,8 @@ const dateFormatter2 = new Intl.DateTimeFormat('en-US', {
   timeZone: 'Asia/Singapore',
 });
 export function formatDateLong(date: string | Date) {
-  date = new Date(date);
-  return dateFormatter2.format(date);
+  const dateObj = new Date(date);
+  return dateFormatter2.format(dateObj);
 }
 
 const timeFormatter = new Intl.DateTimeFormat('en-SG', {
@@ -24,6 +24,6 @@ const timeFormatter = new Intl.DateTimeFormat('en-SG', {
   timeZone: 'Asia/Singapore',
 });
 export function formatTime(date: string | Date) {
-  date = new Date(date);
-  return timeFormatter.format(date);
+  const dateObj = new Date(date);
+  return timeFormatter.format(dateObj);
 }

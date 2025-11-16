@@ -9,8 +9,8 @@
   --white: #f1f1f1;
   --darkgray: #282a35;
   --padding: 1.69rem;
-  --code-font: 'Fira Code', 'Courier New', Courier, monospace;
-  --title-font: 'Staatliches', 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+  --code-font: "Fira Code", "Courier New", Courier, monospace;
+  --title-font: "Staatliches", "Franklin Gothic Medium", "Arial Narrow", Arial,
     sans-serif;
 }
 
@@ -24,7 +24,7 @@ body {
   margin: 0;
   background: var(--coal);
   color: var(--white);
-  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
   font-size: 1.375rem;
   line-height: 1.5;
   font-weight: normal;
@@ -58,7 +58,7 @@ h2 br {
 }
 
 h2::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 5px;
   position: absolute;

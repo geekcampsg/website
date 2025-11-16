@@ -1,9 +1,9 @@
-import GameObject from './GameObject';
+import GameObject, { type Game } from './GameObject';
 
 let imagesLoaded = false;
 const geekcampTent = new Image();
 geekcampTent.src = '/images/game/geekcamp_tent.png';
-geekcampTent.onload = function () {
+geekcampTent.onload = () => {
   imagesLoaded = true;
 };
 
@@ -15,16 +15,16 @@ const TRIANGLE_HALF_BASE = TRIANGLE_BASE / 2;
 const BULLET_INIT_Y = TRIANGLE_HEIGHT - TRIANGLE_TOP_PADDING;
 
 export default class Hero extends GameObject {
-  x: number = 0;
-  speed: number = 0;
-  acceleration: number = 0;
-  maxSpeed: number = 0;
-  maxAcceleration: number = 0;
-  accelerationDelta: number = 0;
-  friction: number = 0;
-  bulletCount: number = 0;
+  x = 0;
+  speed = 0;
+  acceleration = 0;
+  maxSpeed = 0;
+  maxAcceleration = 0;
+  accelerationDelta = 0;
+  friction = 0;
+  bulletCount = 0;
   unsubscribe: () => void;
-  constructor(game: any) {
+  constructor(game: Game) {
     super(game);
     this.reset();
 
@@ -48,14 +48,14 @@ export default class Hero extends GameObject {
       ctx.drawImage(
         geekcampTent,
         this.x - TRIANGLE_HALF_BASE,
-        this.game.HEIGHT - TRIANGLE_HEIGHT,
+        this.game.HEIGHT - TRIANGLE_HEIGHT
       );
     } else {
       ctx.fillStyle = 'black';
       ctx.beginPath();
       ctx.moveTo(
         this.x,
-        this.game.HEIGHT - TRIANGLE_HEIGHT + TRIANGLE_TOP_PADDING,
+        this.game.HEIGHT - TRIANGLE_HEIGHT + TRIANGLE_TOP_PADDING
       );
       ctx.lineTo(this.x - TRIANGLE_HALF_BASE, this.game.HEIGHT);
       ctx.lineTo(this.x + TRIANGLE_HALF_BASE, this.game.HEIGHT);
@@ -65,7 +65,7 @@ export default class Hero extends GameObject {
   tick() {
     this.speed = Math.min(
       Math.max(this.speed + this.acceleration, -this.maxSpeed),
-      this.maxSpeed,
+      this.maxSpeed
     );
     this.x = this.x + this.speed;
     if (this.x > this.game.WIDTH - TRIANGLE_HALF_BASE) {
@@ -88,9 +88,9 @@ export default class Hero extends GameObject {
               (key === 'ArrowLeft'
                 ? -this.accelerationDelta
                 : this.accelerationDelta),
-            -this.maxAcceleration,
+            -this.maxAcceleration
           ),
-          this.maxAcceleration,
+          this.maxAcceleration
         );
         break;
       case 'Shift': {

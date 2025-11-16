@@ -22,16 +22,18 @@ import liaochoonway from './images/liao-choon-way.png?h=400';
 import liaochoonwayWebp from './images/liao-choon-way.png?h=400&webp';
 import muhammadhazwan from './images/muhammad-hazwan.jpg?h=400';
 import muhammadhazwanWebp from './images/muhammad-hazwan.jpg?h=400&webp';
-import nguyenthienminhtuan from './images/nguyenthienminhtuan.jpeg?h=400';
-import nguyenthienminhtuanWebp from './images/nguyenthienminhtuan.jpeg?h=400&webp';
 import nguyenducminhanh from './images/nguyenducminhanh.jpeg?h=400';
 import nguyenducminhanhWebp from './images/nguyenducminhanh.jpeg?h=400&webp';
+import nguyenthienminhtuan from './images/nguyenthienminhtuan.jpeg?h=400';
+import nguyenthienminhtuanWebp from './images/nguyenthienminhtuan.jpeg?h=400&webp';
 import sampoder from './images/sam-poder.png?h=400';
 import sampoderWebp from './images/sam-poder.png?h=400&webp';
 import shiling from './images/shi-ling.jpg?h=400';
 import shilingWebp from './images/shi-ling.jpg?h=400&webp';
 import simcherboon from './images/sim-cher-boon.png?h=400';
 import simcherboonWebp from './images/sim-cher-boon.png?h=400&webp';
+import tenzhiyang from './images/ten-zhi-yang.png?h=400';
+import tenzhiyangWebp from './images/ten-zhi-yang.png?h=400&webp';
 import thomashuchede from './images/thomas-huchede.jpg?h=400';
 import thomashuchedeWebp from './images/thomas-huchede.jpg?h=400&webp';
 import uzynchua from './images/u-zyn-chua.jpg?h=400';
@@ -40,8 +42,6 @@ import wongmengweng from './images/wong-meng-weng.png?h=400';
 import wongmengwengWebp from './images/wong-meng-weng.png?h=400&webp';
 import wongwaituck from './images/wong-wai-tuck.png?h=400';
 import wongwaituckWebp from './images/wong-wai-tuck.png?h=400&webp';
-import tenzhiyang from './images/ten-zhi-yang.png?h=400';
-import tenzhiyangWebp from './images/ten-zhi-yang.png?h=400&webp';
 
 const schedule = {
   year: 2022,
@@ -491,13 +491,13 @@ const schedule = {
 const speakers = schedule.dates.flatMap((date) =>
   date.talks
     .flatMap((talk) => talk.speakers ?? [])
-    .sort((a, b) => (a.name > b.name ? 1 : -1)),
+    .sort((a, b) => (a.name > b.name ? 1 : -1))
 );
 const tracks = Array.from(
   new Set(
     schedule.dates
       .flatMap((date) => date.talks.map((talk) => talk.track!))
-      .filter(Boolean),
-  ),
+      .filter(Boolean)
+  )
 );
 export { schedule, speakers, tracks };
