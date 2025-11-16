@@ -20,9 +20,9 @@ const speakers = sessionizeSpeakers
     position: speaker.tagLine,
     bio: textToHtml(speaker.bio),
     twitter: speaker.links
-      ?.filter((link) => link.linkType == 'Twitter')
+      ?.filter((link) => link.linkType === 'Twitter')
       .map((link) => link.url.split('/').pop())
-      .reduce((acc, link) => link || null, null),
+      .reduce((_acc, link) => link || null, null),
   }));
 
 const schedule = {
@@ -47,13 +47,13 @@ const schedule = {
                 id: `sessionize-${speaker.id}`,
                 name: speaker.name,
                 imgUrl: sessionizeSpeakers
-                  .filter((s) => s.id == speaker.id)
+                  .filter((s) => s.id === speaker.id)
                   .map((s) => ({
                     default: s.profilePicture,
                   }))
                   .pop(),
               })),
-        })),
+        }))
       )
       .sort((a, b) => Date.parse(a.startTime) - Date.parse(b.startTime)),
   })),
@@ -63,8 +63,8 @@ const tracks = Array.from(
   new Set(
     schedule.dates
       .flatMap((date) => date.talks.map((talk) => talk.track!))
-      .filter(Boolean),
-  ),
+      .filter(Boolean)
+  )
 );
 
 export { schedule, speakers, tracks, gridUrl };

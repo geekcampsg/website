@@ -1,11 +1,10 @@
-import GameObject from './GameObject';
-import type Bullet from './Bullet';
+import GameObject, { type Game } from './GameObject';
 import { getRandom } from './utils';
 
 let imagesLoaded = false;
 const geekcampSprite = new Image();
 geekcampSprite.src = '/images/game/geekcamp_sprite.png';
-geekcampSprite.onload = function () {
+geekcampSprite.onload = () => {
   imagesLoaded = true;
 };
 
@@ -16,7 +15,7 @@ const SPEED = 2;
 export default class Alien extends GameObject {
   x: number;
   y: number;
-  constructor(game: any) {
+  constructor(game: Game) {
     super(game);
     this.x = getRandom(200, game.WIDTH - 200);
     this.y = 0;

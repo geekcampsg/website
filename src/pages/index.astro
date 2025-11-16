@@ -1,31 +1,33 @@
 ---
-import Hero from "./_/Hero/index.astro"
-import Layout from "@src/layouts/Layout.astro"
-import About from "./_/About.astro"
-import LocalTechCommunities from "./_/LocalTechCommunities.astro"
-import Schedule from "./_/Schedule/index.astro"
-import Speakers from "./_/Speakers/index.astro"
-import Testimonials from "./_/Testimonials/index.astro"
-import CodeOfConduct from "./_/CodeOfConduct.astro"
-import Sponsors from "./_/Sponsors/index.astro"
-import Partners from "./_/Partners/index.astro"
-import Organisers from "./_/Organisers/index.astro"
-import CallForPaper from "./_/CallForPaper.astro"
-import Live from "./_/Live/index.astro"
-import * as cfp from "@src/data/cfp"
-import { schedule, speakers } from "@src/data/schedules/current"
+import * as cfp from '@src/data/cfp';
+import { schedule, speakers } from '@src/data/schedules/current';
+import { showSections } from '@src/data/sections';
+import Layout from '@src/layouts/Layout.astro';
+import About from './_/About.astro';
+import CallForPaper from './_/CallForPaper.astro';
+import CodeOfConduct from './_/CodeOfConduct.astro';
+import Hero from './_/Hero/index.astro';
+import Live from './_/Live/index.astro';
+import LocalTechCommunities from './_/LocalTechCommunities.astro';
+import Organisers from './_/Organisers/index.astro';
+import Partners from './_/Partners/index.astro';
+import Schedule from './_/Schedule/index.astro';
+import ScheduleTeaser from './_/ScheduleTeaser.astro';
+import Speakers from './_/Speakers/index.astro';
+import Sponsors from './_/Sponsors/index.astro';
+import Testimonials from './_/Testimonials/index.astro';
 ---
 
-<Layout title="Home">
+<Layout title='Home'>
   <Hero />
   {+Date.now() > +cfp.deadline ? null : <CallForPaper />}
-  <!-- {schedule.dates.length > 0 ? <Live /> : null} -->
+  {showSections.liveStream && schedule.dates.length > 0 ? <Live /> : null}
   <About />
   <Partners />
   <Sponsors />
-  <!-- <LocalTechCommunities /> -->
-  {schedule.dates.length > 0 ? <Schedule /> : null}
-  <!-- {speakers.length > 0 ? <Speakers /> : null} -->
+  {showSections.localTechCommunities ? <LocalTechCommunities /> : null}
+  {showSections.schedule && schedule.dates.length > 0 ? <Schedule /> : <ScheduleTeaser />}
+  {showSections.speakers && speakers.length > 0 ? <Speakers /> : null}
   <Testimonials />
   <CodeOfConduct />
   <Organisers />

@@ -1,34 +1,55 @@
-<script>
-  import xss from "xss"
-  import { flip } from "svelte/animate"
-  import { fade } from "svelte/transition"
-  import preferReducedMotion from "@src/utils/prefer-reduced-motion"
-  import { formatTime } from "@src/utils/date-format"
+<script lang="ts">
+import { formatTime } from '@src/utils/date-format';
+import preferReducedMotion from '@src/utils/prefer-reduced-motion';
+import { flip } from 'svelte/animate';
+import { fade } from 'svelte/transition';
+import xss from 'xss';
 
-  export let scheduleTalks
-  export let tracks
+interface Talk {
+  id: string;
+  title: string;
+  startTime: string;
+  endTime: string;
+  track?: string;
+  speakers?: Array<{
+    id: string;
+    name: string;
+    imgUrl: { default: string; webp?: string };
+  }>;
+  slides?: string;
+  summary?: string;
+}
 
-  let selectedTracks = [...tracks]
-  $: talks = scheduleTalks.filter(
+interface Props {
+  scheduleTalks: Talk[];
+  tracks: string[];
+}
+
+const { scheduleTalks, tracks }: Props = $props();
+
+let selectedTracks = $state([...tracks]);
+let talks = $derived(
+  scheduleTalks.filter(
     (talk) => !talk.track || selectedTracks.includes(talk.track)
   )
+);
 
-  function getTrackColor(track) {
-    switch (track) {
-      case "0":
-        return "#258fa7"
-      case "1":
-        return "#b59317"
-      case "0 (2F)":
-        return "var(--green)"
-      case "1 (2F)":
-        return "#258fa7"
-      case "2 (2G)":
-        return "#b59317"
-      default:
-        return "var(--green)"
-    }
+function getTrackColor(track?: string): string {
+  switch (track) {
+    case '0':
+      return '#258fa7';
+    case '1':
+      return '#b59317';
+    case '0 (2F)':
+      return 'var(--green)';
+    case '1 (2F)':
+      return '#258fa7';
+    case '2 (2G)':
+      return '#b59317';
+    default:
+      return 'var(--green)';
   }
+}
 </script>
 
 <div>

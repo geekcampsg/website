@@ -1,5 +1,5 @@
 import * as cfp from '@src/data/cfp';
-import { year, date } from '@src/data/date';
+import { date, year } from '@src/data/date';
 import {
   discordLink,
   ticketLink,
@@ -7,8 +7,8 @@ import {
   venueName,
   volunteerLink,
 } from '@src/data/links';
-import { formatDateFull } from '@src/utils/date-format';
 import { speakers } from '@src/data/schedules/current';
+import { formatDateFull } from '@src/utils/date-format';
 
 const cmdWithoutArg = [
   'help',
@@ -43,9 +43,9 @@ export default function handleTerminal({
   key: string;
   input: HTMLInputElement;
   value: string;
-  dispatch: (event: string) => boolean;
+  dispatch: (event: string) => void;
   clear: () => void;
-  clearLogs: () => void;
+  clearLogs: (initialise?: boolean) => void;
   reply: (string: string) => void;
 }) {
   if (ctrl) {
@@ -74,7 +74,7 @@ export default function handleTerminal({
       window.scroll(0, theY);
     } else if (theY > window.scrollY + window.innerHeight - height - 26) {
       // below
-      window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(() => {
         const { top, height } = input.getBoundingClientRect();
         const theY = window.scrollY + top;
         window.scroll(0, theY - window.innerHeight + height + 26);
@@ -82,7 +82,7 @@ export default function handleTerminal({
     }
 
     // handle cmds
-    let val;
+    let val: string;
     const userInput = value;
     const trimmed = userInput.trim();
     let invalidCmd = false;
@@ -126,7 +126,7 @@ export default function handleTerminal({
           if (volunteerLink) {
             val = `<a href="${volunteerLink}">Volunteer with us!</a>`;
           } else {
-            val = 'Shoot a message in the <a href="${discordLink}">Discord</a> if you are interested!';
+            val = `Shoot a message in the <a href="${discordLink}">Discord</a> if you are interested!`;
           }
         } else if (cmd === 'location') {
           val = `In-person: <a href="${venueLink}">${venueName}</a><br>Online: <a href="${discordLink}">Discord</a>`;
@@ -138,22 +138,22 @@ export default function handleTerminal({
           const today = new Date();
           val = `Today is <b>${formatDateFull(today)}</b>.`;
           if (!date) {
-            val += `<br />Geekcamp SG date is not confirmed!`;
+            val += '<br />Geekcamp SG date is not confirmed!';
           } else if (+date > +today) {
             val += `<br />Geekcamp SG is on <b>${formatDateFull(
-              date,
+              date
             )}.</b><br /><br />`;
             const diff = Math.round(
               (+date - +today) /
                 1000 /* milliseconds */ /
                 60 /* seconds */ /
                 60 /* minutes */ /
-                24 /* hours */,
+                24 /* hours */
             );
             val += `${diff} more day${diff > 1 ? 's' : ''} to go!`;
           }
         } else if (cmd === 'contact') {
-          val = 'please send a message in <a href="${discordLink}">Discord</a>!';
+          val = `please send a message in <a href="${discordLink}">Discord</a>!`;
         } else if (cmd === 'archives') {
           val = '<a href="/past-events">View past events</a>';
         } else if (cmd === 'game') {

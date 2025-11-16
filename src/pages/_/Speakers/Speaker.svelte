@@ -1,53 +1,55 @@
-<script>
+<script lang="ts">
 import { Image } from 'astro:assets';
 
-  import { createEventDispatcher } from 'svelte';
-  import { crossfade, fade, scale } from 'svelte/transition';
-  import { cubicInOut } from 'svelte/easing';
-  import xss from 'xss';
+import { cubicInOut } from 'svelte/easing';
+import { crossfade, fade, scale } from 'svelte/transition';
+import xss from 'xss';
 
-  export let name;
-  export let id;
-  export let imgUrl;
-  export let position;
-  export let bio;
-  export let twitter;
-  export let focused;
+interface Props {
+  name: string;
+  id: string;
+  imgUrl: { default: string; webp?: string };
+  position?: string;
+  bio: string;
+  twitter?: string;
+  focused: boolean;
+  onFocus: (id: string | undefined) => void;
+}
 
-  const dispatch = createEventDispatcher();
+const { name, id, imgUrl, position, bio, twitter, focused, onFocus }: Props =
+  $props();
 
-  const easing = cubicInOut;
-  const duration = 500;
+const easing = cubicInOut;
+const duration = 500;
 
-  const [crossfadeIn, crossfadeOut] = crossfade({
-    fallback: fade,
-    duration,
-    easing,
-  });
+const [crossfadeIn, crossfadeOut] = crossfade({
+  fallback: fade,
+  duration,
+  easing,
+});
 
-  function clickOrScrollOutside(node, callback) {
-    function onClick(event) {
-      if (!node.contains(event.target)) {
-        callback();
-      }
-    }
-    function onScroll() {
+function clickOrScrollOutside(node: HTMLElement, callback: () => void) {
+  function onClick(event: MouseEvent) {
+    if (!node.contains(event.target as Node)) {
       callback();
     }
-    document.addEventListener('click', onClick, true);
-    document.addEventListener('scroll', onScroll, { passive: true });
-    return {
-      destroy() {
-        document.removeEventListener('click', onClick, true);
-        document.removeEventListener('scroll', onScroll, { passive: true });
-      },
-    };
   }
-  // set background to black after transition is done
-  // this allow us to scale the backdrop without messing with the measurements
-  // but the backdrop can't cover all if the detail is scrollable
-  let detail;
-
+  function onScroll() {
+    callback();
+  }
+  document.addEventListener('click', onClick, true);
+  document.addEventListener('scroll', onScroll, { passive: true });
+  return {
+    destroy() {
+      document.removeEventListener('click', onClick, true);
+      document.removeEventListener('scroll', onScroll, { passive: true });
+    },
+  };
+}
+// set background to black after transition is done
+// this allow us to scale the backdrop without messing with the measurements
+// but the backdrop can't cover all if the detail is scrollable
+let detail: HTMLDivElement;
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -56,7 +58,7 @@ import { Image } from 'astro:assets';
     <div
       class="detail"
       bind:this={detail}
-      use:clickOrScrollOutside={() => dispatch('focus', undefined)}
+      use:clickOrScrollOutside={() => onFocus(undefined)}
     >
       <div
         class="backdrop"
@@ -109,7 +111,7 @@ import { Image } from 'astro:assets';
       </div>
     </div>
   {:else}
-    <figure on:click={() => dispatch('focus', id)}>
+    <figure on:click={() => onFocus(id)}>
       <picture>
         <source type="image/webp" srcset={imgUrl.webp} />
         <img

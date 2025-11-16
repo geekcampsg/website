@@ -1,31 +1,30 @@
 ---
-import Logo from "@src/components/Logo.astro"
-import Layout from "@src/layouts/Layout.astro"
-import Selector from "./_/Selector.svelte"
-import schedule2017 from "@src/data/schedules/2017"
-import schedule2018 from "@src/data/schedules/2018"
-import schedule2019 from "@src/data/schedules/2019"
-import schedule2020 from "@src/data/schedules/2020"
-import schedule2021 from "@src/data/schedules/2021"
-import schedule2022 from "@src/data/schedules/2022"
-import schedule2023 from "@src/data/schedules/2023"
-import schedule2024 from "@src/data/schedules/2024"
+import Logo from '@src/components/Logo.astro';
+import schedule2017 from '@src/data/schedules/2017';
+import schedule2018 from '@src/data/schedules/2018';
+import schedule2019 from '@src/data/schedules/2019';
+import schedule2020 from '@src/data/schedules/2020';
+import schedule2021 from '@src/data/schedules/2021';
+import schedule2022 from '@src/data/schedules/2022';
+import schedule2023 from '@src/data/schedules/2023';
+import schedule2024 from '@src/data/schedules/2024';
+import Layout from '@src/layouts/Layout.astro';
+import Selector from './_/Selector.svelte';
 // import { schedule as schedule2025 } from "@src/data/schedules/2025"
 
-
-import xss from "xss"
-import { formatDateFull } from "@src/utils/date-format"
+import { formatDateFull } from '@src/utils/date-format';
+import xss from 'xss';
 
 const schedules = [
-  ["GeekcampSG 2024", schedule2024],
-  ["GeekcampSG 2023", schedule2023],
-  ["GeekcampSG 2022", schedule2022],
-  ["GeekcampSG 2021", schedule2021],
-  ["GeekcampSG 2020", schedule2020],
-  ["GeekcampSG 2019", schedule2019],
-  ["GeekcampSG 2018+", schedule2018],
-  ["GeekcampSG 2017", schedule2017],
-] as const
+  ['GeekcampSG 2024', schedule2024],
+  ['GeekcampSG 2023', schedule2023],
+  ['GeekcampSG 2022', schedule2022],
+  ['GeekcampSG 2021', schedule2021],
+  ['GeekcampSG 2020', schedule2020],
+  ['GeekcampSG 2019', schedule2019],
+  ['GeekcampSG 2018+', schedule2018],
+  ['GeekcampSG 2017', schedule2017],
+] as const;
 ---
 
 <Layout title="Past Events">
