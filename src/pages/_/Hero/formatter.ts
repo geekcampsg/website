@@ -1,22 +1,25 @@
 export default function formatter() {
   const data: string[] = [];
-  let obj = {
+  const obj = {
     addEntry(key: string, value: string, highlight?: boolean) {
       if (data.length > 0) {
         data.push('<i class="c-g">,</i>\n');
       }
+      const keyCls = highlight ? 'c-r' : 'c-y';
+      const valueCls = highlight ? 'c-r' : 'c-b';
+
       data.push(
         [
           '  ',
-          '<i class="c-b">"</i>',
-          `<i class='c-${highlight ? 'r' : 'y'}'>${key}</i>`,
-          '<i class="c-b">"</i>',
+          `<i class="${keyCls}">"</i>`,
+          `<i class="${keyCls}">${key}</i>`,
+          `<i class="${keyCls}">"</i>`,
           "<i class='c-g'>:</i>",
           ' ',
-          '<i class="c-b">"</i>',
-          value,
-          '<i class="c-b">"</i>',
-        ].join(''),
+          `<i class="${valueCls}">"</i>`,
+          `<span class="${valueCls}">${value}</span>`,
+          `<i class="${valueCls}">"</i>`,
+        ].join('')
       );
       return obj;
     },

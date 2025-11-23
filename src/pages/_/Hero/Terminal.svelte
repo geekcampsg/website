@@ -1,42 +1,53 @@
-<script>
-  import { createEventDispatcher } from 'svelte';
+<script lang="ts">
+import type { Snippet } from 'svelte';
 
-  const dispatch = createEventDispatcher();
-  let handleTerminal;
-  function getHandleTerminal() {
-    // lazy load the replies
-    return handleTerminal || (handleTerminal = import('./handleTerminal'));
+interface Props {
+  children?: Snippet;
+  onTerminalEvent: (event: string) => void;
+}
+
+const { children, onTerminalEvent }: Props = $props();
+let handleTerminal: Promise<typeof import('./handleTerminal')> | undefined;
+function getHandleTerminal() {
+  if (!handleTerminal) {
+    handleTerminal = import('./handleTerminal');
   }
+  return handleTerminal;
+}
 
-  const ENTER_COMMAND_TEXT =
-    'Enter command. Type help to see available commands';
+const ENTER_COMMAND_TEXT = 'Enter command. Type help to see available commands';
 
-  let logs = [ENTER_COMMAND_TEXT];
-  let input;
+let logs = $state<string[]>([ENTER_COMMAND_TEXT]);
+let input: HTMLInputElement;
 
-  function handleKeyPress(event) {
-    const obj = {
-      ctrl: event.ctrlKey,
-      key: event.key,
-      input,
-      value: input.value,
-      dispatch,
-      clear: () => (input.value = ''),
-      clearLogs: (initialise) =>
-        (logs = initialise ? [ENTER_COMMAND_TEXT] : []),
-      reply: (text) => (logs = [...logs, text]),
-    };
-    getHandleTerminal().then((fn) => {
-      fn.default(obj);
-    });
-  }
-  function focusInput() {
-    getHandleTerminal();
-    input?.focus();
-  }
+function handleKeyPress(event: KeyboardEvent) {
+  const obj = {
+    ctrl: event.ctrlKey,
+    key: event.key,
+    input,
+    value: input.value,
+    dispatch: onTerminalEvent,
+    clear: () => {
+      input.value = '';
+    },
+    clearLogs: (initialise?: boolean) => {
+      logs = initialise ? [ENTER_COMMAND_TEXT] : [];
+    },
+    reply: (text: string) => {
+      logs = [...logs, text];
+    },
+  };
+  getHandleTerminal().then((fn) => {
+    fn.default(obj);
+  });
+}
+function focusInput() {
+  getHandleTerminal();
+  input?.focus();
+}
 </script>
 
-<slot />
+{@render children?.()}
 
 <!-- svelte-ignore a11y-click-events-have-key-events-->
 <div on:click={focusInput}>

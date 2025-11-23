@@ -23,3 +23,5 @@ pnpm-debug.log*
 
 /public/~partytown
 /public/static
+
+.astro/
